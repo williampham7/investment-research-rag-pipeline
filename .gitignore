@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Raw paper PDFs are large binaries — keep metadata.jsonl tracked, not the PDFs
+arxiv_papers/*.pdf
