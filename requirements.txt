@@ -17,3 +17,11 @@ tiktoken
 # server (Docker on GPU machines) even for local inference. 1.x runs surya's
 # OCR/layout models directly in-process (transformers/torch), no server needed.
 marker-pdf==1.10.2
+
+# Retrieval stack (embeddings, vector index, lexical search, reranking).
+faiss-cpu
+rank_bm25
+# Pinned: sentence-transformers>=5.0 requires transformers>=5.0, which
+# conflicts with marker-pdf's transformers<5.0 pin. 4.1.0 is the last release
+# before that jump and has everything needed (SentenceTransformer, CrossEncoder).
+sentence-transformers==4.1.0

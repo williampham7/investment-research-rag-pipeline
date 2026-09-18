@@ -1,0 +1,6 @@
+config,recall@5,recall@10,mrr@10,n_queries
+"section-aware + bge-large + hybrid + rerank (baseline)",1.0000,1.0000,1.0000,67
+"fixed-size + bge-large + hybrid + rerank",1.0000,1.0000,1.0000,67
+"section-aware + e5-large + hybrid + rerank",1.0000,1.0000,1.0000,67
+"section-aware + bge-large + dense-only + rerank",1.0000,1.0000,1.0000,67
+"section-aware + bge-large + hybrid + no-rerank",1.0000,1.0000,1.0000,67

@@ -8,3 +8,6 @@ arxiv_papers/*.pdf
 
 # Parsed output is mechanically regenerable from the PDFs via pdf_parser.py
 parsed_papers/
+
+# FAISS indexes/embeddings are mechanically regenerable from chunks/ via embed.py
+index/

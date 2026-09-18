@@ -1,0 +1,67 @@
+{"query_id": "q01", "query": "Does momentum work better among more liquid cryptocurrencies?", "relevant_paper_ids": ["arxiv:1904.00890v1"]}
+{"query_id": "q02", "query": "Combining changepoint detection with deep learning to make time-series momentum more responsive to regime changes", "relevant_paper_ids": ["arxiv:2105.13727v3"]}
+{"query_id": "q03", "query": "Deep reinforcement learning trading strategy for continuous futures contracts across commodities, equities, bonds and FX", "relevant_paper_ids": ["arxiv:1911.10107v1"]}
+{"query_id": "q04", "query": "Evidence for trend-following excess returns across commodities, currencies, stocks and bonds going back two centuries", "relevant_paper_ids": ["arxiv:1404.3274v1"]}
+{"query_id": "q05", "query": "Using network momentum spillover between commodity futures markets to improve trend-following", "relevant_paper_ids": ["arxiv:2501.07135v1"]}
+{"query_id": "q06", "query": "A deep learning model that learns both trend estimation and position sizing by directly optimizing the Sharpe ratio on futures", "relevant_paper_ids": ["arxiv:1904.04912v3"]}
+{"query_id": "q07", "query": "An attention-based transformer architecture for time-series momentum trading that outperforms LSTM models", "relevant_paper_ids": ["arxiv:2112.08534v3"]}
+{"query_id": "q08", "query": "Timing excess returns across equity and bond index benchmarks using time-series momentum", "relevant_paper_ids": ["arxiv:2002.04304v1"]}
+{"query_id": "q09", "query": "How does forced selling pressure from open-end mutual fund redemptions predict future stock returns?", "relevant_paper_ids": ["arxiv:2605.30672v1"]}
+{"query_id": "q10", "query": "A cross-sectional equity factor combining value and short-term reversal signals that only activates during certain drift regimes", "relevant_paper_ids": ["arxiv:2511.12490v1"]}
+{"query_id": "q11", "query": "A two-factor asset pricing model that explains size and value anomalies via heavy-tailed firm size distributions", "relevant_paper_ids": ["arxiv:physics/0702027v1"]}
+{"query_id": "q12", "query": "A predictive regression test robust to anomalous observations, applied to dividend yield and variance risk premium return predictors", "relevant_paper_ids": ["arxiv:1612.05072v1"]}
+{"query_id": "q13", "query": "How does multivariate tail dependence between currencies affect the risk of the FX carry trade?", "relevant_paper_ids": ["arxiv:1406.4322v1", "arxiv:1303.4314v3"]}
+{"query_id": "q14", "query": "Choosing the optimal FX forward hedge tenor to maximize carry return under a liquidity risk constraint", "relevant_paper_ids": ["arxiv:1903.06346v1"]}
+{"query_id": "q15", "query": "Is there an asset-pricing anomaly linked to how much a company pays its employees?", "relevant_paper_ids": ["arxiv:1602.00931v2"]}
+{"query_id": "q16", "query": "Decomposing the low-volatility anomaly into its dividend yield and skewness components", "relevant_paper_ids": ["arxiv:1510.01679v2"]}
+{"query_id": "q17", "query": "Explaining the low-volatility anomaly using an adaptive multi-factor model", "relevant_paper_ids": ["arxiv:2003.08302v2"]}
+{"query_id": "q18", "query": "Is there a size premium among decentralized AI subnet tokens on Bittensor?", "relevant_paper_ids": ["arxiv:2603.29751v1"]}
+{"query_id": "q19", "query": "Modeling liquidity-adjusted returns and volatility for a portfolio of crypto assets", "relevant_paper_ids": ["arxiv:2306.15807v4"]}
+{"query_id": "q20", "query": "Day-of-the-week seasonality in biotechnology stock returns using GARCH models", "relevant_paper_ids": ["arxiv:1701.07175v1"]}
+{"query_id": "q21", "query": "A non-parametric test to detect spurious day-of-the-week calendar anomalies across world stock indices", "relevant_paper_ids": ["arxiv:1801.07941v1"]}
+{"query_id": "q22", "query": "Can emoji sentiment extracted from social media predict cryptocurrency market reactions?", "relevant_paper_ids": ["arxiv:2402.10481v2"]}
+{"query_id": "q23", "query": "Generating forex trading signals from sentiment in news articles and social media", "relevant_paper_ids": ["arxiv:2403.00785v1"]}
+{"query_id": "q24", "query": "A multimodal model combining FinBERT tweet sentiment with technical indicators to predict extreme Bitcoin price moves", "relevant_paper_ids": ["arxiv:2206.00648v2"]}
+{"query_id": "q25", "query": "Constructing a firm-level AI engagement index from the text of 10-K filings", "relevant_paper_ids": ["arxiv:2501.01763v1"]}
+{"query_id": "q26", "query": "Forecasting Japanese municipal real estate returns using alternative data variables", "relevant_paper_ids": ["arxiv:2405.20715v1"]}
+{"query_id": "q27", "query": "Using Wikipedia page-view attention data to trade digital currencies", "relevant_paper_ids": ["arxiv:1902.04517v2"]}
+{"query_id": "q28", "query": "Predicting Bitcoin implied volatility from Google Trends search attention and sentiment", "relevant_paper_ids": ["arxiv:2010.15611v1"]}
+{"query_id": "q29", "query": "Do SEC Form 144 sale notices leak information ahead of the actual insider Form 4 sale?", "relevant_paper_ids": ["arxiv:2602.17890v1"]}
+{"query_id": "q30", "query": "Evidence of green bond announcement information leaking on the Bloomberg Terminal before official disclosure", "relevant_paper_ids": ["arxiv:2504.03311v1"]}
+{"query_id": "q31", "query": "Using a genetic-algorithm-optimized XGBoost model to trade post-earnings-announcement drift", "relevant_paper_ids": ["arxiv:2009.03094v1"]}
+{"query_id": "q32", "query": "Abnormal returns from insider trading ahead of UK merger announcements", "relevant_paper_ids": ["arxiv:2012.11594v1"]}
+{"query_id": "q33", "query": "How did implied volatility and Google search attention predict the Russian ruble during the 2022 invasion of Ukraine?", "relevant_paper_ids": ["arxiv:2205.09179v1"]}
+{"query_id": "q34", "query": "A hidden Markov model for statistical arbitrage between Shanghai, Brent and WTI crude oil futures", "relevant_paper_ids": ["arxiv:2309.00875v3"]}
+{"query_id": "q35", "query": "A control-theoretic framework for designing pairs trading strategies", "relevant_paper_ids": ["arxiv:1608.03636v1"]}
+{"query_id": "q36", "query": "Copula-based pairs trading strategy for cointegrated cryptocurrency pairs", "relevant_paper_ids": ["arxiv:2305.06961v2"]}
+{"query_id": "q37", "query": "Using a convolutional transformer to build a deep learning statistical arbitrage strategy on US equities", "relevant_paper_ids": ["arxiv:2106.04028v2"]}
+{"query_id": "q38", "query": "Optimal stop-loss and leverage for a statistical arbitrage strategy on heating oil and gas oil futures", "relevant_paper_ids": ["arxiv:1706.07021v1"]}
+{"query_id": "q39", "query": "Deep hedging of S&P 500 index option portfolios using the full implied volatility surface", "relevant_paper_ids": ["arxiv:2504.06208v3"]}
+{"query_id": "q40", "query": "Position sizing for SPX put-writing strategies using the Kelly criterion combined with VIX regimes", "relevant_paper_ids": ["arxiv:2508.16598v1"]}
+{"query_id": "q41", "query": "Testing for stochastic arbitrage opportunities in S&P 500 index options", "relevant_paper_ids": ["arxiv:2207.00949v4"]}
+{"query_id": "q42", "query": "Modeling clustered jump risk premia in Bitcoin options with a Hawkes process", "relevant_paper_ids": ["arxiv:2510.21297v1"]}
+{"query_id": "q43", "query": "Using KNN, XGBoost and random forest classifiers to design a cryptocurrency trend-trading strategy", "relevant_paper_ids": ["arxiv:2105.06827v3"]}
+{"query_id": "q44", "query": "Predicting forex trend direction from candlestick chart images using a convolutional neural network", "relevant_paper_ids": ["arxiv:1801.03018v1"]}
+{"query_id": "q45", "query": "A machine learning classification model for trading 5-year and 10-year Treasury note futures", "relevant_paper_ids": ["arxiv:1512.06228v1"]}
+{"query_id": "h01", "query": "A neural network momentum strategy trained by directly optimizing the Sharpe ratio, tested across a large set of futures contracts", "relevant_paper_ids": ["arxiv:1904.04912v3"]}
+{"query_id": "h02", "query": "An interpretable attention-based deep learning momentum trading model that identifies which past time steps matter most", "relevant_paper_ids": ["arxiv:2112.08534v3"]}
+{"query_id": "h03", "query": "A momentum trading model that adapts quickly to regime changes like the 2020 market crash by detecting changepoints", "relevant_paper_ids": ["arxiv:2105.13727v3"]}
+{"query_id": "h04", "query": "Does ESG help protect a stock portfolio against tail risk and crash exposure?", "relevant_paper_ids": ["arxiv:2605.04479v1", "arxiv:2606.05631v1"]}
+{"query_id": "h05", "query": "Comparing machine learning to simple rule-based screening for building an ESG stock-picking strategy", "relevant_paper_ids": ["arxiv:2002.07477v2"]}
+{"query_id": "h06", "query": "How resilient are ESG-focused equity portfolios during market turmoil in Europe?", "relevant_paper_ids": ["arxiv:2501.03269v1"]}
+{"query_id": "h07", "query": "A reinforcement learning approach to pairs trading in the cryptocurrency market", "relevant_paper_ids": ["arxiv:2407.16103v2"]}
+{"query_id": "h08", "query": "A pairs trading study covering every possible pair of stocks on an entire stock exchange", "relevant_paper_ids": ["arxiv:1412.7269v2"]}
+{"query_id": "h09", "query": "A pairs trading spread model with non-Gaussian, heteroskedastic innovations and nonlinear mean reversion", "relevant_paper_ids": ["arxiv:2005.09794v1"]}
+{"query_id": "h10", "query": "An autonomous LLM trading agent for crypto that reflects on and learns from its own past trading decisions", "relevant_paper_ids": ["arxiv:2407.09546v2"]}
+{"query_id": "h11", "query": "Do currencies that transmit more volatility shocks to other currencies earn lower returns?", "relevant_paper_ids": ["arxiv:2101.09738v3"]}
+{"query_id": "h12", "query": "A variance risk premium harvesting strategy that sells put options on energy sector equities", "relevant_paper_ids": ["arxiv:2609.01183v1"]}
+{"query_id": "h13", "query": "Using imbalances between bullish and bearish option trading volume to predict stock market direction", "relevant_paper_ids": ["arxiv:2201.09319v1"]}
+{"query_id": "h14", "query": "Forecasting extreme Bitcoin volatility spikes from on-chain whale transaction data with a transformer model", "relevant_paper_ids": ["arxiv:2211.08281v1"]}
+{"query_id": "h15", "query": "A cointegration-based statistical arbitrage strategy for crude oil futures across three different exchanges", "relevant_paper_ids": ["arxiv:2309.00875v3"]}
+{"query_id": "h16", "query": "Can a hidden Markov regime-switching model predict risk-adjusted returns across commodities, currencies, stocks and bonds simultaneously?", "relevant_paper_ids": ["arxiv:2107.05535v1"]}
+{"query_id": "h17", "query": "Building a market-neutral factor strategy by combining a momentum-based long-short signal with a separate low-volatility portfolio", "relevant_paper_ids": ["arxiv:1808.02505v2"]}
+{"query_id": "h18", "query": "Using genetic algorithms to optimize a Sharpe- and Sterling-ratio-based automated forex trading system", "relevant_paper_ids": ["arxiv:2008.09471v1"]}
+{"query_id": "t01", "query": "What Sharpe ratio does the always-on equal-weighted short-put strategy on nuclear and energy stocks achieve?", "relevant_paper_ids": ["arxiv:2609.01183v1"]}
+{"query_id": "t02", "query": "Which paper reports the average daily return and volatility of the ADA cryptocurrency as part of a liquidity-adjusted portfolio study?", "relevant_paper_ids": ["arxiv:2306.15807v4"]}
+{"query_id": "t03", "query": "Which paper uses kill-switch parameters, including a -30% drawdown trigger and a 3x volatility-spike trigger, to shut off a trading factor?", "relevant_paper_ids": ["arxiv:2511.12490v1"]}
+{"query_id": "t04", "query": "What is the correlation between bond and carry factor returns reported in a skewness-aware risk parity study?", "relevant_paper_ids": ["arxiv:2202.10721v1"]}
