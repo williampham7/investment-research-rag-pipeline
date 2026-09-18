@@ -5,3 +5,6 @@ venv/
 
 # Raw paper PDFs are large binaries — keep metadata.jsonl tracked, not the PDFs
 arxiv_papers/*.pdf
+
+# Parsed output is mechanically regenerable from the PDFs via pdf_parser.py
+parsed_papers/

@@ -1,2 +1,19 @@
+# Setup:
+#   python -m venv .venv
+#   .venv\Scripts\pip install -r requirements.txt
+#   # PyPI's default `torch` wheel on Windows is CPU-only -- reinstall it from
+#   # the CUDA index to get GPU acceleration for marker_fallback_parse.py:
+#   .venv\Scripts\pip install torch==2.7.1 --index-url https://download.pytorch.org/whl/cu118
+#
+# Without a CUDA GPU, skip that last step -- marker will run on CPU (much
+# slower, but functional) and pdf_parser.py doesn't need a GPU at all.
+
 arxiv
 requests
+pymupdf
+beautifulsoup4
+tiktoken
+# Pinned to 1.x: marker-pdf 2.0.0 requires spawning a vLLM or llama.cpp model
+# server (Docker on GPU machines) even for local inference. 1.x runs surya's
+# OCR/layout models directly in-process (transformers/torch), no server needed.
+marker-pdf==1.10.2
