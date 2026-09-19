@@ -1,0 +1,42 @@
+{
+  "paper_id": "arxiv:1911.02194v1",
+  "title": "A Rational Finance Explanation of the Stock Predictability Puzzle",
+  "extraction": {
+    "signal_type": [
+      "other"
+    ],
+    "asset_class": [
+      "equities",
+      "options_volatility"
+    ],
+    "methodology_summary": "The paper proposes a rational finance model for stock return predictability using the Stratonovich integral to incorporate predictability into the classical Black-Scholes-Merton framework. It introduces an 'implied excess predictability' measure by calibrating European option prices (using SPY call options) against spot prices across different strikes and maturities. Four volatility measures (VIX, historical volatility, realized volatility, and ARIMA-GARCH estimates) are tested to evaluate their impact on excess predictability and variance risk premium.",
+    "data_period": "01/02/2015 to 01/10/2015, daily",
+    "universe": "SPDR S&P 500 ETF (SPY) index options",
+    "performance_metrics": [],
+    "key_findings": [
+      "The effect of option trader's predictability of stock returns on option prices is an increasing function of moneyness, while it is decreasing for spot traders.",
+      "Stock return predictability must be incorporated into option pricing models when strike prices are significantly higher or lower than the stock price (deep in-the-money or out-of-the-money).",
+      "For options with moneyness close to one, stock return predictability is identical for both spot and option traders, meaning neither has an informational advantage.",
+      "The CBOE volatility index (VIX) contains more information about the stock market compared to historical, realized, or time-series estimated volatilities."
+    ],
+    "limitations": [],
+    "extraction_confidence": "high",
+    "extraction_notes": "The paper is theoretical and empirical regarding option pricing models and implied excess predictability, but it does not report traditional strategy trading performance figures such as Sharpe ratios, strategy returns, drawdowns, or alphas. Therefore, performance_metrics is an empty list."
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:39:00.352912+00:00",
+    "input_tokens": 7050,
+    "validation_flags": [
+      "no_performance_metrics_found"
+    ],
+    "curation_signal_type": [
+      "volatility_risk_premium",
+      "other"
+    ],
+    "curation_asset_class": [
+      "equities",
+      "options_volatility"
+    ]
+  }
+}

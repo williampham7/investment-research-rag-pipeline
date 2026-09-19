@@ -1,0 +1,44 @@
+{
+  "paper_id": "arxiv:1701.05016v1",
+  "title": "Mean-Reverting Portfolio Design with Budget Constraint",
+  "extraction": {
+    "signal_type": [
+      "stat_arb_pairs",
+      "reversal"
+    ],
+    "asset_class": [
+      "equities",
+      "futures_multi_asset",
+      "fx",
+      "other"
+    ],
+    "methodology_summary": "The paper formulates mean-reverting portfolio (MRP) design for statistical arbitrage as an optimization problem that minimizes a mean-reversion criterion (such as predictability, portmanteau, crossing statistics, or penalized crossing statistics) subject to portfolio variance and budget constraints (dollar-neutral or net-budget). The nonconvex optimization problems are solved efficiently either directly via Generalized Eigenvalue Problems (GEVP) and Generalized Trust Region Subproblems (GTRS), or iteratively via a Majorization-Minimization (MM) framework (IRGEVP, IRGTRS, and EIRGEVP). The resulting MRPs are evaluated out-of-sample using a threshold-based mean-reversion trading strategy on log-price spreads.",
+    "data_period": "February 1st, 2012 to June 30th, 2014 for market data experiments; synthetic data also used",
+    "universe": "S&P 500 Index stock pools and synthetic cointegrated asset systems",
+    "performance_metrics": [],
+    "key_findings": [
+      "The proposed mean-reverting portfolio design methods successfully generate consistent positive profits.",
+      "Proposed MRP design methods outperform traditional benchmark methods and single underlying spreads in terms of cumulative P&L and Sharpe ratio of returns on investment (ROI).",
+      "The reformulation of non-convex MRP design problems into GEVPs and GTRSs allows for efficient computation."
+    ],
+    "limitations": [
+      "Asset pool construction is not elaborated in the paper."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": "The paper presents extensive mathematical derivations, algorithmic frameworks (GEVP, GTRS, MM), and visual plots of backtest results (ROIs, Sharpe ratios, cumulative P&Ls) in figures 4, 5, 7, and 8. However, because no explicit numeric performance tables or numerical values for Sharpe ratios/returns are printed in the text or figure labels, the performance_metrics list is left empty in strict accordance with the quantitative metric instructions."
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:37:56.374839+00:00",
+    "input_tokens": 19755,
+    "validation_flags": [
+      "no_performance_metrics_found"
+    ],
+    "curation_signal_type": [
+      "stat_arb_pairs"
+    ],
+    "curation_asset_class": [
+      "equities"
+    ]
+  }
+}

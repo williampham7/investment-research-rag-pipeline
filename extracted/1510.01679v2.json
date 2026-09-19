@@ -1,0 +1,109 @@
+{
+  "paper_id": "arxiv:1510.01679v2",
+  "title": "Deconstructing the Low-Vol Anomaly",
+  "extraction": {
+    "signal_type": [
+      "low_volatility",
+      "value"
+    ],
+    "asset_class": [
+      "equities"
+    ],
+    "methodology_summary": "The authors construct low-volatility and low-beta strategies across 11 international equity pools. Volatility is measured as a 100-day rolling standard deviation of total returns, and beta is computed relative to an equi-weighted index over 100 days using 3-day returns, both lagged by one month. Portfolios are formed by ranking stocks, projecting out the market mode to ensure market neutrality, and re-leveraging the long leg to finance the strategy using risk-free rates.",
+    "data_period": "1966 to July 16th, 2015 (P&L simulations start in 1970)",
+    "universe": "International pools of stocks across 11 regions (including US Russell 3000, S&P 500, Small Caps, Australia, UK, Europe ex-UK, Japan, Korea, Hong-Kong, Brazil, Canada)",
+    "performance_metrics": [
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.86,
+        "unit": "ratio",
+        "context": "Global portfolio of the low-vol strategy",
+        "evidence_quote": "the global portfolios have Sharpe ratios of 0.86 and 0.74 respectively (see Table 2)",
+        "source_location": "Section 2.2"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.74,
+        "unit": "ratio",
+        "context": "Global portfolio of the low-beta strategy",
+        "evidence_quote": "the global portfolios have Sharpe ratios of 0.86 and 0.74 respectively (see Table 2)",
+        "source_location": "Section 2.2"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 5.8,
+        "unit": "ratio",
+        "context": "Global portfolio of the low-vol strategy",
+        "evidence_quote": "which give them a high statistical significance (t-stat) of 5.8 and 5.0.",
+        "source_location": "Section 2.2"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 5.0,
+        "unit": "ratio",
+        "context": "Global portfolio of the low-beta strategy",
+        "evidence_quote": "which give them a high statistical significance (t-stat) of 5.8 and 5.0.",
+        "source_location": "Section 2.2"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 1.41,
+        "unit": "ratio",
+        "context": "Global low-vol strategy after 2002",
+        "evidence_quote": "The Sharpe ratio of the global low-vol strategy after 2002 actually rises to 1.41 (t-stat = 4.9).",
+        "source_location": "Table 2 caption"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 4.9,
+        "unit": "ratio",
+        "context": "Global low-vol strategy after 2002",
+        "evidence_quote": "The Sharpe ratio of the global low-vol strategy after 2002 actually rises to 1.41 (t-stat = 4.9).",
+        "source_location": "Table 2 caption"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.62,
+        "unit": "ratio",
+        "context": "Global sector-neutral (SN) low-vol strategy",
+        "evidence_quote": "Global | 0.86 | 0.74 | 0.62",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "skewness",
+        "value": 0.03,
+        "unit": "other",
+        "context": "Global low-vol strategy",
+        "evidence_quote": "Global | 0.86 | 0.74 | 0.62 | 0.83 | 0.82 | 0.03",
+        "source_location": "Table 2"
+      }
+    ],
+    "key_findings": [
+      "The low-volatility anomaly is driven by two independent effects: a strong negative correlation between past realized volatility and dividend yield, and the fact that ex-dividend returns are weakly dependent on volatility, leading to better risk-adjusted returns for low-vol stocks.",
+      "The low-vol strategy is not associated with short-term reversals, nor does it qualify as a Risk-Premium strategy since its overall skewness is slightly positive.",
+      "The low-vol strategy is highly redundant with standard valuation metrics (such as Earnings-to-Price and Dividend-to-Price); controlling for these factors makes the residual performance essentially flat since 1980.",
+      "Institutional mutual funds are systematically under-allocated to low-vol stocks and over-allocated to small-cap, high-vol stocks."
+    ],
+    "limitations": [
+      "Does not account for transaction costs.",
+      "Does not account for differences in financing costs between the long and short legs of the portfolio.",
+      "Does not account for dividend taxes.",
+      "The strategy has a net long dollar bias, meaning it could stop working if risk-free interest rates become too high."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash",
+    "extracted_at": "2026-09-18T23:51:51.533582+00:00",
+    "input_tokens": 13317,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "low_volatility",
+      "quality_profitability"
+    ],
+    "curation_asset_class": [
+      "equities"
+    ]
+  }
+}

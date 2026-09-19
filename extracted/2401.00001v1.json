@@ -1,0 +1,127 @@
+{
+  "paper_id": "arxiv:2401.00001v1",
+  "title": "Sector Rotation by Factor Model and Fundamental Analysis",
+  "extraction": {
+    "signal_type": [
+      "momentum",
+      "reversal",
+      "value",
+      "ml_composite"
+    ],
+    "asset_class": [
+      "equities"
+    ],
+    "methodology_summary": "The paper constructs sector rotation strategies using momentum factors (past 1-12 month returns excluding the most recent month), short-term reversion factors (negative cumulative returns over 5 to 55 days), and a neural network model taking fundamental factors (such as PE, PB, EV/Sales, EV/EBIT, dividend yield, margins, ROA, ROE) as inputs. Portfolios are formed by ranking sectors cross-sectionally and taking long/short positions in the top and bottom sectors on a monthly or quarterly basis.",
+    "data_period": "2002 to February 2022 (and September 2020 to September 2021 for the neural network test set)",
+    "universe": "11 MSCI level one sectors using S&P 500 GICS Indices",
+    "performance_metrics": [
+      {
+        "metric_name": "quarterly return difference standard deviation",
+        "value": 0.0523,
+        "unit": "stddev",
+        "context": "quarterly return difference between top 3 and bottom 3 sector returns",
+        "evidence_quote": "Also, by calculation, the quarterly return difference has a mean of 0.1306, median of 0.1185, standard deviation of 0.0523.",
+        "source_location": "Section 2"
+      },
+      {
+        "metric_name": "annual return rate",
+        "value": 0.2119,
+        "unit": "percent",
+        "context": "MOM 7M factor from 2017 to 2022 February",
+        "evidence_quote": "From this table, we can tell that by using the MOM 7M factor, we can reach a maximum annual return rate of 21.19% and a maximum Sharpe ratio of 0.62.",
+        "source_location": "Section 3.1.2"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.62,
+        "unit": "ratio",
+        "context": "MOM 7M factor from 2017 to 2022 February",
+        "evidence_quote": "From this table, we can tell that by using the MOM 7M factor, we can reach a maximum annual return rate of 21.19% and a maximum Sharpe ratio of 0.62.",
+        "source_location": "Section 3.1.2"
+      },
+      {
+        "metric_name": "annual return rate",
+        "value": 0.0877,
+        "unit": "percent",
+        "context": "Rev 30D short term reversion factor from 2002 to recent time",
+        "evidence_quote": "It has an optimal annual return rate of 8.77% on average and leads to a sharp ratio of 0.8735.",
+        "source_location": "Section 3.2.2"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.8735,
+        "unit": "ratio",
+        "context": "Rev 30D short term reversion factor from 2002 to recent time",
+        "evidence_quote": "It has an optimal annual return rate of 8.77% on average and leads to a sharp ratio of 0.8735.",
+        "source_location": "Section 3.2.2"
+      },
+      {
+        "metric_name": "model score",
+        "value": 0.64,
+        "unit": "ratio",
+        "context": "neural network model score on test set",
+        "evidence_quote": "On the test set, the score of the model is 0.64, which means the model predicts 64% of the results correctly.",
+        "source_location": "Section 5.3"
+      },
+      {
+        "metric_name": "winning rate",
+        "value": 0.59,
+        "unit": "ratio",
+        "context": "positive predictions winning rate on test set",
+        "evidence_quote": "On the test set, we have a 0.59 winning rates on the positive predictions and 0.72 on the negative predictions, which gives an overall winning rate of 0.64.",
+        "source_location": "Section 5.3"
+      },
+      {
+        "metric_name": "winning rate",
+        "value": 0.72,
+        "unit": "ratio",
+        "context": "negative predictions winning rate on test set",
+        "evidence_quote": "On the test set, we have a 0.59 winning rates on the positive predictions and 0.72 on the negative predictions, which gives an overall winning rate of 0.64.",
+        "source_location": "Section 5.3"
+      },
+      {
+        "metric_name": "winning rate",
+        "value": 0.64,
+        "unit": "ratio",
+        "context": "overall winning rate on test set",
+        "evidence_quote": "On the test set, we have a 0.59 winning rates on the positive predictions and 0.72 on the negative predictions, which gives an overall winning rate of 0.64.",
+        "source_location": "Section 5.3"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 2.21,
+        "unit": "ratio",
+        "context": "neural network model prediction trading strategy on test set from September 2020 to September 2021",
+        "evidence_quote": "On the test set, which is from September in 2020 to September in 2021, we have a Sharpe ratio of 2.21.",
+        "source_location": "Section 5.4"
+      }
+    ],
+    "key_findings": [
+      "Momentum and short-term reversion factors exhibit significant predictive power in sector rotation, with MOM 7M and Rev 30D showing strong risk-adjusted performance.",
+      "Fundamental metrics such as P/E, P/B, EV/Sales, and margins reveal distinct sector characteristics (e.g., Real Estate being overvalued, IT and Consumer Staples exhibiting strong profitability).",
+      "A neural network model using neutralized fundamental indicators achieves a 64% prediction accuracy on the test set.",
+      "Trading based on the neural network probability outputs yields a Sharpe ratio of 2.21 on the test set from September 2020 to September 2021."
+    ],
+    "limitations": [
+      "Small sample size for quarterly fundamental data limiting the training size.",
+      "Factor neutralization issues where different sectors possess inner trends of higher exposures.",
+      "Model may not be applicable on a wider range of time because it was trained and tested on only the most recent five years."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:14:31.542177+00:00",
+    "input_tokens": 6227,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "momentum",
+      "reversal",
+      "value"
+    ],
+    "curation_asset_class": [
+      "equities"
+    ]
+  }
+}

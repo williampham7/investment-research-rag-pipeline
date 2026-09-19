@@ -1,0 +1,67 @@
+{
+  "paper_id": "arxiv:1412.7269v2",
+  "title": "Large-scale empirical study on pairs trading for all possible pairs of stocks listed on the first section of the Tokyo Stock Exchange",
+  "extraction": {
+    "signal_type": [
+      "stat_arb_pairs"
+    ],
+    "asset_class": [
+      "equities"
+    ],
+    "methodology_summary": "The paper proposes an automated pairs trading strategy based on three thresholds: starting (θ), profit-taking (ε), and stop-loss (Ω) for the spread between two highly-correlated stocks. Pairs are selected based on a Pearson correlation coefficient greater than 0.6 and stock volatilities within a range of 0.05 to 0.20 over a 250-day lookback period. The strategy is tested on all possible pairs of 1,784 stocks listed on the Tokyo Stock Exchange, evaluating winning probability and profit rate.",
+    "data_period": "2009-2012, daily",
+    "universe": "1,784 stocks listed on the first section of the Tokyo Stock Exchange",
+    "performance_metrics": [
+      {
+        "metric_name": "winning probability",
+        "value": 75.0,
+        "unit": "percent",
+        "context": "2012, epsilon=90%, theta=100%, omega=110%",
+        "evidence_quote": "90 | 100 | 110 | 3 | 1 | 75.0",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "winning probability",
+        "value": 71.4,
+        "unit": "percent",
+        "context": "2012, epsilon=80%, theta=90%, omega=100%",
+        "evidence_quote": "80 | 90 | 100 | 5 | 2 | 71.4",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "winning probability",
+        "value": 31.7,
+        "unit": "percent",
+        "context": "2011, epsilon=0%, theta=10%, omega=20%",
+        "evidence_quote": "0 | 10 | 20 | 93 | 200 | 31.7",
+        "source_location": "Table 2"
+      }
+    ],
+    "key_findings": [
+      "The profit rate becomes positive (totally positive arbitrage) in most cases of the possible combinations of thresholds.",
+      "The winning probability is unfortunately less than that of the 'draw case' pw = 0.5 in most choices of the thresholds.",
+      "An active pair producing a relatively large arbitrage can compensate the loss of wrong active pairs by choosing the threshold appropriately, leading to a positive profit rate.",
+      "The selection procedure of active pairs using correlation coefficients and volatilities works effectively to manage the asset safely by reducing risk."
+    ],
+    "limitations": [
+      "Once a pair passes their decision time, the authors discard the pair and never recycle it again for pairs trading.",
+      "The game is simplified by restricting traders to always make a trade by a unit volume.",
+      "Transaction costs are not included in the main results, though the authors note they could be introduced to pare down candidates.",
+      "The results are based on historical simulations and cannot be used directly for practical pairs trading without further extensive analysis."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash",
+    "extracted_at": "2026-09-18T23:51:27.422585+00:00",
+    "input_tokens": 12630,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "stat_arb_pairs"
+    ],
+    "curation_asset_class": [
+      "equities"
+    ]
+  }
+}

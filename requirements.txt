@@ -25,3 +25,10 @@ rank_bm25
 # conflicts with marker-pdf's transformers<5.0 pin. 4.1.0 is the last release
 # before that jump and has everything needed (SentenceTransformer, CrossEncoder).
 sentence-transformers==4.1.0
+
+# Structured extraction (structured_extract.py) and Q&A (qa.py). Free Gemini
+# API key from https://aistudio.google.com/apikey, set as GEMINI_API_KEY.
+google-genai
+
+# Q&A UI (app.py)
+streamlit

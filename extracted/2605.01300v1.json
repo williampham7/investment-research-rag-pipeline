@@ -1,0 +1,119 @@
+{
+  "paper_id": "arxiv:2605.01300v1",
+  "title": "Visibility graphs can make money in financial markets",
+  "extraction": {
+    "signal_type": [
+      "momentum",
+      "reversal",
+      "other"
+    ],
+    "asset_class": [
+      "equities",
+      "fx",
+      "commodities"
+    ],
+    "methodology_summary": "The Visibility Graphs Relative Strength Index (VGRSI) is constructed by transforming backward visibility relations in a price time series into upward and downward price change sums and frequency counts within a rolling window. The strategy uses a 30-day optimisation window and a 7-day walk-forward test window to evaluate long and short entries based on predefined thresholds. It is tested on automated trading platforms using minute and 30-minute bar data over a 2024-2025 sample.",
+    "data_period": "2024–2025, 503 trading days",
+    "universe": "DJI30, EUR/USD, and XAU/USD",
+    "performance_metrics": [
+      {
+        "metric_name": "total profit",
+        "value": 146000.0,
+        "unit": "other",
+        "context": "DJI30 full period total profit",
+        "evidence_quote": "The strategy based on VGRSI signals generated a profit of USD 146,000 for DJI30, USD 69,000 for EUR/USD, and USD 125,000 for XAU/USD.",
+        "source_location": "page 1"
+      },
+      {
+        "metric_name": "total profit",
+        "value": 69000.0,
+        "unit": "other",
+        "context": "EUR/USD full period total profit",
+        "evidence_quote": "The strategy based on VGRSI signals generated a profit of USD 146,000 for DJI30, USD 69,000 for EUR/USD, and USD 125,000 for XAU/USD.",
+        "source_location": "page 1"
+      },
+      {
+        "metric_name": "total profit",
+        "value": 125000.0,
+        "unit": "other",
+        "context": "XAU/USD full period total profit",
+        "evidence_quote": "The strategy based on VGRSI signals generated a profit of USD 146,000 for DJI30, USD 69,000 for EUR/USD, and USD 125,000 for XAU/USD.",
+        "source_location": "page 1"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 3.6,
+        "unit": "ratio",
+        "context": "DJI30 Sharpe ratio",
+        "evidence_quote": "DJI30 | 0 / 37/ 18 | 0 / 32/ 10 | 0 / 29/ 8 | 3.6 | 18 | 1842 | 3.5 | 146 000",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "max drawdown",
+        "value": 18.0,
+        "unit": "percent",
+        "context": "DJI30 max drawdown",
+        "evidence_quote": "DJI30 | 0 / 37/ 18 | 0 / 32/ 10 | 0 / 29/ 8 | 3.6 | 18 | 1842 | 3.5 | 146 000",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 2.55,
+        "unit": "ratio",
+        "context": "EUR/USD Sharpe ratio",
+        "evidence_quote": "EUR/USD | 0 / 45/ 16 | 0 / 40/ 7 | 0 / 39/ 9 | 2.55 | 12 | 1677 | 3.3 | 69 000",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "max drawdown",
+        "value": 12.0,
+        "unit": "percent",
+        "context": "EUR/USD max drawdown",
+        "evidence_quote": "EUR/USD | 0 / 45/ 16 | 0 / 40/ 7 | 0 / 39/ 9 | 2.55 | 12 | 1677 | 3.3 | 69 000",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 3.2,
+        "unit": "ratio",
+        "context": "XAU/USD Sharpe ratio",
+        "evidence_quote": "XAU/USD | 0 / 62/ 24 | 0 / 55/ 18 | 0 / 45/ 6 | 3.20 | 10 | 2418 | 4.8 | 125 000",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "max drawdown",
+        "value": 10.0,
+        "unit": "percent",
+        "context": "XAU/USD max drawdown",
+        "evidence_quote": "XAU/USD | 0 / 62/ 24 | 0 / 55/ 18 | 0 / 45/ 6 | 3.20 | 10 | 2418 | 4.8 | 125 000",
+        "source_location": "Table 1"
+      }
+    ],
+    "key_findings": [
+      "The Visibility Graphs Relative Strength Index (VGRSI) successfully generates profitable trading signals across different asset classes by capturing geometric and temporal price patterns.",
+      "The strategy produced a combined profit of approximately USD 340,000 across DJI30, EUR/USD, and XAU/USD over 503 trading days.",
+      "The strategy maintains high Sharpe ratios ranging between 2.55 and 3.6 with moderate drawdowns between 10% and 18%."
+    ],
+    "limitations": [
+      "The study covered only three financial instruments.",
+      "Testing was performed using a fixed single-trade value of USD 1,000 and a limit of two simultaneously open positions."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:18:29.707189+00:00",
+    "input_tokens": 5154,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "other",
+      "momentum"
+    ],
+    "curation_asset_class": [
+      "equities",
+      "fx",
+      "commodities"
+    ]
+  }
+}

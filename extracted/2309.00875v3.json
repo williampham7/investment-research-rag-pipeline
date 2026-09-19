@@ -1,0 +1,123 @@
+{
+  "paper_id": "arxiv:2309.00875v3",
+  "title": "A hidden Markov model for statistical arbitrage in international crude oil futures markets",
+  "extraction": {
+    "signal_type": [
+      "reversal",
+      "stat_arb_pairs",
+      "other"
+    ],
+    "asset_class": [
+      "commodities",
+      "futures_multi_asset"
+    ],
+    "methodology_summary": "The paper investigates statistical arbitrage strategies extending classical pairs trading across international crude oil futures (Brent, WTI, Shanghai, and Dubai). The authors test for cointegration using Johansen's procedure and model the cointegration spread as an autoregressive process modulated by a hidden Markov model (AR-HMM). Parameters are estimated dynamically using an online filter-based Expectation Maximization (EM) algorithm, and trading positions are opened or closed based on threshold-crossing rules derived from probability and prediction intervals.",
+    "data_period": "03/26/2018 to 06/30/2023, daily and weekly",
+    "universe": "International crude oil futures contracts including Brent, West Texas Intermediate (WTI), Shanghai, and Dubai",
+    "performance_metrics": [
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 1.1792,
+        "unit": "ratio",
+        "context": "Prediction interval strategy (PredI) with alpha = 0.20 on Brent, Shanghai, and WTI",
+        "evidence_quote": "1.1792",
+        "source_location": "Table 5"
+      },
+      {
+        "metric_name": "annualized return",
+        "value": 0.1518,
+        "unit": "percent",
+        "context": "Prediction interval strategy (PredI) with alpha = 0.20 on Brent, Shanghai, and WTI",
+        "evidence_quote": "0.1518",
+        "source_location": "Table 5"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.8335,
+        "unit": "ratio",
+        "context": "Probability interval strategy (ProbI) with alpha = 0.20 on Brent, Shanghai, and WTI",
+        "evidence_quote": "0.8335",
+        "source_location": "Table 5"
+      },
+      {
+        "metric_name": "annualized return",
+        "value": 0.1043,
+        "unit": "percent",
+        "context": "Probability interval strategy (ProbI) with alpha = 0.20 on Brent, Shanghai, and WTI",
+        "evidence_quote": "0.1043",
+        "source_location": "Table 5"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": -0.0025,
+        "unit": "ratio",
+        "context": "Plain vanilla strategy (PV) with alpha = 0.20 on Brent, Shanghai, and WTI",
+        "evidence_quote": "-0.0025",
+        "source_location": "Table 5"
+      },
+      {
+        "metric_name": "annualized return",
+        "value": -0.0091,
+        "unit": "percent",
+        "context": "Plain vanilla strategy (PV) with alpha = 0.20 on Brent, Shanghai, and WTI",
+        "evidence_quote": "-0.0091",
+        "source_location": "Table 5"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.6729,
+        "unit": "ratio",
+        "context": "S&P 500 excess return benchmark (Ex. S&P)",
+        "evidence_quote": "0.6729",
+        "source_location": "Table 5"
+      },
+      {
+        "metric_name": "annualized return",
+        "value": 0.1174,
+        "unit": "percent",
+        "context": "S&P 500 excess return benchmark (Ex. S&P)",
+        "evidence_quote": "0.1174",
+        "source_location": "Table 5"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": -0.7436,
+        "unit": "ratio",
+        "context": "Crude oil ETF excess return benchmark (Ex. ETF)",
+        "evidence_quote": "-0.7436",
+        "source_location": "Table 5"
+      },
+      {
+        "metric_name": "annualized return",
+        "value": -0.2847,
+        "unit": "percent",
+        "context": "Crude oil ETF excess return benchmark (Ex. ETF)",
+        "evidence_quote": "-0.2847",
+        "source_location": "Table 5"
+      }
+    ],
+    "key_findings": [
+      "Arbitrage strategies involving the recently introduced Shanghai futures can be profitable even under conservative transaction cost levels.",
+      "Strategies based on the proposed hidden Markov regime-switching model outperform those relying solely on observed spread values.",
+      "Incorporating three futures contracts enables the implementation of arbitrage strategies even in cases where pairwise cointegration is not detected."
+    ],
+    "limitations": [
+      "The dataset for Shanghai futures is relatively short due to its 2018 introduction, capturing major market turmoil such as the COVID-19 pandemic and the Russia-Ukraine conflict.",
+      "EM algorithm parameter estimates can show initial instability before stabilizing as new observations arrive."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:14:22.178505+00:00",
+    "input_tokens": 22895,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "stat_arb_pairs"
+    ],
+    "curation_asset_class": [
+      "commodities"
+    ]
+  }
+}

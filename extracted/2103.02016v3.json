@@ -1,0 +1,525 @@
+{
+  "paper_id": "arxiv:2103.02016v3",
+  "title": "Trading Signals In VIX Futures",
+  "extraction": {
+    "signal_type": [
+      "momentum",
+      "reversal",
+      "ml_composite"
+    ],
+    "asset_class": [
+      "futures_multi_asset"
+    ],
+    "methodology_summary": "The strategy models the term structure of VIX futures using a stationary vector autoregressive (VAR) process centered around its mode. A deep feed-forward neural network with five hidden layers is trained on simulated data from the VAR model to maximize expected day-ahead utility over a discrete action space of rolling VIX futures allocations. The model's out-of-sample performance is tested using a 10-fold cross-validation procedure across historical daily data.",
+    "data_period": "April 14, 2008 to November 6, 2020, daily",
+    "universe": "One-month, two-month, three-month, fourth-month, five-month, and six-month VIX futures contracts",
+    "performance_metrics": [
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 5.297,
+        "unit": "ratio",
+        "context": "Piece-wise linear utility function, fold 0 out-of-sample test without transaction costs",
+        "evidence_quote": "0 | 2.361 | 0.443 | 304.264 | 5.297 | -0.196",
+        "source_location": "Table 3.2"
+      },
+      {
+        "metric_name": "Profit (%)",
+        "value": 304.264,
+        "unit": "percent",
+        "context": "Piece-wise linear utility function, fold 0 out-of-sample test without transaction costs",
+        "evidence_quote": "0 | 2.361 | 0.443 | 304.264 | 5.297 | -0.196",
+        "source_location": "Table 3.2"
+      },
+      {
+        "metric_name": "Maximum Drawdown",
+        "value": -0.196,
+        "unit": "percent",
+        "context": "Piece-wise linear utility function, fold 0 out-of-sample test without transaction costs",
+        "evidence_quote": "0 | 2.361 | 0.443 | 304.264 | 5.297 | -0.196",
+        "source_location": "Table 3.2"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 3.215,
+        "unit": "ratio",
+        "context": "Piece-wise linear utility function, fold 1 out-of-sample test without transaction costs",
+        "evidence_quote": "1 | 1.195 | 0.368 | 145.924 | 3.215 | -0.138",
+        "source_location": "Table 3.2"
+      },
+      {
+        "metric_name": "Profit (%)",
+        "value": 145.924,
+        "unit": "percent",
+        "context": "Piece-wise linear utility function, fold 1 out-of-sample test without transaction costs",
+        "evidence_quote": "1 | 1.195 | 0.368 | 145.924 | 3.215 | -0.138",
+        "source_location": "Table 3.2"
+      },
+      {
+        "metric_name": "Maximum Drawdown",
+        "value": -0.138,
+        "unit": "percent",
+        "context": "Piece-wise linear utility function, fold 1 out-of-sample test without transaction costs",
+        "evidence_quote": "1 | 1.195 | 0.368 | 145.924 | 3.215 | -0.138",
+        "source_location": "Table 3.2"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 11.053,
+        "unit": "ratio",
+        "context": "Piece-wise linear utility function, fold 2 out-of-sample test without transaction costs",
+        "evidence_quote": "2 | 4.951 | 0.447 | 724.848 | 11.053 | -0.117",
+        "source_location": "Table 3.2"
+      },
+      {
+        "metric_name": "Profit (%)",
+        "value": 724.848,
+        "unit": "percent",
+        "context": "Piece-wise linear utility function, fold 2 out-of-sample test without transaction costs",
+        "evidence_quote": "2 | 4.951 | 0.447 | 724.848 | 11.053 | -0.117",
+        "source_location": "Table 3.2"
+      },
+      {
+        "metric_name": "Maximum Drawdown",
+        "value": -0.117,
+        "unit": "percent",
+        "context": "Piece-wise linear utility function, fold 2 out-of-sample test without transaction costs",
+        "evidence_quote": "2 | 4.951 | 0.447 | 724.848 | 11.053 | -0.117",
+        "source_location": "Table 3.2"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 6.878,
+        "unit": "ratio",
+        "context": "Piece-wise linear utility function, fold 3 out-of-sample test without transaction costs",
+        "evidence_quote": "3 | 2.835 | 0.410 | 384.387 | 6.878 | -0.214",
+        "source_location": "Table 3.2"
+      },
+      {
+        "metric_name": "Profit (%)",
+        "value": 384.387,
+        "unit": "percent",
+        "context": "Piece-wise linear utility function, fold 3 out-of-sample test without transaction costs",
+        "evidence_quote": "3 | 2.835 | 0.410 | 384.387 | 6.878 | -0.214",
+        "source_location": "Table 3.2"
+      },
+      {
+        "metric_name": "Maximum Drawdown",
+        "value": -0.214,
+        "unit": "percent",
+        "context": "Piece-wise linear utility function, fold 3 out-of-sample test without transaction costs",
+        "evidence_quote": "3 | 2.835 | 0.410 | 384.387 | 6.878 | -0.214",
+        "source_location": "Table 3.2"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 3.474,
+        "unit": "ratio",
+        "context": "Piece-wise linear utility function, fold 4 out-of-sample test without transaction costs",
+        "evidence_quote": "4 | 0.854 | 0.242 | 108.168 | 3.474 | -0.128",
+        "source_location": "Table 3.2"
+      },
+      {
+        "metric_name": "Profit (%)",
+        "value": 108.168,
+        "unit": "percent",
+        "context": "Piece-wise linear utility function, fold 4 out-of-sample test without transaction costs",
+        "evidence_quote": "4 | 0.854 | 0.242 | 108.168 | 3.474 | -0.128",
+        "source_location": "Table 3.2"
+      },
+      {
+        "metric_name": "Maximum Drawdown",
+        "value": -0.128,
+        "unit": "percent",
+        "context": "Piece-wise linear utility function, fold 4 out-of-sample test without transaction costs",
+        "evidence_quote": "4 | 0.854 | 0.242 | 108.168 | 3.474 | -0.128",
+        "source_location": "Table 3.2"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 3.093,
+        "unit": "ratio",
+        "context": "Piece-wise linear utility function, fold 5 out-of-sample test without transaction costs",
+        "evidence_quote": "5 | 1.129 | 0.361 | 137.044 | 3.093 | -0.123",
+        "source_location": "Table 3.2"
+      },
+      {
+        "metric_name": "Profit (%)",
+        "value": 137.044,
+        "unit": "percent",
+        "context": "Piece-wise linear utility function, fold 5 out-of-sample test without transaction costs",
+        "evidence_quote": "5 | 1.129 | 0.361 | 137.044 | 3.093 | -0.123",
+        "source_location": "Table 3.2"
+      },
+      {
+        "metric_name": "Maximum Drawdown",
+        "value": -0.123,
+        "unit": "percent",
+        "context": "Piece-wise linear utility function, fold 5 out-of-sample test without transaction costs",
+        "evidence_quote": "5 | 1.129 | 0.361 | 137.044 | 3.093 | -0.123",
+        "source_location": "Table 3.2"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 2.709,
+        "unit": "ratio",
+        "context": "Piece-wise linear utility function, fold 6 out-of-sample test without transaction costs",
+        "evidence_quote": "6 | 1.027 | 0.375 | 121.582 | 2.709 | -0.156",
+        "source_location": "Table 3.2"
+      },
+      {
+        "metric_name": "Profit (%)",
+        "value": 121.582,
+        "unit": "percent",
+        "context": "Piece-wise linear utility function, fold 6 out-of-sample test without transaction costs",
+        "evidence_quote": "6 | 1.027 | 0.375 | 121.582 | 2.709 | -0.156",
+        "source_location": "Table 3.2"
+      },
+      {
+        "metric_name": "Maximum Drawdown",
+        "value": -0.156,
+        "unit": "percent",
+        "context": "Piece-wise linear utility function, fold 6 out-of-sample test without transaction costs",
+        "evidence_quote": "6 | 1.027 | 0.375 | 121.582 | 2.709 | -0.156",
+        "source_location": "Table 3.2"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 1.862,
+        "unit": "ratio",
+        "context": "Piece-wise linear utility function, fold 7 out-of-sample test without transaction costs",
+        "evidence_quote": "7 | 1.415 | 0.754 | 130.578 | 1.862 | -0.293",
+        "source_location": "Table 3.2"
+      },
+      {
+        "metric_name": "Profit (%)",
+        "value": 130.578,
+        "unit": "percent",
+        "context": "Piece-wise linear utility function, fold 7 out-of-sample test without transaction costs",
+        "evidence_quote": "7 | 1.415 | 0.754 | 130.578 | 1.862 | -0.293",
+        "source_location": "Table 3.2"
+      },
+      {
+        "metric_name": "Maximum Drawdown",
+        "value": -0.293,
+        "unit": "percent",
+        "context": "Piece-wise linear utility function, fold 7 out-of-sample test without transaction costs",
+        "evidence_quote": "7 | 1.415 | 0.754 | 130.578 | 1.862 | -0.293",
+        "source_location": "Table 3.2"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 1.056,
+        "unit": "ratio",
+        "context": "Piece-wise linear utility function, fold 8 out-of-sample test without transaction costs",
+        "evidence_quote": "8 | 0.329 | 0.302 | 34.784 | 1.056 | -0.180",
+        "source_location": "Table 3.2"
+      },
+      {
+        "metric_name": "Profit (%)",
+        "value": 34.784,
+        "unit": "percent",
+        "context": "Piece-wise linear utility function, fold 8 out-of-sample test without transaction costs",
+        "evidence_quote": "8 | 0.329 | 0.302 | 34.784 | 1.056 | -0.180",
+        "source_location": "Table 3.2"
+      },
+      {
+        "metric_name": "Maximum Drawdown",
+        "value": -0.18,
+        "unit": "percent",
+        "context": "Piece-wise linear utility function, fold 8 out-of-sample test without transaction costs",
+        "evidence_quote": "8 | 0.329 | 0.302 | 34.784 | 1.056 | -0.180",
+        "source_location": "Table 3.2"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 6.661,
+        "unit": "ratio",
+        "context": "Piece-wise linear utility function, fold 9 out-of-sample test without transaction costs",
+        "evidence_quote": "9 | 3.284 | 0.491 | 429.191 | 6.661 | -0.240",
+        "source_location": "Table 3.2"
+      },
+      {
+        "metric_name": "Profit (%)",
+        "value": 429.191,
+        "unit": "percent",
+        "context": "Piece-wise linear utility function, fold 9 out-of-sample test without transaction costs",
+        "evidence_quote": "9 | 3.284 | 0.491 | 429.191 | 6.661 | -0.240",
+        "source_location": "Table 3.2"
+      },
+      {
+        "metric_name": "Maximum Drawdown",
+        "value": -0.24,
+        "unit": "percent",
+        "context": "Piece-wise linear utility function, fold 9 out-of-sample test without transaction costs",
+        "evidence_quote": "9 | 3.284 | 0.491 | 429.191 | 6.661 | -0.240",
+        "source_location": "Table 3.2"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 3.763,
+        "unit": "ratio",
+        "context": "Exponential utility function, fold 0 out-of-sample test without transaction costs",
+        "evidence_quote": "0 | 1.728 | 0.456 | 209.177 | 3.763 | -0.239",
+        "source_location": "Table 3.3"
+      },
+      {
+        "metric_name": "Profit (%)",
+        "value": 209.177,
+        "unit": "percent",
+        "context": "Exponential utility function, fold 0 out-of-sample test without transaction costs",
+        "evidence_quote": "0 | 1.728 | 0.456 | 209.177 | 3.763 | -0.239",
+        "source_location": "Table 3.3"
+      },
+      {
+        "metric_name": "Maximum Drawdown",
+        "value": -0.239,
+        "unit": "percent",
+        "context": "Exponential utility function, fold 0 out-of-sample test without transaction costs",
+        "evidence_quote": "0 | 1.728 | 0.456 | 209.177 | 3.763 | -0.239",
+        "source_location": "Table 3.3"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 3.88,
+        "unit": "ratio",
+        "context": "Exponential utility function, fold 1 out-of-sample test without transaction costs",
+        "evidence_quote": "1 | 1.610 | 0.412 | 198.810 | 3.880 | -0.165",
+        "source_location": "Table 3.3"
+      },
+      {
+        "metric_name": "Profit (%)",
+        "value": 198.81,
+        "unit": "percent",
+        "context": "Exponential utility function, fold 1 out-of-sample test without transaction costs",
+        "evidence_quote": "1 | 1.610 | 0.412 | 198.810 | 3.880 | -0.165",
+        "source_location": "Table 3.3"
+      },
+      {
+        "metric_name": "Maximum Drawdown",
+        "value": -0.165,
+        "unit": "percent",
+        "context": "Exponential utility function, fold 1 out-of-sample test without transaction costs",
+        "evidence_quote": "1 | 1.610 | 0.412 | 198.810 | 3.880 | -0.165",
+        "source_location": "Table 3.3"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 9.775,
+        "unit": "ratio",
+        "context": "Exponential utility function, fold 2 out-of-sample test without transaction costs",
+        "evidence_quote": "2 | 4.534 | 0.462 | 645.731 | 9.775 | -0.175",
+        "source_location": "Table 3.3"
+      },
+      {
+        "metric_name": "Profit (%)",
+        "value": 645.731,
+        "unit": "percent",
+        "context": "Exponential utility function, fold 2 out-of-sample test without transaction costs",
+        "evidence_quote": "2 | 4.534 | 0.462 | 645.731 | 9.775 | -0.175",
+        "source_location": "Table 3.3"
+      },
+      {
+        "metric_name": "Maximum Drawdown",
+        "value": -0.175,
+        "unit": "percent",
+        "context": "Exponential utility function, fold 2 out-of-sample test without transaction costs",
+        "evidence_quote": "2 | 4.534 | 0.462 | 645.731 | 9.775 | -0.175",
+        "source_location": "Table 3.3"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 6.751,
+        "unit": "ratio",
+        "context": "Exponential utility function, fold 3 out-of-sample test without transaction costs",
+        "evidence_quote": "3 | 3.138 | 0.463 | 418.006 | 6.751 | -0.202",
+        "source_location": "Table 3.3"
+      },
+      {
+        "metric_name": "Profit (%)",
+        "value": 418.006,
+        "unit": "percent",
+        "context": "Exponential utility function, fold 3 out-of-sample test without transaction costs",
+        "evidence_quote": "3 | 3.138 | 0.463 | 418.006 | 6.751 | -0.202",
+        "source_location": "Table 3.3"
+      },
+      {
+        "metric_name": "Maximum Drawdown",
+        "value": -0.202,
+        "unit": "percent",
+        "context": "Exponential utility function, fold 3 out-of-sample test without transaction costs",
+        "evidence_quote": "3 | 3.138 | 0.463 | 418.006 | 6.751 | -0.202",
+        "source_location": "Table 3.3"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 2.577,
+        "unit": "ratio",
+        "context": "Exponential utility function, fold 4 out-of-sample test without transaction costs",
+        "evidence_quote": "4 | 0.742 | 0.284 | 90.055 | 2.577 | -0.190",
+        "source_location": "Table 3.3"
+      },
+      {
+        "metric_name": "Profit (%)",
+        "value": 90.055,
+        "unit": "percent",
+        "context": "Exponential utility function, fold 4 out-of-sample test without transaction costs",
+        "evidence_quote": "4 | 0.742 | 0.284 | 90.055 | 2.577 | -0.190",
+        "source_location": "Table 3.3"
+      },
+      {
+        "metric_name": "Maximum Drawdown",
+        "value": -0.19,
+        "unit": "percent",
+        "context": "Exponential utility function, fold 4 out-of-sample test without transaction costs",
+        "evidence_quote": "4 | 0.742 | 0.284 | 90.055 | 2.577 | -0.190",
+        "source_location": "Table 3.3"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 1.731,
+        "unit": "ratio",
+        "context": "Exponential utility function, fold 5 out-of-sample test without transaction costs",
+        "evidence_quote": "5 | 0.683 | 0.388 | 74.484 | 1.731 | -0.236",
+        "source_location": "Table 3.3"
+      },
+      {
+        "metric_name": "Profit (%)",
+        "value": 74.484,
+        "unit": "percent",
+        "context": "Exponential utility function, fold 5 out-of-sample test without transaction costs",
+        "evidence_quote": "5 | 0.683 | 0.388 | 74.484 | 1.731 | -0.236",
+        "source_location": "Table 3.3"
+      },
+      {
+        "metric_name": "Maximum Drawdown",
+        "value": -0.236,
+        "unit": "percent",
+        "context": "Exponential utility function, fold 5 out-of-sample test without transaction costs",
+        "evidence_quote": "5 | 0.683 | 0.388 | 74.484 | 1.731 | -0.236",
+        "source_location": "Table 3.3"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 2.187,
+        "unit": "ratio",
+        "context": "Exponential utility function, fold 6 out-of-sample test without transaction costs",
+        "evidence_quote": "6 | 0.886 | 0.400 | 100.162 | 2.187 | -0.189",
+        "source_location": "Table 3.3"
+      },
+      {
+        "metric_name": "Profit (%)",
+        "value": 100.162,
+        "unit": "percent",
+        "context": "Exponential utility function, fold 6 out-of-sample test without transaction costs",
+        "evidence_quote": "6 | 0.886 | 0.400 | 100.162 | 2.187 | -0.189",
+        "source_location": "Table 3.3"
+      },
+      {
+        "metric_name": "Maximum Drawdown",
+        "value": -0.189,
+        "unit": "percent",
+        "context": "Exponential utility function, fold 6 out-of-sample test without transaction costs",
+        "evidence_quote": "6 | 0.886 | 0.400 | 100.162 | 2.187 | -0.189",
+        "source_location": "Table 3.3"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 1.564,
+        "unit": "ratio",
+        "context": "Exponential utility function, fold 7 out-of-sample test without transaction costs",
+        "evidence_quote": "7 | 1.239 | 0.785 | 103.799 | 1.564 | -0.281",
+        "source_location": "Table 3.3"
+      },
+      {
+        "metric_name": "Profit (%)",
+        "value": 103.799,
+        "unit": "percent",
+        "context": "Exponential utility function, fold 7 out-of-sample test without transaction costs",
+        "evidence_quote": "7 | 1.239 | 0.785 | 103.799 | 1.564 | -0.281",
+        "source_location": "Table 3.3"
+      },
+      {
+        "metric_name": "Maximum Drawdown",
+        "value": -0.281,
+        "unit": "percent",
+        "context": "Exponential utility function, fold 7 out-of-sample test without transaction costs",
+        "evidence_quote": "7 | 1.239 | 0.785 | 103.799 | 1.564 | -0.281",
+        "source_location": "Table 3.3"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 1.765,
+        "unit": "ratio",
+        "context": "Exponential utility function, fold 8 out-of-sample test without transaction costs",
+        "evidence_quote": "8 | 0.639 | 0.356 | 71.310 | 1.765 | -0.171",
+        "source_location": "Table 3.3"
+      },
+      {
+        "metric_name": "Profit (%)",
+        "value": 71.31,
+        "unit": "percent",
+        "context": "Exponential utility function, fold 8 out-of-sample test without transaction costs",
+        "evidence_quote": "8 | 0.639 | 0.356 | 71.310 | 1.765 | -0.171",
+        "source_location": "Table 3.3"
+      },
+      {
+        "metric_name": "Maximum Drawdown",
+        "value": -0.171,
+        "unit": "percent",
+        "context": "Exponential utility function, fold 8 out-of-sample test without transaction costs",
+        "evidence_quote": "8 | 0.639 | 0.356 | 71.310 | 1.765 | -0.171",
+        "source_location": "Table 3.3"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 4.443,
+        "unit": "ratio",
+        "context": "Exponential utility function, fold 9 out-of-sample test without transaction costs",
+        "evidence_quote": "9 | 2.518 | 0.564 | 294.004 | 4.443 | -0.248",
+        "source_location": "Table 3.3"
+      },
+      {
+        "metric_name": "Profit (%)",
+        "value": 294.004,
+        "unit": "percent",
+        "context": "Exponential utility function, fold 9 out-of-sample test without transaction costs",
+        "evidence_quote": "9 | 2.518 | 0.564 | 294.004 | 4.443 | -0.248",
+        "source_location": "Table 3.3"
+      },
+      {
+        "metric_name": "Maximum Drawdown",
+        "value": -0.248,
+        "unit": "percent",
+        "context": "Exponential utility function, fold 9 out-of-sample test without transaction costs",
+        "evidence_quote": "9 | 2.518 | 0.564 | 294.004 | 4.443 | -0.248",
+        "source_location": "Table 3.3"
+      }
+    ],
+    "key_findings": [
+      "VIX futures curves are shown to be stationary and possess a strong propensity to revert to contango, making them suitable for tactical trading strategies.",
+      "Utilizing a deep feed-forward neural network to approximate day-ahead expected utility yields robust out-of-sample trading signals with high positive returns and Sharpe ratios.",
+      "The neural network-based trading signals outperform constant benchmark trading allocations and individual static strategies across almost all cross-validation folds.",
+      "While the strategy delivers considerable profits, it also exhibits high maximum drawdowns which can be challenging to manage in practice, and portfolio performance declines as transaction costs are introduced."
+    ],
+    "limitations": [
+      "Maximum drawdowns remain high throughout backtests, posing practical management challenges.",
+      "Performance degrades as the transaction cost basis points parameter in the execution model increases."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": "All requested metrics from Table 3.2 and Table 3.3 have been comprehensively extracted. Table 3.4/3.5 data rows are extensive and only the main tables were fully mapped for primary results."
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:10:50.536484+00:00",
+    "input_tokens": 16841,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "ml_composite",
+      "volatility_risk_premium"
+    ],
+    "curation_asset_class": [
+      "options_volatility",
+      "futures_multi_asset"
+    ]
+  }
+}

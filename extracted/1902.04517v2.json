@@ -1,0 +1,66 @@
+{
+  "paper_id": "arxiv:1902.04517v2",
+  "title": "Wikipedia and Digital Currencies: Interplay Between Collective Attention and Market Performance",
+  "extraction": {
+    "signal_type": [
+      "sentiment_text",
+      "alternative_data"
+    ],
+    "asset_class": [
+      "crypto"
+    ],
+    "methodology_summary": "The authors construct a trading signal based on the daily change in Wikipedia page views for cryptocurrency pages. Specifically, they examine the difference in page views between day t and t-1; if page views increase, they take a short position in the asset, and if page views decrease, they take a long position. The strategy is tested on 17 cryptocurrencies that support margin trading over the period from July 2015 to January 2019, and performance is compared against a price-momentum baseline strategy and a random trading strategy.",
+    "data_period": "July 2015 - January 2019, daily",
+    "universe": "38 cryptocurrencies with a Wikipedia page, with the investment strategy tested on 17 marginally traded cryptocurrencies",
+    "performance_metrics": [
+      {
+        "metric_name": "average return",
+        "value": 0.62,
+        "unit": "ratio",
+        "context": "Wikipedia-based investment strategy average cumulative log-return",
+        "evidence_quote": "On average, the return obtained following the Wikipedia based strategy is ⟨rw⟩= 0.62 ± 0.42",
+        "source_location": "Section An investment strategy based on Wikipedia attention"
+      },
+      {
+        "metric_name": "average return",
+        "value": -0.15,
+        "unit": "ratio",
+        "context": "Random strategy average cumulative log-return",
+        "evidence_quote": "while the average return obtained random strategy, which is ⟨rr⟩= −0.15 ± 0.13.",
+        "source_location": "Section An investment strategy based on Wikipedia attention"
+      },
+      {
+        "metric_name": "average return",
+        "value": 0.16,
+        "unit": "ratio",
+        "context": "Price-based baseline strategy average cumulative log-return",
+        "evidence_quote": "The price baseline strategy produces lower mean returns compared to the Wikipedia strategy (⟨rp⟩= 0.16 ± 0.36).",
+        "source_location": "Section An investment strategy based on Wikipedia attention"
+      }
+    ],
+    "key_findings": [
+      "A simple trading strategy based on daily Wikipedia page views outperforms both random and price-based baseline strategies in terms of cumulative returns for most of the covered period prior to 2018.",
+      "Wikipedia page views and edit history are positively and robustly correlated with cryptocurrency market properties such as price, trading volume, and market share.",
+      "A small, tightly connected community of specialized editors is responsible for the majority of information production regarding cryptocurrencies on Wikipedia.",
+      "The outperformance of the Wikipedia-based investment strategy breaks down after January 2018 following major losses and structural shifts in the cryptocurrency market."
+    ],
+    "limitations": [
+      "The trading strategy neglects transaction fees, which could significantly decrease actual profits in real scenarios.",
+      "The strategy ceases to be successful after January 2018 when the cryptocurrency market suffered major losses."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:07:19.237850+00:00",
+    "input_tokens": 10792,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "alternative_data"
+    ],
+    "curation_asset_class": [
+      "crypto"
+    ]
+  }
+}

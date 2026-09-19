@@ -1,0 +1,140 @@
+{
+  "paper_id": "arxiv:1807.11751v1",
+  "title": "Co-existence of Trend and Value in Financial Markets: Estimating an Extended Chiarella Model",
+  "extraction": {
+    "signal_type": [
+      "momentum",
+      "value"
+    ],
+    "asset_class": [
+      "futures_multi_asset"
+    ],
+    "methodology_summary": "The paper estimates an extended Chiarella heterogeneous agent-based model (HABM) featuring trend-followers, fundamentalists, and noise traders using Bayesian filtering techniques (Kalman filtering and Unscented Kalman Filtering) combined with the Expectation-Maximization algorithm. The fundamental value is treated as an unobservable hidden variable estimated directly from price time series across multiple asset classes without relying on an external pricing model. The model is then tested by analyzing the resulting mispricing distributions, trend and value effects, and performing regressions of log-returns on trend and value components.",
+    "data_period": "Since 1800, monthly",
+    "universe": "Monthly spot prices of stock indices, commodities, FX rates, and government bonds across Australia, Canada, Germany, Japan, Switzerland, the United Kingdom, and the United States (sourced from Global Financial Data).",
+    "performance_metrics": [
+      {
+        "metric_name": "adjusted R-square",
+        "value": 0.001,
+        "unit": "ratio",
+        "context": "Regression of log-returns on constant and trend component for model (3.3)",
+        "evidence_quote": "coefficient -0.000 0.024 - - - - 0.001",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "adjusted R-square",
+        "value": 0.013,
+        "unit": "ratio",
+        "context": "Regression of log-returns on trend components (including cubic term) for model (3.3)",
+        "evidence_quote": "coefficient -0.003 0.068 0.001 -0.005 - - 0.013",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "adjusted R-square",
+        "value": 0.044,
+        "unit": "ratio",
+        "context": "Regression of log-returns on value component for model (3.3)",
+        "evidence_quote": "coefficient 0.000 - - - 0.210 - 0.044",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "adjusted R-square",
+        "value": 0.05,
+        "unit": "ratio",
+        "context": "Regression of log-returns on value components for model (3.3)",
+        "evidence_quote": "coefficient 0.001 - - - 0.167 0.008 0.050",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "adjusted R-square",
+        "value": 0.056,
+        "unit": "ratio",
+        "context": "Regression of log-returns on trend and value components for model (3.3)",
+        "evidence_quote": "coefficient -0.000 0.119 - - 0.255 - 0.056",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "adjusted R-square",
+        "value": 0.067,
+        "unit": "ratio",
+        "context": "Regression of log-returns on full set of trend and value components for model (3.3)",
+        "evidence_quote": "coefficient -0.007 0.158 0.005 -0.005 0.251 - 0.067",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "adjusted R-square",
+        "value": 0.068,
+        "unit": "ratio",
+        "context": "Regression of log-returns on full set of trend and value components with additional interaction terms for model (3.3)",
+        "evidence_quote": "coefficient -0.006 0.152 0.005 -0.003 0.231 0.004 0.068",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "adjusted R-square",
+        "value": 0.041,
+        "unit": "ratio",
+        "context": "Regression of log-returns on value component for model (4.1)",
+        "evidence_quote": "coefficient 0.000 | - | - | - | 0.202 | - | 0.041",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "adjusted R-square",
+        "value": 0.048,
+        "unit": "ratio",
+        "context": "Regression of log-returns on value components for model (4.1)",
+        "evidence_quote": "coefficient 0.002 | - | - | - | 0.158 | 0.011 | 0.048",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "adjusted R-square",
+        "value": 0.054,
+        "unit": "ratio",
+        "context": "Regression of log-returns on trend and value components for model (4.1)",
+        "evidence_quote": "coefficient -0.000 | 0.127 | - | - | 0.253 | - | 0.054",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "adjusted R-square",
+        "value": 0.067,
+        "unit": "ratio",
+        "context": "Regression of log-returns on full set of trend and value components for model (4.1)",
+        "evidence_quote": "coefficient -0.007 | 0.172 | 0.005 | -0.005 | 0.254 | - | 0.067",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "adjusted R-square",
+        "value": 0.07,
+        "unit": "ratio",
+        "context": "Regression of log-returns on full set of trend and value components with additional interaction terms for model (4.1)",
+        "evidence_quote": "coefficient -0.005 | 0.165 | 0.005 | -0.004 | 0.223 | 0.008 | 0.070",
+        "source_location": "Table 2"
+      }
+    ],
+    "key_findings": [
+      "The extended Chiarella agent-based model effectively reproduces empirical regularities such as the non-monotonic relation between past trends and future returns (trend saturation and inversion).",
+      "Controlling the trend effect for value removes the apparent contrarian reversal for large trend signals, revealing that trend saturation is driven by fundamentalists countering extreme price distortions.",
+      "The linear demand specification of fundamentalists fails to fully capture observed non-linearities, whereas an extended model with a cubic fundamentalist demand function provides superior performance and consistency.",
+      "For certain assets such as US and Canadian equity indices, the stationary mispricing distribution is bimodal rather than unimodal, implying markets tend to be over- or undervalued for extended periods."
+    ],
+    "limitations": [
+      "The model is not designed to deal with large political or structural jumps, requiring the manual removal of specific wartime and crisis periods from the time series.",
+      "In the non-linear system, convergence to the local maximum of log-likelihood cannot be mathematically guaranteed by the EM algorithm due to approximation errors in the conditional distribution."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": "[Manually corrected: model repeatedly (3x/2x independent calls) decomposed this diversified futures/index basket into ['equities', 'commodities', 'fx', 'fixed_income'] instead of using the futures_multi_asset category, despite the universe description matching that convention. Overridden to match project taxonomy.]"
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:32:38.795072+00:00",
+    "input_tokens": 27698,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "momentum",
+      "value"
+    ],
+    "curation_asset_class": [
+      "futures_multi_asset"
+    ],
+    "manually_corrected": true
+  }
+}

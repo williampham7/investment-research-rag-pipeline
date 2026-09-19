@@ -1,0 +1,179 @@
+{
+  "paper_id": "arxiv:1908.05419v1",
+  "title": "Modelling Crypto Asset Price Dynamics, Optimal Crypto Portfolio, and Crypto Option Valuation",
+  "extraction": {
+    "signal_type": [
+      "low_volatility",
+      "ml_composite"
+    ],
+    "asset_class": [
+      "crypto",
+      "equities"
+    ],
+    "methodology_summary": "The authors study the top seven crypto assets using daily closing prices and model log returns with multivariate ARMA(1,1)-GARCH(1,1) processes combined with various joint innovation distributions (multivariate t, multivariate variance-gamma, and t-copulas). Using Monte Carlo backtesting, they find the ARMA-GARCH model with Gaussian innovations and a multivariate t distribution (5 degrees of freedom) performs best. They construct minimum-risk portfolios via mean-variance (min Variance) and CVaR (min CVaR) optimizations and value European options on these crypto portfolios using an Esscher transform to pass to the equivalent martingale measure under NIG innovations.",
+    "data_period": "July 25, 2017 to July 2, 2019, daily",
+    "universe": "The top seven crypto assets (bitcoin, ethereum, XRP, litecoin, bitcoin cash, EOS, binance coin) selected by market capitalization, with SPY as the benchmark.",
+    "performance_metrics": [
+      {
+        "metric_name": "Maximum Drawdown",
+        "value": 22.0,
+        "unit": "percent",
+        "context": "Bitcoin price in 08/12/2017-07/02/2019",
+        "evidence_quote": "Bitcoin | Ethereum | Litecoin | Bitcoin Cash | SPY\nStandard Deviation($) | 780.11 | 48.74 | 12.50 | 137.24 | 4.05\nMaximum Drawdown(%) | 22 | 24 | 27 | 32 | 4",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "Maximum Drawdown",
+        "value": 24.0,
+        "unit": "percent",
+        "context": "Ethereum price in 08/12/2017-07/02/2019",
+        "evidence_quote": "Bitcoin | Ethereum | Litecoin | Bitcoin Cash | SPY\nStandard Deviation($) | 780.11 | 48.74 | 12.50 | 137.24 | 4.05\nMaximum Drawdown(%) | 22 | 24 | 27 | 32 | 4",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "Maximum Drawdown",
+        "value": 27.0,
+        "unit": "percent",
+        "context": "Litecoin price in 08/12/2017-07/02/2019",
+        "evidence_quote": "Bitcoin | Ethereum | Litecoin | Bitcoin Cash | SPY\nStandard Deviation($) | 780.11 | 48.74 | 12.50 | 137.24 | 4.05\nMaximum Drawdown(%) | 22 | 24 | 27 | 32 | 4",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "Maximum Drawdown",
+        "value": 32.0,
+        "unit": "percent",
+        "context": "Bitcoin Cash price in 08/12/2017-07/02/2019",
+        "evidence_quote": "Bitcoin | Ethereum | Litecoin | Bitcoin Cash | SPY\nStandard Deviation($) | 780.11 | 48.74 | 12.50 | 137.24 | 4.05\nMaximum Drawdown(%) | 22 | 24 | 27 | 32 | 4",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "Maximum Drawdown",
+        "value": 4.0,
+        "unit": "percent",
+        "context": "SPY price in 08/12/2017-07/02/2019",
+        "evidence_quote": "Bitcoin | Ethereum | Litecoin | Bitcoin Cash | SPY\nStandard Deviation($) | 780.11 | 48.74 | 12.50 | 137.24 | 4.05\nMaximum Drawdown(%) | 22 | 24 | 27 | 32 | 4",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "Maximum Drawdown",
+        "value": 0.7307,
+        "unit": "ratio",
+        "context": "min CVaR portfolio, out-of-sample data 04/04/2018-07/02/2019",
+        "evidence_quote": "MDD | 0.7307 | 0.7464 | 0.1935",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "Maximum Drawdown",
+        "value": 0.7464,
+        "unit": "ratio",
+        "context": "min Variance portfolio, out-of-sample data 04/04/2018-07/02/2019",
+        "evidence_quote": "MDD | 0.7307 | 0.7464 | 0.1935",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "Maximum Drawdown",
+        "value": 0.1935,
+        "unit": "ratio",
+        "context": "SPY, out-of-sample data 04/04/2018-07/02/2019",
+        "evidence_quote": "MDD | 0.7307 | 0.7464 | 0.1935",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.0502,
+        "unit": "ratio",
+        "context": "min CVaR portfolio, out-of-sample data 04/04/2018-07/02/2019",
+        "evidence_quote": "Sharpe ratio | 0.0502 | 0.0078 | 0.0333",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.0078,
+        "unit": "ratio",
+        "context": "min Variance portfolio, out-of-sample data 04/04/2018-07/02/2019",
+        "evidence_quote": "Sharpe ratio | 0.0502 | 0.0078 | 0.0333",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.0333,
+        "unit": "ratio",
+        "context": "SPY, out-of-sample data 04/04/2018-07/02/2019",
+        "evidence_quote": "Sharpe ratio | 0.0502 | 0.0078 | 0.0333",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "M2 ratio",
+        "value": 0.0023,
+        "unit": "ratio",
+        "context": "min CVaR portfolio, out-of-sample data 04/04/2018-07/02/2019",
+        "evidence_quote": "M2 ratio | 0.0023 | 0.0004 | 0.0003",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "M2 ratio",
+        "value": 0.0004,
+        "unit": "ratio",
+        "context": "min Variance portfolio, out-of-sample data 04/04/2018-07/02/2019",
+        "evidence_quote": "M2 ratio | 0.0023 | 0.0004 | 0.0003",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "M2 ratio",
+        "value": 0.0003,
+        "unit": "ratio",
+        "context": "SPY, out-of-sample data 04/04/2018-07/02/2019",
+        "evidence_quote": "M2 ratio | 0.0023 | 0.0004 | 0.0003",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "Rachev ratio",
+        "value": 1.7588,
+        "unit": "ratio",
+        "context": "min CVaR portfolio, out-of-sample data 04/04/2018-07/02/2019",
+        "evidence_quote": "Rachev ratio | 1.7588 | 1.0124 | 1.0246",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "Rachev ratio",
+        "value": 1.0124,
+        "unit": "ratio",
+        "context": "min Variance portfolio, out-of-sample data 04/04/2018-07/02/2019",
+        "evidence_quote": "Rachev ratio | 1.7588 | 1.0124 | 1.0246",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "Rachev ratio",
+        "value": 1.0246,
+        "unit": "ratio",
+        "context": "SPY, out-of-sample data 04/04/2018-07/02/2019",
+        "evidence_quote": "Rachev ratio | 1.7588 | 1.0124 | 1.0246",
+        "source_location": "Table 4"
+      }
+    ],
+    "key_findings": [
+      "Crypto portfolios constructed via optimizations that minimize variance and Conditional Value at Risk can outperform a major stock market index (the S&P 500).",
+      "Bitcoin acts as a risk diversifier while EOS acts as a risk contributor in the crypto portfolios.",
+      "The min CVaR portfolio has the highest risk-adjusted return among the tested portfolios, whereas the min Variance portfolio performs similarly to the S&P 500 benchmark.",
+      "A fair valuation model for European options on crypto asset indexes can be successfully formulated using an ARMA-GARCH model with normal inverse Gaussian innovations via the Esscher transform."
+    ],
+    "limitations": [
+      "Assumes no transaction costs so that portfolio weights can be adjusted purely for hedging risk."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:07:50.605563+00:00",
+    "input_tokens": 7536,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "other",
+      "low_volatility"
+    ],
+    "curation_asset_class": [
+      "crypto"
+    ]
+  }
+}

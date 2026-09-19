@@ -1,0 +1,90 @@
+{
+  "paper_id": "arxiv:1911.10107v1",
+  "title": "Deep Reinforcement Learning for Trading",
+  "extraction": {
+    "signal_type": [
+      "momentum",
+      "ml_composite"
+    ],
+    "asset_class": [
+      "futures_multi_asset"
+    ],
+    "methodology_summary": "The paper formulates trading as a Markov Decision Process where deep reinforcement learning models (DQN, Policy Gradients, and A2C) take as input historical prices, returns across horizons, MACD, and RSI features, and directly output target trade positions. Volatility scaling is incorporated into the reward function to normalize rewards and adjust positions based on ex-ante volatility. The models are tested across 50 continuous futures contracts spanning commodities, equity indices, fixed income, and FX, retrained every 5 years with fixed parameters out-of-sample.",
+    "data_period": "2011-2019 (training/dataset from 2005)",
+    "universe": "50 most liquid continuous futures contracts across commodities, equity indices, fixed income, and FX markets",
+    "performance_metrics": [
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.604,
+        "unit": "ratio",
+        "context": "Commodity, Long strategy",
+        "evidence_quote": "Long | -0.710 | 0.979 | 0.604 | -0.726 | -1.177 | 0.350 | -0.140 | 0.473 | 0.989",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.723,
+        "unit": "ratio",
+        "context": "Commodity, DQN strategy",
+        "evidence_quote": "DQN | 0.703 | 0.973 | 0.552 | 0.723 | 1.275 | 0.066 | 0.501 | 0.498 | 1.135",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.648,
+        "unit": "ratio",
+        "context": "Equity Index, DQN strategy",
+        "evidence_quote": "DQN | 0.629 | 0.970 | 0.606 | 0.648 | 1.038 | 0.161 | 0.381 | 0.541 | 0.944",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.935,
+        "unit": "ratio",
+        "context": "Fixed Income, DQN strategy",
+        "evidence_quote": "DQN | 0.908 | 0.972 | 0.562 | 0.935 | 1.617 | 0.062 | 0.543 | 0.515 | 1.098",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.546,
+        "unit": "ratio",
+        "context": "FX, DQN strategy",
+        "evidence_quote": "DQN | 0.528 | 0.967 | 0.553 | 0.546 | 0.955 | 0.183 | 0.313 | 0.510 | 1.051",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 1.288,
+        "unit": "ratio",
+        "context": "All contracts, DQN portfolio strategy",
+        "evidence_quote": "DQN | 1.258 | 0.976 | 0.567 | 1.288 | 2.220 | 0.002 | 1.025 | 0.543 | 1.043",
+        "source_location": "Table 2"
+      }
+    ],
+    "key_findings": [
+      "Deep reinforcement learning trading strategies outperform classical time series momentum and technical baselines across most asset classes.",
+      "DQN achieves the best overall performance among tested reinforcement learning models, followed by the Advantage Actor-Critic (A2C) approach.",
+      "RL algorithms can generate positive returns and tolerate heavy transaction costs up to 25bp.",
+      "RL algorithms successfully capture large market trends without changing positions and scale down or hold through consolidation or mean-reverting periods."
+    ],
+    "limitations": [
+      "Equity indices during the test period were dominated by large upward trends where a simple long-only strategy performed better than RL models."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:39:14.867569+00:00",
+    "input_tokens": 10304,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "momentum",
+      "ml_composite"
+    ],
+    "curation_asset_class": [
+      "futures_multi_asset"
+    ]
+  }
+}

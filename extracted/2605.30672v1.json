@@ -1,0 +1,140 @@
+{
+  "paper_id": "arxiv:2605.30672v1",
+  "title": "Residual Supply and the Price of Risk Absorption",
+  "extraction": {
+    "signal_type": [
+      "reversal",
+      "liquidity",
+      "other"
+    ],
+    "asset_class": [
+      "equities"
+    ],
+    "methodology_summary": "The paper maps open-end mutual fund flows through predetermined fund holdings to construct stock-level flow-induced trading pressure, isolating the negative component as forced-sale pressure and accumulating it into a residual inventory proxy (AbsInv). Fama-MacBeth cross-sectional regressions and portfolio sorts are conducted using U.S. common stocks from January 2003 through November 2024 to test whether forced selling predicts subsequent positive returns and how this return premium varies across states of market scarcity and investor-base thickness.",
+    "data_period": "January 2003 - November 2024, monthly",
+    "universe": "U.S. common stocks from CRSP and Compustat with CRSP share codes 10 and 11",
+    "performance_metrics": [
+      {
+        "metric_name": "t-statistic",
+        "value": 30.24,
+        "unit": "ratio",
+        "context": "Manager-stock first-stage regression slope of actual mutual fund holdings changes on lagged stock weight multiplied by fund flow",
+        "evidence_quote": "The average monthly slope is 1.07, with a Newey-West t-statistic of 30.24 across 168 report months and 20.5 million manager-stock observations.",
+        "source_location": "Section 4.1"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": -4.48,
+        "unit": "ratio",
+        "context": "Stock-quarter cross-sectional regression t-statistic of change in aggregate mutual fund holdings on sale pressure rank",
+        "evidence_quote": "A move from the bottom to the top of the quarterly sale-pressure rank is associated with a 114 basis point decline in mutual fund ownership relative to market capitalization, with a t-statistic of -4.48.",
+        "source_location": "Section 4.1"
+      },
+      {
+        "metric_name": "cumulative return",
+        "value": 50.36,
+        "unit": "bps",
+        "context": "1-month future return predicted by reported-holdings forced-sale rank in no-microcap sample",
+        "evidence_quote": "Reported ForcedSale rank | 50.36 | 132.97 | 195.29 | 321.06\n(2.83) | (3.44) | (3.14) | (2.86)",
+        "source_location": "Table 4 Panel B"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 2.83,
+        "unit": "ratio",
+        "context": "t-statistic for 1-month reported-holdings forced-sale rank prediction in no-microcap sample",
+        "evidence_quote": "Reported ForcedSale rank | 50.36 | 132.97 | 195.29 | 321.06\n(2.83) | (3.44) | (3.14) | (2.86)",
+        "source_location": "Table 4 Panel B"
+      },
+      {
+        "metric_name": "cumulative return",
+        "value": 65.43,
+        "unit": "bps",
+        "context": "1-month future return predicted by ForcedSale rank in no-microcap sample",
+        "evidence_quote": "ForcedSale rank | No microcap | 65.43 | 160.11 | 216.50 | 342.33\n(3.32) | (3.97) | (3.54) | (3.07)",
+        "source_location": "Table 5"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 3.32,
+        "unit": "ratio",
+        "context": "t-statistic for 1-month ForcedSale rank prediction in no-microcap sample",
+        "evidence_quote": "ForcedSale rank | No microcap | 65.43 | 160.11 | 216.50 | 342.33\n(3.32) | (3.97) | (3.54) | (3.07)",
+        "source_location": "Table 5"
+      },
+      {
+        "metric_name": "cumulative return",
+        "value": 45.81,
+        "unit": "bps",
+        "context": "1-month future return predicted by AbsInv rank in no-microcap sample",
+        "evidence_quote": "AbsInv rank | No microcap | 45.81 | 135.39 | 237.07 | 308.55\n(2.52) | (2.65) | (2.63) | (1.60)",
+        "source_location": "Table 5"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 2.52,
+        "unit": "ratio",
+        "context": "t-statistic for 1-month AbsInv rank prediction in no-microcap sample",
+        "evidence_quote": "AbsInv rank | No microcap | 45.81 | 135.39 | 237.07 | 308.55\n(2.52) | (2.65) | (2.63) | (1.60)",
+        "source_location": "Table 5"
+      },
+      {
+        "metric_name": "cumulative return",
+        "value": 44.09,
+        "unit": "bps",
+        "context": "1-month equal-weighted high-minus-low portfolio return sorted by AbsInv in no-microcap sample",
+        "evidence_quote": "No microcap | Equal-weighted H-L | 44.09 | 120.20 | 218.41 | 333.79\n(2.85) | (2.75) | (2.57) | (1.99)",
+        "source_location": "Table 9"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 2.85,
+        "unit": "ratio",
+        "context": "t-statistic for 1-month equal-weighted high-minus-low portfolio return sorted by AbsInv in no-microcap sample",
+        "evidence_quote": "No microcap | Equal-weighted H-L | 44.09 | 120.20 | 218.41 | 333.79\n(2.85) | (2.75) | (2.57) | (1.99)",
+        "source_location": "Table 9"
+      },
+      {
+        "metric_name": "alpha",
+        "value": 31.28,
+        "unit": "bps",
+        "context": "Monthly CAPM alpha for equal-weighted absorption portfolio in no-microcap sample",
+        "evidence_quote": "No microcap | Equal-weighted | 31.28 | 34.72 | 40.21 | 24.46\n(1.79) | (2.19) | (2.51) | (1.83)",
+        "source_location": "Table 10"
+      },
+      {
+        "metric_name": "alpha",
+        "value": 24.46,
+        "unit": "bps",
+        "context": "Monthly FF5+UMD alpha for equal-weighted absorption portfolio in no-microcap sample",
+        "evidence_quote": "No microcap | Equal-weighted | 31.28 | 34.72 | 40.21 | 24.46\n(1.79) | (2.19) | (2.51) | (1.83)",
+        "source_location": "Table 10"
+      }
+    ],
+    "key_findings": [
+      "Mutual fund investor flows mapped through lagged holdings predict actual mutual fund selling and contemporaneous price declines.",
+      "Flow-induced selling pressure and cumulative residual inventory (AbsInv) strongly predict positive future returns over one- to six-month horizons.",
+      "The return premium roughly doubles when market-wide absorption capacity is tight and concentrates heavily in stocks with thin investor bases and limited trading capacity.",
+      "Permutation placebo tests confirm that the demand-pressure channel is distinct from random matchings or mechanical time variation."
+    ],
+    "limitations": [
+      "The flow-holdings mapping is not a randomized experiment and forced selling correlates with poor prior performance.",
+      "Quarterly 13F data show that forced-sale stocks become harder to place with broad institutional owners but do not isolate a single class of marginal buyers because some absorption occurs outside 13F or below reporting thresholds."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:18:49.136741+00:00",
+    "input_tokens": 31156,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "liquidity",
+      "reversal"
+    ],
+    "curation_asset_class": [
+      "equities"
+    ]
+  }
+}

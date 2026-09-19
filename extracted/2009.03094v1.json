@@ -1,0 +1,190 @@
+{
+  "paper_id": "arxiv:2009.03094v1",
+  "title": "Capturing dynamics of post-earnings-announcement drift using genetic algorithm-optimised supervised learning",
+  "extraction": {
+    "signal_type": [
+      "momentum",
+      "value",
+      "quality_profitability",
+      "event_driven",
+      "ml_composite"
+    ],
+    "asset_class": [
+      "equities"
+    ],
+    "methodology_summary": "The paper uses an Extreme Gradient Boosting (XGBoost) model optimized via a Genetic Algorithm (GA) combined with 5-fold cross-validation to predict the 30-day Post-Earnings-Announcement Drift (PEAD) direction and cumulative abnormal returns. The input feature space consists of 97,901 quarterly financial statements, earnings surprise metrics, technical momentum indicators, and short interest data from 1,106 Russell 1000 companies between 1997 and 2018. Out-of-sample tests are conducted across annual periods from 2014 to 2018 and across nine industrial sectors, and stocks are ranked by predicted returns to form quantile portfolios.",
+    "data_period": "1997 Q1 to 2018 Q4, quarterly",
+    "universe": "1,106 companies that are or once existed as components of the Russell 1,000 index",
+    "performance_metrics": [
+      {
+        "metric_name": "Top Quantile Portfolio Return",
+        "value": 3.9,
+        "unit": "percent",
+        "context": "Q4 2018 All stocks portfolio holding period 30 days",
+        "evidence_quote": "Q4 2018 | All | 30 days | 3.90% | -0.29 % | -3.76 %",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "Average Actual Return",
+        "value": -0.29,
+        "unit": "percent",
+        "context": "Q4 2018 All stocks portfolio holding period 30 days",
+        "evidence_quote": "Q4 2018 | All | 30 days | 3.90% | -0.29 % | -3.76 %",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "Bottom Quantile Portfolio Return",
+        "value": -3.76,
+        "unit": "percent",
+        "context": "Q4 2018 All stocks portfolio holding period 30 days",
+        "evidence_quote": "Q4 2018 | All | 30 days | 3.90% | -0.29 % | -3.76 %",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "Top Quantile Portfolio Return",
+        "value": 4.09,
+        "unit": "percent",
+        "context": "Q3 2018 All stocks portfolio holding period 30 days",
+        "evidence_quote": "Q3 2018 | All | 30 days | 4.09 % | 0.36% | -4.78 %",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "Average Actual Return",
+        "value": 0.36,
+        "unit": "percent",
+        "context": "Q3 2018 All stocks portfolio holding period 30 days",
+        "evidence_quote": "Q3 2018 | All | 30 days | 4.09 % | 0.36% | -4.78 %",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "Bottom Quantile Portfolio Return",
+        "value": -4.78,
+        "unit": "percent",
+        "context": "Q3 2018 All stocks portfolio holding period 30 days",
+        "evidence_quote": "Q3 2018 | All | 30 days | 4.09 % | 0.36% | -4.78 %",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "Top Quantile Portfolio Return",
+        "value": 2.75,
+        "unit": "percent",
+        "context": "02-Aug-18 All stocks portfolio holding period 30 days",
+        "evidence_quote": "02-Aug-18 | All | 30 days | 2.75 % | 1.16 % | 0.54 %",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "Average Actual Return",
+        "value": 1.16,
+        "unit": "percent",
+        "context": "02-Aug-18 All stocks portfolio holding period 30 days",
+        "evidence_quote": "02-Aug-18 | All | 30 days | 2.75 % | 1.16 % | 0.54 %",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "Bottom Quantile Portfolio Return",
+        "value": 0.54,
+        "unit": "percent",
+        "context": "02-Aug-18 All stocks portfolio holding period 30 days",
+        "evidence_quote": "02-Aug-18 | All | 30 days | 2.75 % | 1.16 % | 0.54 %",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "Top Quantile Portfolio Return",
+        "value": 3.83,
+        "unit": "percent",
+        "context": "25-Oct-18 All stocks portfolio holding period 30 days",
+        "evidence_quote": "25-Oct-18 | All | 30 days | 3.83% | 1.06 % | -1.64 %",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "Average Actual Return",
+        "value": 1.06,
+        "unit": "percent",
+        "context": "25-Oct-18 All stocks portfolio holding period 30 days",
+        "evidence_quote": "25-Oct-18 | All | 30 days | 3.83% | 1.06 % | -1.64 %",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "Bottom Quantile Portfolio Return",
+        "value": -1.64,
+        "unit": "percent",
+        "context": "25-Oct-18 All stocks portfolio holding period 30 days",
+        "evidence_quote": "25-Oct-18 | All | 30 days | 3.83% | 1.06 % | -1.64 %",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "t0 to t30 accuracy by model",
+        "value": 71.4,
+        "unit": "percent",
+        "context": "2016 tested year model accuracy",
+        "evidence_quote": "2016 | 3635 | 254 | 71.40 % | 58.30 %",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "Inferred accuracy t1 to t30 for remaining stocks",
+        "value": 58.3,
+        "unit": "percent",
+        "context": "2016 tested year inferred accuracy from t1 to t30",
+        "evidence_quote": "2016 | 3635 | 254 | 71.40 % | 58.30 %",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "t0 to t30 accuracy by model",
+        "value": 70.8,
+        "unit": "percent",
+        "context": "2017 tested year model accuracy",
+        "evidence_quote": "2017 | 3715 | 151 | 70.80 % | 60.30 %",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "Inferred accuracy t1 to t30 for remaining stocks",
+        "value": 60.3,
+        "unit": "percent",
+        "context": "2017 tested year inferred accuracy from t1 to t30",
+        "evidence_quote": "2017 | 3715 | 151 | 70.80 % | 60.30 %",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "t0 to t30 accuracy by model",
+        "value": 69.9,
+        "unit": "percent",
+        "context": "2018 tested year model accuracy",
+        "evidence_quote": "2018 | 3728 | 261 | 69.90 % | 57.50 %",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "Inferred accuracy t1 to t30 for remaining stocks",
+        "value": 57.5,
+        "unit": "percent",
+        "context": "2018 tested year inferred accuracy from t1 to t30",
+        "evidence_quote": "2018 | 3728 | 261 | 69.90 % | 57.50 %",
+        "source_location": "Table 4"
+      }
+    ],
+    "key_findings": [
+      "Extreme Gradient Boosting (XGBoost) optimized via a Genetic Algorithm effectively predicts the direction and cumulative abnormal returns of Post-Earnings-Announcement Drift (PEAD).",
+      "PEAD drivers vary significantly across different industrial sectors and time periods, with engineered EPS-related surprise metrics frequently dominating top importance counts.",
+      "Ranking out-of-sample stocks by model-predicted returns allows the creation of quantile portfolios that consistently offer higher positive returns and lower negative returns, providing a basis for market-neutral long-short strategies.",
+      "A practical trading tactic utilizing a one-day delay after the earnings release allows traders to achieve close to 60% accuracy in inferring subsequent stock movement directions, overcoming the issue of information leakage prior to public announcements."
+    ],
+    "limitations": [
+      "Certain industrial sectors (such as Energy and Utilities) exhibit inconsistent feature drivers and poorer prediction results, indicating missing variables like management guidance or qualitative text data.",
+      "Direct prediction of cumulative abnormal returns starting 1 day after the announcement (t1 to t30) yields inferior accuracy around 50% without applying the devised inference tactic due to rapid market incorporation of news."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:09:50.130207+00:00",
+    "input_tokens": 21451,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "event_driven",
+      "ml_composite"
+    ],
+    "curation_asset_class": [
+      "equities"
+    ]
+  }
+}

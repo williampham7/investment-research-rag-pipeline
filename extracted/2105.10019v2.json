@@ -1,0 +1,162 @@
+{
+  "paper_id": "arxiv:2105.10019v2",
+  "title": "Enhancing Cross-Sectional Currency Strategies by Context-Aware Learning to Rank with Self-Attention",
+  "extraction": {
+    "signal_type": [
+      "momentum",
+      "ml_composite"
+    ],
+    "asset_class": [
+      "fx"
+    ],
+    "methodology_summary": "The paper presents a cross-sectional currency momentum strategy where assets are ranked using Learning to Rank (LTR) algorithms and subsequently re-ranked using a Transformer-based context-aware model that encodes the local ranking context of top and bottom retrieved assets. Portfolios are rebalanced daily by constructing equally weighted long/short decile portfolios from a universe of 31 currencies, with returns scaled to an annual target volatility of 15%.",
+    "data_period": "2000 to 2020, daily",
+    "universe": "31 currency pairs expressed versus the USD",
+    "performance_metrics": [
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": -0.064,
+        "unit": "ratio",
+        "context": "Rand conventional baseline",
+        "evidence_quote": "Sharpe Ratio | -0.064",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 0.539,
+        "unit": "ratio",
+        "context": "Baz conventional baseline",
+        "evidence_quote": "Sharpe Ratio | -0.064 | 0.539",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 0.572,
+        "unit": "ratio",
+        "context": "MLP conventional baseline",
+        "evidence_quote": "Sharpe Ratio | -0.064 | 0.539 | 0.572",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 0.624,
+        "unit": "ratio",
+        "context": "PW baseline",
+        "evidence_quote": "Sharpe Ratio | -0.064 | 0.539 | 0.572 | 0.624",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 0.586,
+        "unit": "ratio",
+        "context": "ML baseline",
+        "evidence_quote": "Sharpe Ratio | -0.064 | 0.539 | 0.572 | 0.624 | 0.586",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 0.602,
+        "unit": "ratio",
+        "context": "LN baseline",
+        "evidence_quote": "Sharpe Ratio | -0.064 | 0.539 | 0.572 | 0.624 | 0.586 | 0.602",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 0.822,
+        "unit": "ratio",
+        "context": "LM baseline",
+        "evidence_quote": "Sharpe Ratio | -0.064 | 0.539 | 0.572 | 0.624 | 0.586 | 0.602 | **0.822",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 0.905,
+        "unit": "ratio",
+        "context": "PW+P context-aware model",
+        "evidence_quote": "Sharpe Ratio | 0.624 | 0.905",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 0.746,
+        "unit": "ratio",
+        "context": "PW+L context-aware model",
+        "evidence_quote": "Sharpe Ratio | 0.624 | 0.905 | 0.746",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 0.729,
+        "unit": "ratio",
+        "context": "ML+P context-aware model",
+        "evidence_quote": "Sharpe Ratio | 0.624 | 0.905 | 0.746 | 0.586 | 0.729",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 0.764,
+        "unit": "ratio",
+        "context": "ML+L context-aware model",
+        "evidence_quote": "Sharpe Ratio | 0.624 | 0.905 | 0.746 | 0.586 | 0.729 | 0.764",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 0.948,
+        "unit": "ratio",
+        "context": "LN+P context-aware model",
+        "evidence_quote": "Sharpe Ratio | 0.624 | 0.905 | 0.746 | 0.586 | 0.729 | 0.764 | 0.602 | 0.948",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 0.806,
+        "unit": "ratio",
+        "context": "LN+L context-aware model",
+        "evidence_quote": "Sharpe Ratio | 0.624 | 0.905 | 0.746 | 0.586 | 0.729 | 0.764 | 0.602 | 0.948 | 0.806",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 0.941,
+        "unit": "ratio",
+        "context": "LM+P context-aware model",
+        "evidence_quote": "Sharpe Ratio | 0.624 | 0.905 | 0.746 | 0.586 | 0.729 | 0.764 | 0.602 | 0.948 | 0.806 | 0.822 | 0.941",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 1.008,
+        "unit": "ratio",
+        "context": "LM+L context-aware model",
+        "evidence_quote": "Sharpe Ratio | 0.624 | 0.905 | 0.746 | 0.586 | 0.729 | 0.764 | 0.602 | 0.948 | 0.806 | 0.822 | 0.941 | **1.008",
+        "source_location": "Table 2"
+      }
+    ],
+    "key_findings": [
+      "Integrating a Transformer-based context-aware re-ranking mechanism into Learning to Rank (LTR) cross-sectional currency momentum strategies increases Sharpe ratios by approximately 30% on average.",
+      "Context-aware ranking models accurately select currency instruments more precisely across both normal and risk-off market environments, resulting in substantially enhanced performance during critical risk-off episodes.",
+      "LambdaMART generally dominates other baseline rankers across most performance measures among traditional LTR models.",
+      "Context-aware LTR models consistently improve cumulative wealth and performance statistics compared to standard global LTR baselines."
+    ],
+    "limitations": [
+      "All returns are computed in the absence of transaction costs to focus on raw predictive ability."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:11:19.354956+00:00",
+    "input_tokens": 8914,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "ml_composite",
+      "carry"
+    ],
+    "curation_asset_class": [
+      "fx"
+    ]
+  }
+}

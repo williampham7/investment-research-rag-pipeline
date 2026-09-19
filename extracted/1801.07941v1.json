@@ -1,0 +1,43 @@
+{
+  "paper_id": "arxiv:1801.07941v1",
+  "title": "Spurious seasonality detection: a non-parametric test proposal",
+  "extraction": {
+    "signal_type": [
+      "seasonality",
+      "other"
+    ],
+    "asset_class": [
+      "equities"
+    ],
+    "methodology_summary": "The paper develops a non-parametric test based on ordinal patterns and symbolic dynamics to detect day-of-the-week return seasonalities without making distributional assumptions. Daily returns are partitioned into weekly 5-dimensional vectors (representing Monday through Friday) and converted into permutation symbols based on their relative ranks. The paper tests hypotheses regarding uniform pattern distribution and positional frequencies using Pearson chi-squared and binomial tests on both simulated fractional Brownian motion series and real stock index data.",
+    "data_period": "03/01/1966 to 08/12/2017, daily",
+    "universe": "NYSE Composite Price Index and 83 stock indices around the world",
+    "performance_metrics": [],
+    "key_findings": [
+      "The traditional day-of-the-week effect is partly an artifact of the hidden correlation structure (long memory) of the data rather than pure economic/investor behavior.",
+      "Simulations show that time series generated with long memory (Hurst exponent different from 0.5) are prone to exhibit daily seasonality and preferred patterns, whereas pure white noise exhibits no pattern preference.",
+      "Empirical application to the NYSE shows that while Monday frequently exhibited the lowest return of the week in early subperiods, the day-of-the-week effect disappears in recent subperiods, aligning with vanishing seasonality related to underlying return dynamics.",
+      "Shuffled NYSE return data (which eliminates non-trivial temporal correlations) displays a uniform distribution of ordinal patterns, proving that empirical seasonality findings are driven by temporal dependence."
+    ],
+    "limitations": [
+      "Real stock markets dynamics do not follow a pure fractional Gaussian noise process.",
+      "Real data exhibits time-varying Hurst exponents, making direct comparison with controlled constant-Hurst simulations challenging."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:38:27.669561+00:00",
+    "input_tokens": 13919,
+    "validation_flags": [
+      "no_performance_metrics_found"
+    ],
+    "curation_signal_type": [
+      "seasonality"
+    ],
+    "curation_asset_class": [
+      "equities"
+    ]
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "paper_id": "arxiv:2105.06827v3",
+  "title": "Profitable Strategy Design for Trades on Cryptocurrency Markets with Machine Learning Techniques",
+  "extraction": {
+    "signal_type": [
+      "ml_composite",
+      "momentum"
+    ],
+    "asset_class": [
+      "crypto"
+    ],
+    "methodology_summary": "The authors apply three machine learning classifiers (k-Nearest Neighbors, Random Forest, and eXtreme Gradient Boosting) to predict the next 4-hour market direction (up or down) of three cryptocurrency pairs (ETH-USDT, LTC-BTC, and ZEC-BTC). The feature space consists of the previous 60 periods of OHLCV data, tested both with and without technical indicators (such as CCI, RSI, DMI, MACD, and Bollinger Bands) added via feature augmentation. A strategy is constructed by taking long/flat positions based on whether the predicted price movement exceeds the exchange's trading fee threshold, evaluated on an out-of-sample 5% test span (approximately 66 days).",
+    "data_period": "mid-2017 to April 2021, 4-hour bars",
+    "universe": "ETH-USDT, LTC-BTC, and ZEC-BTC markets from Binance exchange",
+    "performance_metrics": [
+      {
+        "metric_name": "Testing Accuracy",
+        "value": 0.5199,
+        "unit": "ratio",
+        "context": "ETH-USDT test data, k-NN model",
+        "evidence_quote": "Testing Accuracy | 0.519900",
+        "source_location": "Table /page/11/Table/2 (page 12)"
+      },
+      {
+        "metric_name": "Profit Factor",
+        "value": 1.23,
+        "unit": "ratio",
+        "context": "ETH-USDT test data, k-NN model",
+        "evidence_quote": "Profit Factor | 1.23",
+        "source_location": "Table /page/11/Table/2 (page 12)"
+      },
+      {
+        "metric_name": "Testing Accuracy",
+        "value": 0.562189,
+        "unit": "ratio",
+        "context": "ETH-USDT test data, Random Forest model",
+        "evidence_quote": "Testing Accuracy | 0.562189",
+        "source_location": "Table /page/11/Table/3 (page 12)"
+      },
+      {
+        "metric_name": "Profit Factor",
+        "value": 1.16,
+        "unit": "ratio",
+        "context": "ETH-USDT test data, Random Forest model",
+        "evidence_quote": "Profit Factor | 1.16",
+        "source_location": "Table /page/11/Table/3 (page 12)"
+      },
+      {
+        "metric_name": "Testing Accuracy",
+        "value": 0.547264,
+        "unit": "ratio",
+        "context": "ETH-USDT test data, XGBoost model",
+        "evidence_quote": "Testing Accuracy | 0.547264",
+        "source_location": "Table /page/12/Table/0 (page 13)"
+      },
+      {
+        "metric_name": "Profit Factor",
+        "value": 1.25,
+        "unit": "ratio",
+        "context": "ETH-USDT test data, XGBoost model",
+        "evidence_quote": "Profit Factor | 1.25",
+        "source_location": "Table /page/12/Table/0 (page 13)"
+      },
+      {
+        "metric_name": "Testing Accuracy",
+        "value": 0.585956,
+        "unit": "ratio",
+        "context": "LTC-BTC test data, k-NN model",
+        "evidence_quote": "Testing Accuracy | 0.585956",
+        "source_location": "Table /page/16/Table/2 (page 17)"
+      },
+      {
+        "metric_name": "Profit Factor",
+        "value": 1.24,
+        "unit": "ratio",
+        "context": "LTC-BTC test data, k-NN model",
+        "evidence_quote": "Profit Factor | 1.24",
+        "source_location": "Table /page/16/Table/2 (page 17)"
+      },
+      {
+        "metric_name": "Testing Accuracy",
+        "value": 0.467312,
+        "unit": "ratio",
+        "context": "LTC-BTC test data, Random Forest model",
+        "evidence_quote": "Testing Accuracy | 0.467312",
+        "source_location": "Table /page/16/Table/4 (page 17)"
+      },
+      {
+        "metric_name": "Profit Factor",
+        "value": 1.12,
+        "unit": "ratio",
+        "context": "LTC-BTC test data, Random Forest model",
+        "evidence_quote": "Profit Factor | 1.12",
+        "source_location": "Table /page/16/Table/4 (page 17)"
+      },
+      {
+        "metric_name": "Testing Accuracy",
+        "value": 0.520581,
+        "unit": "ratio",
+        "context": "LTC-BTC test data, XGBoost model",
+        "evidence_quote": "Testing Accuracy | 0.520581",
+        "source_location": "Table /page/17/Table/0 (page 18)"
+      },
+      {
+        "metric_name": "Profit Factor",
+        "value": 1.22,
+        "unit": "ratio",
+        "context": "LTC-BTC test data, XGBoost model",
+        "evidence_quote": "Profit Factor | 1.22",
+        "source_location": "Table /page/17/Table/0 (page 18)"
+      },
+      {
+        "metric_name": "Testing Accuracy",
+        "value": 0.521277,
+        "unit": "ratio",
+        "context": "ZEC-BTC test data, k-NN model",
+        "evidence_quote": "Testing Accuracy | 0.521277",
+        "source_location": "Table /page/21/Table/2 (page 22)"
+      },
+      {
+        "metric_name": "Profit Factor",
+        "value": 1.63,
+        "unit": "ratio",
+        "context": "ZEC-BTC test data, k-NN model",
+        "evidence_quote": "Profit Factor | 1.63",
+        "source_location": "Table /page/21/Table/2 (page 22)"
+      },
+      {
+        "metric_name": "Testing Accuracy",
+        "value": 0.510638,
+        "unit": "ratio",
+        "context": "ZEC-BTC test data, Random Forest model",
+        "evidence_quote": "Testing Accuracy | 0.510638",
+        "source_location": "Table /page/21/Table/4 (page 22)"
+      },
+      {
+        "metric_name": "Profit Factor",
+        "value": 1.25,
+        "unit": "ratio",
+        "context": "ZEC-BTC test data, Random Forest model",
+        "evidence_quote": "Profit Factor | 1.25",
+        "source_location": "Table /page/21/Table/4 (page 22)"
+      },
+      {
+        "metric_name": "Testing Accuracy",
+        "value": 0.518617,
+        "unit": "ratio",
+        "context": "ZEC-BTC test data, XGBoost model",
+        "evidence_quote": "Testing Accuracy | 0.518617",
+        "source_location": "Table /page/22/Table/0 (page 23)"
+      },
+      {
+        "metric_name": "Profit Factor",
+        "value": 1.14,
+        "unit": "ratio",
+        "context": "ZEC-BTC test data, XGBoost model",
+        "evidence_quote": "Profit Factor | 1.14",
+        "source_location": "Table /page/22/Table/0 (page 23)"
+      }
+    ],
+    "key_findings": [
+      "Augmenting input price data with technical indicators has a significant positive effect on final returns, sometimes moving a model from a negative return to a positive one.",
+      "All tested machine learning models (k-NN, Random Forest, XGBoost) achieved positive returns and profit factors above 1.0 on the unseen 66-day test spans across the cryptocurrency pairs.",
+      "The highest profit factor observed in the experiments was 1.63 for the ZEC-BTC market using the k-NN model over a 66-day span."
+    ],
+    "limitations": [
+      "The resulting strategies lack 'smoothness' in their equity graphs, showing large potential risks for implementation.",
+      "Designing a full autonomous trading system involves practical concerns not fully addressed in the research, such as market liquidity issues."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:11:09.639651+00:00",
+    "input_tokens": 10957,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "ml_composite",
+      "momentum"
+    ],
+    "curation_asset_class": [
+      "crypto"
+    ]
+  }
+}

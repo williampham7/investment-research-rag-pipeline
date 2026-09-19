@@ -1,0 +1,54 @@
+{
+  "paper_id": "arxiv:2010.15611v1",
+  "title": "Fear and Volatility in Digital Assets",
+  "extraction": {
+    "signal_type": [
+      "momentum",
+      "sentiment_text",
+      "alternative_data"
+    ],
+    "asset_class": [
+      "crypto",
+      "options_volatility"
+    ],
+    "methodology_summary": "The paper constructs a 7-day maturity Bitcoin implied volatility index (VXBT) from Deribit options data using the CBOE VIX methodology. This is combined with alternative data time series including Twitter volume, tweet sentiment via VADER, and Google Trends search interest for 'Bitcoin' sampled at 5-minute intervals. A Gradient Boosting Classifier (GBC) is trained on 24 past observations (a 2-hour window) of these features to predict the directional movement of VXBT over the next 5-minute step, using a 90-10 train-test split.",
+    "data_period": "01 May 2019 to 25 February 2020, 5-minute intervals",
+    "universe": "Bitcoin options listed on Deribit and related Twitter/Google Trends data",
+    "performance_metrics": [
+      {
+        "metric_name": "accuracy",
+        "value": 0.434,
+        "unit": "ratio",
+        "context": "Test set accuracy of the tuned Gradient Boosting Classifier for a 3-outcome directional prediction problem",
+        "evidence_quote": "Applying this across our 5 minute resolution, 300 day dataset, we ﬁnd overall that the tuned GBC achieves a test set accuracy of 43.4%, considerably better than random chance for a 3-outcome problem (random score of 33%).",
+        "source_location": "Section 3.1"
+      }
+    ],
+    "key_findings": [
+      "Bitcoin implied volatility (VXBT) on a 5-minute horizon is modestly predictable using a Gradient Boosting Classifier, achieving an accuracy of 43.4% against a 33% random chance baseline.",
+      "The most important feature for predicting future VXBT direction is the direction of VXBT in the previous 5 minutes (volatility momentum).",
+      "Non-financial alternative data, specifically Google Trends search interest for 'Bitcoin', exhibits strong predictive power and makes up half of the top 20 features, with a lag of up to approximately one hour.",
+      "Tweet volume and tweet sentiment show weak or little predictive power at the 5-minute frequency compared to Google Trends."
+    ],
+    "limitations": [
+      "High-frequency 5-minute sampling may lose day-to-day variations in tweet volume that could otherwise carry predictive power."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:10:06.425184+00:00",
+    "input_tokens": 3749,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "alternative_data",
+      "volatility_risk_premium",
+      "sentiment_text"
+    ],
+    "curation_asset_class": [
+      "crypto",
+      "options_volatility"
+    ]
+  }
+}

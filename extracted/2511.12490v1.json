@@ -1,0 +1,151 @@
+{
+  "paper_id": "arxiv:2511.12490v1",
+  "title": "Discovery of a 13-Sharpe OOS Factor: Drift Regimes Unlock Hidden Cross-Sectional Predictability",
+  "extraction": {
+    "signal_type": [
+      "value",
+      "reversal",
+      "other"
+    ],
+    "asset_class": [
+      "equities"
+    ],
+    "methodology_summary": "The strategy combines an un-levered cross-sectional value score and a short-term reversal z-score, multiplied by a binary stock-specific regime gate based on whether a stock exhibits positive daily returns on over 60% of trailing 63 trading days. Portfolios are constructed daily as market-neutral long-short with constant gross exposure of 100%, and tested using a walk-forward framework across three distinct test windows (2010-2011, 2015-2016, 2020-2021) with frozen parameters.",
+    "data_period": "2004-2024, daily",
+    "universe": "S&P 500 index current constituents",
+    "performance_metrics": [
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 13.19,
+        "unit": "ratio",
+        "context": "Combined Out-of-Sample Performance",
+        "evidence_quote": "Sharpe Ratio (OOS) | 13.19 | 0.99 | 13.3'times",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Annualized Return",
+        "value": 158.6,
+        "unit": "percent",
+        "context": "Combined Out-of-Sample Performance",
+        "evidence_quote": "combined Sharpe ratio of 13.19, annualized returns of 158.6%, volatility of 12.0%, and maximum drawdown of −11.9%",
+        "source_location": "Section 3.1"
+      },
+      {
+        "metric_name": "Volatility",
+        "value": 12.0,
+        "unit": "percent",
+        "context": "Combined Out-of-Sample Performance",
+        "evidence_quote": "combined Sharpe ratio of 13.19, annualized returns of 158.6%, volatility of 12.0%, and maximum drawdown of −11.9%",
+        "source_location": "Section 3.1"
+      },
+      {
+        "metric_name": "Maximum Drawdown",
+        "value": -11.9,
+        "unit": "percent",
+        "context": "Combined Out-of-Sample Performance",
+        "evidence_quote": "Max Drawdown | −11.9% | −18.7% | 0.64'times",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 16.89,
+        "unit": "ratio",
+        "context": "Window 1 Test Period (2010-2011)",
+        "evidence_quote": "1 | 2005–2010 | 2010–2011 | 19.42 | 0.841 | 16.89 | 206.7% | 12.2% | −11.9%",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 22.87,
+        "unit": "ratio",
+        "context": "Window 2 Test Period (2015-2016)",
+        "evidence_quote": "2 | 2010–2015 | 2015–2016 | 27.79 | 1.327 | 22.87 | 207.2% | 9.1% | −0.9%",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 5.11,
+        "unit": "ratio",
+        "context": "Window 3 Test Period (2020-2021)",
+        "evidence_quote": "3 | 2015†2020 | 2020–2021 | 16.63 | 1.569 | 5.11 | 62.0% | 12.2% | −4.0%",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "Winning Days",
+        "value": 67.0,
+        "unit": "percent",
+        "context": "Combined Out-of-Sample Performance",
+        "evidence_quote": "Winning Days | 67% | 54% | 1.24'times",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Best Day",
+        "value": 4.2,
+        "unit": "percent",
+        "context": "Combined Out-of-Sample Performance",
+        "evidence_quote": "Best Day | +4.2% | +9.1% | 0.46'times",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Worst Day",
+        "value": -3.1,
+        "unit": "percent",
+        "context": "Combined Out-of-Sample Performance",
+        "evidence_quote": "Worst Day | −3.1% | −8.3% | 0.37'times",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Skewness",
+        "value": 0.42,
+        "unit": "ratio",
+        "context": "Combined Out-of-Sample Performance",
+        "evidence_quote": "Skewness | 0.42 | −0.31 | N/A",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Correlation",
+        "value": 0.08,
+        "unit": "ratio",
+        "context": "Combined Out-of-Sample Performance vs S&P 500 EW",
+        "evidence_quote": "Correlation | 0.08 | 1.00 | N/A",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 4.1,
+        "unit": "ratio",
+        "context": "Crisis Liquidity Stress Test",
+        "evidence_quote": "Crisis Liquidity | 2008-like conditions | Sharpe: 4.1 | Positive performance",
+        "source_location": "Table 7"
+      }
+    ],
+    "key_findings": [
+      "Regime-conditional signal activation based on stock-specific drift conditions unlocks high out-of-sample risk-adjusted performance with a combined Sharpe ratio of 13.19 across a 20-year walk-forward test framework.",
+      "Traditional risk factors (Fama-French and momentum) fail to explain returns, collectively accounting for less than 3% of total R-squared variance.",
+      "The strategy exhibits strong resilience during extreme market stress, maintaining a Sharpe ratio of 4.1 under simulated 2008 liquidity crisis conditions.",
+      "Conservative capacity analysis estimates deployable capital between $100 million and $500 million before material performance degradation occurs."
+    ],
+    "limitations": [
+      "Survivorship bias is introduced by using current constituents of the S&P 500.",
+      "Strategy path dependency relies on the presence of drift regimes, leading to minimal returns during extended non-drift periods.",
+      "Real-world constraints such as short-selling limits, regulatory changes, and execution frictions could reduce realized performance."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:17:46.430533+00:00",
+    "input_tokens": 6847,
+    "validation_flags": [
+      "metric_out_of_range:'Sharpe Ratio'=22.87ratio"
+    ],
+    "curation_signal_type": [
+      "value",
+      "reversal"
+    ],
+    "curation_asset_class": [
+      "equities"
+    ]
+  }
+}

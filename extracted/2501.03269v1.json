@@ -1,0 +1,138 @@
+{
+  "paper_id": "arxiv:2501.03269v1",
+  "title": "Evaluating the resilience of ESG investments in European Markets during turmoil periods",
+  "extraction": {
+    "signal_type": [
+      "other"
+    ],
+    "asset_class": [
+      "equities"
+    ],
+    "methodology_summary": "Daily closing prices of traditional and ESG equity indices for Germany, France, and Italy are analyzed using log-returns. A two-component mixture of generalised normal distributions (MGND) combined with a Naïve Bayes' classifier is used to identify stable versus turmoil market regimes. Subsequently, EGARCH-in-mean models incorporating turmoil dummy variables are estimated to evaluate the dynamics of conditional means, conditional volatilities, and leverage effects across the index pairs.",
+    "data_period": "October 18, 2021 to February 19, 2024, daily",
+    "universe": "European equity markets focusing on major traditional and ESG indices for Germany, France, and Italy (DAX, DAX 30 ESG, CAC 40, CAC 40 ESG, FTSE MIB, MIB ESG), benchmarked using Euro Stoxx 50.",
+    "performance_metrics": [
+      {
+        "metric_name": "mean return",
+        "value": 0.0166,
+        "unit": "percent",
+        "context": "Germany traditional index (DAX)",
+        "evidence_quote": "Germany | 0.0166 | 0.0031",
+        "source_location": "Table A1"
+      },
+      {
+        "metric_name": "mean return",
+        "value": 0.0031,
+        "unit": "percent",
+        "context": "Germany ESG index (DAX 30 ESG)",
+        "evidence_quote": "Germany | 0.0166 | 0.0031",
+        "source_location": "Table A1"
+      },
+      {
+        "metric_name": "volatility standard deviation",
+        "value": 1.1487,
+        "unit": "stddev",
+        "context": "Germany traditional index (DAX)",
+        "evidence_quote": "1.1487 | 1.1989",
+        "source_location": "Table A1"
+      },
+      {
+        "metric_name": "volatility standard deviation",
+        "value": 1.1989,
+        "unit": "stddev",
+        "context": "Germany ESG index (DAX 30 ESG)",
+        "evidence_quote": "1.1487 | 1.1989",
+        "source_location": "Table A1"
+      },
+      {
+        "metric_name": "mean return",
+        "value": 0.0254,
+        "unit": "percent",
+        "context": "France traditional index (CAC 40)",
+        "evidence_quote": "France | 0.0254 | 0.0229",
+        "source_location": "Table A1"
+      },
+      {
+        "metric_name": "mean return",
+        "value": 0.0229,
+        "unit": "percent",
+        "context": "France ESG index (CAC 40 ESG)",
+        "evidence_quote": "France | 0.0254 | 0.0229",
+        "source_location": "Table A1"
+      },
+      {
+        "metric_name": "volatility standard deviation",
+        "value": 1.1396,
+        "unit": "stddev",
+        "context": "France traditional index (CAC 40)",
+        "evidence_quote": "1.1396 | 1.1721",
+        "source_location": "Table A1"
+      },
+      {
+        "metric_name": "volatility standard deviation",
+        "value": 1.1721,
+        "unit": "stddev",
+        "context": "France ESG index (CAC 40 ESG)",
+        "evidence_quote": "1.1396 | 1.1721",
+        "source_location": "Table A1"
+      },
+      {
+        "metric_name": "mean return",
+        "value": 0.0313,
+        "unit": "percent",
+        "context": "Italy traditional index (FTSE MIB)",
+        "evidence_quote": "Italy | 0.0313 | 0.0289",
+        "source_location": "Table A1"
+      },
+      {
+        "metric_name": "mean return",
+        "value": 0.0289,
+        "unit": "percent",
+        "context": "Italy ESG index (MIB ESG)",
+        "evidence_quote": "Italy | 0.0313 | 0.0289",
+        "source_location": "Table A1"
+      },
+      {
+        "metric_name": "volatility standard deviation",
+        "value": 1.2633,
+        "unit": "stddev",
+        "context": "Italy traditional index (FTSE MIB)",
+        "evidence_quote": "1.2633 | 1.2972",
+        "source_location": "Table A1"
+      },
+      {
+        "metric_name": "volatility standard deviation",
+        "value": 1.2972,
+        "unit": "stddev",
+        "context": "Italy ESG index (MIB ESG)",
+        "evidence_quote": "1.2633 | 1.2972",
+        "source_location": "Table A1"
+      }
+    ],
+    "key_findings": [
+      "Traditional indices consistently report higher mean returns than ESG indices across Germany, France, and Italy.",
+      "Volatility levels between ESG and traditional indices are largely comparable in Germany and Italy, whereas the French ESG index exhibits noticeably higher volatility than its traditional benchmark.",
+      "Financial turmoil periods (such as the Russia-Ukraine conflict) significantly reduce conditional returns and increase conditional volatility across all examined markets.",
+      "EGARCH models reveal negative leverage effects and statistically significant risk premiums across both index types."
+    ],
+    "limitations": [
+      "The study is limited to the top three EU countries by GDP (France, Germany, and Italy), meaning effects may differ in other countries.",
+      "The sample period excludes the 2020 COVID-19 market shock due to data limitations for certain ESG indices, focusing predominantly on the impact of the Russia-Ukraine conflict."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:21:50.839378+00:00",
+    "input_tokens": 9257,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "quality_profitability",
+      "volatility_risk_premium"
+    ],
+    "curation_asset_class": [
+      "equities"
+    ]
+  }
+}

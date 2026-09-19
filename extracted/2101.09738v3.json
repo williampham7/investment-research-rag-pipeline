@@ -1,0 +1,65 @@
+{
+  "paper_id": "arxiv:2101.09738v3",
+  "title": "Volatility Shocks and Currency Returns",
+  "extraction": {
+    "signal_type": [
+      "volatility_risk_premium",
+      "other"
+    ],
+    "asset_class": [
+      "fx"
+    ],
+    "methodology_summary": "The authors construct forward-looking currency implied volatilities using OTC option prices via a model-free approach. They estimate a dynamic volatility network through time-varying parameter vector autoregression (TVP-VAR) models, isolating shocks that exclude contemporaneous common correlations. Currencies are sorted monthly into quintiles based on to-directional and from-directional volatility connectedness, forming long-short zero-cost portfolios to test currency return predictability.",
+    "data_period": "January 1996 to December 2021, monthly",
+    "universe": "20 developed and emerging market countries against the USD",
+    "performance_metrics": [
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.61,
+        "unit": "ratio",
+        "context": "To-directional volatility connectedness long-short strategy (P5-1)",
+        "evidence_quote": "Sharpe | −0.26 | 0.03 | −0.05 | −0.05 | 0.20 | 0.61",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.6,
+        "unit": "ratio",
+        "context": "Short-term to-directional volatility connectedness long-short strategy (T(S))",
+        "evidence_quote": "Sharpe | −0.24 | −0.02 | −0.04 | −0.05 | 0.22 | 0.60",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.53,
+        "unit": "ratio",
+        "context": "Long-term to-directional volatility connectedness long-short strategy (T(L))",
+        "evidence_quote": "Sharpe | −0.23 | −0.07 | 0.04 | −0.07 | 0.18 | 0.53",
+        "source_location": "Table 2"
+      }
+    ],
+    "key_findings": [
+      "Currencies that transmit more correlation-adjusted volatility shocks earn lower average excess returns.",
+      "Buying the weakest and selling the strongest transmitters of correlation-adjusted volatility shocks yields strong risk-adjusted returns driven primarily by spot exchange rate movements.",
+      "A general equilibrium model confirms that volatility transmission captures idiosyncratic country-specific jump risks, matching empirical findings.",
+      "The volatility transmission strategy provides substantial diversification benefits when combined with standard currency benchmarks due to weak negative correlations."
+    ],
+    "limitations": [],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:10:28.759825+00:00",
+    "input_tokens": 43393,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "carry",
+      "volatility_risk_premium",
+      "other"
+    ],
+    "curation_asset_class": [
+      "fx"
+    ]
+  }
+}

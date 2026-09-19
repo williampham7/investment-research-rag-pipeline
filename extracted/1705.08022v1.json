@@ -1,0 +1,59 @@
+{
+  "paper_id": "arxiv:1705.08022v1",
+  "title": "Using Macroeconomic Forecasts to Improve Mean Reverting Trading Strategies",
+  "extraction": {
+    "signal_type": [
+      "reversal",
+      "ml_composite",
+      "alternative_data"
+    ],
+    "asset_class": [
+      "fx"
+    ],
+    "methodology_summary": "The strategy implements a multiple pairs trading framework on major currency pairs using cointegration tested via the Johansen procedure. A mean reversion trading signal is generated using z-scores of the cointegrated portfolio spreads with entry and exit thresholds. To improve performance, a Support Vector Machine (SVM) classifies the monthly directional movement of macroeconomic variables (S&P 500, Federal Funds Rate, and 10-Year Treasury Yield), and the resulting signals are combined with the mean-reverting signal using weights optimized via Sequential Least-Squares Programming (SLSQP) to maximize APR.",
+    "data_period": "January 2008 to June 2014, daily",
+    "universe": "Major currency pairs retrieved through Yahoo Finance",
+    "performance_metrics": [
+      {
+        "metric_name": "APR",
+        "value": 4.084,
+        "unit": "percent",
+        "context": "Mean reversion strategy considering only the mean reverting signal",
+        "evidence_quote": "If only the mean reverting signal was considered, an APR of 4.084% was yielded.",
+        "source_location": "Section 5"
+      },
+      {
+        "metric_name": "APR",
+        "value": 4.112,
+        "unit": "percent",
+        "context": "Mean reversion strategy after optimization, giving non-zero weight to macroeconomic indicators",
+        "evidence_quote": "After optimization, giving non-zero weight to the macroeconomic indicators was found to be ideal, with a increased APR of 4.112% obtained.",
+        "source_location": "Section 5"
+      }
+    ],
+    "key_findings": [
+      "Macroeconomic indicators combined with technical mean reversion signals improve trading strategy performance.",
+      "Support Vector Machines can forecast the directional movement of macroeconomic indicators with a classification accuracy of 70%.",
+      "Incorporating macroeconomic forecasts prevents excessive transitioning between long and short positions during major macroeconomic events such as the 2008-2009 recession."
+    ],
+    "limitations": [
+      "The lessening in the APR is due to the transaction costs factored in."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:05:40.344124+00:00",
+    "input_tokens": 4760,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "stat_arb_pairs",
+      "ml_composite"
+    ],
+    "curation_asset_class": [
+      "fixed_income",
+      "fx"
+    ]
+  }
+}

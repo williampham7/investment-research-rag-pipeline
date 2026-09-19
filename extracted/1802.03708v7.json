@@ -1,0 +1,64 @@
+{
+  "paper_id": "arxiv:1802.03708v7",
+  "title": "A Time-Varying Network for Cryptocurrencies",
+  "extraction": {
+    "signal_type": [
+      "momentum",
+      "other"
+    ],
+    "asset_class": [
+      "crypto"
+    ],
+    "methodology_summary": "The authors construct a time-varying directed network of cryptocurrencies based on return cross-predictability (using adaptive Lasso on rolling daily returns) and technological similarities (hashing algorithms and proof types). They develop a dynamic covariate-assisted spectral clustering (CASC) method to identify latent crypto communities. Finally, they test portfolio diversification across communities and an inter-crypto momentum trading strategy that buys top-quartile and sells bottom-quartile momentum signal portfolios within communities.",
+    "data_period": "January 1, 2016 to December 31, 2018, daily",
+    "universe": "Top 400 cryptocurrencies by market capitalization as of December 31, 2018, filtered to 182 cryptocurrencies after excluding those under 1 year old or with incomplete contract/price data.",
+    "performance_metrics": [
+      {
+        "metric_name": "t-statistic",
+        "value": 9.0,
+        "unit": "ratio",
+        "context": "Community 1 30-day-ahead return correlation difference between within- and cross-community (Dynamic CASC)",
+        "evidence_quote": "The correlation difference is 2.8%, which is significant at the 1% level with a Newey–West adjusted t-statistic of 9.0.",
+        "source_location": "Section 4.1"
+      },
+      {
+        "metric_name": "annualized return",
+        "value": 1.08,
+        "unit": "percent",
+        "context": "One-day-ahead average daily return of the inter-crypto momentum long-short portfolio (Winner-Loser)",
+        "evidence_quote": "It shows that the trading strategy generates a one-day-ahead average daily return of 1.08%, and the return does not revert in a week.",
+        "source_location": "Abstract"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 12.24,
+        "unit": "ratio",
+        "context": "t-statistic for the one-day-ahead average daily return of the inter-crypto momentum portfolio (Winner-Loser)",
+        "evidence_quote": "Winner−Loser | 1.08 | 0.05 | 0.12 | 0.14 | −0.13 | 0.16 | −0.09\nt-statistic | 12.24 | 0.55 | 1.30 | 1.56 | −1.37 | 1.89 | −1.05",
+        "source_location": "Table 4"
+      }
+    ],
+    "key_findings": [
+      "Dynamic covariate-assisted spectral clustering (CASC) successfully recovers crypto network communities by combining return cross-predictability and technological similarities.",
+      "Investors achieve better risk diversification by investing in cross-community cryptocurrencies, evidenced by significantly lower return correlations across communities than within communities.",
+      "An inter-crypto momentum trading strategy based on community network linkages earns a robust one-day-ahead average daily return of 1.08% that does not revert within a week.",
+      "Behavioral factors such as market frictions (limit-to-arbitrage), investor attention, and economic policy uncertainty do not explain the momentum spillover effects, confirming an information propagation mechanism."
+    ],
+    "limitations": [],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:06:10.089179+00:00",
+    "input_tokens": 19167,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "momentum",
+      "other"
+    ],
+    "curation_asset_class": [
+      "crypto"
+    ]
+  }
+}

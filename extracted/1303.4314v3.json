@@ -1,0 +1,92 @@
+{
+  "paper_id": "arxiv:1303.4314v3",
+  "title": "Reinvestigating the Uncovered Interest Rate Parity Puzzle via Analysis of Multivariate Tail Dependence in Currency Carry Trades",
+  "extraction": {
+    "signal_type": [
+      "carry"
+    ],
+    "asset_class": [
+      "fx"
+    ],
+    "methodology_summary": "The paper investigates the risk-reward profile of currency carry trades by analyzing the multivariate tail dependence of currency baskets. Currencies are sorted daily into five baskets based on their interest rate differentials (forward-to-spot ratio) relative to the US dollar, focusing on the high interest rate (long) and low interest rate (short) baskets. The joint distribution of exchange rate log-returns is modeled using a two-stage Inference Function for the Margins (IFM) approach, combining Log-Generalized-Gamma marginal distributions with flexible mixture copula models (Clayton-Frank-Gumbel). Finally, the authors compute generalized multivariate tail dependence coefficients to evaluate downside and upside extreme risk exposures and adjust cumulative portfolio returns.",
+    "data_period": "02/01/1989 to 31/05/2013, daily and monthly",
+    "universe": "33 currencies relative to the USD (excluding euro area countries and pegged currencies like HKD, KWD, MYR, SAR, and Danish krone)",
+    "performance_metrics": [
+      {
+        "metric_name": "Mean difference between AIC scores (C-F-G vs C-G)",
+        "value": 2.33,
+        "unit": "other",
+        "context": "High interest rate basket model comparison",
+        "evidence_quote": "the mean difference between the AIC scores for the C-F-G and the C-G models for the high interest rate basket is 2.33",
+        "source_location": "Section 5.2"
+      },
+      {
+        "metric_name": "Mean difference between AIC scores (C-F-G vs C-G)",
+        "value": 2.25,
+        "unit": "other",
+        "context": "Low interest rate basket model comparison",
+        "evidence_quote": "and for the low interest rate basket is 2.25 in favour of the C-F-G.",
+        "source_location": "Section 5.2"
+      },
+      {
+        "metric_name": "Mean difference between AIC scores (C-F-G vs OpC)",
+        "value": 14.43,
+        "unit": "other",
+        "context": "High interest rate basket model comparison",
+        "evidence_quote": "as shown by the mean difference between the AIC scores of 14.43 for the high interest rate basket",
+        "source_location": "Section 5.2"
+      },
+      {
+        "metric_name": "Mean difference between AIC scores (C-F-G vs OpC)",
+        "value": 13.36,
+        "unit": "other",
+        "context": "Low interest rate basket model comparison",
+        "evidence_quote": "and 13.36 for the low interest rate basket",
+        "source_location": "Section 5.2"
+      },
+      {
+        "metric_name": "Daily slump",
+        "value": 29.0,
+        "unit": "percent",
+        "context": "South African rand slump in 2001",
+        "evidence_quote": "In 2001, the South African rand slumped 29% after the events of September 11",
+        "source_location": "Section 3"
+      },
+      {
+        "metric_name": "Daily loss",
+        "value": 30.0,
+        "unit": "percent",
+        "context": "Turkish lira daily loss on 22nd of February 2001",
+        "evidence_quote": "we note the 30% daily loss of the Turkish lira on the 22nd of February 2001.",
+        "source_location": "Section 3"
+      }
+    ],
+    "key_findings": [
+      "The Uncovered Interest Rate Parity (UIP) condition is violated empirically, allowing investors to earn profits on average via the currency carry trade.",
+      "High interest rate (investment) currencies exhibit significant upper tail dependence during crisis periods, meaning they tend to depreciate simultaneously against the USD, exposing carry trade portfolios to severe drawdown risks.",
+      "Low interest rate (funding) currencies and high interest rate currencies display periods of inverted tail dependence, which may reflect the construction phase of carry trade positions by investors.",
+      "Incorporating multivariate tail dependence into risk-reward analysis reveals that the apparent profitability of carry trades is a compensation for exposure to joint catastrophic tail risk.",
+      "The Clayton-Frank-Gumbel (C-F-G) mixture copula model provides a superior fit compared to the Clayton-Gumbel (C-G) and outer-power Clayton (OpC) models for capturing asymmetric tail dependence in currency baskets."
+    ],
+    "limitations": [
+      "The analysis does not quantify a market price per unit of tail risk (referred to as relative exposure adjustments only).",
+      "The study removes euro area countries (due to ERM convergence trade) and several pegged currencies (HKD, KWD, MYR, SAR, and Danish krone) which might limit the generalizability to all global currencies.",
+      "The model assumes local stationarity over sliding windows of 6 months and 1 year.",
+      "The VIX is used as a proxy for market volatility, but it is not a direct measure of global FX volatility."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash",
+    "extracted_at": "2026-09-18T23:50:22.264691+00:00",
+    "input_tokens": 16901,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "carry"
+    ],
+    "curation_asset_class": [
+      "fx"
+    ]
+  }
+}

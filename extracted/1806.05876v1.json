@@ -1,0 +1,362 @@
+{
+  "paper_id": "arxiv:1806.05876v1",
+  "title": "Financial Risk and Returns Prediction with Modular Networked Learning",
+  "extraction": {
+    "signal_type": [
+      "momentum",
+      "reversal",
+      "low_volatility",
+      "ml_composite"
+    ],
+    "asset_class": [
+      "equities"
+    ],
+    "methodology_summary": "The paper builds an artificial agent using a Modular Networked Learning (MNL) system comprising interconnected recurrent neural networks (either LSTM or GRU). The main prediction unit (MPU) forecasts the next period's returns based on a past time window of returns, while a dispersion prediction unit (DPU) forecasts the next period's squared deviation around the MPU's prediction using a sliding window working memory block of past squared errors. These two conditional expectations are combined into a volatility-sensitive interval prediction for financial returns and tested across varying time window sizes.",
+    "data_period": "S&P 500: Jan 3, 1950 - Jan 4, 2018 (8000 training, 9112 testing); NASDAQ: Feb 5, 1971 - Jan 4, 2018 (5000 training, 6834 testing); Russell 2000: Sep 10, 1987 - Jan 4, 2018 (3500 training, 4142 testing); daily",
+    "universe": "S&P 500, NASDAQ Composite, and Russell 2000 dividend adjusted closing value indices",
+    "performance_metrics": [
+      {
+        "metric_name": "hit rate",
+        "value": 0.855464,
+        "unit": "ratio",
+        "context": "S&P 500 MPU maximum training accuracy for 1% neighborhood size (LSTM)",
+        "evidence_quote": "S&P 500 MPU 0.192673 0.855464 0.669282",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "hit rate",
+        "value": 0.871436,
+        "unit": "ratio",
+        "context": "S&P 500 DPU maximum training accuracy for 0.01% neighborhood size (LSTM)",
+        "evidence_quote": "S&P 500 DPU 0.016633 0.871436 0.567719",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "hit rate",
+        "value": 0.872549,
+        "unit": "ratio",
+        "context": "NASDAQ MPU maximum training accuracy for 1% neighborhood size (LSTM)",
+        "evidence_quote": "NASDAQ MPU 0.181273 0.872549 0.671791",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "hit rate",
+        "value": 0.886309,
+        "unit": "ratio",
+        "context": "NASDAQ DPU maximum training accuracy for 0.01% neighborhood size (LSTM)",
+        "evidence_quote": "NASDAQ DPU 0.014211 0.886309 0.577956",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "hit rate",
+        "value": 0.817038,
+        "unit": "ratio",
+        "context": "Russell 2000 MPU maximum training accuracy for 1% neighborhood size (LSTM)",
+        "evidence_quote": "Russell 2000 MPU 0.175243 0.817038 0.642004",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "hit rate",
+        "value": 0.833238,
+        "unit": "ratio",
+        "context": "Russell 2000 DPU maximum training accuracy for 0.01% neighborhood size (LSTM)",
+        "evidence_quote": "Russell 2000 DPU 0.014874 0.833238 0.544640",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "hit rate",
+        "value": 0.857089,
+        "unit": "ratio",
+        "context": "S&P 500 MPU maximum training accuracy for 1% neighborhood size (GRU)",
+        "evidence_quote": "S&P 500 MPU 0.066767 0.857089 0.573361",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "hit rate",
+        "value": 0.862181,
+        "unit": "ratio",
+        "context": "S&P 500 DPU maximum training accuracy for 0.01% neighborhood size (GRU)",
+        "evidence_quote": "S&P 500 DPU 0.066783 0.862181 0.534920",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "hit rate",
+        "value": 0.873749,
+        "unit": "ratio",
+        "context": "NASDAQ MPU maximum training accuracy for 1% neighborhood size (GRU)",
+        "evidence_quote": "NASDAQ MPU 0.058423 0.873749 0.573601",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "hit rate",
+        "value": 0.878102,
+        "unit": "ratio",
+        "context": "NASDAQ DPU maximum training accuracy for 0.01% neighborhood size (GRU)",
+        "evidence_quote": "NASDAQ DPU 0.058447 0.878102 0.534037",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "hit rate",
+        "value": 0.818754,
+        "unit": "ratio",
+        "context": "Russell 2000 MPU maximum training accuracy for 1% neighborhood size (GRU)",
+        "evidence_quote": "Russell 2000 MPU 0.054889 0.818754 0.545563",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "hit rate",
+        "value": 0.815503,
+        "unit": "ratio",
+        "context": "Russell 2000 DPU maximum training accuracy for 0.01% neighborhood size (GRU)",
+        "evidence_quote": "Russell 2000 DPU 0.054920 0.815503 0.508249",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "hit rate",
+        "value": 0.347174,
+        "unit": "ratio",
+        "context": "S&P 500 training interval prediction success for window size 2 (LSTM)",
+        "evidence_quote": "2 0.347174 0.361480 0.401521 0.412798 0.346682 0.346628",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "hit rate",
+        "value": 0.36148,
+        "unit": "ratio",
+        "context": "S&P 500 test interval prediction success for window size 2 (LSTM)",
+        "evidence_quote": "2 0.347174 0.361480 0.401521 0.412798 0.346682 0.346628",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "hit rate",
+        "value": 0.401521,
+        "unit": "ratio",
+        "context": "NASDAQ training interval prediction success for window size 2 (LSTM)",
+        "evidence_quote": "2 0.347174 0.361480 0.401521 0.412798 0.346682 0.346628",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "hit rate",
+        "value": 0.412798,
+        "unit": "ratio",
+        "context": "NASDAQ test interval prediction success for window size 2 (LSTM)",
+        "evidence_quote": "2 0.347174 0.361480 0.401521 0.412798 0.346682 0.346628",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "hit rate",
+        "value": 0.346682,
+        "unit": "ratio",
+        "context": "Russell training interval prediction success for window size 2 (LSTM)",
+        "evidence_quote": "2 0.347174 0.361480 0.401521 0.412798 0.346682 0.346628",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "hit rate",
+        "value": 0.346628,
+        "unit": "ratio",
+        "context": "Russell test interval prediction success for window size 2 (LSTM)",
+        "evidence_quote": "2 0.347174 0.361480 0.401521 0.412798 0.346682 0.346628",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "hit rate",
+        "value": 0.445718,
+        "unit": "ratio",
+        "context": "S&P 500 training interval prediction success for window size 30 (LSTM)",
+        "evidence_quote": "30 0.445718 0.458402 0.544737 0.551011 0.438953 0.442784",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "hit rate",
+        "value": 0.458402,
+        "unit": "ratio",
+        "context": "S&P 500 test interval prediction success for window size 30 (LSTM)",
+        "evidence_quote": "30 0.445718 0.458402 0.544737 0.551011 0.438953 0.442784",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "hit rate",
+        "value": 0.544737,
+        "unit": "ratio",
+        "context": "NASDAQ training interval prediction success for window size 30 (LSTM)",
+        "evidence_quote": "30 0.445718 0.458402 0.544737 0.551011 0.438953 0.442784",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "hit rate",
+        "value": 0.551011,
+        "unit": "ratio",
+        "context": "NASDAQ test interval prediction success for window size 30 (LSTM)",
+        "evidence_quote": "30 0.445718 0.458402 0.544737 0.551011 0.438953 0.442784",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "hit rate",
+        "value": 0.438953,
+        "unit": "ratio",
+        "context": "Russell training interval prediction success for window size 30 (LSTM)",
+        "evidence_quote": "30 0.445718 0.458402 0.544737 0.551011 0.438953 0.442784",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "hit rate",
+        "value": 0.442784,
+        "unit": "ratio",
+        "context": "Russell test interval prediction success for window size 30 (LSTM)",
+        "evidence_quote": "30 0.445718 0.458402 0.544737 0.551011 0.438953 0.442784",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "hit rate",
+        "value": 0.31053,
+        "unit": "ratio",
+        "context": "S&P 500 training interval prediction success for window size 2 (GRU)",
+        "evidence_quote": "2 0.310530 0.307346 0.309047 0.303119 0.313215 0.303602",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "hit rate",
+        "value": 0.307346,
+        "unit": "ratio",
+        "context": "S&P 500 test interval prediction success for window size 2 (GRU)",
+        "evidence_quote": "2 0.310530 0.307346 0.309047 0.303119 0.313215 0.303602",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "hit rate",
+        "value": 0.309047,
+        "unit": "ratio",
+        "context": "NASDAQ training interval prediction success for window size 2 (GRU)",
+        "evidence_quote": "2 0.310530 0.307346 0.309047 0.303119 0.313215 0.303602",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "hit rate",
+        "value": 0.303119,
+        "unit": "ratio",
+        "context": "NASDAQ test interval prediction success for window size 2 (GRU)",
+        "evidence_quote": "2 0.310530 0.307346 0.309047 0.303119 0.313215 0.303602",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "hit rate",
+        "value": 0.313215,
+        "unit": "ratio",
+        "context": "Russell training interval prediction success for window size 2 (GRU)",
+        "evidence_quote": "2 0.310530 0.307346 0.309047 0.303119 0.313215 0.303602",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "hit rate",
+        "value": 0.303602,
+        "unit": "ratio",
+        "context": "Russell test interval prediction success for window size 2 (GRU)",
+        "evidence_quote": "2 0.310530 0.307346 0.309047 0.303119 0.313215 0.303602",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "hit rate",
+        "value": 0.830982,
+        "unit": "ratio",
+        "context": "S&P 500 training interval prediction success for window size 30 (GRU)",
+        "evidence_quote": "30 0.830982 0.834825 0.835223 0.835080 0.840698 0.826268",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "hit rate",
+        "value": 0.834825,
+        "unit": "ratio",
+        "context": "S&P 500 test interval prediction success for window size 30 (GRU)",
+        "evidence_quote": "30 0.830982 0.834825 0.835223 0.835080 0.840698 0.826268",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "hit rate",
+        "value": 0.835223,
+        "unit": "ratio",
+        "context": "NASDAQ training interval prediction success for window size 30 (GRU)",
+        "evidence_quote": "30 0.830982 0.834825 0.835223 0.835080 0.840698 0.826268",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "hit rate",
+        "value": 0.83508,
+        "unit": "ratio",
+        "context": "NASDAQ test interval prediction success for window size 30 (GRU)",
+        "evidence_quote": "30 0.830982 0.834825 0.835223 0.835080 0.840698 0.826268",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "hit rate",
+        "value": 0.840698,
+        "unit": "ratio",
+        "context": "Russell training interval prediction success for window size 30 (GRU)",
+        "evidence_quote": "30 0.830982 0.834825 0.835223 0.835080 0.840698 0.826268",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "hit rate",
+        "value": 0.826268,
+        "unit": "ratio",
+        "context": "Russell test interval prediction success for window size 30 (GRU)",
+        "evidence_quote": "30 0.830982 0.834825 0.835223 0.835080 0.840698 0.826268",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "hit rate",
+        "value": 0.94534,
+        "unit": "ratio",
+        "context": "S&P 500 training interval prediction success for SD multiplier 1.5 (GRU)",
+        "evidence_quote": "1.5 Train 0.945340 0.941093 0.940116",
+        "source_location": "Table 5"
+      },
+      {
+        "metric_name": "hit rate",
+        "value": 0.945641,
+        "unit": "ratio",
+        "context": "S&P 500 test interval prediction success for SD multiplier 1.5 (GRU)",
+        "evidence_quote": "Test 0.945641 0.946995 0.950502",
+        "source_location": "Table 5"
+      },
+      {
+        "metric_name": "hit rate",
+        "value": 0.980605,
+        "unit": "ratio",
+        "context": "S&P 500 training interval prediction success for SD multiplier 2 (GRU)",
+        "evidence_quote": "2 Train 0.980605 0.979150 0.976163",
+        "source_location": "Table 5"
+      },
+      {
+        "metric_name": "hit rate",
+        "value": 0.979892,
+        "unit": "ratio",
+        "context": "S&P 500 test interval prediction success for SD multiplier 2 (GRU)",
+        "evidence_quote": "Test 0.979892 0.979625 0.984073",
+        "source_location": "Table 5"
+      }
+    ],
+    "key_findings": [
+      "Modular Networked Learning (MNL) agents can predict financial returns and market volatility simultaneously using interconnected recurrent neural network modules.",
+      "For GRU-based MNL systems, increasing the historical time window size improves interval prediction accuracy, achieving over 80% success rate at a 30-day window and up to ~98% success when using 2 standard deviation bounds.",
+      "The empirical results challenge the Efficient Market Hypothesis (EMH) by showing that past returns and volatility patterns contain predictable information that can be successfully exploited over long out-of-sample periods.",
+      "GRU architectures outperform LSTM architectures in capturing large market jumps, volatility bursts, and laminar periods within the proposed MNL framework."
+    ],
+    "limitations": [],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:06:27.576635+00:00",
+    "input_tokens": 22874,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "ml_composite",
+      "volatility_risk_premium"
+    ],
+    "curation_asset_class": [
+      "equities"
+    ]
+  }
+}

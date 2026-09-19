@@ -1,0 +1,40 @@
+{
+  "paper_id": "arxiv:2106.06164v1",
+  "title": "A new look at calendar anomalies: Multifractality and day of the week effect",
+  "extraction": {
+    "signal_type": [
+      "seasonality",
+      "other"
+    ],
+    "asset_class": [
+      "equities"
+    ],
+    "methodology_summary": "The paper applies Multifractal Detrended Fluctuation Analysis (MF-DFA) to daily closing price returns of 19 major global stock market indices, separated by each day of the week, to investigate calendar anomalies. Complexity parameters—such as spectrum position maximum alpha_0, spectrum width W, and skew parameter r—are computed from the resulting multifractal singularity spectra. Shuffling tests are performed to determine the sources of multifractality (probability density functions versus long-term correlations), and a sliding-window time-dependent analysis evaluates temporal evolution.",
+    "data_period": "From earliest recorded date (varying by index, e.g., GSPC starting 1950) to 2019, daily",
+    "universe": "19 major stock market indices worldwide listed on Yahoo Finance (including AORD, AXJO, BFX, BVSP, DJI, FCHI, GDAXI, GSPC, GSPTSE, HIS, IPSA, IXIC, JKSE, KS11, MERV, MXX, N225, NYA, TWII)",
+    "performance_metrics": [],
+    "key_findings": [
+      "Individual days of the week exhibit distinct multifractal properties, demonstrating day-of-the-week calendar anomalies from an econophysics perspective.",
+      "Monday returns typically exhibit more persistent behavior (higher alpha_0) and richer multifractal structures (wider spectrum W) than other day-resolved returns across many global markets.",
+      "Shuffling time series reveals that multifractality arises from both a broad probability density function and long-term correlations, with Monday returns tending to show the strongest impact from shuffling.",
+      "Time-dependent multifractal analysis on the US market shows that differences in multifractal spectra between Monday and other days were prominent from 1950 to 1980 and vanished thereafter, except during major financial crises (1987 and 2008) where Monday returns displayed significantly wider multifractal spectra."
+    ],
+    "limitations": [],
+    "extraction_confidence": "high",
+    "extraction_notes": "The paper is a quantitative econophysics study investigating fractal properties and calendar anomalies rather than proposing a trading strategy. Consequently, performance_metrics is an empty list as there are no trading return figures, Sharpe ratios, or strategy alphas reported."
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:39:38.245092+00:00",
+    "input_tokens": 8296,
+    "validation_flags": [
+      "no_performance_metrics_found"
+    ],
+    "curation_signal_type": [
+      "seasonality"
+    ],
+    "curation_asset_class": [
+      "equities"
+    ]
+  }
+}

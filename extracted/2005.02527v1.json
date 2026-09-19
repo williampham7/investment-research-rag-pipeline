@@ -1,0 +1,105 @@
+{
+  "paper_id": "arxiv:2005.02527v1",
+  "title": "ESG2Risk: A Deep Learning Framework from ESG News to Stock Volatility Prediction",
+  "extraction": {
+    "signal_type": [
+      "sentiment_text",
+      "alternative_data",
+      "low_volatility"
+    ],
+    "asset_class": [
+      "equities"
+    ],
+    "methodology_summary": "The authors propose a deep learning framework called ESG2Risk to predict stock volatility using ESG-related financial news. The pipeline extracts ESG news using an in-house vocabulary filter, transforms raw text into dense embeddings using a pre-trained Transformer language model and extracts sentiment scores, and feeds these into stacked dense layer encoders. A Bayesian deep learning framework using stochastic gradient MCMC is employed to learn model parameters and generate robust ensemble volatility predictions over 1-week and 2-week horizons.",
+    "data_period": "2003 to 2019, weekly",
+    "universe": "MSCI US and All Cap EU stocks",
+    "performance_metrics": [
+      {
+        "metric_name": "RMSE",
+        "value": 0.289,
+        "unit": "ratio",
+        "context": "MSCI-US market, 1 week forward volatility predicting errors for ESG2Risk model",
+        "evidence_quote": "MSCI-US | 0.663 | 0.289 | 0.542 | 0.249",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "MAE",
+        "value": 0.249,
+        "unit": "ratio",
+        "context": "MSCI-US market, 1 week forward volatility predicting errors for ESG2Risk model",
+        "evidence_quote": "MSCI-US | 0.663 | 0.289 | 0.542 | 0.249",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "RMSE",
+        "value": 0.281,
+        "unit": "ratio",
+        "context": "AC-EU market, 1 week forward volatility predicting errors for ESG2Risk model",
+        "evidence_quote": "AC-EU | 0.630 | 0.281 | 0.515 | 0.241",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "MAE",
+        "value": 0.241,
+        "unit": "ratio",
+        "context": "AC-EU market, 1 week forward volatility predicting errors for ESG2Risk model",
+        "evidence_quote": "AC-EU | 0.630 | 0.281 | 0.515 | 0.241",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "RMSE",
+        "value": 0.289,
+        "unit": "ratio",
+        "context": "MSCI-US market, 2 weeks forward volatility predicting errors for ESG2Risk model",
+        "evidence_quote": "MSCI-US | 0.669 | 0.289 | 0.548 | 0.251",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "MAE",
+        "value": 0.251,
+        "unit": "ratio",
+        "context": "MSCI-US market, 2 weeks forward volatility predicting errors for ESG2Risk model",
+        "evidence_quote": "MSCI-US | 0.669 | 0.289 | 0.548 | 0.251",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "RMSE",
+        "value": 0.28,
+        "unit": "ratio",
+        "context": "AC-EU market, 2 weeks forward volatility predicting errors for ESG2Risk model",
+        "evidence_quote": "AC-EU | 0.624 | 0.280 | 0.511 | 0.240",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "MAE",
+        "value": 0.24,
+        "unit": "ratio",
+        "context": "AC-EU market, 2 weeks forward volatility predicting errors for ESG2Risk model",
+        "evidence_quote": "AC-EU | 0.624 | 0.280 | 0.511 | 0.240",
+        "source_location": "Table 3"
+      }
+    ],
+    "key_findings": [
+      "Transformer-based language models combined with sentiment analysis successfully extract predictive information from ESG newsflow for stock volatility.",
+      "The ESG2Risk framework significantly outperforms models using solely sentiment metrics across both MSCI US and All Cap EU markets.",
+      "Stocks with high predicted volatility exhibit significantly lower forward returns, allowing the identification of potential high risk and low return names.",
+      "Integrating ESG newsflow can positively contribute to equity portfolio performance and risk management."
+    ],
+    "limitations": [],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:09:19.381659+00:00",
+    "input_tokens": 4546,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "quality_profitability",
+      "volatility_risk_premium"
+    ],
+    "curation_asset_class": [
+      "equities"
+    ]
+  }
+}

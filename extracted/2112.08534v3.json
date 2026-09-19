@@ -1,0 +1,102 @@
+{
+  "paper_id": "arxiv:2112.08534v3",
+  "title": "Trading with the Momentum Transformer: An Intelligent and Interpretable Architecture",
+  "extraction": {
+    "signal_type": [
+      "momentum",
+      "reversal"
+    ],
+    "asset_class": [
+      "commodities",
+      "equities",
+      "fixed_income",
+      "fx",
+      "futures_multi_asset"
+    ],
+    "methodology_summary": "The paper introduces the Momentum Transformer, an attention-LSTM hybrid strategy that incorporates multi-head self-attention and variable selection networks into a deep momentum network framework. The strategy uses price and return features across multiple timescales along with MACD and changepoint detection (CPD) covariates to size futures positions with volatility scaling. It is evaluated on a balanced portfolio of 50 liquid futures contracts using an expanding training-validation-test window approach.",
+    "data_period": "1990-2020",
+    "universe": "50 of the most liquid, continuous futures contracts spanning commodities, equities, fixed income, and foreign exchange, extracted from the Pinnacle Data Corp CLC Database",
+    "performance_metrics": [
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 1.67,
+        "unit": "ratio",
+        "context": "LSTM strategy, Average 1995-2020",
+        "evidence_quote": "LSTM | 2.71% | 1.67% | 1.70 | 1.10% | 2.66 | 2.14% | 1.68 | 55.17% | 1.091",
+        "source_location": "Exhibit 3"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 2.61,
+        "unit": "ratio",
+        "context": "Decoder-Only Trans. strategy, Average 1995-2020",
+        "evidence_quote": "Decoder-Only Trans. | 2.95% | 2.61% | 1.11 | 1.74% | 1.69 | 3.47% | 1.09 | 53.50% | 1.051",
+        "source_location": "Exhibit 3"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 1.54,
+        "unit": "ratio",
+        "context": "Decoder-Only TFT strategy, Average 1995-2020",
+        "evidence_quote": "Decoder-Only TFT | 4.01% | 1.54% | 2.54 | 0.96% | 4.14 | 1.32% | 3.22 | 57.34% | 1.154",
+        "source_location": "Exhibit 3"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 1.85,
+        "unit": "ratio",
+        "context": "LSTM strategy, Average 2015-2020",
+        "evidence_quote": "LSTM | 1.23% | 1.85% | 0.82 | 1.32% | 1.19 | 3.55% | 0.66 | 53.38% | 1.004",
+        "source_location": "Exhibit 3"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 1.23,
+        "unit": "ratio",
+        "context": "Decoder-Only TFT strategy, Average 2015-2020",
+        "evidence_quote": "Decoder-Only TFT | 1.99% | 1.23% | 1.71 | 0.82% | 2.61 | 1.17% | 2.06 | 55.72% | 1.073",
+        "source_location": "Exhibit 3"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 2.82,
+        "unit": "ratio",
+        "context": "LSTM strategy, SARS-CoV-2 scenario",
+        "evidence_quote": "LSTM | -4.15% | 2.82% | -1.50 | 2.52% | -1.67 | 5.35% | -0.78 | 52.29% | 0.643",
+        "source_location": "Exhibit 3"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 1.75,
+        "unit": "ratio",
+        "context": "Decoder-Only TFT strategy, SARS-CoV-2 scenario",
+        "evidence_quote": "Decoder-Only TFT | 1.81% | 1.75% | 1.22 | 1.37% | 1.74 | 2.14% | 1.57 | 60.39% | 0.831",
+        "source_location": "Exhibit 3"
+      }
+    ],
+    "key_findings": [
+      "The Momentum Transformer outperforms benchmark time-series momentum and mean-reversion strategies across risk-adjusted metrics.",
+      "Attention mechanisms allow the model to capture longer-term dependencies, perform better net of transaction costs, and respond robustly to regime changes such as the SARS-CoV-2 crisis.",
+      "The attention-LSTM hybrid Decoder-Only TFT model provides a stable, strong all-rounder performance across all years and asset classes.",
+      "The inclusion of a changepoint detection (CPD) module complements multi-head attention and further enhances risk-adjusted returns."
+    ],
+    "limitations": [
+      "The hybrid TFT model displays slightly more variance in experimental repeats due to its higher complexity and sensitivity to hyperparameters."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:12:21.821302+00:00",
+    "input_tokens": 17589,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "momentum",
+      "ml_composite"
+    ],
+    "curation_asset_class": [
+      "futures_multi_asset"
+    ]
+  }
+}

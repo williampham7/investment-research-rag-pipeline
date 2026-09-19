@@ -1,0 +1,167 @@
+{
+  "paper_id": "arxiv:2009.07947v1",
+  "title": "Using Machine Learning and Alternative Data to Predict Movements in Market Risk",
+  "extraction": {
+    "signal_type": [
+      "ml_composite",
+      "alternative_data",
+      "sentiment_text",
+      "other"
+    ],
+    "asset_class": [
+      "equities",
+      "options_volatility"
+    ],
+    "methodology_summary": "The paper investigates predicting whether Apple's (AAPL) market implied volatility will move up or down over the next trading day using technical indicators derived from market data, Google News counts, and Wikipedia page views. A set of 78 features is generated using moving averages, exponential moving averages, rates of change, and other technical tools. Models tested include Logistic Regression, Support Vector Machines (SVM), and AdaBoost, evaluated via a walk-forward rolling window cross-validation over 106 test periods.",
+    "data_period": "January 1, 2016 till December 31, 2017, daily",
+    "universe": "AAPL (Apple Inc.) stock and options data",
+    "performance_metrics": [
+      {
+        "metric_name": "balanced accuracy",
+        "value": 63.3,
+        "unit": "percent",
+        "context": "Logistic Regression, Scenario 1 (Market data)",
+        "evidence_quote": "1 | 63.3% | 64.2% | 53.7%",
+        "source_location": "Table 9"
+      },
+      {
+        "metric_name": "balanced accuracy",
+        "value": 64.2,
+        "unit": "percent",
+        "context": "SVM, Scenario 1 (Market data)",
+        "evidence_quote": "1 | 63.3% | 64.2% | 53.7%",
+        "source_location": "Table 9"
+      },
+      {
+        "metric_name": "balanced accuracy",
+        "value": 53.7,
+        "unit": "percent",
+        "context": "AdaBoost, Scenario 1 (Market data)",
+        "evidence_quote": "1 | 63.3% | 64.2% | 53.7%",
+        "source_location": "Table 9"
+      },
+      {
+        "metric_name": "balanced accuracy",
+        "value": 52.3,
+        "unit": "percent",
+        "context": "Logistic Regression, Scenario 2 (Google News counts, Wikipedia traffic)",
+        "evidence_quote": "2 | 52.3% | 50.5% | 55.0%",
+        "source_location": "Table 9"
+      },
+      {
+        "metric_name": "balanced accuracy",
+        "value": 50.5,
+        "unit": "percent",
+        "context": "SVM, Scenario 2 (Google News counts, Wikipedia traffic)",
+        "evidence_quote": "2 | 52.3% | 50.5% | 55.0%",
+        "source_location": "Table 9"
+      },
+      {
+        "metric_name": "balanced accuracy",
+        "value": 55.0,
+        "unit": "percent",
+        "context": "AdaBoost, Scenario 2 (Google News counts, Wikipedia traffic)",
+        "evidence_quote": "2 | 52.3% | 50.5% | 55.0%",
+        "source_location": "Table 9"
+      },
+      {
+        "metric_name": "balanced accuracy",
+        "value": 52.8,
+        "unit": "percent",
+        "context": "Logistic Regression, Scenario 3 (Market data, Wikipedia traffic)",
+        "evidence_quote": "3 | 52.8% | 55.6% | 63.0%",
+        "source_location": "Table 9"
+      },
+      {
+        "metric_name": "balanced accuracy",
+        "value": 55.6,
+        "unit": "percent",
+        "context": "SVM, Scenario 3 (Market data, Wikipedia traffic)",
+        "evidence_quote": "3 | 52.8% | 55.6% | 63.0%",
+        "source_location": "Table 9"
+      },
+      {
+        "metric_name": "balanced accuracy",
+        "value": 63.0,
+        "unit": "percent",
+        "context": "AdaBoost, Scenario 3 (Market data, Wikipedia traffic)",
+        "evidence_quote": "3 | 52.8% | 55.6% | 63.0%",
+        "source_location": "Table 9"
+      },
+      {
+        "metric_name": "balanced accuracy",
+        "value": 51.8,
+        "unit": "percent",
+        "context": "Logistic Regression, Scenario 4 (Market data, Google News counts)",
+        "evidence_quote": "4 | 51.8% | 53.3% | 49.0%",
+        "source_location": "Table 9"
+      },
+      {
+        "metric_name": "balanced accuracy",
+        "value": 53.3,
+        "unit": "percent",
+        "context": "SVM, Scenario 4 (Market data, Google News counts)",
+        "evidence_quote": "4 | 51.8% | 53.3% | 49.0%",
+        "source_location": "Table 9"
+      },
+      {
+        "metric_name": "balanced accuracy",
+        "value": 49.0,
+        "unit": "percent",
+        "context": "AdaBoost, Scenario 4 (Market data, Google News counts)",
+        "evidence_quote": "4 | 51.8% | 53.3% | 49.0%",
+        "source_location": "Table 9"
+      },
+      {
+        "metric_name": "balanced accuracy",
+        "value": 61.3,
+        "unit": "percent",
+        "context": "Logistic Regression, Scenario 5 (Market data, Wikipedia traffic, Google News counts)",
+        "evidence_quote": "5 | 61.3% | 59.1% | 57.3%",
+        "source_location": "Table 9"
+      },
+      {
+        "metric_name": "balanced accuracy",
+        "value": 59.1,
+        "unit": "percent",
+        "context": "SVM, Scenario 5 (Market data, Wikipedia traffic, Google News counts)",
+        "evidence_quote": "5 | 61.3% | 59.1% | 57.3%",
+        "source_location": "Table 9"
+      },
+      {
+        "metric_name": "balanced accuracy",
+        "value": 57.3,
+        "unit": "percent",
+        "context": "AdaBoost, Scenario 5 (Market data, Wikipedia traffic, Google News counts)",
+        "evidence_quote": "5 | 61.3% | 59.1% | 57.3%",
+        "source_location": "Table 9"
+      }
+    ],
+    "key_findings": [
+      "Movements in an asset's market implied volatility can be predicted to a certain extent using machine learning techniques.",
+      "Using only features derived from market data yielded the best overall results for both Logistic Regression and SVM models.",
+      "Alternative data sources (Google News and Wikipedia) did not enhance overall predictive accuracy compared to market data alone.",
+      "AdaBoost performed best using a combination of market and Wikipedia features, providing preliminary evidence of non-linear relationships between Wikipedia page traffic and implied volatility movements."
+    ],
+    "limitations": [
+      "Limited by a short 2-year history of end-of-day options data, constraining the timeframe and sample size.",
+      "Large feature spaces combined with relatively small training sets might introduce too much noise.",
+      "Did not perform hyperparameter optimization for the employed machine learning algorithms."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:09:59.596436+00:00",
+    "input_tokens": 6368,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "alternative_data",
+      "volatility_risk_premium"
+    ],
+    "curation_asset_class": [
+      "options_volatility"
+    ]
+  }
+}

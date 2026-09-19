@@ -1,0 +1,97 @@
+{
+  "paper_id": "arxiv:2407.16103v2",
+  "title": "Reinforcement Learning Pair Trading: A Dynamic Scaling approach",
+  "extraction": {
+    "signal_type": [
+      "reversal",
+      "ml_composite"
+    ],
+    "asset_class": [
+      "crypto"
+    ],
+    "methodology_summary": "The paper constructs reinforcement learning (RL) environments for pair trading cryptocurrencies, combining cointegration-based spread calculation with dynamic action spaces. Pairs are selected via Pearson correlation and Engle-Granger cointegration tests on 1-minute interval data. Grid search is utilized to find optimal parameters (window size, open/close thresholds), and actor-critic algorithms (primarily A2C) are trained to determine trade timing (RL1) or both timing and dynamic investment quantities (RL2).",
+    "data_period": "October 2023 - December 2023, 1-min intervals",
+    "universe": "Binance cryptocurrency market (specifically BTC-GBP and BTC-EUR pairs)",
+    "performance_metrics": [
+      {
+        "metric_name": "Cumulative Return",
+        "value": 8.33,
+        "unit": "percent",
+        "context": "Gatev et al. (2006) traditional pair trading strategy",
+        "evidence_quote": "Cumulative Return | 8.33%",
+        "source_location": "Table 5"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 25.91,
+        "unit": "ratio",
+        "context": "Gatev et al. (2006) traditional pair trading strategy",
+        "evidence_quote": "Sharpe Ratio | 25.91",
+        "source_location": "Table 5"
+      },
+      {
+        "metric_name": "Cumulative Return",
+        "value": 9.94,
+        "unit": "percent",
+        "context": "RL1 pair trading using A2C",
+        "evidence_quote": "Cumulative Return | 9.94%",
+        "source_location": "Table 5"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 32.74,
+        "unit": "ratio",
+        "context": "RL1 pair trading using A2C",
+        "evidence_quote": "Sharpe Ratio | 32.74",
+        "source_location": "Table 5"
+      },
+      {
+        "metric_name": "Cumulative Return",
+        "value": 31.53,
+        "unit": "percent",
+        "context": "RL2 pair trading using A2C",
+        "evidence_quote": "Cumulative Return | 31.53%",
+        "source_location": "Table 5"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 94.34,
+        "unit": "ratio",
+        "context": "RL2 pair trading using A2C",
+        "evidence_quote": "Sharpe Ratio | 94.34",
+        "source_location": "Table 5"
+      }
+    ],
+    "key_findings": [
+      "Reinforcement learning significantly outperforms traditional rule-based pair trading techniques when applied to volatile cryptocurrency markets.",
+      "Allowing the RL agent to dynamically scale investment quantities (RL2) leads to substantially higher profits compared to binary timing-only decisions (RL1).",
+      "A2C outperformed other algorithms such as PPO, DQN, and SAC in the pair trading environment.",
+      "Transaction costs heavily impact high-frequency crypto trading profitability, though RL models maintain outperformance at lower fee tiers."
+    ],
+    "limitations": [
+      "Relatively limited dataset scope restricted to specific crypto pairs and a short timeframe.",
+      "Focusing only on two-leg strategies restricts complex arbitrage opportunities.",
+      "High computational demand and resource intensity during training.",
+      "Model lacks consideration for certain real-world friction factors."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:15:33.062456+00:00",
+    "input_tokens": 11239,
+    "validation_flags": [
+      "metric_out_of_range:'Sharpe Ratio'=25.91ratio",
+      "metric_out_of_range:'Sharpe Ratio'=32.74ratio",
+      "metric_out_of_range:'Sharpe Ratio'=94.34ratio"
+    ],
+    "curation_signal_type": [
+      "stat_arb_pairs",
+      "ml_composite"
+    ],
+    "curation_asset_class": [
+      "crypto"
+    ]
+  }
+}

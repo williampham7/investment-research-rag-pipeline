@@ -1,0 +1,186 @@
+{
+  "paper_id": "arxiv:1903.06346v1",
+  "title": "Optimal FX Hedge Tenor with Liquidity Risk",
+  "extraction": {
+    "signal_type": [
+      "carry"
+    ],
+    "asset_class": [
+      "fx"
+    ],
+    "methodology_summary": "The strategy determines the optimal tenor over which FX forward contracts should be staggered for a 100% hedged foreign asset portfolio. It uses an Ornstein-Uhlenbeck process to model mean-reversion in FX spot rates, analytically deriving Cash Flow at Risk (CFaR) across future time buckets. Tenors are ranked and selected by expected carry return minus transaction costs, allocating nominal hedges from highest to lowest expected carry subject to a strict CFaR liquidity budget constraint.",
+    "data_period": "November 1993 to August 2018, monthly",
+    "universe": "AUD/USD spot and forward exchange rates sourced from Bloomberg",
+    "performance_metrics": [
+      {
+        "metric_name": "Annualized Return",
+        "value": 2.55,
+        "unit": "percent",
+        "context": "Backtested monthly cash flows for Test Strategy 1 (unconstrained long/short)",
+        "evidence_quote": "2.55 2.49 2.33 2.24 2.18 2.02 2.33 2.05 1.88",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Annualized Return",
+        "value": 2.49,
+        "unit": "percent",
+        "context": "Backtested monthly cash flows for Test Strategy 2 (constrained long/short)",
+        "evidence_quote": "2.55 2.49 2.33 2.24 2.18 2.02 2.33 2.05 1.88",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Annualized Return",
+        "value": 2.33,
+        "unit": "percent",
+        "context": "Backtested monthly cash flows for Test Strategy 3 (unconstrained long-only)",
+        "evidence_quote": "2.55 2.49 2.33 2.24 2.18 2.02 2.33 2.05 1.88",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Annualized Return",
+        "value": 2.24,
+        "unit": "percent",
+        "context": "Backtested monthly cash flows for Test Strategy 4 (unconstrained long-only)",
+        "evidence_quote": "2.55 2.49 2.33 2.24 2.18 2.02 2.33 2.05 1.88",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Annualized Return",
+        "value": 2.18,
+        "unit": "percent",
+        "context": "Backtested monthly cash flows for Test Strategy 5 (unconstrained long-only)",
+        "evidence_quote": "2.55 2.49 2.33 2.24 2.18 2.02 2.33 2.05 1.88",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Annualized Return",
+        "value": 2.02,
+        "unit": "percent",
+        "context": "Backtested monthly cash flows for Test Strategy 6 (unconstrained long-only)",
+        "evidence_quote": "2.55 2.49 2.33 2.24 2.18 2.02 2.33 2.05 1.88",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Annualized Return",
+        "value": 2.33,
+        "unit": "percent",
+        "context": "Backtested monthly cash flows for Benchmark Equal Weight 1-Year Strategy",
+        "evidence_quote": "2.55 2.49 2.33 2.24 2.18 2.02 2.33 2.05 1.88",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Annualized Return",
+        "value": 2.05,
+        "unit": "percent",
+        "context": "Backtested monthly cash flows for Benchmark Equal Weight 3-Year Strategy",
+        "evidence_quote": "2.55 2.49 2.33 2.24 2.18 2.02 2.33 2.05 1.88",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Annualized Return",
+        "value": 1.88,
+        "unit": "percent",
+        "context": "Backtested monthly cash flows for Benchmark Equal Weight 10-Year Strategy",
+        "evidence_quote": "2.55 2.49 2.33 2.24 2.18 2.02 2.33 2.05 1.88",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Volatility",
+        "value": 3.5,
+        "unit": "percent",
+        "context": "Volatility of monthly cash flows for Test Strategy 1",
+        "evidence_quote": "3.50 3.45 3.82 2.28 1.97 1.14 5.04 2.75 0.97",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Volatility",
+        "value": 3.45,
+        "unit": "percent",
+        "context": "Volatility of monthly cash flows for Test Strategy 2",
+        "evidence_quote": "3.50 3.45 3.82 2.28 1.97 1.14 5.04 2.75 0.97",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Volatility",
+        "value": 3.82,
+        "unit": "percent",
+        "context": "Volatility of monthly cash flows for Test Strategy 3",
+        "evidence_quote": "3.50 3.45 3.82 2.28 1.97 1.14 5.04 2.75 0.97",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Volatility",
+        "value": 2.28,
+        "unit": "percent",
+        "context": "Volatility of monthly cash flows for Test Strategy 4",
+        "evidence_quote": "3.50 3.45 3.82 2.28 1.97 1.14 5.04 2.75 0.97",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Volatility",
+        "value": 1.97,
+        "unit": "percent",
+        "context": "Volatility of monthly cash flows for Test Strategy 5",
+        "evidence_quote": "3.50 3.45 3.82 2.28 1.97 1.14 5.04 2.75 0.97",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Volatility",
+        "value": 1.14,
+        "unit": "percent",
+        "context": "Volatility of monthly cash flows for Test Strategy 6",
+        "evidence_quote": "3.50 3.45 3.82 2.28 1.97 1.14 5.04 2.75 0.97",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Volatility",
+        "value": 5.04,
+        "unit": "percent",
+        "context": "Volatility of monthly cash flows for Equal Weight 1Y Strategy",
+        "evidence_quote": "3.50 3.45 3.82 2.28 1.97 1.14 5.04 2.75 0.97",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Volatility",
+        "value": 2.75,
+        "unit": "percent",
+        "context": "Volatility of monthly cash flows for Equal Weight 3Y Strategy",
+        "evidence_quote": "3.50 3.45 3.82 2.28 1.97 1.14 5.04 2.75 0.97",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Volatility",
+        "value": 0.97,
+        "unit": "percent",
+        "context": "Volatility of monthly cash flows for Equal Weight 10Y Strategy",
+        "evidence_quote": "3.50 3.45 3.82 2.28 1.97 1.14 5.04 2.75 0.97",
+        "source_location": "Table 2"
+      }
+    ],
+    "key_findings": [
+      "Staggering FX forward tenors using the proposed optimization framework successfully maintains cash flows within the predetermined CFaR liquidity budget while maximizing carry returns.",
+      "Given a similar level of carry trade return, the proposed strategy delivers a significantly lower 1%-CFaR compared to standard equal-weight hedging strategies.",
+      "Tenor allocation is highly sensitive to spot volatility and the liquidity budget, where lower liquidity budgets and higher spot volatilities require longer-dated hedges.",
+      "The tenor-ranking method effectively manages liquidity risk through market cycles, accumulating cash inflows when the domestic currency appreciates and deferring cash outflows during depreciation."
+    ],
+    "limitations": [
+      "In-sample backtesting is used rather than out-of-sample prediction.",
+      "Assumes mean-reversion properties of the FX spot rate using an Ornstein-Uhlenbeck process."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:07:30.254863+00:00",
+    "input_tokens": 13720,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "carry",
+      "other"
+    ],
+    "curation_asset_class": [
+      "fx"
+    ]
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "paper_id": "arxiv:2407.21791v1",
+  "title": "Deep Learning for Options Trading: An End-To-End Approach",
+  "extraction": {
+    "signal_type": [
+      "momentum",
+      "reversal",
+      "ml_composite"
+    ],
+    "asset_class": [
+      "options_volatility",
+      "equities"
+    ],
+    "methodology_summary": "The paper develops an end-to-end deep learning framework for options trading that maps historical point-in-time option features directly to trading positions without assuming specific market dynamics or option pricing models. Portfolios are constructed using monthly, at-the-money, static delta-neutral straddles on S&P 100 equities. The models are trained using minibatch stochastic gradient descent with Adam, directly optimizing the Sharpe ratio as the loss function over an expanding window backtest.",
+    "data_period": "2010 to 2023, daily/monthly",
+    "universe": "Standard monthly option contracts on equities listed on the S&P 100 Index",
+    "performance_metrics": [
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 1.258,
+        "unit": "ratio",
+        "context": "Linear model, raw signal outputs",
+        "evidence_quote": "Linear | 0.021 | 0.018 | 0.014 | 0.036 | 1.258 | 1.672 | 0.754 | 0.561 | 1.073",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 1.399,
+        "unit": "ratio",
+        "context": "LSTM model, raw signal outputs",
+        "evidence_quote": "LSTM | 0.026 | 0.019 | 0.014 | 0.031 | 1.399* | 1.917* | 0.850* | 0.557 | 1.231",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 1.29,
+        "unit": "ratio",
+        "context": "Linear model, rescaled to target volatility",
+        "evidence_quote": "Linear | 0.245 | 0.190 | 0.146 | 0.276 | 1.290 | 1.690 | 0.917 | 0.561 | 1.094",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 1.329,
+        "unit": "ratio",
+        "context": "LSTM model, rescaled to target volatility",
+        "evidence_quote": "LSTM | 0.266* | 0.200 | 0.144 | 0.274 | 1.329* | 1.862* | 0.974* | 0.557 | 1.212",
+        "source_location": "Table 2"
+      }
+    ],
+    "key_findings": [
+      "Deep learning models trained via an end-to-end Sharpe ratio maximization approach significantly outperform rules-based option trading strategies in risk-adjusted performance.",
+      "Mean-reversion benchmarks generally exhibit positive performance whereas momentum benchmarks are mostly unprofitable over the test period.",
+      "Incorporating turnover regularization into the LSTM model further enhances performance at high levels of transaction costs (10 to 50 bps)."
+    ],
+    "limitations": [
+      "Performance can deteriorate at excessively high transaction costs without turnover regularization."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:15:40.675518+00:00",
+    "input_tokens": 9424,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "ml_composite"
+    ],
+    "curation_asset_class": [
+      "options_volatility"
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "paper_id": "arxiv:1608.03636v1",
+  "title": "A General Framework for Pairs Trading with a Control-Theoretic Point of View",
+  "extraction": {
+    "signal_type": [
+      "stat_arb_pairs"
+    ],
+    "asset_class": [
+      "equities"
+    ],
+    "methodology_summary": "The paper presents a control-theoretic framework for pairs trading using an arbitrary mean-reverting spread function of underlying stock prices. Using a staggered sliding window method for parameter estimation (training window of length 40 and trading window of length 5), a threshold-based feedback trading algorithm dynamically adjusts stock holdings based on the spread's deviation from zero relative to a computed threshold.",
+    "data_period": "July 1, 2011 to December 31, 2015, daily",
+    "universe": "Direxion Daily FTSE China Bull 3X ETF (YINN) and Direxion Daily FTSE China Bear 3X ETF (YANG)",
+    "performance_metrics": [],
+    "key_findings": [
+      "The proposed control-inspired trading algorithm guarantees positive expected growth in account value for all periods where trading occurs.",
+      "Simulations on historical ETF data (YINN and YANG) demonstrate robust gains compared to buy-and-hold strategies while avoiding huge drawdowns.",
+      "The algorithm avoids disastrous drawdowns by halting trading when estimated thresholds become excessively high during unfavorable market periods."
+    ],
+    "limitations": [
+      "Zero transaction costs assumed",
+      "Price taker assumption",
+      "Perfect liquidity conditions assumed",
+      "Bounded returns assumed"
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": "The paper presents a theoretical framework and visual simulations of account value, but does not explicitly report exact tabular performance numbers such as annualized return or Sharpe ratio in the text."
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:37:45.197455+00:00",
+    "input_tokens": 6898,
+    "validation_flags": [
+      "no_performance_metrics_found"
+    ],
+    "curation_signal_type": [
+      "stat_arb_pairs"
+    ],
+    "curation_asset_class": [
+      "equities"
+    ]
+  }
+}

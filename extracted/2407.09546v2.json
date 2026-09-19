@@ -1,0 +1,239 @@
+{
+  "paper_id": "arxiv:2407.09546v2",
+  "title": "A Reflective LLM-based Agent to Guide Zero-shot Cryptocurrency Trading",
+  "extraction": {
+    "signal_type": [
+      "momentum",
+      "sentiment_text",
+      "alternative_data",
+      "ml_composite",
+      "other"
+    ],
+    "asset_class": [
+      "crypto"
+    ],
+    "methodology_summary": "CryptoTrade uses a multi-agent Large Language Model framework combining on-chain data (such as transaction counts, active wallets, and gas prices) and off-chain data (financial news summaries) to make daily trading decisions. Specialized analytical agents evaluate market trends, news impact, and trading actions, while a reflection agent reviews past performance to iteratively refine the strategy. The framework operates in a zero-shot manner across Bitcoin, Ethereum, and Solana under different market conditions.",
+    "data_period": "Dataset covering several months in 2023 across bull, sideways, and bear conditions, daily",
+    "universe": "Bitcoin (BTC), Ethereum (ETH), and Solana (SOL)",
+    "performance_metrics": [
+      {
+        "metric_name": "Total Return",
+        "value": 39.66,
+        "unit": "percent",
+        "context": "Buy and hold strategy on ETH under bull market condition",
+        "evidence_quote": "Buy and hold | 39.66 | -0.83 | -15.61",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 0.25,
+        "unit": "ratio",
+        "context": "Buy and hold strategy on ETH under bull market condition",
+        "evidence_quote": "Buy and hold | 39.66 | -0.83 | -15.61 | 0.56±2.23 | 0.00±1.74 | -0.24±2.07 | 0.25 | 0.00 | -0.11",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "Total Return",
+        "value": 26.35,
+        "unit": "percent",
+        "context": "Ours (GPT-4) strategy on ETH under bull market condition",
+        "evidence_quote": "Ours(GPT-4) | 26.35 | -4.07 | -11.72",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 0.23,
+        "unit": "ratio",
+        "context": "Ours (GPT-4) strategy on ETH under bull market condition",
+        "evidence_quote": "Ours(GPT-4) | 26.35 | -4.07 | -11.72 | 0.40±1.76 | -0.05±1.43 | -0.18±1.67 | 0.23 | -0.04 | -0.11",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "Total Return",
+        "value": 28.47,
+        "unit": "percent",
+        "context": "Ours (GPT-3.5-turbo) strategy on ETH under bull market condition",
+        "evidence_quote": "Ours(GPT-3.5-turbo) | 28.47 | -5.08 | -13.71",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 0.23,
+        "unit": "ratio",
+        "context": "Ours (GPT-3.5-turbo) strategy on ETH under bull market condition",
+        "evidence_quote": "Ours(GPT-3.5-turbo) | 28.47 | -5.08 | -13.71 | 0.43±1.89 | -0.07±1.14 | -0.21±1.71 | 0.23 | -0.06 | -0.12",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "Total Return",
+        "value": 25.72,
+        "unit": "percent",
+        "context": "Ours (GPT-4) strategy on SOL under bull market condition",
+        "evidence_quote": "Ours(GPT-4) | 25.72 | 0.72 | -13.72",
+        "source_location": "Table 5 (page 5)"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 0.17,
+        "unit": "ratio",
+        "context": "Ours (GPT-4) strategy on SOL under bull market condition",
+        "evidence_quote": "Ours(GPT-4) | 25.72 | 0.72 | -13.72 | 0.41±2.45 | 0.03±1.67 | -0.21±2.02 | 0.17 | 0.02 | -0.10",
+        "source_location": "Table 5 (page 5)"
+      },
+      {
+        "metric_name": "Total Return",
+        "value": 99.84,
+        "unit": "percent",
+        "context": "Ours (GPT-4) strategy on SOL under bull market condition",
+        "evidence_quote": "Ours(GPT-4) | 99.84 | -2.16 | -19.55",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 0.27,
+        "unit": "ratio",
+        "context": "Ours (GPT-4) strategy on SOL under bull market condition",
+        "evidence_quote": "Ours(GPT-4) | 99.84 | -2.16 | -19.55 | 1.24±4.53 | 0.01±3.33 | -0.31±2.35 | 0.27 | 0.00 | -0.13",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "Total Return",
+        "value": 102.45,
+        "unit": "percent",
+        "context": "Ours (GPT-3.5-turbo) strategy on SOL under bull market condition",
+        "evidence_quote": "Ours(GPT-3.5-turbo) | 102.45 | -13.05 | -24.08",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 0.28,
+        "unit": "ratio",
+        "context": "Ours (GPT-3.5-turbo) strategy on SOL under bull market condition",
+        "evidence_quote": "Ours(GPT-3.5-turbo) | 102.45 | -13.05 | -24.08 | 1.26±4.54 | -0.23±2.42 | -0.39±2.60 | 0.28 | -0.15 | -0.10",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "Total Return",
+        "value": 28.47,
+        "unit": "percent",
+        "context": "Ablation study full prompt configuration",
+        "evidence_quote": "Full | 28.47 | 0.23",
+        "source_location": "Table 5 (page 6)"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 0.23,
+        "unit": "ratio",
+        "context": "Ablation study full prompt configuration",
+        "evidence_quote": "Full | 28.47 | 0.23",
+        "source_location": "Table 5 (page 6)"
+      },
+      {
+        "metric_name": "Total Return",
+        "value": 17.14,
+        "unit": "percent",
+        "context": "Ablation study without reflection configuration",
+        "evidence_quote": "w/o Reflection | 17.14 | 0.06",
+        "source_location": "Table 5 (page 6)"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 0.06,
+        "unit": "ratio",
+        "context": "Ablation study without reflection configuration",
+        "evidence_quote": "w/o Reflection | 17.14 | 0.06",
+        "source_location": "Table 5 (page 6)"
+      },
+      {
+        "metric_name": "Total Return",
+        "value": 19.69,
+        "unit": "percent",
+        "context": "Ablation study without news configuration",
+        "evidence_quote": "w/o News | 19.69 | 0.06",
+        "source_location": "Table 5 (page 6)"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 0.06,
+        "unit": "ratio",
+        "context": "Ablation study without news configuration",
+        "evidence_quote": "w/o News | 19.69 | 0.06",
+        "source_location": "Table 5 (page 6)"
+      },
+      {
+        "metric_name": "Total Return",
+        "value": 12.7,
+        "unit": "percent",
+        "context": "Ablation study without transaction statistics configuration",
+        "evidence_quote": "w/o TxnStats | 12.70 | 0.05",
+        "source_location": "Table 5 (page 6)"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 0.05,
+        "unit": "ratio",
+        "context": "Ablation study without transaction statistics configuration",
+        "evidence_quote": "w/o TxnStats | 12.70 | 0.05",
+        "source_location": "Table 5 (page 6)"
+      },
+      {
+        "metric_name": "Total Return",
+        "value": 17.27,
+        "unit": "percent",
+        "context": "Ablation study without technical indicators configuration",
+        "evidence_quote": "w/o Technical | 17.27 | 0.05",
+        "source_location": "Table 5 (page 6)"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 0.05,
+        "unit": "ratio",
+        "context": "Ablation study without technical indicators configuration",
+        "evidence_quote": "w/o Technical | 17.27 | 0.05",
+        "source_location": "Table 5 (page 6)"
+      },
+      {
+        "metric_name": "Total Return",
+        "value": 8.4,
+        "unit": "percent",
+        "context": "Ablation study base prompt configuration",
+        "evidence_quote": "Base | 8.40 | 0.03",
+        "source_location": "Table 5 (page 6)"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 0.03,
+        "unit": "ratio",
+        "context": "Ablation study base prompt configuration",
+        "evidence_quote": "Base | 8.40 | 0.03",
+        "source_location": "Table 5 (page 6)"
+      }
+    ],
+    "key_findings": [
+      "CryptoTrade successfully integrates on-chain and off-chain data to guide zero-shot cryptocurrency trading decisions using LLMs.",
+      "CryptoTrade consistently outperforms Transformer-based time-series baselines and performs competitively compared to traditional strategies like Buy and Hold and MACD across various market conditions without fine-tuning.",
+      "Ablation studies reveal that incorporating on-chain transaction statistics, news, technical indicators, and self-reflection significantly improves overall strategy performance.",
+      "The framework effectively captures market trends and exploits pricing dynamics such as the 'buy the rumor, sell the news' phenomenon around major events like Bitcoin ETF approvals."
+    ],
+    "limitations": [
+      "Reliance on a relatively limited dataset.",
+      "Trading actions are restricted to day-to-day frequency rather than higher-frequency intervals.",
+      "Lack of fine-tuning for the LLMs using the validation set may lead to underperformance compared to some traditional signals."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:15:25.212752+00:00",
+    "input_tokens": 9613,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "sentiment_text",
+      "ml_composite"
+    ],
+    "curation_asset_class": [
+      "crypto"
+    ]
+  }
+}

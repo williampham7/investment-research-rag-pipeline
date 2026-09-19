@@ -1,0 +1,52 @@
+{
+  "paper_id": "arxiv:1806.06148v4",
+  "title": "Quantile Spectral Beta: A Tale of Tail Risks, Investment Horizons, and Asset Prices",
+  "extraction": {
+    "signal_type": [
+      "momentum",
+      "value",
+      "carry",
+      "event_driven",
+      "stat_arb_pairs",
+      "other"
+    ],
+    "asset_class": [
+      "equities",
+      "fixed_income",
+      "fx",
+      "commodities",
+      "futures_multi_asset"
+    ],
+    "methodology_summary": "The paper introduces quantile spectral betas based on the frequency decomposition of covariance between indicator functions, capturing tail and horizon-specific risks across distributions. Portfolios and individual stocks are evaluated using Fama-MacBeth cross-sectional regressions to estimate the pricing of tail market risk and extreme market volatility risk across short and long investment horizons.",
+    "data_period": "July 1926 to December 2015, monthly",
+    "universe": "U.S. individual stocks from the CRSP database, Fama-French industry, size and value, profit, investment, and book-to-market portfolios, asset class portfolios, and multi-asset investment strategies",
+    "performance_metrics": [],
+    "key_findings": [
+      "Tail risk is a short-term phenomenon priced significantly in the cross-section of asset returns, especially for lower quantile thresholds.",
+      "Extreme market volatility risk is priced by investors predominantly in the long term.",
+      "Quantile spectral risk measures provide independent pricing information that is not subsumed by traditional CAPM betas or existing downside risk models."
+    ],
+    "limitations": [
+      "Precise estimation of quantile spectral betas requires sufficiently long historical data series."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": "No specific strategy backtest cumulative returns or Sharpe ratios are reported in the text; performance metrics list is empty as instructed for papers lacking explicit strategy performance figures."
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:38:38.441351+00:00",
+    "input_tokens": 50939,
+    "validation_flags": [
+      "no_performance_metrics_found"
+    ],
+    "curation_signal_type": [
+      "other",
+      "value",
+      "quality_profitability"
+    ],
+    "curation_asset_class": [
+      "equities",
+      "futures_multi_asset"
+    ]
+  }
+}

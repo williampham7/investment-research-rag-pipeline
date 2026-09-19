@@ -1,0 +1,80 @@
+{
+  "paper_id": "arxiv:1611.01463v1",
+  "title": "International Portfolio Optimisation with Integrated Currency Overlay Costs and Constraints",
+  "extraction": {
+    "signal_type": [
+      "carry",
+      "other"
+    ],
+    "asset_class": [
+      "equities",
+      "fixed_income",
+      "fx"
+    ],
+    "methodology_summary": "The paper proposes a unified mean-variance portfolio optimization model that integrates asset allocation and currency overlay optimization using foreign exchange forward contracts. The model incorporates realistic costs of forward contracts, including the cost of carry (interest rate differentials), transaction costs (bid-ask spreads and fixed costs), and margin requirements. The empirical performance and risk-return trade-offs are evaluated using monthly historical data for bonds, stocks, and exchange rates across four major countries (US, Germany, UK, Japan) from 2000 to 2012.",
+    "data_period": "Jan-00 to Jun-12, monthly",
+    "universe": "Government bonds, stock indices, and currency forward contracts for the US, Germany, UK, and Japan.",
+    "performance_metrics": [
+      {
+        "metric_name": "adjusted expected return",
+        "value": 1.426,
+        "unit": "percent",
+        "context": "US stock index adjusted expected return (% monthly)",
+        "evidence_quote": "stock index | 1.426 | 0.948 | 1.007 | 0.752 | 4.692 | 6.714 | 4.297 | 5.828",
+        "source_location": "Table 6"
+      },
+      {
+        "metric_name": "adjusted volatility",
+        "value": 4.692,
+        "unit": "percent",
+        "context": "US stock index adjusted volatility (% monthly)",
+        "evidence_quote": "stock index | 1.426 | 0.948 | 1.007 | 0.752 | 4.692 | 6.714 | 4.297 | 5.828",
+        "source_location": "Table 6"
+      },
+      {
+        "metric_name": "highest return achievable",
+        "value": 1.7,
+        "unit": "percent",
+        "context": "Highest monthly return achievable for portfolios under the 'fully-hedged' policy",
+        "evidence_quote": "For portfolios under the 'fully-hedged' policy, the highest return achievable is around 1.7% monthly because foreign exchange gain from foreign currencies is not allowed.",
+        "source_location": "Section 3.2.2"
+      },
+      {
+        "metric_name": "average runtime",
+        "value": 2.5,
+        "unit": "other",
+        "context": "Average CPU runtime in seconds taken on optimising each portfolio when G=6 (unrestricted number of forwards)",
+        "evidence_quote": "6 | 2.5",
+        "source_location": "Table 11"
+      }
+    ],
+    "key_findings": [
+      "Optimizing asset allocation and currency overlay simultaneously (unified approach) outperforms the two-stage approach where asset allocation is optimized first and currency overlay is added after.",
+      "Unrestricted currency exposure policies dominate fully-hedged (USD only) or foreign-only currency exposure policies, especially at monthly returns below 1.4%.",
+      "High margin requirements for forward contracts reduce the attractiveness of currency overlays, forcing portfolios to hold more risky assets instead of forwards to meet high return targets.",
+      "Restricting the total currency overlay or the number of forward contracts reduces transaction costs but increases portfolio volatility, particularly at lower return targets (below 1% monthly) where hedging is more active.",
+      "For a four-currency portfolio, only three forward contract pairs are sufficient to replicate all possible currency overlay positions."
+    ],
+    "limitations": [
+      "The study assumes that buying and selling forward contracts encounter identical percent spreads.",
+      "The model is tested on a relatively small scale of four countries and three asset classes (bonds, stocks, cash).",
+      "The analysis uses historical averages for expected returns and a short recent period (Jun-11 to Jun-12) for expected interest rates, which may not reflect future conditions.",
+      "The model does not consider individual securities, which limits the exploitation of cross-currency correlations at the security level."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash",
+    "extracted_at": "2026-09-18T23:57:50.190407+00:00",
+    "input_tokens": 16763,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "carry",
+      "other"
+    ],
+    "curation_asset_class": [
+      "fx"
+    ]
+  }
+}

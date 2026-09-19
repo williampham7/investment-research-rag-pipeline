@@ -12,9 +12,16 @@ import json
 import logging
 from pathlib import Path
 
-import faiss
 import numpy as np
 from sentence_transformers import SentenceTransformer
+
+# faiss is imported lazily in main(), AFTER the CUDA embedding model is
+# constructed -- not here. On Windows, faiss bundles an OpenMP runtime that
+# conflicts with torch's CUDA runtime and segfaults the process the moment a
+# CUDA context initializes *after* faiss has already loaded. What matters is
+# the order CUDA-init vs. faiss-load actually happen at runtime, not the
+# order of import statements in the file -- faiss must not be imported until
+# the SentenceTransformer model is already constructed on CUDA.
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 logger = logging.getLogger(__name__)
@@ -74,6 +81,8 @@ def main() -> None:
     logger.info("Loading model %s", spec["hf_name"])
     model = SentenceTransformer(spec["hf_name"])
     logger.info("Model loaded on device: %s", model.device)
+
+    import faiss  # deferred -- see module-level note on import order
 
     texts = [spec["passage_prefix"] + build_embed_text(c) for c in chunks]
     logger.info("Encoding %d passages (batch_size=%d)...", len(texts), args.batch_size)

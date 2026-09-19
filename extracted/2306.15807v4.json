@@ -1,0 +1,169 @@
+{
+  "paper_id": "arxiv:2306.15807v4",
+  "title": "Liquidity Premium, Liquidity-Adjusted Return and Volatility, and Extreme Liquidity",
+  "extraction": {
+    "signal_type": [
+      "liquidity",
+      "ml_composite"
+    ],
+    "asset_class": [
+      "crypto"
+    ],
+    "methodology_summary": "We establish innovative liquidity premium measures and construct liquidity-adjusted return and volatility using tick-level trading data from ten selected crypto assets. We develop a set of liquidity-adjusted ARMA-GARCH/EGARCH models to improve return and volatility predictability under extreme liquidity. Finally, we build and test a series of liquidity-adjusted Mean-Variance (LAMV) and traditional Mean-Variance (TMV) portfolios over a 3.5-year back-test period with a 1-year rolling window.",
+    "data_period": "April 27, 2019 to January 1, 2024, daily",
+    "universe": "Top 15 crypto assets by market value from Binance API, narrowed down to ten crypto assets (ADA, BNB, BTC, ETC, ETH, LINK, LTC, MATIC, XMR, XRP) with at least 4.5 years of historical data.",
+    "performance_metrics": [
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 1.52,
+        "unit": "ratio",
+        "context": "Benchmark Portfolio 1 (equ) with wash trades removed",
+        "evidence_quote": "1 | 2 | 3 | 4\nPortfolio Description | equ | mkt | blq | blq_inv\nAnnualized Return | 138.26% | 110.39% | 161.44% | 86.62%\nAnnualized Standard Deviation | 91.12% | 86.83% | 112.52% | 89.30%\nAnnualized Sharpe Ratio (Rf=0%) | 1.52 | 1.27 | 1.43 | 0.97",
+        "source_location": "Table 6, Panel A"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 1.27,
+        "unit": "ratio",
+        "context": "Benchmark Portfolio 2 (mkt) with wash trades removed",
+        "evidence_quote": "Annualized Sharpe Ratio (Rf=0%) | 1.52 | 1.27 | 1.43 | 0.97",
+        "source_location": "Table 6, Panel A"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 1.43,
+        "unit": "ratio",
+        "context": "Benchmark Portfolio 3 (blq) with wash trades removed",
+        "evidence_quote": "Annualized Sharpe Ratio (Rf=0%) | 1.52 | 1.27 | 1.43 | 0.97",
+        "source_location": "Table 6, Panel A"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.97,
+        "unit": "ratio",
+        "context": "Benchmark Portfolio 4 (blq_inv) with wash trades removed",
+        "evidence_quote": "Annualized Sharpe Ratio (Rf=0%) | 1.52 | 1.27 | 1.43 | 0.97",
+        "source_location": "Table 6, Panel A"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 1.43,
+        "unit": "ratio",
+        "context": "TMV Portfolio 5 (MV_rr) with wash trades removed",
+        "evidence_quote": "Portfolio Number | 5 | 6\nPortfolio Description | MV_rr | MV_rrlq\nAnnualized Return | 153.26% | 99.48%\nAnnualized Standard Deviation | 107.02% | 97.61%\nAnnualized Sharpe Ratio (Rf=0%) | 1.43 | 1.02",
+        "source_location": "Table 6, Panel A"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 1.02,
+        "unit": "ratio",
+        "context": "LAMV Portfolio 6 (MV_rrlq) with wash trades removed",
+        "evidence_quote": "Annualized Sharpe Ratio (Rf=0%) | 1.43 | 1.02",
+        "source_location": "Table 6, Panel A"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.81,
+        "unit": "ratio",
+        "context": "TMV Portfolio 7 (MV_arga_rr) with wash trades removed",
+        "evidence_quote": "Portfolio Number | 7 | 8\nPortfolio Description | MV_arga_rr | MV_arga_rrlq\nAnnualized Return | 74.04% | 144.54%\nAnnualized Standard Deviation | 91.55% | 95.59%\nAnnualized Sharpe Ratio (Rf=0%) | 0.81 | 1.51",
+        "source_location": "Table 6, Panel A"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 1.51,
+        "unit": "ratio",
+        "context": "LAMV Portfolio 8 (MV_arga_rrlq) with wash trades removed",
+        "evidence_quote": "Annualized Sharpe Ratio (Rf=0%) | 0.81 | 1.51",
+        "source_location": "Table 6, Panel A"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 1.52,
+        "unit": "ratio",
+        "context": "Benchmark Portfolio 1 (equ) with wash trades retained",
+        "evidence_quote": "Annualized Sharpe Ratio (Rf=0%) | 1.52 | 1.26 | 1.20 | 1.13",
+        "source_location": "Table 6, Panel B"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 1.26,
+        "unit": "ratio",
+        "context": "Benchmark Portfolio 2 (mkt) with wash trades retained",
+        "evidence_quote": "Annualized Sharpe Ratio (Rf=0%) | 1.52 | 1.26 | 1.20 | 1.13",
+        "source_location": "Table 6, Panel B"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 1.2,
+        "unit": "ratio",
+        "context": "Benchmark Portfolio 3 (blq) with wash trades retained",
+        "evidence_quote": "Annualized Sharpe Ratio (Rf=0%) | 1.52 | 1.26 | 1.20 | 1.13",
+        "source_location": "Table 6, Panel B"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 1.13,
+        "unit": "ratio",
+        "context": "Benchmark Portfolio 4 (blq_inv) with wash trades retained",
+        "evidence_quote": "Annualized Sharpe Ratio (Rf=0%) | 1.52 | 1.26 | 1.20 | 1.13",
+        "source_location": "Table 6, Panel B"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 1.39,
+        "unit": "ratio",
+        "context": "TMV Portfolio 5 (MV_rr) with wash trades retained",
+        "evidence_quote": "Annualized Sharpe Ratio (Rf=0%) | 1.39 | 1.54",
+        "source_location": "Table 6, Panel B"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 1.54,
+        "unit": "ratio",
+        "context": "LAMV Portfolio 6 (MV_rrlq) with wash trades retained",
+        "evidence_quote": "Annualized Sharpe Ratio (Rf=0%) | 1.39 | 1.54",
+        "source_location": "Table 6, Panel B"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.85,
+        "unit": "ratio",
+        "context": "TMV Portfolio 7 (MV_arga_rr) with wash trades retained",
+        "evidence_quote": "Annualized Sharpe Ratio (Rf=0%) | 0.85 | 2.06",
+        "source_location": "Table 6, Panel B"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 2.06,
+        "unit": "ratio",
+        "context": "LAMV Portfolio 8 (MV_arga_rrlq) with wash trades retained",
+        "evidence_quote": "Annualized Sharpe Ratio (Rf=0%) | 0.85 | 2.06",
+        "source_location": "Table 6, Panel B"
+      }
+    ],
+    "key_findings": [
+      "The daily liquidity of crypto assets is positively skewed with a wide and sticky distribution, providing new information from a third dimension of liquidity beyond return and variance.",
+      "Incorporating liquidity adjustments into ARMA-GARCH/EGARCH models restores well-behaved autoregressive properties and improves predictability during periods of extreme liquidity.",
+      "Liquidity-Adjusted Mean Variance (LAMV) portfolios incorporating forecasted returns from liquidity-adjusted models outperform traditional Mean Variance (TMV) portfolios.",
+      "Model predictability and portfolio performance improve proportionally with the number of days exhibiting extreme liquidity and the overall level of liquidity."
+    ],
+    "limitations": [
+      "The baseline analysis removes estimated wash trades, though robustness checks are performed without this treatment."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:14:13.542684+00:00",
+    "input_tokens": 23879,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "liquidity"
+    ],
+    "curation_asset_class": [
+      "crypto"
+    ]
+  }
+}

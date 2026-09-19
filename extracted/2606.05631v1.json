@@ -1,0 +1,63 @@
+{
+  "paper_id": "arxiv:2606.05631v1",
+  "title": "Stress Amplified Resilience: ESG and Joint Fragility in Equity Markets",
+  "extraction": {
+    "signal_type": [
+      "quality_profitability",
+      "alternative_data",
+      "other"
+    ],
+    "asset_class": [
+      "equities"
+    ],
+    "methodology_summary": "The paper investigates the relationship between firm-level ESG scores and a multi-dimensional joint cofragility state using monthly data on S&P 500 constituents from 2014 to 2025. Fragility is measured via conditional quantiles for tail returns, volatility, and illiquidity, and aggregated into a discrete cofragility score counting simultaneous adverse outcomes. The empirical models include conditional quantile regressions, ordered-response logit models with stress-ESG interactions, and Double Machine Learning (DML) to adjust for high-dimensional firm-level controls.",
+    "data_period": "2014 to 2025, monthly",
+    "universe": "S&P 500 equity constituents",
+    "performance_metrics": [
+      {
+        "metric_name": "probability reduction",
+        "value": -0.0028,
+        "unit": "ratio",
+        "context": "Non-stress months, change in Pr(F >= 2) for a one standard deviation ESG increase",
+        "evidence_quote": "−0.0028∗∗∗ [−0.0045,−0.0013]",
+        "source_location": "Table 6"
+      },
+      {
+        "metric_name": "probability reduction",
+        "value": -0.0092,
+        "unit": "ratio",
+        "context": "Stress months, change in Pr(F >= 2) for a one standard deviation ESG increase",
+        "evidence_quote": "−0.0092∗∗∗ [−0.0143,−0.0047]",
+        "source_location": "Table 6"
+      }
+    ],
+    "key_findings": [
+      "Higher ESG ratings are not associated with a broad unconditional return premium, but are tied to extreme downside tail protection during stress months.",
+      "Higher ESG scores are associated with smaller volatility spikes and a persistent liquidity quality advantage that becomes more valuable during market-wide stress.",
+      "A one-standard-deviation increase in ESG lowers the stress-period probability of severe cofragility by 0.92 percentage points, representing a roughly 9% reduction relative to the baseline.",
+      "Double Machine Learning confirms that the negative ESG association with severe cofragility persists after flexible adjustment for observable firm characteristics.",
+      "Environmental scores show stronger baseline resilience across cycles, whereas Social scores display clearer proportional amplification during market stress."
+    ],
+    "limitations": [
+      "The analysis is based exclusively on large U.S. publicly traded firms in the S&P 500 universe.",
+      "The estimates are associational and do not indicate a true structural causal chain despite DML and control adjustments.",
+      "Evidence for mechanisms like investor ownership, trading patterns, and stakeholder relationships is indirect."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:18:56.399211+00:00",
+    "input_tokens": 16101,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "quality_profitability",
+      "volatility_risk_premium",
+      "liquidity"
+    ],
+    "curation_asset_class": [
+      "equities"
+    ]
+  }
+}

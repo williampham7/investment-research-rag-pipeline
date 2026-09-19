@@ -1,0 +1,145 @@
+{
+  "paper_id": "arxiv:2003.02515v4",
+  "title": "Time-varying neural network for stock return prediction",
+  "extraction": {
+    "signal_type": [
+      "momentum",
+      "size",
+      "value",
+      "quality_profitability",
+      "other",
+      "ml_composite"
+    ],
+    "asset_class": [
+      "equities"
+    ],
+    "methodology_summary": "The authors propose an online early stopping (OES) algorithm for training neural networks in a time-varying context by treating the number of optimization iterations as a learnable, time-varying parameter updated recursively over time. The strategy is tested on predicting cross-sectional U.S. stock returns using firm-level features and industry dummy variables. Performance is evaluated out-of-sample using information coefficients, decile portfolio spreads, and Sharpe ratios compared against expanding window deep neural network (DNN) benchmarks.",
+    "data_period": "March 1957 to December 2016, monthly",
+    "universe": "U.S. stocks listed on NYSE, AMEX, and NASDAQ (with an alternative investable universe excluding microcaps based on the 5th percentile of NYSE market capitalization breakpoints)",
+    "performance_metrics": [
+      {
+        "metric_name": "Information coefficient",
+        "value": 4.53,
+        "unit": "percent",
+        "context": "U.S. equities without interaction terms, OES model",
+        "evidence_quote": "OES and DNN achieve IC of 4.53 % and 3.82 %, respectively.",
+        "source_location": "Section 5.2"
+      },
+      {
+        "metric_name": "Information coefficient",
+        "value": 3.82,
+        "unit": "percent",
+        "context": "U.S. equities without interaction terms, DNN replication model",
+        "evidence_quote": "OES and DNN achieve IC of 4.53 % and 3.82 %, respectively.",
+        "source_location": "Section 5.2"
+      },
+      {
+        "metric_name": "Pooled out-of-sample R2",
+        "value": -2.48,
+        "unit": "percent",
+        "context": "U.S. equities without interaction terms, OES model",
+        "evidence_quote": "OES scores −2.48 % on R2oos and DNN scores 0.22 %.",
+        "source_location": "Section 5.2"
+      },
+      {
+        "metric_name": "Pooled out-of-sample R2",
+        "value": 0.22,
+        "unit": "percent",
+        "context": "U.S. equities without interaction terms, DNN model",
+        "evidence_quote": "OES scores −2.48 % on R2oos and DNN scores 0.22 %.",
+        "source_location": "Section 5.2"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.83,
+        "unit": "ratio",
+        "context": "U.S. equities without interaction terms, OES decile spread P10-1",
+        "evidence_quote": "DNN achieves higher Sharpe ratio than OES, at 1.63 and 0.83, respectively.",
+        "source_location": "Section 5.2"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 1.63,
+        "unit": "ratio",
+        "context": "U.S. equities without interaction terms, DNN decile spread P10-1",
+        "evidence_quote": "DNN achieves higher Sharpe ratio than OES, at 1.63 and 0.83, respectively.",
+        "source_location": "Section 5.2"
+      },
+      {
+        "metric_name": "Information coefficient",
+        "value": 6.05,
+        "unit": "percent",
+        "context": "Investable set, OES model",
+        "evidence_quote": "Both R2oos and IC improved once microcaps are excluded, with OES scoring 6.05 % on IC and DNN on 5.74 %.",
+        "source_location": "Section 5.4"
+      },
+      {
+        "metric_name": "Information coefficient",
+        "value": 5.74,
+        "unit": "percent",
+        "context": "Investable set, DNN model",
+        "evidence_quote": "Both R2oos and IC improved once microcaps are excluded, with OES scoring 6.05 % on IC and DNN on 5.74 %.",
+        "source_location": "Section 5.4"
+      },
+      {
+        "metric_name": "Information coefficient",
+        "value": 6.29,
+        "unit": "percent",
+        "context": "Investable set, ensemble model combining OES and DNN",
+        "evidence_quote": "An ensemble based on the average of standardized predictions of the two methods achieved the best IC, decile spread and Sharpe ratio relative to OES and DNN.",
+        "source_location": "Section 5.4"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.82,
+        "unit": "ratio",
+        "context": "Investable set, OES model",
+        "evidence_quote": "By contrast, mean decile spread and Sharpe ratio remain stable for OES, at 2.41 % and 0.82, respectively.",
+        "source_location": "Section 5.4"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.69,
+        "unit": "ratio",
+        "context": "Investable set, DNN model",
+        "evidence_quote": "However, DNN experienced a significant drop in mean decile spread (to 1.69 % per month) and Sharpe ratio (0.69), suggesting that microcaps are significant contributors to the results using the full data set.",
+        "source_location": "Section 5.4"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.96,
+        "unit": "ratio",
+        "context": "Investable set, ensemble model",
+        "evidence_quote": "Sharpe ratio | 0.69 | 0.82 | 0.96",
+        "source_location": "Table 6"
+      }
+    ],
+    "key_findings": [
+      "The proposed online early stopping (OES) algorithm allows a neural network to adapt to time-varying asset pricing relationships without assuming explicit functional forms for concept drift.",
+      "OES outperforms static expanding window deep neural networks in predicting cross-sectional U.S. stock returns as measured by information coefficient (IC).",
+      "Firm-level feature importance exhibits rapid drops during periods of market distress (such as the 1990-91 recession, Dot-com bubble, and GFC), while industry indicators increase in importance.",
+      "Excluding microcap stocks improves predictive performance metrics (IC and R2) and shows that OES performance is robust and not driven solely by illiquid microcaps.",
+      "An ensemble of OES and standard DNN predictions lowers variance and achieves superior IC, decile spreads, and Sharpe ratios."
+    ],
+    "limitations": [
+      "The algorithm has an inability to theoretically explain the underlying sources of variability in the changing function.",
+      "OES predictions exhibit higher variance, potentially requiring higher or different forms of regularization."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:08:52.992550+00:00",
+    "input_tokens": 15143,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "ml_composite",
+      "momentum",
+      "size"
+    ],
+    "curation_asset_class": [
+      "equities"
+    ]
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "paper_id": "arxiv:2405.20715v1",
+  "title": "Transforming Japan Real Estate",
+  "extraction": {
+    "signal_type": [
+      "momentum",
+      "reversal",
+      "alternative_data"
+    ],
+    "asset_class": [
+      "equities",
+      "other"
+    ],
+    "methodology_summary": "The paper constructs a quality-adjusted real estate price index for Japanese municipalities from 2005 onwards using hedonic regression on over 5 million transactions. It extracts alternative socio-economic and demographic factors (such as net migration, taxable income growth, and new dwelling ratios) from the SSDS and MLIT datasets. Simple long-short portfolios and Transformer time series models are then tested using these variables to predict future municipal real estate returns.",
+    "data_period": "2005 to 2022",
+    "universe": "1100 municipalities across Japan (restricted to top 500 most populous in long-short factor experiments)",
+    "performance_metrics": [
+      {
+        "metric_name": "annualized return",
+        "value": 4.6,
+        "unit": "percent",
+        "context": "Net migration ratio investment signal strategy",
+        "evidence_quote": "For instance, the net migration ratio delivered an annualized return of 4.6% with a Sharpe ratio of 1.5",
+        "source_location": "Abstract"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 1.5,
+        "unit": "ratio",
+        "context": "Net migration ratio investment signal strategy",
+        "evidence_quote": "For instance, the net migration ratio delivered an annualized return of 4.6% with a Sharpe ratio of 1.5",
+        "source_location": "Abstract"
+      },
+      {
+        "metric_name": "annualized return",
+        "value": 4.1,
+        "unit": "percent",
+        "context": "Taxable income growth investment signal strategy",
+        "evidence_quote": "while taxable income growth and new dwellings ratio recorded annualized returns of 4.1% (Sharpe ratio of 1.3) and 3.3% (Sharpe ratio of 0.9), respectively.",
+        "source_location": "Abstract"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 1.3,
+        "unit": "ratio",
+        "context": "Taxable income growth investment signal strategy",
+        "evidence_quote": "while taxable income growth and new dwellings ratio recorded annualized returns of 4.1% (Sharpe ratio of 1.3) and 3.3% (Sharpe ratio of 0.9), respectively.",
+        "source_location": "Abstract"
+      },
+      {
+        "metric_name": "annualized return",
+        "value": 3.3,
+        "unit": "percent",
+        "context": "New dwellings ratio investment signal strategy",
+        "evidence_quote": "while taxable income growth and new dwellings ratio recorded annualized returns of 4.1% (Sharpe ratio of 1.3) and 3.3% (Sharpe ratio of 0.9), respectively.",
+        "source_location": "Abstract"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.9,
+        "unit": "ratio",
+        "context": "New dwellings ratio investment signal strategy",
+        "evidence_quote": "while taxable income growth and new dwellings ratio recorded annualized returns of 4.1% (Sharpe ratio of 1.3) and 3.3% (Sharpe ratio of 0.9), respectively.",
+        "source_location": "Abstract"
+      },
+      {
+        "metric_name": "R-squared score",
+        "value": 0.28,
+        "unit": "ratio",
+        "context": "Transformer model predicting risk-adjusted returns 4 years in advance",
+        "evidence_quote": "the model achieves an R-squared score of 0.28, explaining nearly 30 percent of the variation in future municipality prices.",
+        "source_location": "Abstract"
+      }
+    ],
+    "key_findings": [
+      "Alternative data variables such as net migration ratio, taxable income growth, and new dwelling ratios can successfully forecast real estate performance across Japanese municipalities.",
+      "Long-short investment strategies based on these fundamental alternative data factors generated positive returns with low volatility.",
+      "Time series Transformer models effectively harness non-linear temporal and spatial relationships in alternative datasets, achieving an R-squared of 0.28 when predicting risk-adjusted returns four years ahead."
+    ],
+    "limitations": [],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:15:13.385857+00:00",
+    "input_tokens": 8016,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "alternative_data"
+    ],
+    "curation_asset_class": [
+      "other"
+    ]
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "paper_id": "arxiv:1108.3155v2",
+  "title": "About the non-random Content of Financial Markets",
+  "extraction": {
+    "signal_type": [
+      "momentum"
+    ],
+    "asset_class": [
+      "fx",
+      "equities",
+      "commodities"
+    ],
+    "methodology_summary": "The paper designs a trend-following trading strategy using high-frequency (5-minute) data. The strategy uses four exponential moving averages of different lengths, with crossings acting as potential trade triggers conditioned on volatility ranges and specific exit rules. The model is optimized on an in-sample period, validated on an out-of-sample period, and tested on a live-sample period, alongside extensive stress testing.",
+    "data_period": "1999-2011 (varies by asset: EC 2000-2011, FDAX 1999-2011, CC 2003-2010)",
+    "universe": "Euro future contract (EC), DAX future (FDAX), and Cacao future (CC)",
+    "performance_metrics": [
+      {
+        "metric_name": "Average Sharpe ratio across stress tests",
+        "value": 2.2,
+        "unit": "ratio",
+        "context": "Euro future contract (EC) in-sample (2000-2007) across 128 stress tests",
+        "evidence_quote": "This is what we observe in Fig. 4, with an average value of 2.2 and a RMS of 0.8.",
+        "source_location": "Section 2.2"
+      },
+      {
+        "metric_name": "RMS of Sharpe ratio across stress tests",
+        "value": 0.8,
+        "unit": "ratio",
+        "context": "Euro future contract (EC) in-sample (2000-2007) across 128 stress tests",
+        "evidence_quote": "This is what we observe in Fig. 4, with an average value of 2.2 and a RMS of 0.8.",
+        "source_location": "Section 2.2"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.7,
+        "unit": "ratio",
+        "context": "DAX future (FDAX) over 10 years of data using the unoptimized Euro future system",
+        "evidence_quote": "If we use exactly the same system as defined for Euro future, we obtain a Sharpe ratio of 0.7 over 10 years of data.",
+        "source_location": "Section 3.1"
+      }
+    ],
+    "key_findings": [
+      "Financial markets exhibit small but detectable non-random, trend-following behavior when analyzed using multivariate statistical methods.",
+      "A trend-following strategy conditioned on volatility ranges and exit thresholds can generate consistent profits (net of fees) across different market regimes.",
+      "The trading system is robust against data randomization and various stress tests (e.g., delayed execution, increased fees).",
+      "The identified trend-following invariants are transferable across largely uncorrelated assets, such as the Euro future, DAX future, and Cacao future."
+    ],
+    "limitations": [
+      "The authors note that this is not a general proof of statistical inference, as they focus on specific examples and generality cannot be claimed.",
+      "The rationale behind the parameters and herding behaviors is complex and not fully explained."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash",
+    "extracted_at": "2026-09-18T23:48:45.904398+00:00",
+    "input_tokens": 5704,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "momentum"
+    ],
+    "curation_asset_class": [
+      "fx",
+      "commodities"
+    ]
+  }
+}

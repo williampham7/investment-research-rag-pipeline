@@ -1,0 +1,102 @@
+{
+  "paper_id": "arxiv:2603.29751v1",
+  "title": "Common Risk Factors in Decentralized AI Subnets",
+  "extraction": {
+    "signal_type": [
+      "size",
+      "momentum",
+      "reversal",
+      "liquidity"
+    ],
+    "asset_class": [
+      "crypto",
+      "other"
+    ],
+    "methodology_summary": "Daily subnet data from the Taostats API is used to construct lagged characteristics including market capitalization, momentum, emission yield, and liquidity for decentralized AI subnet tokens priced via constant-product AMMs. Portfolios are formed daily using tercile sorts on these lagged characteristics, and long-short factor returns are calculated as the difference between extreme terciles. Fama-MacBeth cross-sectional regressions, GRS tests, and spanning tests are conducted to evaluate the factor structure.",
+    "data_period": "February 14, 2025, through March 26, 2026, daily",
+    "universe": "128 decentralized AI subnet tokens on the Bittensor network, excluding subnet 0 and subnets in startup mode",
+    "performance_metrics": [
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 3.84,
+        "unit": "ratio",
+        "context": "SMB factor annualized Sharpe ratio",
+        "evidence_quote": "The size factor (SMB) is the strongest: small subnets outperform large subnets by 1.01% per day, with a Newey-West t-statistic of 3.28 (OLS t = 4.04) and an annualized Sharpe ratio of 3.84.",
+        "source_location": "Section III.B"
+      },
+      {
+        "metric_name": "annualized return",
+        "value": 367.1,
+        "unit": "percent",
+        "context": "-SMB (Small-Large) annualized return",
+        "evidence_quote": "−SMB (SmallLarge) | 1.01 | 367.1 | 95.7 | 3.84",
+        "source_location": "Table II"
+      },
+      {
+        "metric_name": "annualized return",
+        "value": 317.4,
+        "unit": "percent",
+        "context": "Small (bottom tercile) annualized return",
+        "evidence_quote": "Small (bottom tercile) | 0.87 | 317.4 | 111.7 | 2.84",
+        "source_location": "Table II"
+      },
+      {
+        "metric_name": "annualized return",
+        "value": -49.7,
+        "unit": "percent",
+        "context": "Large (top tercile) annualized return",
+        "evidence_quote": "Large (top tercile) | −0.14 | −49.7 | 80.6 | −0.62",
+        "source_location": "Table II"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 4.32,
+        "unit": "ratio",
+        "context": "30-day momentum factor annualized Sharpe ratio",
+        "evidence_quote": "The 30-day momentum factor earns 0.68% per day (NW t = 3.69, Sharpe 4.32)",
+        "source_location": "Section III.B"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 3.65,
+        "unit": "ratio",
+        "context": "7-day momentum variant annualized Sharpe ratio",
+        "evidence_quote": "and the 7-day variant earns 0.75% (NW t = 3.05, Sharpe 3.65).",
+        "source_location": "Section III.B"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 1.35,
+        "unit": "ratio",
+        "context": "Market factor annualized Sharpe ratio",
+        "evidence_quote": "The market factor earns 0.29% per day in TAO terms, reflecting the general appreciation of subnet tokens over the sample period. The annualized Sharpe ratio is 1.35.",
+        "source_location": "Section III.B"
+      }
+    ],
+    "key_findings": [
+      "A size effect (small-minus-big, SMB) dominates the cross-section, earning 1.01% per day with a Newey-West t-statistic of 3.28.",
+      "Momentum is pervasive, with 30-day and 7-day winning-minus-losing portfolios earning 0.68% and 0.75% daily, respectively.",
+      "The December 2025 halving of token emissions reduced the size premium from 1.17% to 0.51% daily, consistent with a structural constant-product AMM pricing mechanism.",
+      "Constant-product AMM slippage causes the size premium to be implementable only for portfolio AUM below $10K, as transaction costs exceed gross returns at $100K and above."
+    ],
+    "limitations": [
+      "The sample period is short (13 months).",
+      "The cross-section is modest (128 assets).",
+      "Transaction costs in thin AMM pools severely erode paper returns at higher AUM levels."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:18:12.564981+00:00",
+    "input_tokens": 12349,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "size"
+    ],
+    "curation_asset_class": [
+      "crypto"
+    ]
+  }
+}

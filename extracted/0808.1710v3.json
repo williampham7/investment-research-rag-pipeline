@@ -1,0 +1,42 @@
+{
+  "paper_id": "arxiv:0808.1710v3",
+  "title": "Dynamic modeling of mean-reverting spreads for statistical arbitrage",
+  "extraction": {
+    "signal_type": [
+      "stat_arb_pairs"
+    ],
+    "asset_class": [
+      "equities",
+      "commodities"
+    ],
+    "methodology_summary": "The authors propose a Bayesian time-varying autoregressive (TVAR) state-space model for statistical arbitrage spreads, extending traditional pairs trading methods to accommodate time-varying parameters. The hidden state representing the spread follows a dynamic process estimated via an on-line recursive algorithm using component discount factors instead of the slow EM algorithm. The strategy models spread deviations between asset prices (or cointegrated ETFs/stocks) to monitor mean-reversion in real-time.",
+    "data_period": "March 23, 1980 to August 6, 2008 (equity pairs); May 23, 2006 to August 6, 2008 (ETF pairs), daily",
+    "universe": "Exxon Mobil (XOM) and Southwest Airlines (LUV); SPDR Gold Shares (GLD) and Market Vectors Gold Miners (GDX) ETFs",
+    "performance_metrics": [],
+    "key_findings": [
+      "Introducing time-dependent parameters via a TVAR(1) state-space model allows tracking of structural breaks and sudden losses of mean-reversion that time-invariant models miss.",
+      "An on-line Bayesian recursive algorithm using discount factors successfully recovers true model parameters and tracks mean-reversion locally without heavy computational costs.",
+      "Empirical application to XOM and LUV stock prices reveals a mean-reverting spread period from March 1980 until November 2004, after which mean-reversion is lost, consistent with cointegration tests.",
+      "Application to GLD and GDX ETFs demonstrates a valid cointegrating relationship between July 2006 and December 2007."
+    ],
+    "limitations": [
+      "An empirical evaluation of actual trading strategies and transaction costs is beyond the scope of this work."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": "The paper is methodological and theoretical regarding state-space modeling for statistical arbitrage, with illustrations on simulated and historical equity/ETF data to test cointegration and parameter tracking. It does not report trading performance figures (e.g. strategy returns, Sharpe ratios, drawdowns), so performance_metrics is correctly left empty."
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:37:34.938881+00:00",
+    "input_tokens": 15743,
+    "validation_flags": [
+      "no_performance_metrics_found"
+    ],
+    "curation_signal_type": [
+      "stat_arb_pairs"
+    ],
+    "curation_asset_class": [
+      "equities"
+    ]
+  }
+}

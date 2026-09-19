@@ -1,0 +1,109 @@
+{
+  "paper_id": "arxiv:2609.01183v1",
+  "title": "Harvesting the Variance Risk Premium in Nuclear and Energy Equities: A Short-Put Portfolio Derisking Strategy",
+  "extraction": {
+    "signal_type": [
+      "volatility_risk_premium"
+    ],
+    "asset_class": [
+      "equities",
+      "options_volatility"
+    ],
+    "methodology_summary": "The strategy constructs a systematic short-put portfolio across a universe of nuclear and energy-adjacent equities by writing cash-secured put options. Realized volatility is estimated using a GARCH(1,1) model with consensus parameters and compared against ATM implied volatility to measure the variance risk premium. Positions target 0.30-delta and 45-day DTE, and are rebalanced or exited based on specific take-profit, stop-loss, or expiration rules.",
+    "data_period": "2000-2024, monthly",
+    "universe": "39 nuclear and energy-adjacent equities with option coverage from a total universe of 45 tickers",
+    "performance_metrics": [
+      {
+        "metric_name": "annualized return",
+        "value": 18.7,
+        "unit": "percent",
+        "context": "EW Unconditional put strategy, 2000-2024",
+        "evidence_quote": "EW | 18.7% | 2.4% | 7.81 | 0.0%",
+        "source_location": "Table I"
+      },
+      {
+        "metric_name": "annualized volatility",
+        "value": 2.4,
+        "unit": "percent",
+        "context": "EW Unconditional put strategy, 2000-2024",
+        "evidence_quote": "EW | 18.7% | 2.4% | 7.81 | 0.0%",
+        "source_location": "Table I"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 7.81,
+        "unit": "ratio",
+        "context": "EW Unconditional put strategy, 2000-2024",
+        "evidence_quote": "EW | 18.7% | 2.4% | 7.81 | 0.0%",
+        "source_location": "Table I"
+      },
+      {
+        "metric_name": "max drawdown",
+        "value": 0.0,
+        "unit": "percent",
+        "context": "EW Unconditional put strategy, 2000-2024",
+        "evidence_quote": "EW | 18.7% | 2.4% | 7.81 | 0.0%",
+        "source_location": "Table I"
+      },
+      {
+        "metric_name": "annualized return",
+        "value": 15.4,
+        "unit": "percent",
+        "context": "EW stock benchmark, 2000-2024",
+        "evidence_quote": "EW stock bench. | 15.4% | 19.1% | 0.81 | 47.0%",
+        "source_location": "Table I"
+      },
+      {
+        "metric_name": "annualized volatility",
+        "value": 19.1,
+        "unit": "percent",
+        "context": "EW stock benchmark, 2000-2024",
+        "evidence_quote": "EW stock bench. | 15.4% | 19.1% | 0.81 | 47.0%",
+        "source_location": "Table I"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.81,
+        "unit": "ratio",
+        "context": "EW stock benchmark, 2000-2024",
+        "evidence_quote": "EW stock bench. | 15.4% | 19.1% | 0.81 | 47.0%",
+        "source_location": "Table I"
+      },
+      {
+        "metric_name": "max drawdown",
+        "value": 47.0,
+        "unit": "percent",
+        "context": "EW stock benchmark, 2000-2024",
+        "evidence_quote": "EW stock bench. | 15.4% | 19.1% | 0.81 | 47.0%",
+        "source_location": "Table I"
+      }
+    ],
+    "key_findings": [
+      "A statistically significant positive variance risk premium exists in the majority of nuclear and energy equities with option coverage.",
+      "An unconditional short-put strategy achieves an annualized return of 18.7% with a Sharpe ratio of 7.81 and a maximum drawdown near zero, significantly outperforming the equal-weight stock benchmark on a risk-adjusted basis.",
+      "The unconditional put strategy achieved positive calendar-year returns in all 25 years of the sample.",
+      "A GARCH-filtered conditional variant (IV/RV threshold >= 1.10) maintains a high Sharpe ratio of 2.63 with a 7.7% maximum drawdown, albeit with fewer trades."
+    ],
+    "limitations": [
+      "The backtest uses option mid-prices throughout without modeling realistic bid-ask execution costs.",
+      "Cash-secured capital earns no T-bill return, understating opportunity cost post-2022.",
+      "The universe is fixed at today's list of survivors, introducing survivorship and look-ahead bias.",
+      "Exit prices assume fills at the first daily mid satisfying the stop or take-profit condition, which may understate gap risk on adverse overnight moves."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:19:33.092348+00:00",
+    "input_tokens": 4063,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "volatility_risk_premium"
+    ],
+    "curation_asset_class": [
+      "options_volatility",
+      "equities"
+    ]
+  }
+}

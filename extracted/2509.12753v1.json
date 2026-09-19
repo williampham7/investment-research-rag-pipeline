@@ -1,0 +1,149 @@
+{
+  "paper_id": "arxiv:2509.12753v1",
+  "title": "DeltaHedge: A Multi-Agent Framework for Portfolio Options Optimization",
+  "extraction": {
+    "signal_type": [
+      "momentum",
+      "volatility_risk_premium",
+      "sentiment_text",
+      "ml_composite",
+      "other"
+    ],
+    "asset_class": [
+      "equities",
+      "options_volatility"
+    ],
+    "methodology_summary": "DeltaHedge combines a transformer-based forecasting module, a sentiment analysis agent, a PPO-based trading agent, and an ensembled options-based hedging agent coordinated by a central manager. The framework processes historical OHLCV data and financial headlines to dynamically manage stock positions and buy/sell protective put options. The strategy is tested on daily data across the S&P 500, Apple, and Tesla, utilizing a rolling-window strategy with quarterly retraining and validation to select the best-performing RL hedging policy.",
+    "data_period": "January 2010 - December 2024, daily",
+    "universe": "S&P 500 index, Apple (AAPL), and Tesla (TSLA) stocks along with options",
+    "performance_metrics": [
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 1.33,
+        "unit": "ratio",
+        "context": "DeltaHedge strategy on S&P 500",
+        "evidence_quote": "DeltaHedge achieves a Sharpe ratio of 1.33 and a Sortino ratio of 1.81",
+        "source_location": "Results Overview"
+      },
+      {
+        "metric_name": "Sortino ratio",
+        "value": 1.81,
+        "unit": "ratio",
+        "context": "DeltaHedge strategy on S&P 500",
+        "evidence_quote": "DeltaHedge achieves a Sharpe ratio of 1.33 and a Sortino ratio of 1.81",
+        "source_location": "Results Overview"
+      },
+      {
+        "metric_name": "total return",
+        "value": 121.13,
+        "unit": "percent",
+        "context": "DeltaHedge strategy on S&P 500",
+        "evidence_quote": "DeltaHedge | 1.33 | 1.81 | 2.18 | 121.13 | 10.11 | 14.17",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "max drawdown",
+        "value": 10.11,
+        "unit": "percent",
+        "context": "DeltaHedge strategy on S&P 500",
+        "evidence_quote": "DeltaHedge | 1.33 | 1.81 | 2.18 | 121.13 | 10.11 | 14.17",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "annualized volatility",
+        "value": 14.17,
+        "unit": "percent",
+        "context": "DeltaHedge strategy on S&P 500",
+        "evidence_quote": "DeltaHedge | 1.33 | 1.81 | 2.18 | 121.13 | 10.11 | 14.17",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 1.09,
+        "unit": "ratio",
+        "context": "DeltaHedge strategy on Apple",
+        "evidence_quote": "DeltaHedge | 1.09 | 2.37 | 254.87 | 13.15",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Sortino ratio",
+        "value": 2.37,
+        "unit": "ratio",
+        "context": "DeltaHedge strategy on Apple",
+        "evidence_quote": "DeltaHedge | 1.09 | 2.37 | 254.87 | 13.15",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "total return",
+        "value": 254.87,
+        "unit": "percent",
+        "context": "DeltaHedge strategy on Apple",
+        "evidence_quote": "DeltaHedge | 1.09 | 2.37 | 254.87 | 13.15",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "max drawdown",
+        "value": 13.15,
+        "unit": "percent",
+        "context": "DeltaHedge strategy on Apple",
+        "evidence_quote": "DeltaHedge | 1.09 | 2.37 | 254.87 | 13.15",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 1.71,
+        "unit": "ratio",
+        "context": "DeltaHedge strategy on Tesla",
+        "evidence_quote": "DeltaHedge | 1.71 | 2.55 | 984.52 | 26.95",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Sortino ratio",
+        "value": 2.55,
+        "unit": "ratio",
+        "context": "DeltaHedge strategy on Tesla",
+        "evidence_quote": "DeltaHedge | 1.71 | 2.55 | 984.52 | 26.95",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "total return",
+        "value": 984.52,
+        "unit": "percent",
+        "context": "DeltaHedge strategy on Tesla",
+        "evidence_quote": "DeltaHedge | 1.71 | 2.55 | 984.52 | 26.95",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "max drawdown",
+        "value": 26.95,
+        "unit": "percent",
+        "context": "DeltaHedge strategy on Tesla",
+        "evidence_quote": "DeltaHedge | 1.71 | 2.55 | 984.52 | 26.95",
+        "source_location": "Table 2"
+      }
+    ],
+    "key_findings": [
+      "DeltaHedge nearly doubles risk-adjusted metrics like the Sharpe and Sortino ratios relative to standard benchmarks on the S&P 500.",
+      "The multi-agent framework effectively limits drawdowns to about one-third of those seen under buy-and-hold or pure RL methods while enhancing overall returns.",
+      "An ensemble of hedging algorithms with quarterly policy switching outperforms any single standalone reinforcement learning hedger.",
+      "Options-based hedging in this framework captures volatility-risk premiums and provides strong downside protection during extreme market movements."
+    ],
+    "limitations": [],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:17:19.792907+00:00",
+    "input_tokens": 9754,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "ml_composite",
+      "volatility_risk_premium"
+    ],
+    "curation_asset_class": [
+      "options_volatility",
+      "equities"
+    ]
+  }
+}

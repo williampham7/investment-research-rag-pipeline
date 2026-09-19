@@ -1,0 +1,78 @@
+{
+  "paper_id": "arxiv:1602.00865v1",
+  "title": "Tail Risk Premia for Long-Term Equity Investors",
+  "extraction": {
+    "signal_type": [
+      "volatility_risk_premium"
+    ],
+    "asset_class": [
+      "equities",
+      "options_volatility"
+    ],
+    "methodology_summary": "The paper proposes a model-free framework to estimate long-term variance, skewness, and kurtosis risk premia on the S&P 500 using Discretisation-Invariant (DI) moment swaps. These swaps are replicated via static portfolios of out-of-the-money European options and dynamic trading in log contracts. The authors construct 30-day constant-maturity investable P&L series at daily, weekly, and monthly frequencies to analyze the risk premia's statistical properties and their determinants using Fama-French and Carhart factors.",
+    "data_period": "January 1996 to December 2013",
+    "universe": "S&P 500 index options and futures",
+    "performance_metrics": [
+      {
+        "metric_name": "Correlation",
+        "value": -0.6,
+        "unit": "ratio",
+        "context": "Correlation between the daily changes in the S&P500 forward and the variance swap under daily monitoring",
+        "evidence_quote": "the correlation between the daily changes in the S&P500 forward and the variance swap in the top panel is around -0.6",
+        "source_location": "Section 4.3, page 23"
+      },
+      {
+        "metric_name": "Correlation",
+        "value": -0.86,
+        "unit": "ratio",
+        "context": "Correlation between the variance and skew risk premiums under monthly monitoring",
+        "evidence_quote": "the correlation of -0.86 between the variance and skew risk premiums is in line with Kozhan et al. [2013].",
+        "source_location": "Section 4.3, page 25"
+      },
+      {
+        "metric_name": "Adjusted R-squared (unrestricted model)",
+        "value": 0.581,
+        "unit": "ratio",
+        "context": "Fama-French and Carhart five-factor regression of the daily changes in the 30-day S&P500 variance risk premium (VRP) over the full sample (1996-2013)",
+        "evidence_quote": "The addition of the Fama-French factors only marginally increases the adjusted R2 from 0.567 to 0.581",
+        "source_location": "Section 4.4, page 29"
+      },
+      {
+        "metric_name": "Adjusted R-squared (restricted model)",
+        "value": 0.753,
+        "unit": "ratio",
+        "context": "Regression of the daily changes in the 30-day S&P500 skewness risk premium during the financial crisis period (July 2008 to June 2009) using only market factors",
+        "evidence_quote": "and even higher (0.753) for the skewness risk premium.",
+        "source_location": "Section 4.4, page 30"
+      }
+    ],
+    "key_findings": [
+      "Momentum is the dominant driver for both skewness and kurtosis risk premia, which exhibit a highly significant negative correlation.",
+      "The variance risk premium (VRP) responds positively to size and negatively to growth, and is not driven by momentum.",
+      "There is a significant asymmetric response of the VRP and other moment risk premia to market shocks when measured at high sampling frequencies (daily).",
+      "The correlation between variance and tail risk premia (skewness and kurtosis) is relatively low at high sampling frequencies (around -0.5 and 0.5) compared to monthly frequency (where VRP and skewness correlation is -0.86).",
+      "Long-term investors can diversify their exposures to variance risk (driven by growth) and skewness/kurtosis risk (driven by momentum)."
+    ],
+    "limitations": [
+      "The study does not explicitly incorporate transaction costs for the dynamic replication of the swaps, which could affect the exploitability of the risk premia.",
+      "At long-term horizons, there are insufficient non-overlapping time-series data available for highly reliable statistical estimation without spanning across different market regimes."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash",
+    "extracted_at": "2026-09-18T23:53:04.974008+00:00",
+    "input_tokens": 20169,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "volatility_risk_premium",
+      "momentum",
+      "size"
+    ],
+    "curation_asset_class": [
+      "equities",
+      "options_volatility"
+    ]
+  }
+}

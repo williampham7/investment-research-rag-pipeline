@@ -1,0 +1,126 @@
+{
+  "paper_id": "arxiv:2211.08281v1",
+  "title": "Forecasting Bitcoin volatility spikes from whale transactions and CryptoQuant data using Synthesizer Transformer models",
+  "extraction": {
+    "signal_type": [
+      "ml_composite",
+      "alternative_data",
+      "sentiment_text",
+      "low_volatility"
+    ],
+    "asset_class": [
+      "crypto"
+    ],
+    "methodology_summary": "The paper proposes a deep learning Synthesizer Transformer model to forecast next-day extreme Bitcoin volatility spikes using CryptoQuant on-chain/exchange metrics and Twitter whale-alert transaction data. Standardized features and technical indicators are fed into decoder-only transformer variants with synthetic attention mechanisms (dense, random, factorized, and mixed). Models are evaluated via regression (RMSE) and binary classification (F1-score, precision, recall) against baselines like LSTM, Vanilla Transformer, and GARCH, and subsequently tested using backtested trading strategies with volatility-scaled position sizing.",
+    "data_period": "January 2016 to September 2021, daily",
+    "universe": "Bitcoin cryptocurrency market",
+    "performance_metrics": [
+      {
+        "metric_name": "RMSE",
+        "value": 0.303,
+        "unit": "ratio",
+        "context": "GARCH(1,1) regression volatility prediction",
+        "evidence_quote": "GARCH(1,1) | 0.303 | 0.000 | 0.000 | 0.000 | 0 | 60 | 254 | 0",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "RMSE",
+        "value": 0.095,
+        "unit": "ratio",
+        "context": "LSTM regression volatility prediction",
+        "evidence_quote": "LSTM | 0.095 | 0.171 | 0.600 | 0.100 | 6 | 54 | 250 | 4",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "RMSE",
+        "value": 0.095,
+        "unit": "ratio",
+        "context": "Vanilla Transformer regression volatility prediction",
+        "evidence_quote": "Transformer (V) | 0.095 | 0.286 | 0.500 | 0.200 | 12 | 48 | 242 | 12",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "RMSE",
+        "value": 0.114,
+        "unit": "ratio",
+        "context": "Synthesizer (R) regression volatility prediction",
+        "evidence_quote": "Synthesizer (R) | 0.114 | 0.374 | 0.303 | 0.500 | 30 | 30 | 185 | 69",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "RMSE",
+        "value": 0.123,
+        "unit": "ratio",
+        "context": "Synthesizer (FR) regression volatility prediction",
+        "evidence_quote": "Synthesizer (FR) | 0.123 | 0.414 | 0.316 | 0.600 | 36 | 24 | 176 | 78",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "RMSE",
+        "value": 0.103,
+        "unit": "ratio",
+        "context": "Synthesizer (D) regression volatility prediction",
+        "evidence_quote": "Synthesizer (D) | 0.103 | 0.448 | 0.405 | 0.500 | 30 | 30 | 210 | 44",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "RMSE",
+        "value": 0.101,
+        "unit": "ratio",
+        "context": "Synthesizer (FD) regression volatility prediction",
+        "evidence_quote": "Synthesizer (FD) | 0.101 | 0.463 | 0.370 | 0.617 | 37 | 23 | 191 | 63",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "RMSE",
+        "value": 0.1,
+        "unit": "ratio",
+        "context": "Synthesizer (MD) regression volatility prediction",
+        "evidence_quote": "Synthesizer (MD) | 0.100 | 0.385 | 0.429 | 0.350 | 21 | 39 | 226 | 28",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "RMSE",
+        "value": 0.101,
+        "unit": "ratio",
+        "context": "Synthesizer (MR) regression volatility prediction",
+        "evidence_quote": "Synthesizer (MR) | 0.101 | 0.400 | 0.400 | 0.400 | 24 | 36 | 218 | 36",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "F1-score",
+        "value": 0.463,
+        "unit": "ratio",
+        "context": "Synthesizer (FD) classification volatility spike prediction",
+        "evidence_quote": "Synthesizer (FD) | 0.101 | 0.463 | 0.370 | 0.617 | 37 | 23 | 191 | 63",
+        "source_location": "Table 3"
+      }
+    ],
+    "key_findings": [
+      "Synthesizer Transformer models outperform traditional baseline models like LSTM, Vanilla Transformer, and GARCH in forecasting extreme Bitcoin volatility spikes.",
+      "The Synthesizer Transformer with factorized dense attention (FD) achieves the best performance with an RMSE of 0.101 and an F1-score of 0.463.",
+      "Explainable AI analysis via Captum reveals that features such as taker_buy_volume, HL_spread, volume, exchange_outflow_mean_ma7, and whale USDminus significantly influence volatility predictions.",
+      "Backtesting simple trading strategies demonstrates that integrating volatility predictions combined with volatility scaling can enhance Sharpe ratios and total returns while mitigating downside drawdowns."
+    ],
+    "limitations": [
+      "The trading strategies evaluated are simple and serve primarily to show the usefulness of predictions rather than being fully optimized real-world strategies.",
+      "The dataset relies on out-of-time test splitting due to deep learning data requirements rather than continuous rolling time frames."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:13:29.994897+00:00",
+    "input_tokens": 20968,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "alternative_data",
+      "volatility_risk_premium",
+      "ml_composite"
+    ],
+    "curation_asset_class": [
+      "crypto"
+    ]
+  }
+}

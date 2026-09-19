@@ -1,0 +1,905 @@
+{
+  "paper_id": "arxiv:1404.3274v1",
+  "title": "Two centuries of trend following",
+  "extraction": {
+    "signal_type": [
+      "momentum"
+    ],
+    "asset_class": [
+      "futures_multi_asset"
+    ],
+    "methodology_summary": "The strategy constructs a trend signal using an exponential moving average of past monthly prices divided by price volatility. Portfolio weights are proportional to the sign of the signal scaled by inverse volatility. The performance is tested on futures and long-historical spot proxies spanning commodities, bonds, stock indices, and currencies.",
+    "data_period": "1800-2014, monthly",
+    "universe": "Pool of 7 commodity contracts, 7 10-year bond contracts, 7 stock index contracts, and 6 currency contracts across developed countries.",
+    "performance_metrics": [
+      {
+        "metric_name": "t-statistic",
+        "value": 5.9,
+        "unit": "ratio",
+        "context": "Trend following strategy on futures since 1960",
+        "evidence_quote": "t-stat=5.9 (corresponding to a Sharpe ratio=0.8), de-biased t-stat=5.0",
+        "source_location": "Figure 1 caption"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.8,
+        "unit": "ratio",
+        "context": "Trend following strategy on futures since 1960",
+        "evidence_quote": "t-stat=5.9 (corresponding to a Sharpe ratio=0.8), de-biased t-stat=5.0",
+        "source_location": "Figure 1 caption"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 5.0,
+        "unit": "ratio",
+        "context": "De-biased trend following strategy on futures since 1960",
+        "evidence_quote": "t-stat=5.9 (corresponding to a Sharpe ratio=0.8), de-biased t-stat=5.0",
+        "source_location": "Figure 1 caption"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.8,
+        "unit": "ratio",
+        "context": "Time-scale n = 2 months, since 1960",
+        "evidence_quote": "2 | 0.8 | 5.9 | 5.5",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 5.9,
+        "unit": "ratio",
+        "context": "Time-scale n = 2 months, since 1960",
+        "evidence_quote": "2 | 0.8 | 5.9 | 5.5",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 5.5,
+        "unit": "ratio",
+        "context": "De-biased trend, time-scale n = 2 months, since 1960",
+        "evidence_quote": "2 | 0.8 | 5.9 | 5.5",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.83,
+        "unit": "ratio",
+        "context": "Time-scale n = 3 months, since 1960",
+        "evidence_quote": "3 | 0.83 | 6.1 | 5.5",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 6.1,
+        "unit": "ratio",
+        "context": "Time-scale n = 3 months, since 1960",
+        "evidence_quote": "3 | 0.83 | 6.1 | 5.5",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 5.5,
+        "unit": "ratio",
+        "context": "De-biased trend, time-scale n = 3 months, since 1960",
+        "evidence_quote": "3 | 0.83 | 6.1 | 5.5",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.78,
+        "unit": "ratio",
+        "context": "Time-scale n = 5 months, since 1960",
+        "evidence_quote": "5 | 0.78 | 5.7 | 5.0",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 5.7,
+        "unit": "ratio",
+        "context": "Time-scale n = 5 months, since 1960",
+        "evidence_quote": "5 | 0.78 | 5.7 | 5.0",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 5.0,
+        "unit": "ratio",
+        "context": "De-biased trend, time-scale n = 5 months, since 1960",
+        "evidence_quote": "5 | 0.78 | 5.7 | 5.0",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.8,
+        "unit": "ratio",
+        "context": "Time-scale n = 7 months, since 1960",
+        "evidence_quote": "7 | 0.8 | 5.9 | 5.0",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 5.9,
+        "unit": "ratio",
+        "context": "Time-scale n = 7 months, since 1960",
+        "evidence_quote": "7 | 0.8 | 5.9 | 5.0",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 5.0,
+        "unit": "ratio",
+        "context": "De-biased trend, time-scale n = 7 months, since 1960",
+        "evidence_quote": "7 | 0.8 | 5.9 | 5.0",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.76,
+        "unit": "ratio",
+        "context": "Time-scale n = 10 months, since 1960",
+        "evidence_quote": "10 | 0.76 | 5.6 | 5.1",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 5.6,
+        "unit": "ratio",
+        "context": "Time-scale n = 10 months, since 1960",
+        "evidence_quote": "10 | 0.76 | 5.6 | 5.1",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 5.1,
+        "unit": "ratio",
+        "context": "De-biased trend, time-scale n = 10 months, since 1960",
+        "evidence_quote": "10 | 0.76 | 5.6 | 5.1",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.65,
+        "unit": "ratio",
+        "context": "Time-scale n = 15 months, since 1960",
+        "evidence_quote": "15 | 0.65 | 4.8 | 4.5",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 4.8,
+        "unit": "ratio",
+        "context": "Time-scale n = 15 months, since 1960",
+        "evidence_quote": "15 | 0.65 | 4.8 | 4.5",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 4.5,
+        "unit": "ratio",
+        "context": "De-biased trend, time-scale n = 15 months, since 1960",
+        "evidence_quote": "15 | 0.65 | 4.8 | 4.5",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.57,
+        "unit": "ratio",
+        "context": "Time-scale n = 20 months, since 1960",
+        "evidence_quote": "20 | 0.57 | 4.2 | 3.3",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 4.2,
+        "unit": "ratio",
+        "context": "Time-scale n = 20 months, since 1960",
+        "evidence_quote": "20 | 0.57 | 4.2 | 3.3",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 3.3,
+        "unit": "ratio",
+        "context": "De-biased trend, time-scale n = 20 months, since 1960",
+        "evidence_quote": "20 | 0.57 | 4.2 | 3.3",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.57,
+        "unit": "ratio",
+        "context": "Currencies sector, n = 5, since 1960",
+        "evidence_quote": "Currencies | 0.57 | 3.6 | 3.4 | 0.05 | 0.32 | 05/1973",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 3.6,
+        "unit": "ratio",
+        "context": "Currencies sector, n = 5, since 1960",
+        "evidence_quote": "Currencies | 0.57 | 3.6 | 3.4 | 0.05 | 0.32 | 05/1973",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 3.4,
+        "unit": "ratio",
+        "context": "Currencies de-biased trend, n = 5, since 1960",
+        "evidence_quote": "Currencies | 0.57 | 3.6 | 3.4 | 0.05 | 0.32 | 05/1973",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.05,
+        "unit": "ratio",
+        "context": "Currencies drift component mu, since 1960",
+        "evidence_quote": "Currencies | 0.57 | 3.6 | 3.4 | 0.05 | 0.32 | 05/1973",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 0.32,
+        "unit": "ratio",
+        "context": "Currencies drift component mu, since 1960",
+        "evidence_quote": "Currencies | 0.57 | 3.6 | 3.4 | 0.05 | 0.32 | 05/1973",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.8,
+        "unit": "ratio",
+        "context": "Commodities sector, n = 5, since 1960",
+        "evidence_quote": "Commodities | 0.8 | 5.9 | 5.0 | 0.33 | 2.45 | 01/1960",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 5.9,
+        "unit": "ratio",
+        "context": "Commodities sector, n = 5, since 1960",
+        "evidence_quote": "Commodities | 0.8 | 5.9 | 5.0 | 0.33 | 2.45 | 01/1960",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 5.0,
+        "unit": "ratio",
+        "context": "Commodities de-biased trend, n = 5, since 1960",
+        "evidence_quote": "Commodities | 0.8 | 5.9 | 5.0 | 0.33 | 2.45 | 01/1960",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.33,
+        "unit": "ratio",
+        "context": "Commodities drift component mu, since 1960",
+        "evidence_quote": "Commodities | 0.8 | 5.9 | 5.0 | 0.33 | 2.45 | 01/1960",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 2.45,
+        "unit": "ratio",
+        "context": "Commodities drift component mu, since 1960",
+        "evidence_quote": "Commodities | 0.8 | 5.9 | 5.0 | 0.33 | 2.45 | 01/1960",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.49,
+        "unit": "ratio",
+        "context": "Bonds sector, n = 5, since 1960",
+        "evidence_quote": "Bonds | 0.49 | 2.8 | 1.6 | 0.58 | 3.3 | 05/1982",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 2.8,
+        "unit": "ratio",
+        "context": "Bonds sector, n = 5, since 1960",
+        "evidence_quote": "Bonds | 0.49 | 2.8 | 1.6 | 0.58 | 3.3 | 05/1982",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 1.6,
+        "unit": "ratio",
+        "context": "Bonds de-biased trend, n = 5, since 1960",
+        "evidence_quote": "Bonds | 0.49 | 2.8 | 1.6 | 0.58 | 3.3 | 05/1982",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.58,
+        "unit": "ratio",
+        "context": "Bonds drift component mu, since 1960",
+        "evidence_quote": "Bonds | 0.49 | 2.8 | 1.6 | 0.58 | 3.3 | 05/1982",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 3.3,
+        "unit": "ratio",
+        "context": "Bonds drift component mu, since 1960",
+        "evidence_quote": "Bonds | 0.49 | 2.8 | 1.6 | 0.58 | 3.3 | 05/1982",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.41,
+        "unit": "ratio",
+        "context": "Indices sector, n = 5, since 1960",
+        "evidence_quote": "Indices | 0.41 | 2.3 | 2.1 | 0.4 | 2.3 | 01/1982",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 2.3,
+        "unit": "ratio",
+        "context": "Indices sector, n = 5, since 1960",
+        "evidence_quote": "Indices | 0.41 | 2.3 | 2.1 | 0.4 | 2.3 | 01/1982",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 2.1,
+        "unit": "ratio",
+        "context": "Indices de-biased trend, n = 5, since 1960",
+        "evidence_quote": "Indices | 0.41 | 2.3 | 2.1 | 0.4 | 2.3 | 01/1982",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.4,
+        "unit": "ratio",
+        "context": "Indices drift component mu, since 1960",
+        "evidence_quote": "Indices | 0.41 | 2.3 | 2.1 | 0.4 | 2.3 | 01/1982",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 2.3,
+        "unit": "ratio",
+        "context": "Indices drift component mu, since 1960",
+        "evidence_quote": "Indices | 0.41 | 2.3 | 2.1 | 0.4 | 2.3 | 01/1982",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.66,
+        "unit": "ratio",
+        "context": "Decade 1960-1970",
+        "evidence_quote": "1960-1970 | 0.66 | 2.1 | 1.8 | 0.17 | 0.5",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 2.1,
+        "unit": "ratio",
+        "context": "Decade 1960-1970",
+        "evidence_quote": "1960-1970 | 0.66 | 2.1 | 1.8 | 0.17 | 0.5",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 1.8,
+        "unit": "ratio",
+        "context": "Decade 1960-1970 de-biased trend",
+        "evidence_quote": "1960-1970 | 0.66 | 2.1 | 1.8 | 0.17 | 0.5",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.17,
+        "unit": "ratio",
+        "context": "Decade 1960-1970 drift component mu",
+        "evidence_quote": "1960-1970 | 0.66 | 2.1 | 1.8 | 0.17 | 0.5",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 0.5,
+        "unit": "ratio",
+        "context": "Decade 1960-1970 drift component mu",
+        "evidence_quote": "1960-1970 | 0.66 | 2.1 | 1.8 | 0.17 | 0.5",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 1.15,
+        "unit": "ratio",
+        "context": "Decade 1970-1980",
+        "evidence_quote": "1970-1980 | 1.15 | 3.64 | 2.5 | 0.78 | 2.5",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 3.64,
+        "unit": "ratio",
+        "context": "Decade 1970-1980",
+        "evidence_quote": "1970-1980 | 1.15 | 3.64 | 2.5 | 0.78 | 2.5",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 2.5,
+        "unit": "ratio",
+        "context": "Decade 1970-1980 de-biased trend",
+        "evidence_quote": "1970-1980 | 1.15 | 3.64 | 2.5 | 0.78 | 2.5",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.78,
+        "unit": "ratio",
+        "context": "Decade 1970-1980 drift component mu",
+        "evidence_quote": "1970-1980 | 1.15 | 3.64 | 2.5 | 0.78 | 2.5",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 2.5,
+        "unit": "ratio",
+        "context": "Decade 1970-1980 drift component mu",
+        "evidence_quote": "1970-1980 | 1.15 | 3.64 | 2.5 | 0.78 | 2.5",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 1.05,
+        "unit": "ratio",
+        "context": "Decade 1980-1990",
+        "evidence_quote": "1980-1990 | 1.05 | 3.3 | 2.85 | -0.03 | -0.1",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 3.3,
+        "unit": "ratio",
+        "context": "Decade 1980-1990",
+        "evidence_quote": "1980-1990 | 1.05 | 3.3 | 2.85 | -0.03 | -0.1",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 2.85,
+        "unit": "ratio",
+        "context": "Decade 1980-1990 de-biased trend",
+        "evidence_quote": "1980-1990 | 1.05 | 3.3 | 2.85 | -0.03 | -0.1",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": -0.03,
+        "unit": "ratio",
+        "context": "Decade 1980-1990 drift component mu",
+        "evidence_quote": "1980-1990 | 1.05 | 3.3 | 2.85 | -0.03 | -0.1",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": -0.1,
+        "unit": "ratio",
+        "context": "Decade 1980-1990 drift component mu",
+        "evidence_quote": "1980-1990 | 1.05 | 3.3 | 2.85 | -0.03 | -0.1",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 1.12,
+        "unit": "ratio",
+        "context": "Decade 1990-2000",
+        "evidence_quote": "1990-2000 | 1.12 | 3.5 | 3.03 | 0.79 | 2.5",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 3.5,
+        "unit": "ratio",
+        "context": "Decade 1990-2000",
+        "evidence_quote": "1990-2000 | 1.12 | 3.5 | 3.03 | 0.79 | 2.5",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 3.03,
+        "unit": "ratio",
+        "context": "Decade 1990-2000 de-biased trend",
+        "evidence_quote": "1990-2000 | 1.12 | 3.5 | 3.03 | 0.79 | 2.5",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.79,
+        "unit": "ratio",
+        "context": "Decade 1990-2000 drift component mu",
+        "evidence_quote": "1990-2000 | 1.12 | 3.5 | 3.03 | 0.79 | 2.5",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 2.5,
+        "unit": "ratio",
+        "context": "Decade 1990-2000 drift component mu",
+        "evidence_quote": "1990-2000 | 1.12 | 3.5 | 3.03 | 0.79 | 2.5",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.75,
+        "unit": "ratio",
+        "context": "Decade >2000",
+        "evidence_quote": ">2000 | 0.75 | 2.8 | 1.9 | 0.68 | 2.15",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 2.8,
+        "unit": "ratio",
+        "context": "Decade >2000",
+        "evidence_quote": ">2000 | 0.75 | 2.8 | 1.9 | 0.68 | 2.15",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 1.9,
+        "unit": "ratio",
+        "context": "Decade >2000 de-biased trend",
+        "evidence_quote": ">2000 | 0.75 | 2.8 | 1.9 | 0.68 | 2.15",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.68,
+        "unit": "ratio",
+        "context": "Decade >2000 drift component mu",
+        "evidence_quote": ">2000 | 0.75 | 2.8 | 1.9 | 0.68 | 2.15",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 2.15,
+        "unit": "ratio",
+        "context": "Decade >2000 drift component mu",
+        "evidence_quote": ">2000 | 0.75 | 2.8 | 1.9 | 0.68 | 2.15",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 10.5,
+        "unit": "ratio",
+        "context": "Aggregate performance of trend over two centuries",
+        "evidence_quote": "t-stat=10.5, debiased t-stat=9.8, Sharpe ratio=0.72.",
+        "source_location": "Figure 4 caption"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 9.8,
+        "unit": "ratio",
+        "context": "Aggregate de-biased trend over two centuries",
+        "evidence_quote": "t-stat=10.5, debiased t-stat=9.8, Sharpe ratio=0.72.",
+        "source_location": "Figure 4 caption"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.72,
+        "unit": "ratio",
+        "context": "Aggregate performance of trend over two centuries",
+        "evidence_quote": "t-stat=10.5, debiased t-stat=9.8, Sharpe ratio=0.72.",
+        "source_location": "Figure 4 caption"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.47,
+        "unit": "ratio",
+        "context": "Currencies sector, full simulation",
+        "evidence_quote": "Currencies | 0.47 | 2.9 | 2.9 | 0.1 | 0.63 | 1973",
+        "source_location": "Table 8"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 2.9,
+        "unit": "ratio",
+        "context": "Currencies sector, full simulation",
+        "evidence_quote": "Currencies | 0.47 | 2.9 | 2.9 | 0.1 | 0.63 | 1973",
+        "source_location": "Table 8"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 2.9,
+        "unit": "ratio",
+        "context": "Currencies de-biased trend, full simulation",
+        "evidence_quote": "Currencies | 0.47 | 2.9 | 2.9 | 0.1 | 0.63 | 1973",
+        "source_location": "Table 8"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.1,
+        "unit": "ratio",
+        "context": "Currencies drift component mu, full simulation",
+        "evidence_quote": "Currencies | 0.47 | 2.9 | 2.9 | 0.1 | 0.63 | 1973",
+        "source_location": "Table 8"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 0.63,
+        "unit": "ratio",
+        "context": "Currencies drift component mu, full simulation",
+        "evidence_quote": "Currencies | 0.47 | 2.9 | 2.9 | 0.1 | 0.63 | 1973",
+        "source_location": "Table 8"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.28,
+        "unit": "ratio",
+        "context": "Commodities sector, full simulation",
+        "evidence_quote": "Commodities | 0.28 | 4.1 | 3.1 | 0.3 | 4.5 | 1800",
+        "source_location": "Table 8"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 4.1,
+        "unit": "ratio",
+        "context": "Commodities sector, full simulation",
+        "evidence_quote": "Commodities | 0.28 | 4.1 | 3.1 | 0.3 | 4.5 | 1800",
+        "source_location": "Table 8"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 3.1,
+        "unit": "ratio",
+        "context": "Commodities de-biased trend, full simulation",
+        "evidence_quote": "Commodities | 0.28 | 4.1 | 3.1 | 0.3 | 4.5 | 1800",
+        "source_location": "Table 8"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.3,
+        "unit": "ratio",
+        "context": "Commodities drift component mu, full simulation",
+        "evidence_quote": "Commodities | 0.28 | 4.1 | 3.1 | 0.3 | 4.5 | 1800",
+        "source_location": "Table 8"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 4.5,
+        "unit": "ratio",
+        "context": "Commodities drift component mu, full simulation",
+        "evidence_quote": "Commodities | 0.28 | 4.1 | 3.1 | 0.3 | 4.5 | 1800",
+        "source_location": "Table 8"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.4,
+        "unit": "ratio",
+        "context": "Bonds sector, full simulation",
+        "evidence_quote": "Bonds | 0.4 | 3.9 | 2.7 | -0.1 | -1 | 1918",
+        "source_location": "Table 8"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 3.9,
+        "unit": "ratio",
+        "context": "Bonds sector, full simulation",
+        "evidence_quote": "Bonds | 0.4 | 3.9 | 2.7 | -0.1 | -1 | 1918",
+        "source_location": "Table 8"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 2.7,
+        "unit": "ratio",
+        "context": "Bonds de-biased trend, full simulation",
+        "evidence_quote": "Bonds | 0.4 | 3.9 | 2.7 | -0.1 | -1 | 1918",
+        "source_location": "Table 8"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": -0.1,
+        "unit": "ratio",
+        "context": "Bonds drift component mu, full simulation",
+        "evidence_quote": "Bonds | 0.4 | 3.9 | 2.7 | -0.1 | -1 | 1918",
+        "source_location": "Table 8"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": -1.0,
+        "unit": "ratio",
+        "context": "Bonds drift component mu, full simulation",
+        "evidence_quote": "Bonds | 0.4 | 3.9 | 2.7 | -0.1 | -1 | 1918",
+        "source_location": "Table 8"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.7,
+        "unit": "ratio",
+        "context": "Indices sector, full simulation",
+        "evidence_quote": "Indices | 0.7 | 10.2 | 6.3 | 0.4 | 5.7 | 1800",
+        "source_location": "Table 8"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 10.2,
+        "unit": "ratio",
+        "context": "Indices sector, full simulation",
+        "evidence_quote": "Indices | 0.7 | 10.2 | 6.3 | 0.4 | 5.7 | 1800",
+        "source_location": "Table 8"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 6.3,
+        "unit": "ratio",
+        "context": "Indices de-biased trend, full simulation",
+        "evidence_quote": "Indices | 0.7 | 10.2 | 6.3 | 0.4 | 5.7 | 1800",
+        "source_location": "Table 8"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.4,
+        "unit": "ratio",
+        "context": "Indices drift component mu, full simulation",
+        "evidence_quote": "Indices | 0.7 | 10.2 | 6.3 | 0.4 | 5.7 | 1800",
+        "source_location": "Table 8"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 5.7,
+        "unit": "ratio",
+        "context": "Indices drift component mu, full simulation",
+        "evidence_quote": "Indices | 0.7 | 10.2 | 6.3 | 0.4 | 5.7 | 1800",
+        "source_location": "Table 8"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.6,
+        "unit": "ratio",
+        "context": "Period 1800-1850",
+        "evidence_quote": "1800-1850 | 0.6 | 4.2 | 0.06 | 0.4",
+        "source_location": "Table 9"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 4.2,
+        "unit": "ratio",
+        "context": "Period 1800-1850",
+        "evidence_quote": "1800-1850 | 0.6 | 4.2 | 0.06 | 0.4",
+        "source_location": "Table 9"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.06,
+        "unit": "ratio",
+        "context": "Period 1800-1850 drift component mu",
+        "evidence_quote": "1800-1850 | 0.6 | 4.2 | 0.06 | 0.4",
+        "source_location": "Table 9"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 0.4,
+        "unit": "ratio",
+        "context": "Period 1800-1850 drift component mu",
+        "evidence_quote": "1800-1850 | 0.6 | 4.2 | 0.06 | 0.4",
+        "source_location": "Table 9"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.57,
+        "unit": "ratio",
+        "context": "Period 1850-1900",
+        "evidence_quote": "1850-1900 | 0.57 | 3.7 | 0.43 | 3.0",
+        "source_location": "Table 9"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 3.7,
+        "unit": "ratio",
+        "context": "Period 1850-1900",
+        "evidence_quote": "1850-1900 | 0.57 | 3.7 | 0.43 | 3.0",
+        "source_location": "Table 9"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.43,
+        "unit": "ratio",
+        "context": "Period 1850-1900 drift component mu",
+        "evidence_quote": "1850-1900 | 0.57 | 3.7 | 0.43 | 3.0",
+        "source_location": "Table 9"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 3.0,
+        "unit": "ratio",
+        "context": "Period 1850-1900 drift component mu",
+        "evidence_quote": "1850-1900 | 0.57 | 3.7 | 0.43 | 3.0",
+        "source_location": "Table 9"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.81,
+        "unit": "ratio",
+        "context": "Period 1900-1950",
+        "evidence_quote": "1900-1950 | 0.81 | 5.7 | 0.34 | 2.4",
+        "source_location": "Table 9"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 5.7,
+        "unit": "ratio",
+        "context": "Period 1900-1950",
+        "evidence_quote": "1900-1950 | 0.81 | 5.7 | 0.34 | 2.4",
+        "source_location": "Table 9"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.34,
+        "unit": "ratio",
+        "context": "Period 1900-1950 drift component mu",
+        "evidence_quote": "1900-1950 | 0.81 | 5.7 | 0.34 | 2.4",
+        "source_location": "Table 9"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 2.4,
+        "unit": "ratio",
+        "context": "Period 1900-1950 drift component mu",
+        "evidence_quote": "1900-1950 | 0.81 | 5.7 | 0.34 | 2.4",
+        "source_location": "Table 9"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.99,
+        "unit": "ratio",
+        "context": "Period >1950",
+        "evidence_quote": ">1950 | 0.99 | 7.9 | 0.41 | 2.9",
+        "source_location": "Table 9"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 7.9,
+        "unit": "ratio",
+        "context": "Period >1950",
+        "evidence_quote": ">1950 | 0.99 | 7.9 | 0.41 | 2.9",
+        "source_location": "Table 9"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.41,
+        "unit": "ratio",
+        "context": "Period >1950 drift component mu",
+        "evidence_quote": ">1950 | 0.99 | 7.9 | 0.41 | 2.9",
+        "source_location": "Table 9"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 2.9,
+        "unit": "ratio",
+        "context": "Period >1950 drift component mu",
+        "evidence_quote": ">1950 | 0.99 | 7.9 | 0.41 | 2.9",
+        "source_location": "Table 9"
+      }
+    ],
+    "key_findings": [
+      "Trend following strategies yield anomalous excess returns across commodities, currencies, stock indices, and bonds over a two-century horizon.",
+      "The aggregate t-statistic of excess returns is approximately 5 since 1960 and approximately 10 since 1800 after accounting for market drift.",
+      "Trend predictability exhibits a saturation effect for large signals, suggesting fundamentalist traders step in when trends become strong.",
+      "While short-term trends (such as 3-day trends) have withered significantly since 1990, long-term trends show no sign of statistical degradation."
+    ],
+    "limitations": [
+      "Fictitious P&L does not attempt to model any realistic implementation costs of the strategy.",
+      "Historical spot data proxies are limited by liquidity and government interventions/free-floating constraints, excluding currency data prior to 1973."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:30:40.141199+00:00",
+    "input_tokens": 8667,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "momentum"
+    ],
+    "curation_asset_class": [
+      "futures_multi_asset"
+    ]
+  }
+}

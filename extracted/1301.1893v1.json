@@ -1,0 +1,68 @@
+{
+  "paper_id": "arxiv:1301.1893v1",
+  "title": "Dynamics of episodic transient correlations in currency exchange rate returns and their predictability",
+  "extraction": {
+    "signal_type": [
+      "momentum",
+      "reversal"
+    ],
+    "asset_class": [
+      "fx"
+    ],
+    "methodology_summary": "The paper employs a rolling window framework to calculate linear (Hxx) and non-linear (Hxxx) serial correlation portmanteau test statistics on hourly currency returns. When a window exhibits statistically significant linear correlation at the 5% level, a simple correlation-based predictor forecasts the direction of the next return based on the sign of the first-lag autocorrelation and the last return. The performance of this predictor is evaluated using the hit rate (the rate of consistency between actual and predicted return signs) across different window lengths and cluster sizes.",
+    "data_period": "March 1, 2004 to December 17, 2009, hourly",
+    "universe": "hourly average exchange rates per Euro (EUR) on the US dollar (USD), Canadian dollar (CAD), Swiss franc (CHF), British pound (GBP) and Japanese yen (JPY)",
+    "performance_metrics": [
+      {
+        "metric_name": "percentage of significant Hxxx windows",
+        "value": 13.5,
+        "unit": "percent",
+        "context": "USD/EUR pair (representing the largest efficiency)",
+        "evidence_quote": "the largest (smallest) efficiency is found in USD/EUR (CHF/EUR) pair, featuring up to 13.5 (22.2) % of the significant Hxxx windows for the considered values of n.",
+        "source_location": "Section 4.1"
+      },
+      {
+        "metric_name": "percentage of significant Hxxx windows",
+        "value": 22.2,
+        "unit": "percent",
+        "context": "CHF/EUR pair (representing the smallest efficiency)",
+        "evidence_quote": "the largest (smallest) efficiency is found in USD/EUR (CHF/EUR) pair, featuring up to 13.5 (22.2) % of the significant Hxxx windows for the considered values of n.",
+        "source_location": "Section 4.1"
+      },
+      {
+        "metric_name": "hit rate for uncorrelated random time series",
+        "value": 0.5,
+        "unit": "ratio",
+        "context": "uncorrelated random time series baseline",
+        "evidence_quote": "the hit rate is not affected by the cluster size but randomly fluctuates around the value of 0.5.",
+        "source_location": "Section 4.2"
+      }
+    ],
+    "key_findings": [
+      "The percentage of windows with statistically significant linear and non-linear correlations increases with the window length, with different currency pairs showing varying degrees of sensitivity.",
+      "The USD/EUR pair exhibits the highest efficiency (lowest percentage of significant Hxxx windows, up to 13.5%), while the CHF/EUR pair exhibits the lowest efficiency (highest percentage, up to 22.2%).",
+      "For sufficiently large window lengths, the distributions of the sizes of clusters with significant correlations fit well to a power-law behavior.",
+      "During periods of significant linear correlations, returns are predictable to a certain degree using a simple correlation-based predictor, and the presence of large contiguous clusters of significant correlations increases predictability."
+    ],
+    "limitations": [
+      "The response to changes in correlation strength is relatively slow for larger window lengths, causing low p-values to persist even after transient dependencies disappear, which can deteriorate the hit rate at the end of these epochs.",
+      "Shorter window lengths respond quicker but have shorter epochs of transient dependencies and may lack adequate statistical power.",
+      "The study does not attempt to use the detected non-linearities (significant bicorrelations) for prediction purposes, noting that predicting such non-linear processes is a challenging task.",
+      "No transaction costs or trading frictions are considered."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": "The paper evaluates predictability primarily via qualitative analysis of figures showing hit rates across different cluster sizes and window lengths, rather than reporting specific overall numeric hit rate values in the text, except for the baseline random walk hit rate of 0.5."
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash",
+    "extracted_at": "2026-09-18T23:50:00.073656+00:00",
+    "input_tokens": 4566,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "other"
+    ],
+    "curation_asset_class": [
+      "fx"
+    ]
+  }
+}

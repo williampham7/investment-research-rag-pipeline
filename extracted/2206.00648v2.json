@@ -1,0 +1,166 @@
+{
+  "paper_id": "arxiv:2206.00648v2",
+  "title": "PreBit -- A multimodal model with Twitter FinBERT embeddings for extreme price movement prediction of Bitcoin",
+  "extraction": {
+    "signal_type": [
+      "sentiment_text",
+      "momentum",
+      "other"
+    ],
+    "asset_class": [
+      "crypto",
+      "commodities"
+    ],
+    "methodology_summary": "The paper proposes a multimodal model called PreBit, combining a Support Vector Machine (SVM) model trained on technical analysis (TA) features and correlated asset prices with a text-based Convolutional Neural Network (CNN) trained on sentence-level FinBERT embeddings of daily Bitcoin-related tweets. The prediction probabilities from the Twitter and TA models are fused using an SVM classifier to output a joint prediction for extreme price movements (up or down by 2% or 5%). The models are evaluated through an ablation study on test data from June 2020 to May 2021, and the resulting signals are backtested on a simple long-only trading strategy.",
+    "data_period": "1 January 2015 to 31 May 2021, daily",
+    "universe": "Bitcoin (BTC), including correlated assets Ethereum and Gold, and daily Twitter posts containing the keyword 'Bitcoin'",
+    "performance_metrics": [
+      {
+        "metric_name": "accuracy",
+        "value": 73.7,
+        "unit": "percent",
+        "context": "Fusion model (sequential) for Task Up 5%",
+        "evidence_quote": "Fusion model (S) | 0.31 | 0.89 | 0.50 | 0.78 | 0.38 | 0.83 | 0.76 | 73.70",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "F1-score",
+        "value": 0.38,
+        "unit": "ratio",
+        "context": "Fusion model (sequential) positive class F1-score for Task Up 5%",
+        "evidence_quote": "Fusion model (S) | 0.31 | 0.89 | 0.50 | 0.78 | 0.38 | 0.83 | 0.76 | 73.70",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "precision",
+        "value": 0.31,
+        "unit": "ratio",
+        "context": "Fusion model (sequential) positive class precision for Task Up 5%",
+        "evidence_quote": "Fusion model (S) | 0.31 | 0.89 | 0.50 | 0.78 | 0.38 | 0.83 | 0.76 | 73.70",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "recall",
+        "value": 0.5,
+        "unit": "ratio",
+        "context": "Fusion model (sequential) positive class recall for Task Up 5%",
+        "evidence_quote": "Fusion model (S) | 0.31 | 0.89 | 0.50 | 0.78 | 0.38 | 0.83 | 0.76 | 73.70",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "accuracy",
+        "value": 64.38,
+        "unit": "percent",
+        "context": "Fusion model (parallel) for Task Up 2%",
+        "evidence_quote": "Fusion model (parallel) | 0.62 | 0.67 | 0.60 | 0.68 | 0.61 | 0.67 | 0.64 | 64.38",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "F1-score",
+        "value": 0.61,
+        "unit": "ratio",
+        "context": "Fusion model (parallel) positive class F1-score for Task Up 2%",
+        "evidence_quote": "Fusion model (parallel) | 0.62 | 0.67 | 0.60 | 0.68 | 0.61 | 0.67 | 0.64 | 64.38",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "accuracy",
+        "value": 81.37,
+        "unit": "percent",
+        "context": "Fusion model (sequential) for Task Down 5%",
+        "evidence_quote": "Fusion model (sequential) | 0.40 | 0.87 | 0.28 | 0.92 | 0.33 | 0.89 | 0.80 | 81.37",
+        "source_location": "Table 5"
+      },
+      {
+        "metric_name": "F1-score",
+        "value": 0.33,
+        "unit": "ratio",
+        "context": "Fusion model (sequential) positive class F1-score for Task Down 5%",
+        "evidence_quote": "Fusion model (sequential) | 0.40 | 0.87 | 0.28 | 0.92 | 0.33 | 0.89 | 0.80 | 81.37",
+        "source_location": "Table 5"
+      },
+      {
+        "metric_name": "accuracy",
+        "value": 56.44,
+        "unit": "percent",
+        "context": "Fusion model (parallel) for Task Down 2%",
+        "evidence_quote": "Fusion model (parallel) | 0.56 | 0.57 | 0.46 | 0.66 | 0.50 | 0.62 | 0.56 | 56.44",
+        "source_location": "Table 6"
+      },
+      {
+        "metric_name": "F1-score",
+        "value": 0.5,
+        "unit": "ratio",
+        "context": "Fusion model (parallel) positive class F1-score for Task Down 2%",
+        "evidence_quote": "Fusion model (parallel) | 0.56 | 0.57 | 0.46 | 0.66 | 0.50 | 0.62 | 0.56 | 56.44",
+        "source_location": "Table 6"
+      },
+      {
+        "metric_name": "annualized return",
+        "value": 60.4,
+        "unit": "percent",
+        "context": "TA SVM trading strategy over the full test period",
+        "evidence_quote": "TA SVM | 60.4 | 3.62 | 1.56 | 16.0 | 58.0 | 31",
+        "source_location": "Table 7"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 1.56,
+        "unit": "ratio",
+        "context": "TA SVM trading strategy over the full test period",
+        "evidence_quote": "TA SVM | 60.4 | 3.62 | 1.56 | 16.0 | 58.0 | 31",
+        "source_location": "Table 7"
+      },
+      {
+        "metric_name": "max drawdown",
+        "value": 16.0,
+        "unit": "percent",
+        "context": "TA SVM trading strategy over the full test period",
+        "evidence_quote": "TA SVM | 60.4 | 3.62 | 1.56 | 16.0 | 58.0 | 31",
+        "source_location": "Table 7"
+      },
+      {
+        "metric_name": "annualized return",
+        "value": 49.9,
+        "unit": "percent",
+        "context": "Fusion model 0.95 threshold trading strategy over the full test period",
+        "evidence_quote": "Fusion model 0.95 threshold | 49.9 | 3.02 | 1.39 | 14.9 | 55.6 | 36",
+        "source_location": "Table 7"
+      },
+      {
+        "metric_name": "max drawdown",
+        "value": 14.9,
+        "unit": "percent",
+        "context": "Fusion model 0.95 threshold trading strategy over the full test period",
+        "evidence_quote": "Fusion model 0.95 threshold | 49.9 | 3.02 | 1.39 | 14.9 | 55.6 | 36",
+        "source_location": "Table 7"
+      }
+    ],
+    "key_findings": [
+      "Integrating Twitter content via FinBERT embeddings improves predictive performance for upward extreme price movements of Bitcoin compared to using price-based technical indicators alone.",
+      "Multimodal Fusion models outperform individual modality models in F1-score and accuracy for tasks predicting upward price spikes.",
+      "Trading strategies built upon the proposed model signals significantly reduce maximum drawdown compared to a Buy and Hold strategy while capturing profitable opportunities.",
+      "During bear market periods, the proposed trading strategies achieve positive returns (e.g., 32% profit for TA SVM) while the underlying benchmark asset price drops significantly."
+    ],
+    "limitations": [
+      "The evaluation and backtest are performed on a limited period in time (one year), which may not generalize across all market cycles due to asset non-stationarity.",
+      "The collected tweet sample size (5,000 tweets per day) may not fully capture the entire market sentiment or the specific impact of major crypto influencers.",
+      "Transaction costs, slippage, and liquidity constraints are omitted in the naive backtesting framework."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:12:56.554979+00:00",
+    "input_tokens": 22730,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "sentiment_text",
+      "ml_composite"
+    ],
+    "curation_asset_class": [
+      "crypto"
+    ]
+  }
+}

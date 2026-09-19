@@ -1,0 +1,140 @@
+{
+  "paper_id": "arxiv:1602.00931v2",
+  "title": "Should employers pay their employees better? An asset pricing approach",
+  "extraction": {
+    "signal_type": [
+      "other"
+    ],
+    "asset_class": [
+      "equities"
+    ],
+    "methodology_summary": "The paper constructs a remuneration factor by sorting stocks within six supersectors based on their annual salaries and benefits expenses per employee. A market-neutral portfolio is formed daily by going long the highest-paying quantile and short the lowest-paying quantile, with weights scaled inversely by stock volatility and adjusted to ensure beta neutrality. The strategy's performance is evaluated using a novel 'Factor Correlation Level' (FCL) metric to measure common risk and compare it with other standard asset pricing factors.",
+    "data_period": "January 2001 to July 2015, daily",
+    "universe": "The 569 biggest companies in Europe, the 258 biggest companies on the London Stock Exchange, and 569 randomly selected U.S. companies with capitalization above 1 billion USD.",
+    "performance_metrics": [
+      {
+        "metric_name": "annualized return above the market",
+        "value": 2.42,
+        "unit": "percent",
+        "context": "Market neutral investment strategy based on the remuneration anomaly",
+        "evidence_quote": "Our main result indicates that a market neutral investment strategy based on the remuneration anomaly would likely deliver positive annual returns of 2.42% above the market.",
+        "source_location": "Section I, page 5"
+      },
+      {
+        "metric_name": "annualized bias",
+        "value": 1.21,
+        "unit": "percent",
+        "context": "Remuneration factor (quantile Q1) for the largest U.K. companies (January 2001 to July 2015)",
+        "evidence_quote": "The annualized bias for the remuneration factor in the U.K. universe is 1.21% with a t-statistic of 1.21.",
+        "source_location": "Section V.G, page 29"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.37,
+        "unit": "ratio",
+        "context": "Remuneration factor (quantile Q1) for the largest U.K. companies (January 2001 to July 2015)",
+        "evidence_quote": "The Sharpe ratio of 0.37 indicates that a horizon of 1/0.37 ≃ 2.7 years is required for the anomaly to be captured",
+        "source_location": "Section V.G, page 30"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 1.4,
+        "unit": "ratio",
+        "context": "Remuneration factor (quantile Q1) for the largest U.K. companies (January 2001 to July 2015)",
+        "evidence_quote": "t-stat | 1.40",
+        "source_location": "Table IV"
+      },
+      {
+        "metric_name": "annualized bias",
+        "value": 0.68,
+        "unit": "percent",
+        "context": "Remuneration factor (quantile Q1) for the largest European companies (January 2001 to July 2015)",
+        "evidence_quote": "Bias, % | 0.68",
+        "source_location": "Table IV"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.25,
+        "unit": "ratio",
+        "context": "Remuneration factor (quantile Q1) for the largest European companies (January 2001 to July 2015)",
+        "evidence_quote": "Sharpe | 0.25",
+        "source_location": "Table IV"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 0.97,
+        "unit": "ratio",
+        "context": "Remuneration factor (quantile Q1) for the largest European companies (January 2001 to July 2015)",
+        "evidence_quote": "t-stat | 0.97",
+        "source_location": "Table IV"
+      },
+      {
+        "metric_name": "intrinsic remuneration bias",
+        "value": 2.85,
+        "unit": "percent",
+        "context": "Remuneration factor for U.K. companies after subtracting the impacts of other factors",
+        "evidence_quote": "if we subtract all the impacts from remuneration's annualized bias, we obtain an intrinsic remuneration bias of 2.85%.",
+        "source_location": "Section V.G, page 30"
+      },
+      {
+        "metric_name": "intrinsic t-statistic",
+        "value": 3.29,
+        "unit": "ratio",
+        "context": "Remuneration factor for U.K. companies after subtracting the impacts of other factors",
+        "evidence_quote": "Therefore, we would have a t-statistic of approximately 2.85×1.40/1.21 = 3.29",
+        "source_location": "Section V.G, page 30"
+      },
+      {
+        "metric_name": "mean monthly return",
+        "value": 0.19,
+        "unit": "percent",
+        "context": "Remuneration factor under methodology A6 (monthly basis, European universe)",
+        "evidence_quote": "Mean | 0.19%",
+        "source_location": "Table VII"
+      },
+      {
+        "metric_name": "monthly volatility",
+        "value": 1.5,
+        "unit": "percent",
+        "context": "Remuneration factor under methodology A6 (monthly basis, European universe)",
+        "evidence_quote": "Std | 1.50%",
+        "source_location": "Table VII"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 1.73,
+        "unit": "ratio",
+        "context": "Remuneration factor under methodology A6 (monthly basis, European universe)",
+        "evidence_quote": "t-stat | 1.73",
+        "source_location": "Table VII"
+      }
+    ],
+    "key_findings": [
+      "Companies that spend more on salaries and benefits per employee (remuneration) perform better on the stock market on average.",
+      "Companies with similar remuneration policies share a common risk, which is comparable in magnitude to the value premium (book-to-market factor).",
+      "The remuneration anomaly is more pronounced for extreme quantiles (Q1) of the remuneration distribution.",
+      "The paper introduces the Factor Correlation Level (FCL) as a proxy for the eigenvalues of the correlation matrix to rank factors by importance.",
+      "The low-volatility factor is identified as the most important factor (highest FCL), followed by capitalization and momentum."
+    ],
+    "limitations": [
+      "The methodology does not yield true eigenvectors and eigenvalues of the covariance matrix, meaning some inter-factor correlations remain (e.g., remuneration is correlated with sales-to-market and dividend factors).",
+      "Lack of systematic remuneration data for the U.S. universe prevented testing the remuneration factor on the U.S. market.",
+      "The study excludes microcapitalization firms, focusing only on liquid stocks with capitalization generally above 800 million euros."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash",
+    "extracted_at": "2026-09-18T23:53:36.835276+00:00",
+    "input_tokens": 22255,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "quality_profitability",
+      "other"
+    ],
+    "curation_asset_class": [
+      "equities"
+    ]
+  }
+}

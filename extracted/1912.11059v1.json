@@ -1,0 +1,329 @@
+{
+  "paper_id": "arxiv:1912.11059v1",
+  "title": "Forecasting Implied Volatility Smile Surface via Deep Learning and Attention Mechanism",
+  "extraction": {
+    "signal_type": [
+      "ml_composite",
+      "volatility_risk_premium",
+      "other"
+    ],
+    "asset_class": [
+      "options_volatility",
+      "equities"
+    ],
+    "methodology_summary": "The authors propose an Attention-based LSTM (Att-LSTM) deep learning prediction system incorporating dropout layers to forecast the entire S&P 500 implied volatility smile surface as a holistic matrix target. Input features consist of daily, weekly, and monthly option implied volatilities corresponding to 45 discrete points on the surface. The predicted volatility surfaces are then used in the Black-Scholes formula to price option contracts and construct time spread and butterfly spread strategies.",
+    "data_period": "November 5, 2009 to November 5, 2019, daily",
+    "universe": "S&P 500 index options market",
+    "performance_metrics": [
+      {
+        "metric_name": "MSE",
+        "value": 1.024,
+        "unit": "ratio",
+        "context": "Att-LSTM model in-sample static prediction",
+        "evidence_quote": "Att-LSTM | 1.024 | 0.704 | 3.786 | 1.212 | 0.751 | 3.695",
+        "source_location": "Table /page/15/Table/3 (page 16)"
+      },
+      {
+        "metric_name": "MAE",
+        "value": 0.704,
+        "unit": "ratio",
+        "context": "Att-LSTM model in-sample static prediction",
+        "evidence_quote": "Att-LSTM | 1.024 | 0.704 | 3.786 | 1.212 | 0.751 | 3.695",
+        "source_location": "Table /page/15/Table/3 (page 16)"
+      },
+      {
+        "metric_name": "QLIKE",
+        "value": 3.786,
+        "unit": "ratio",
+        "context": "Att-LSTM model in-sample static prediction",
+        "evidence_quote": "Att-LSTM | 1.024 | 0.704 | 3.786 | 1.212 | 0.751 | 3.695",
+        "source_location": "Table /page/15/Table/3 (page 16)"
+      },
+      {
+        "metric_name": "MSE",
+        "value": 1.212,
+        "unit": "ratio",
+        "context": "Att-LSTM model out-of-sample static prediction",
+        "evidence_quote": "Att-LSTM | 1.024 | 0.704 | 3.786 | 1.212 | 0.751 | 3.695",
+        "source_location": "Table /page/15/Table/3 (page 16)"
+      },
+      {
+        "metric_name": "MAE",
+        "value": 0.751,
+        "unit": "ratio",
+        "context": "Att-LSTM model out-of-sample static prediction",
+        "evidence_quote": "Att-LSTM | 1.024 | 0.704 | 3.786 | 1.212 | 0.751 | 3.695",
+        "source_location": "Table /page/15/Table/3 (page 16)"
+      },
+      {
+        "metric_name": "QLIKE",
+        "value": 3.695,
+        "unit": "ratio",
+        "context": "Att-LSTM model out-of-sample static prediction",
+        "evidence_quote": "Att-LSTM | 1.024 | 0.704 | 3.786 | 1.212 | 0.751 | 3.695",
+        "source_location": "Table /page/15/Table/3 (page 16)"
+      },
+      {
+        "metric_name": "MSE",
+        "value": 1.325,
+        "unit": "ratio",
+        "context": "LSTM model in-sample static prediction",
+        "evidence_quote": "LSTM | 1.325 | 1.128 | 3.828 | 1.525 | 1.165 | 4.071",
+        "source_location": "Table /page/15/Table/3 (page 16)"
+      },
+      {
+        "metric_name": "MAE",
+        "value": 1.128,
+        "unit": "ratio",
+        "context": "LSTM model in-sample static prediction",
+        "evidence_quote": "LSTM | 1.325 | 1.128 | 3.828 | 1.525 | 1.165 | 4.071",
+        "source_location": "Table /page/15/Table/3 (page 16)"
+      },
+      {
+        "metric_name": "QLIKE",
+        "value": 3.828,
+        "unit": "ratio",
+        "context": "LSTM model in-sample static prediction",
+        "evidence_quote": "LSTM | 1.325 | 1.128 | 3.828 | 1.525 | 1.165 | 4.071",
+        "source_location": "Table /page/15/Table/3 (page 16)"
+      },
+      {
+        "metric_name": "MSE",
+        "value": 1.525,
+        "unit": "ratio",
+        "context": "LSTM model out-of-sample static prediction",
+        "evidence_quote": "LSTM | 1.325 | 1.128 | 3.828 | 1.525 | 1.165 | 4.071",
+        "source_location": "Table /page/15/Table/3 (page 16)"
+      },
+      {
+        "metric_name": "MAE",
+        "value": 1.165,
+        "unit": "ratio",
+        "context": "LSTM model out-of-sample static prediction",
+        "evidence_quote": "LSTM | 1.325 | 1.128 | 3.828 | 1.525 | 1.165 | 4.071",
+        "source_location": "Table /page/15/Table/3 (page 16)"
+      },
+      {
+        "metric_name": "QLIKE",
+        "value": 4.071,
+        "unit": "ratio",
+        "context": "LSTM model out-of-sample static prediction",
+        "evidence_quote": "LSTM | 1.325 | 1.128 | 3.828 | 1.525 | 1.165 | 4.071",
+        "source_location": "Table /page/15/Table/3 (page 16)"
+      },
+      {
+        "metric_name": "MSE",
+        "value": 1.512,
+        "unit": "ratio",
+        "context": "MLP model in-sample static prediction",
+        "evidence_quote": "MLP | 1.512 | 1.259 | 4.259 | 2.367 | 1.160 | 4.510",
+        "source_location": "Table /page/15/Table/3 (page 16)"
+      },
+      {
+        "metric_name": "MAE",
+        "value": 1.259,
+        "unit": "ratio",
+        "context": "MLP model in-sample static prediction",
+        "evidence_quote": "MLP | 1.512 | 1.259 | 4.259 | 2.367 | 1.160 | 4.510",
+        "source_location": "Table /page/15/Table/3 (page 16)"
+      },
+      {
+        "metric_name": "QLIKE",
+        "value": 4.259,
+        "unit": "ratio",
+        "context": "MLP model in-sample static prediction",
+        "evidence_quote": "MLP | 1.512 | 1.259 | 4.259 | 2.367 | 1.160 | 4.510",
+        "source_location": "Table /page/15/Table/3 (page 16)"
+      },
+      {
+        "metric_name": "MSE",
+        "value": 2.367,
+        "unit": "ratio",
+        "context": "MLP model out-of-sample static prediction",
+        "evidence_quote": "MLP | 1.512 | 1.259 | 4.259 | 2.367 | 1.160 | 4.510",
+        "source_location": "Table /page/15/Table/3 (page 16)"
+      },
+      {
+        "metric_name": "MAE",
+        "value": 1.16,
+        "unit": "ratio",
+        "context": "MLP model out-of-sample static prediction",
+        "evidence_quote": "MLP | 1.512 | 1.259 | 4.259 | 2.367 | 1.160 | 4.510",
+        "source_location": "Table /page/15/Table/3 (page 16)"
+      },
+      {
+        "metric_name": "QLIKE",
+        "value": 4.51,
+        "unit": "ratio",
+        "context": "MLP model out-of-sample static prediction",
+        "evidence_quote": "MLP | 1.512 | 1.259 | 4.259 | 2.367 | 1.160 | 4.510",
+        "source_location": "Table /page/15/Table/3 (page 16)"
+      },
+      {
+        "metric_name": "MSE",
+        "value": 0.885,
+        "unit": "ratio",
+        "context": "Att-LSTM model in-sample rolling prediction",
+        "evidence_quote": "Att-LSTM | 0.885 | 0.666 | 3.822 | 1.083 | 0.762 | 3.641",
+        "source_location": "Table /page/15/Table/5 (page 16)"
+      },
+      {
+        "metric_name": "MAE",
+        "value": 0.666,
+        "unit": "ratio",
+        "context": "Att-LSTM model in-sample rolling prediction",
+        "evidence_quote": "Att-LSTM | 0.885 | 0.666 | 3.822 | 1.083 | 0.762 | 3.641",
+        "source_location": "Table /page/15/Table/5 (page 16)"
+      },
+      {
+        "metric_name": "QLIKE",
+        "value": 3.822,
+        "unit": "ratio",
+        "context": "Att-LSTM model in-sample rolling prediction",
+        "evidence_quote": "Att-LSTM | 0.885 | 0.666 | 3.822 | 1.083 | 0.762 | 3.641",
+        "source_location": "Table /page/15/Table/5 (page 16)"
+      },
+      {
+        "metric_name": "MSE",
+        "value": 1.083,
+        "unit": "ratio",
+        "context": "Att-LSTM model out-of-sample rolling prediction",
+        "evidence_quote": "Att-LSTM | 0.885 | 0.666 | 3.822 | 1.083 | 0.762 | 3.641",
+        "source_location": "Table /page/15/Table/5 (page 16)"
+      },
+      {
+        "metric_name": "MAE",
+        "value": 0.762,
+        "unit": "ratio",
+        "context": "Att-LSTM model out-of-sample rolling prediction",
+        "evidence_quote": "Att-LSTM | 0.885 | 0.666 | 3.822 | 1.083 | 0.762 | 3.641",
+        "source_location": "Table /page/15/Table/5 (page 16)"
+      },
+      {
+        "metric_name": "QLIKE",
+        "value": 3.641,
+        "unit": "ratio",
+        "context": "Att-LSTM network out-of-sample rolling prediction",
+        "evidence_quote": "Att-LSTM | 0.885 | 0.666 | 3.822 | 1.083 | 0.762 | 3.641",
+        "source_location": "Table /page/15/Table/5 (page 16)"
+      },
+      {
+        "metric_name": "MSE",
+        "value": 1.26,
+        "unit": "ratio",
+        "context": "LSTM model in-sample rolling prediction",
+        "evidence_quote": "LSTM | 1.260 | 1.107 | 4.103 | 1.210 | 1.102 | 3.953",
+        "source_location": "Table /page/15/Table/5 (page 16)"
+      },
+      {
+        "metric_name": "MAE",
+        "value": 1.107,
+        "unit": "ratio",
+        "context": "LSTM model in-sample rolling prediction",
+        "evidence_quote": "LSTM | 1.260 | 1.107 | 4.103 | 1.210 | 1.102 | 3.953",
+        "source_location": "Table /page/15/Table/5 (page 16)"
+      },
+      {
+        "metric_name": "QLIKE",
+        "value": 4.103,
+        "unit": "ratio",
+        "context": "LSTM model in-sample rolling prediction",
+        "evidence_quote": "LSTM | 1.260 | 1.107 | 4.103 | 1.210 | 1.102 | 3.953",
+        "source_location": "Table /page/15/Table/5 (page 16)"
+      },
+      {
+        "metric_name": "MSE",
+        "value": 1.21,
+        "unit": "ratio",
+        "context": "LSTM model out-of-sample rolling prediction",
+        "evidence_quote": "LSTM | 1.260 | 1.107 | 4.103 | 1.210 | 1.102 | 3.953",
+        "source_location": "Table /page/15/Table/5 (page 16)"
+      },
+      {
+        "metric_name": "MAE",
+        "value": 1.102,
+        "unit": "ratio",
+        "context": "LSTM model out-of-sample rolling prediction",
+        "evidence_quote": "LSTM | 1.260 | 1.107 | 4.103 | 1.210 | 1.102 | 3.953",
+        "source_location": "Table /page/15/Table/5 (page 16)"
+      },
+      {
+        "metric_name": "QLIKE",
+        "value": 3.953,
+        "unit": "ratio",
+        "context": "LSTM model out-of-sample rolling prediction",
+        "evidence_quote": "LSTM | 1.260 | 1.107 | 4.103 | 1.210 | 1.102 | 3.953",
+        "source_location": "Table /page/15/Table/5 (page 16)"
+      },
+      {
+        "metric_name": "MSE",
+        "value": 1.413,
+        "unit": "ratio",
+        "context": "MLP model in-sample rolling prediction",
+        "evidence_quote": "MLP | 1.413 | 1.313 | 4.214 | 2.318 | 1.264 | 4.376",
+        "source_location": "Table /page/15/Table/5 (page 16)"
+      },
+      {
+        "metric_name": "MAE",
+        "value": 1.313,
+        "unit": "ratio",
+        "context": "MLP model in-sample rolling prediction",
+        "evidence_quote": "MLP | 1.413 | 1.313 | 4.214 | 2.318 | 1.264 | 4.376",
+        "source_location": "Table /page/15/Table/5 (page 16)"
+      },
+      {
+        "metric_name": "QLIKE",
+        "value": 4.214,
+        "unit": "ratio",
+        "context": "MLP model in-sample rolling prediction",
+        "evidence_quote": "MLP | 1.413 | 1.313 | 4.214 | 2.318 | 1.264 | 4.376",
+        "source_location": "Table /page/15/Table/5 (page 16)"
+      },
+      {
+        "metric_name": "MSE",
+        "value": 2.318,
+        "unit": "ratio",
+        "context": "MLP model out-of-sample rolling prediction",
+        "evidence_quote": "MLP | 1.413 | 1.313 | 4.214 | 2.318 | 1.264 | 4.376",
+        "source_location": "Table /page/15/Table/5 (page 16)"
+      },
+      {
+        "metric_name": "MAE",
+        "value": 1.264,
+        "unit": "ratio",
+        "context": "MLP model out-of-sample rolling prediction",
+        "evidence_quote": "MLP | 1.413 | 1.313 | 4.214 | 2.318 | 1.264 | 4.376",
+        "source_location": "Table /page/15/Table/5 (page 16)"
+      },
+      {
+        "metric_name": "QLIKE",
+        "value": 4.376,
+        "unit": "ratio",
+        "context": "MLP model out-of-sample rolling prediction",
+        "evidence_quote": "MLP | 1.413 | 1.313 | 4.214 | 2.318 | 1.264 | 4.376",
+        "source_location": "Table /page/15/Table/5 (page 16)"
+      }
+    ],
+    "key_findings": [
+      "Combining LSTM networks with an attention mechanism (Att-LSTM) significantly improves the accuracy of forecasting the implied volatility smile surface compared to standard LSTM and MLP models.",
+      "The training error curve of the Att-LSTM prediction system converges, showing effective learning and generalization properties when using dropout regularization.",
+      "Option spread strategies (time spreads and butterfly spreads) constructed using the AI-predicted implied volatility surfaces achieve higher returns and Sharpe ratios than those using unpredicted volatility surfaces."
+    ],
+    "limitations": [],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:08:26.382454+00:00",
+    "input_tokens": 14248,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "volatility_risk_premium",
+      "ml_composite"
+    ],
+    "curation_asset_class": [
+      "options_volatility"
+    ]
+  }
+}

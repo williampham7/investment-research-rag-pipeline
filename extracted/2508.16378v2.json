@@ -1,0 +1,188 @@
+{
+  "paper_id": "arxiv:2508.16378v2",
+  "title": "Sentiment-Aware Mean-Variance Portfolio Optimization for Cryptocurrencies",
+  "extraction": {
+    "signal_type": [
+      "momentum",
+      "sentiment_text",
+      "other"
+    ],
+    "asset_class": [
+      "crypto"
+    ],
+    "methodology_summary": "The paper proposes a dynamic cryptocurrency portfolio strategy combining technical indicators (14-day RSI and SMA) and news-based VADER sentiment scores. A Ridge regression model is estimated within each rolling window to predict next-day returns using these technical and sentiment signals, adjusting expected return estimates for a constrained mean-variance optimization framework. The portfolio is rebalanced daily using a sliding window approach with a 180-day training window and incorporates weight caps, turnover limits, and transaction costs.",
+    "data_period": "February 14, 2020, to August 6, 2025, daily frequency",
+    "universe": "Major cryptocurrencies including Bitcoin (BTC), Ethereum (ETH), Cardano (ADA), Binance Coin (BNB), and Ripple (XRP)",
+    "performance_metrics": [
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 0.7102,
+        "unit": "ratio",
+        "context": "Proposed Strategy",
+        "evidence_quote": "Proposed Strategy | 0.7102 | 81.95 | 6.0555",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Maximum Drawdown",
+        "value": 81.95,
+        "unit": "percent",
+        "context": "Proposed Strategy",
+        "evidence_quote": "Proposed Strategy | 0.7102 | 81.95 | 6.0555",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Cumulative Return",
+        "value": 6.0555,
+        "unit": "other",
+        "context": "Proposed Strategy",
+        "evidence_quote": "Proposed Strategy | 0.7102 | 81.95 | 6.0555",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 0.5976,
+        "unit": "ratio",
+        "context": "Proposed (Sentiment Only)",
+        "evidence_quote": "Proposed (Sentiment Only) | 0.5976 | 88.99 | 2.6861",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Maximum Drawdown",
+        "value": 88.99,
+        "unit": "percent",
+        "context": "Proposed (Sentiment Only)",
+        "evidence_quote": "Proposed (Sentiment Only) | 0.5976 | 88.99 | 2.6861",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Cumulative Return",
+        "value": 2.6861,
+        "unit": "other",
+        "context": "Proposed (Sentiment Only)",
+        "evidence_quote": "Proposed (Sentiment Only) | 0.5976 | 88.99 | 2.6861",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 0.7026,
+        "unit": "ratio",
+        "context": "Proposed (Technical Only)",
+        "evidence_quote": "Proposed (Technical Only) | 0.7026 | 83.07 | 4.8510",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Maximum Drawdown",
+        "value": 83.07,
+        "unit": "percent",
+        "context": "Proposed (Technical Only)",
+        "evidence_quote": "Proposed (Technical Only) | 0.7026 | 83.07 | 4.8510",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Cumulative Return",
+        "value": 4.851,
+        "unit": "other",
+        "context": "Proposed (Technical Only)",
+        "evidence_quote": "Proposed (Technical Only) | 0.7026 | 83.07 | 4.8510",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 0.6967,
+        "unit": "ratio",
+        "context": "Momentum",
+        "evidence_quote": "Momentum | 0.6967 | 85.92 | 4.7143",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Maximum Drawdown",
+        "value": 85.92,
+        "unit": "percent",
+        "context": "Momentum",
+        "evidence_quote": "Momentum | 0.6967 | 85.92 | 4.7143",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Cumulative Return",
+        "value": 4.7143,
+        "unit": "other",
+        "context": "Momentum",
+        "evidence_quote": "Momentum | 0.6967 | 85.92 | 4.7143",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 0.5823,
+        "unit": "ratio",
+        "context": "Equal-Weighted Portfolio",
+        "evidence_quote": "Equal-Weighted Portfolio | 0.5823 | 75.06 | 2.3911",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Maximum Drawdown",
+        "value": 75.06,
+        "unit": "percent",
+        "context": "Equal-Weighted Portfolio",
+        "evidence_quote": "Equal-Weighted Portfolio | 0.5823 | 75.06 | 2.3911",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Cumulative Return",
+        "value": 2.3911,
+        "unit": "other",
+        "context": "Equal-Weighted Portfolio",
+        "evidence_quote": "Equal-Weighted Portfolio | 0.5823 | 75.06 | 2.3911",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 0.5454,
+        "unit": "ratio",
+        "context": "Bitcoin (BTC) Long-Short",
+        "evidence_quote": "Bitcoin (BTC) Long-Short | 0.5454 | 79.63 | 1.9085",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Maximum Drawdown",
+        "value": 79.63,
+        "unit": "percent",
+        "context": "Bitcoin (BTC) Long-Short",
+        "evidence_quote": "Bitcoin (BTC) Long-Short | 0.5454 | 79.63 | 1.9085",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Cumulative Return",
+        "value": 1.9085,
+        "unit": "other",
+        "context": "Bitcoin (BTC) Long-Short",
+        "evidence_quote": "Bitcoin (BTC) Long-Short | 0.5454 | 79.63 | 1.9085",
+        "source_location": "Table 2"
+      }
+    ],
+    "key_findings": [
+      "Integrating technical indicators and news sentiment into a mean-variance optimization framework outperforms traditional baselines such as momentum strategy, equal-weighted portfolios, and Bitcoin long-short strategies in cumulative returns and Sharpe ratios.",
+      "Combining sentiment information alongside technical indicators produces more consistent performance gains than relying on sentiment-only or technical-only strategies.",
+      "All strategies experience severe drawdowns during market-wide stress periods such as the 2022 cryptocurrency downturn, demonstrating that current signals alone cannot fully protect the portfolio during extreme market shocks."
+    ],
+    "limitations": [
+      "Strategies experience relatively large drawdowns during sharp market declines, indicating limited responsiveness to extreme fluctuations in volatile environments.",
+      "The risk model relies on a 180-day rolling covariance without shrinkage or robust adjustments, making it sensitive to noise and large price swings.",
+      "The model does not account for heavy-tailed return behavior, which may lead to underestimating extreme events."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:16:43.332609+00:00",
+    "input_tokens": 8490,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "momentum",
+      "sentiment_text"
+    ],
+    "curation_asset_class": [
+      "crypto"
+    ]
+  }
+}

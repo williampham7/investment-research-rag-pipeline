@@ -1,0 +1,88 @@
+{
+  "paper_id": "arxiv:2202.10721v1",
+  "title": "Risk Parity Portfolios with Skewness Risk: An Application to Factor Investing and Alternative Risk Premia",
+  "extraction": {
+    "signal_type": [
+      "low_volatility",
+      "carry",
+      "other"
+    ],
+    "asset_class": [
+      "equities",
+      "fixed_income",
+      "other"
+    ],
+    "methodology_summary": "The paper models asset returns as a Gaussian mixture distribution combining a normal regime and a jump regime to capture skewness and tail risk. Using this mixture representation, analytical formulas for expected shortfall and risk contributions are derived to formulate risk budgeting and equal risk contribution (ERC) portfolios. The allocation strategy is then tested and backtested on an asset mix of bonds, equities, and a short volatility (carry) strategy using both full-sample and rolling-window estimators.",
+    "data_period": "January 2000–December 2015, daily, weekly, monthly, and annually",
+    "universe": "US Government bonds, US equities (S&P 500 TR Index), and a generic short volatility / carry strategy index",
+    "performance_metrics": [
+      {
+        "metric_name": "expected shortfall",
+        "value": 28.46,
+        "unit": "percent",
+        "context": "Traditional Gaussian expected shortfall (without jumps) for Example 1",
+        "evidence_quote": "ESα(x) 28.46 Table 1: Expected shortfall decomposition (without jumps)",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "expected shortfall",
+        "value": 37.22,
+        "unit": "percent",
+        "context": "Expected shortfall with jumps for Example 1",
+        "evidence_quote": "ESα(x) | 37.22",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "volatility",
+        "value": 10.89,
+        "unit": "percent",
+        "context": "Volatility of the ERC portfolio using the volatility risk measure in Example 2",
+        "evidence_quote": "σ (x) | 10.89",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "expected shortfall",
+        "value": 16.87,
+        "unit": "percent",
+        "context": "95% Gaussian expected shortfall of the ERC portfolio in Example 2",
+        "evidence_quote": "ESα(x) | 16.87",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "expected shortfall",
+        "value": 33.12,
+        "unit": "percent",
+        "context": "95% expected shortfall with jumps of the ERC portfolio in Example 2",
+        "evidence_quote": "ESα(x) | 33.12",
+        "source_location": "Table 5"
+      }
+    ],
+    "key_findings": [
+      "Skewness risk is equivalent to jump risk in a Gaussian mixture distribution framework, allowing for simple analytical formulas for asset risk contributions.",
+      "Traditional volatility-based risk parity portfolios overestimate the allocation to skewed assets (like short volatility / carry strategies) during periods of calm markets.",
+      "Skewness-based risk parity portfolios remain more robustly invested and avoid abrupt, panic-driven de-allocations immediately following market jumps.",
+      "Hedging skewness is fundamentally different from and much harder than hedging volatility due to a floor in skewness diversification."
+    ],
+    "limitations": [
+      "Full-sample backtesting introduces an in-sample bias unless expected returns are set to zero.",
+      "Selecting parameters such as jump frequency or filtering probability thresholds requires careful calibration, and daily returns may be too short to observe complete drawdown risks."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:12:36.948183+00:00",
+    "input_tokens": 29578,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "other",
+      "volatility_risk_premium"
+    ],
+    "curation_asset_class": [
+      "equities",
+      "fixed_income",
+      "options_volatility"
+    ]
+  }
+}

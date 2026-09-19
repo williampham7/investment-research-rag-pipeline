@@ -1,0 +1,172 @@
+{
+  "paper_id": "arxiv:2002.04304v1",
+  "title": "Timing Excess Returns A cross-universe approach to alpha",
+  "extraction": {
+    "signal_type": [
+      "momentum",
+      "other"
+    ],
+    "asset_class": [
+      "equities",
+      "fixed_income",
+      "other"
+    ],
+    "methodology_summary": "The paper constructs a portfolio by maximizing historic excess total return over past time period T subject to a target tracking error and allocation boundaries, utilizing a cross-universe approach of time series momentum across indices relative to a benchmark. The optimal portfolio weights are found using a convex optimization framework implemented via Python's cvxpy library. The strategy is rebalanced periodically (e.g. every 7 or 28 days) across various equity factor universes, bond sub-universes, and an absolute return multi-asset universe.",
+    "data_period": "2000-01-07 to 2020-01-14, daily",
+    "universe": "MSCI World, USA, and Europe benchmarks along with factor indices (Min Vol, Momentum, Size, Value, Quality), Bloomberg Barclays Euro Aggregate Corporate Bond index and sub-indices, and Eonia Total Return Index for absolute return.",
+    "performance_metrics": [
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 0.61,
+        "unit": "ratio",
+        "context": "World universe 28-day rebalancing strategy",
+        "evidence_quote": "0.61",
+        "source_location": "Section 4.1.1, Table"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 0.6,
+        "unit": "ratio",
+        "context": "World universe 7-day rebalancing strategy",
+        "evidence_quote": "0.60",
+        "source_location": "Section 4.1.1, Table"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 0.47,
+        "unit": "ratio",
+        "context": "US universe 28-day rebalancing strategy",
+        "evidence_quote": "0.47",
+        "source_location": "Section 4.1.2, Table"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 0.51,
+        "unit": "ratio",
+        "context": "US universe 7-day rebalancing strategy",
+        "evidence_quote": "0.51",
+        "source_location": "Section 4.1.2, Table"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 0.59,
+        "unit": "ratio",
+        "context": "Europe universe 28-day rebalancing strategy",
+        "evidence_quote": "0.59",
+        "source_location": "Section 4.1.3, Table"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 0.58,
+        "unit": "ratio",
+        "context": "Europe universe 7-day rebalancing strategy",
+        "evidence_quote": "0.58",
+        "source_location": "Section 4.1.3, Table"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 2.09,
+        "unit": "ratio",
+        "context": "Bond universe 28-day rebalancing strategy",
+        "evidence_quote": "2.09",
+        "source_location": "Section 4.2, Table"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 2.21,
+        "unit": "ratio",
+        "context": "Absolute Return long only strategy",
+        "evidence_quote": "2.21",
+        "source_location": "Section 4.3, Table"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 2.13,
+        "unit": "ratio",
+        "context": "Absolute Return long short strategy",
+        "evidence_quote": "2.13",
+        "source_location": "Section 4.3, Table"
+      },
+      {
+        "metric_name": "Information Ratio",
+        "value": 0.9,
+        "unit": "ratio",
+        "context": "World universe 28-day rebalancing strategy",
+        "evidence_quote": "0.90",
+        "source_location": "Section 4.1.1, Table"
+      },
+      {
+        "metric_name": "Information Ratio",
+        "value": 0.59,
+        "unit": "ratio",
+        "context": "US universe 28-day rebalancing strategy",
+        "evidence_quote": "0.59",
+        "source_location": "Section 4.1.2, Table"
+      },
+      {
+        "metric_name": "Information Ratio",
+        "value": 0.75,
+        "unit": "ratio",
+        "context": "US universe 7-day rebalancing strategy",
+        "evidence_quote": "0.75",
+        "source_location": "Section 4.1.2, Table"
+      },
+      {
+        "metric_name": "Information Ratio",
+        "value": 0.55,
+        "unit": "ratio",
+        "context": "Europe universe 28-day rebalancing strategy",
+        "evidence_quote": "0.55",
+        "source_location": "Section 4.1.3, Table"
+      },
+      {
+        "metric_name": "Information Ratio",
+        "value": 0.49,
+        "unit": "ratio",
+        "context": "Europe universe 7-day rebalancing strategy",
+        "evidence_quote": "0.49",
+        "source_location": "Section 4.1.3, Table"
+      },
+      {
+        "metric_name": "Information Ratio",
+        "value": 1.37,
+        "unit": "ratio",
+        "context": "Bond universe 28-day rebalancing strategy",
+        "evidence_quote": "1.37",
+        "source_location": "Section 4.2, Table"
+      },
+      {
+        "metric_name": "Information Ratio",
+        "value": 1.85,
+        "unit": "ratio",
+        "context": "Absolute Return long only strategy",
+        "evidence_quote": "1.85",
+        "source_location": "Section 4.3, Table"
+      }
+    ],
+    "key_findings": [
+      "The simple time-series momentum timing model systematically outperforms benchmarks across both equity and bond markets while meeting ex-ante risk requirements.",
+      "Combining equity and bond approaches into an absolute return strategy against a cash benchmark yields significant outperformance with high Sharpe ratios.",
+      "Timing excess return momentum delivers sizeable benefits compared to static portfolios with fixed mean weights.",
+      "The model yields positive alpha even after accounting for estimated transaction costs."
+    ],
+    "limitations": [
+      "The strategies are burdened by high transaction costs and high turnover rates."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:08:35.760659+00:00",
+    "input_tokens": 8958,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "momentum"
+    ],
+    "curation_asset_class": [
+      "equities",
+      "fixed_income"
+    ]
+  }
+}

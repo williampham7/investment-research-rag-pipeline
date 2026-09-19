@@ -1,0 +1,97 @@
+{
+  "paper_id": "arxiv:2402.10481v2",
+  "title": "Emoji Driven Crypto Assets Market Reactions",
+  "extraction": {
+    "signal_type": [
+      "sentiment_text",
+      "alternative_data"
+    ],
+    "asset_class": [
+      "crypto"
+    ],
+    "methodology_summary": "The paper presents a multimodal framework that uses GPT-4 to generate descriptive text for emojis and combines it with tweet text. The combined text is embedded using a fine-tuned BERT model, and unsupervised sentiment scores are computed via cosine similarity between emoji vectors and a positive sentiment reference vector. These sentiment metrics are then correlated with next-day Bitcoin closing prices and weekly VCRIX volatility index changes, and used in algorithmic trading strategies based on moving average sentiment benchmarks.",
+    "data_period": "March 8, 2019 to November 23, 2019, daily",
+    "universe": "Kaggle Bitcoin tweets dataset filtered for tweets containing emojis, matched with Bitcoin closing prices and the VCRIX index",
+    "performance_metrics": [
+      {
+        "metric_name": "Adj_R2",
+        "value": 0.043,
+        "unit": "ratio",
+        "context": "Regression of next-day Bitcoin price on top 5 average emoji sentiment",
+        "evidence_quote": "Observation 217 Adj_R2 0.043",
+        "source_location": "Table /page/20/Table/0"
+      },
+      {
+        "metric_name": "Adj_R2",
+        "value": 0.037,
+        "unit": "ratio",
+        "context": "Regression of next-day Bitcoin price on top 10 average emoji sentiment",
+        "evidence_quote": "Observation 217 Adj_R2 0.037",
+        "source_location": "Table /page/20/Table/0"
+      },
+      {
+        "metric_name": "Adj_R2",
+        "value": 0.004,
+        "unit": "ratio",
+        "context": "Regression of next-day Bitcoin price on bottom 5 average emoji sentiment",
+        "evidence_quote": "Observation 217 Adj_R2 0.004",
+        "source_location": "Table /page/20/Table/0"
+      },
+      {
+        "metric_name": "Adj_R2",
+        "value": 0.01,
+        "unit": "ratio",
+        "context": "Regression of next-day Bitcoin price on bottom 10 average emoji sentiment",
+        "evidence_quote": "Observation 217 Adj_R2 0.010",
+        "source_location": "Table /page/20/Table/0"
+      },
+      {
+        "metric_name": "Adj_R2",
+        "value": 0.043,
+        "unit": "ratio",
+        "context": "Regression of next-day Bitcoin price on emoji sentiment",
+        "evidence_quote": "PriceBTC - 7583.717***(2325.440) 0.043 217",
+        "source_location": "Table /page/20/Table/5"
+      },
+      {
+        "metric_name": "Adj_R2",
+        "value": 0.004,
+        "unit": "ratio",
+        "context": "Regression of next-day Bitcoin price on FinBERT text sentiment",
+        "evidence_quote": "619.738 - 0.004 217",
+        "source_location": "Table /page/20/Table/5"
+      },
+      {
+        "metric_name": "Pseudo_R2",
+        "value": 0.017,
+        "unit": "ratio",
+        "context": "Regression of VCRIX direction and magnitude on SentimentMedian",
+        "evidence_quote": "Observation 211 Pseudo_R2 0.017",
+        "source_location": "Table /page/22/Table/0"
+      }
+    ],
+    "key_findings": [
+      "Emoji sentiment derived from the multimodal GPT-4 and BERT architecture shows a significant positive correlation with subsequent day Bitcoin prices, whereas bottom sentiment levels show no significant relationship.",
+      "Emoji sentiment outperforms pure text sentiment analyzed by FinBERT in predicting next-day Bitcoin prices.",
+      "Higher daily sentiment scores are associated with both an upward direction and greater magnitude of changes in the VCRIX volatility index.",
+      "Trading strategies based on emoji sentiment moving averages achieve consistent profits, effectively avoiding major market downturns and generating higher returns compared to a standard buy-and-hold market trend."
+    ],
+    "limitations": [
+      "The proposed trading strategies do not account for transaction costs."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:14:48.685910+00:00",
+    "input_tokens": 8013,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "sentiment_text"
+    ],
+    "curation_asset_class": [
+      "crypto"
+    ]
+  }
+}

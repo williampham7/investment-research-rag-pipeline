@@ -1,0 +1,53 @@
+{
+  "paper_id": "arxiv:1811.10109v2",
+  "title": "The Anatomy of a Cryptocurrency Pump-and-Dump Scheme",
+  "extraction": {
+    "signal_type": [
+      "event_driven",
+      "ml_composite",
+      "alternative_data"
+    ],
+    "asset_class": [
+      "crypto"
+    ],
+    "methodology_summary": "We develop a predictive random forest and LASSO-GLM model that utilizes coin features and market movements prior to an anticipated cryptocurrency pump-and-dump event to predict the target coin likelihood. The strategy pre-purchases coins whose predicted pump likelihood exceeds a specific threshold before the coin announcement is broadcasted on Telegram channels. Performance is evaluated out-of-sample using chronologically consecutive training, validation, and test datasets.",
+    "data_period": "June 17, 2018 to February 26, 2019, tick-by-tick and hourly",
+    "universe": "Cryptocurrency coins listed on the Cryptopia exchange",
+    "performance_metrics": [
+      {
+        "metric_name": "Return on investment",
+        "value": 60.0,
+        "unit": "percent",
+        "context": "Test sample period of two and a half months using RF1 model with a threshold value of 0.3",
+        "evidence_quote": "The return on the investment amounts to 60% (0.96/1.61) over the test sample period of two and a half months.",
+        "source_location": "Section 5.5"
+      }
+    ],
+    "key_findings": [
+      "Machine learning classification models like random forests can successfully predict cryptocurrency pump-and-dump target coins with an area under the ROC curve exceeding 0.94.",
+      "Market movements and returns occurring shortly before a pump-and-dump announcement are significantly more important for prediction than longer-term features.",
+      "A simple trading strategy based on random forest pump likelihood predictions can generate robust out-of-sample returns.",
+      "Pump-and-dump organizers systematically prefer obscure, small-market-cap coins with low liquidity."
+    ],
+    "limitations": [
+      "Lack of precise trader ID tracking prevents exact matching of individual buy and sell transactions for actual participant profits.",
+      "Large purchase orders prior to a pump in liquid exchanges can move the market and cause pump organizers to cancel or switch coins last-minute."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:07:01.640123+00:00",
+    "input_tokens": 16720,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "event_driven",
+      "ml_composite",
+      "other"
+    ],
+    "curation_asset_class": [
+      "crypto"
+    ]
+  }
+}

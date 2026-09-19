@@ -1,0 +1,159 @@
+{
+  "paper_id": "arxiv:2301.08359v3",
+  "title": "Domain-adapted Learning and Interpretability: DRL for Gas Trading",
+  "extraction": {
+    "signal_type": [
+      "ml_composite",
+      "momentum",
+      "reversal",
+      "other"
+    ],
+    "asset_class": [
+      "commodities",
+      "futures_multi_asset"
+    ],
+    "methodology_summary": "The paper applies Deep Reinforcement Learning (APEX DQN and standard DQN) to front-month NBP UK Natural Gas futures. The state space comprises candlestick price features, technical indicators (MACD, RSI, PCA, volatility-adjusted returns), and fundamental gas supply/demand features using a 3-day look-back window. The agent outputs discrete actions (buy, sell, hold) within a simulated environment featuring transaction costs, and an ensemble method (Filtered-Thresholding) is used to combine parallel agent decisions.",
+    "data_period": "2009-2020, daily",
+    "universe": "Front-month NBP UK Natural Gas Futures contract traded on CME / virtual trading point",
+    "performance_metrics": [
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 1.32,
+        "unit": "ratio",
+        "context": "APEX DQN sliding-window training scheme",
+        "evidence_quote": "The APEX DQN sliding-window has an average Sharpe Ratio of 1.32 and a cumulative P&L of 48.32 million GBP, compared to a lower performance of the anchored window with a Sharpe Ratio of 1.27 and a cumulative P&L of 44.95 million GBP.",
+        "source_location": "Section 4.1"
+      },
+      {
+        "metric_name": "cumulative P&L",
+        "value": 48.32,
+        "unit": "other",
+        "context": "APEX DQN sliding-window training scheme",
+        "evidence_quote": "The APEX DQN sliding-window has an average Sharpe Ratio of 1.32 and a cumulative P&L of 48.32 million GBP, compared to a lower performance of the anchored window with a Sharpe Ratio of 1.27 and a cumulative P&L of 44.95 million GBP.",
+        "source_location": "Section 4.1"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 1.27,
+        "unit": "ratio",
+        "context": "APEX DQN anchored window training scheme",
+        "evidence_quote": "The APEX DQN sliding-window has an average Sharpe Ratio of 1.32 and a cumulative P&L of 48.32 million GBP, compared to a lower performance of the anchored window with a Sharpe Ratio of 1.27 and a cumulative P&L of 44.95 million GBP.",
+        "source_location": "Section 4.1"
+      },
+      {
+        "metric_name": "cumulative P&L",
+        "value": 44.95,
+        "unit": "other",
+        "context": "APEX DQN anchored window training scheme",
+        "evidence_quote": "The APEX DQN sliding-window has an average Sharpe Ratio of 1.32 and a cumulative P&L of 48.32 million GBP, compared to a lower performance of the anchored window with a Sharpe Ratio of 1.27 and a cumulative P&L of 44.95 million GBP.",
+        "source_location": "Section 4.1"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 0.55,
+        "unit": "ratio",
+        "context": "RL Selector MACD/BB benchmark",
+        "evidence_quote": "RL Selector MACD/BB | 0.55 | 79 | 8.81",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 0.18,
+        "unit": "ratio",
+        "context": "MACD benchmark",
+        "evidence_quote": "MACD | 0.18 | 174 | -1.17",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 0.0,
+        "unit": "ratio",
+        "context": "BB benchmark",
+        "evidence_quote": "BB | 0.00 | 210 | -4.25",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": -0.18,
+        "unit": "ratio",
+        "context": "BUY & Hold benchmark",
+        "evidence_quote": "BUY & Hold | -0.18 | 252 | -6.39",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 0.96,
+        "unit": "ratio",
+        "context": "In-house DQN (tech.)",
+        "evidence_quote": "DQN (tech.) | 1 Year | Yearly | 0.96± 0.24 | 20 ± 4 | 24 ± 4",
+        "source_location": "Table 5"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 0.94,
+        "unit": "ratio",
+        "context": "In-house DQN (tech.+ fund.)",
+        "evidence_quote": "DQN (tech.+ fund.) | 1 Year | Yearly | 0.94± 0.41 | 20 ± 6 | 24 ± 7",
+        "source_location": "Table 5"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 0.53,
+        "unit": "ratio",
+        "context": "Linear Regression (tech.)",
+        "evidence_quote": "Lin.Reg (tech.) | 4 Months | Daily | 0.53± 0.25 | 24 ± 4 | 22 ± 2",
+        "source_location": "Table 5"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 0.66,
+        "unit": "ratio",
+        "context": "Linear Regression (tech.+ fund.)",
+        "evidence_quote": "Lin.Reg (tech.+ fund.) | 4 Months | Daily | 0.66± 0.36 | 21 ± 5 | 27 ± 3",
+        "source_location": "Table 5"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 0.91,
+        "unit": "ratio",
+        "context": "Random Forest (tech.)",
+        "evidence_quote": "R.F. (tech.) | 4 Months | Daily | 0.91± 0.14 | 19 ± 3 | 23 ± 3",
+        "source_location": "Table 5"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 0.84,
+        "unit": "ratio",
+        "context": "Random Forest (tech.+ fund.)",
+        "evidence_quote": "R.F. (tech.+ fund.) | 4 Months | Daily | 0.84± 0.26 | 25 ± 5 | 20 ± 4",
+        "source_location": "Table 5"
+      }
+    ],
+    "key_findings": [
+      "Deep RL trading models outperform standard rule-based strategies and several traditional machine learning baselines (Linear Regression and Random Forest) on natural gas futures.",
+      "A sliding-window training scheme yields better performance (Sharpe Ratio of 1.32) than an anchored training window (Sharpe Ratio of 1.27) due to adapting more quickly to changing market regimes.",
+      "Adding fundamental supply/demand features does not consistently improve performance and increases performance variance due to higher noise in the observation space.",
+      "An ensemble learning scheme (Filtered-Thresholding) stabilizes agent actions, mitigates sub-optimal agent initialization risks, and enhances overall performance."
+    ],
+    "limitations": [
+      "Potential performance drop when transitioning from back-testing to live trading.",
+      "Extended underwater periods could trigger an algorithmic stop before profitability is reached.",
+      "Trading frequency and holding periods must align with the operational strategy of the trading desk."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:13:49.210374+00:00",
+    "input_tokens": 8494,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "ml_composite",
+      "momentum"
+    ],
+    "curation_asset_class": [
+      "commodities"
+    ]
+  }
+}

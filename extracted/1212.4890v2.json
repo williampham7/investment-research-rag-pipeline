@@ -1,0 +1,92 @@
+{
+  "paper_id": "arxiv:1212.4890v2",
+  "title": "Bollinger Bands Thirty Years Later",
+  "extraction": {
+    "signal_type": [
+      "reversal",
+      "stat_arb_pairs"
+    ],
+    "asset_class": [
+      "equities"
+    ],
+    "methodology_summary": "The paper establishes a statistical foundation for Bollinger Bands by mapping them to an intercept-only rolling regression model and a random walk plus noise (RWPN) state space model. It introduces a pairs trading variant called Fixed Forecast Maximum Duration Pairs Trading (FFMDPT), which uses a constant forecast at trade entry and caps the maximum trade duration at the rolling window size n. The performance of standard Bollinger Bands pairs trading (BBPT) and FFMDPT is evaluated and compared using historical S&P 500 and Nikkei index data from 2003 to 2011 with in-sample parameter optimization.",
+    "data_period": "2003-2011",
+    "universe": "S&P 500 Index and Nikkei Index",
+    "performance_metrics": [
+      {
+        "metric_name": "average duration of winning trades",
+        "value": 8.6,
+        "unit": "count",
+        "context": "Winning trades in the BBPT strategy using S&P 500 and Nikkei Index in 2004 with n=20, k=2",
+        "evidence_quote": "In fact the average duration of the winning trades in is 8.6 and the average duration of the losing trades is 20.5.",
+        "source_location": "Section 4.1, page 11"
+      },
+      {
+        "metric_name": "average duration of losing trades",
+        "value": 20.5,
+        "unit": "count",
+        "context": "Losing trades in the BBPT strategy using S&P 500 and Nikkei Index in 2004 with n=20, k=2",
+        "evidence_quote": "In fact the average duration of the winning trades in is 8.6 and the average duration of the losing trades is 20.5.",
+        "source_location": "Section 4.1, page 11"
+      },
+      {
+        "metric_name": "RTNBBPT",
+        "value": 9.738,
+        "unit": "percent",
+        "context": "Out-of-sample return of BBPT strategy for 2004-5 with k=1 and optimized n",
+        "evidence_quote": "2004-5 | 12 | 9.738 | 45 | 10.390 | −0.6529",
+        "source_location": "Table 1, page 57"
+      },
+      {
+        "metric_name": "RTNFFMDPT",
+        "value": 10.39,
+        "unit": "percent",
+        "context": "Out-of-sample return of FFMDPT strategy for 2004-5 with k=1 and optimized n",
+        "evidence_quote": "2004-5 | 12 | 9.738 | 45 | 10.390 | −0.6529",
+        "source_location": "Table 1, page 57"
+      },
+      {
+        "metric_name": "RTNBBPT",
+        "value": 10.41,
+        "unit": "percent",
+        "context": "Out-of-sample return of BBPT strategy for 2005-6 with k=1.5 and optimized n",
+        "evidence_quote": "2005-6 | 14 | 10.410 | 19 | 9.335 | 1.075",
+        "source_location": "Table 2, page 57"
+      },
+      {
+        "metric_name": "RTNBBPT",
+        "value": 8.907,
+        "unit": "percent",
+        "context": "Out-of-sample return of BBPT strategy for 2009-10 with k=2 and optimized n",
+        "evidence_quote": "2009-10 | 10 | 8.907 | 14 | 7.069 | 1.8380",
+        "source_location": "Table 3, page 58"
+      }
+    ],
+    "key_findings": [
+      "Bollinger Bands can be mapped exactly to the outputs of an intercept-only rolling regression model, providing a solid statistical foundation.",
+      "Bollinger Bands can be viewed as an approximation to the random walk plus noise (RWPN) state space model.",
+      "In a Bollinger Band pairs trading (BBPT) strategy, a trade has a non-negative return if and only if its duration is less than or equal to the rolling window size n.",
+      "The proposed Fixed Forecast Maximum Duration Pairs Trading (FFMDPT) variant generally underperforms the standard BBPT strategy in empirical tests, particularly when the bandwidth multiplier k = 1.5."
+    ],
+    "limitations": [
+      "The empirical results are highly dependent on the assumption that the asset pair (S&P 500 and Nikkei) exhibits stable mean reversion (cointegration) over time.",
+      "The parameter optimization approach is subject to the risk of overfitting, where the model learns irrelevant details of the in-sample data.",
+      "The theoretical proof of the return-duration relationship assumes the absence of slippage during trade entry and exit."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash",
+    "extracted_at": "2026-09-18T23:49:14.500989+00:00",
+    "input_tokens": 24927,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "stat_arb_pairs",
+      "other"
+    ],
+    "curation_asset_class": [
+      "equities"
+    ]
+  }
+}

@@ -1,0 +1,194 @@
+{
+  "paper_id": "arxiv:2003.08302v2",
+  "title": "The Low-volatility Anomaly and the Adaptive Multi-Factor Model",
+  "extraction": {
+    "signal_type": [
+      "low_volatility",
+      "ml_composite"
+    ],
+    "asset_class": [
+      "equities",
+      "futures_multi_asset"
+    ],
+    "methodology_summary": "The paper uses the Adaptive Multi-Factor (AMF) model estimated via the Groupwise Interpretable Basis Selection (GIBS) algorithm to identify basis assets significantly related to high and low volatility portfolios. The investment universe consists of CRSP stocks and ETFs ranked in the top 2500 by market capitalization. Using 3-year rolling weekly regression windows from 2008 to 2018, the high-dimensional GIBS algorithm performs prototype clustering within ETF asset categories and applies a modified LASSO regression to select low-correlated basis assets for explaining portfolio excess returns.",
+    "data_period": "2003-2018, weekly",
+    "universe": "Top 2500 market capitalization stocks and ETFs from the CRSP database",
+    "performance_metrics": [
+      {
+        "metric_name": "Excess return",
+        "value": 1.21,
+        "unit": "ratio",
+        "context": "Low portfolio excess return from 2008 - 2018",
+        "evidence_quote": "Low Portfolio | High Portfolio | Low - High (P value) \n Excess return | 1.21 | 0.62 | 10−50.59 (1.17×)",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Excess return",
+        "value": 0.62,
+        "unit": "ratio",
+        "context": "High portfolio excess return from 2008 - 2018",
+        "evidence_quote": "Low Portfolio | High Portfolio | Low - High (P value) \n Excess return | 1.21 | 0.62 | 10−50.59 (1.17×)",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "FF5 residual return",
+        "value": -0.13,
+        "unit": "ratio",
+        "context": "Low portfolio FF5 residual return",
+        "evidence_quote": "FF5 residual return | -0.13 | -0.31 | 10−95)×0.18 (9.25",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "FF5 residual return",
+        "value": -0.31,
+        "unit": "ratio",
+        "context": "High portfolio FF5 residual return",
+        "evidence_quote": "FF5 residual return | -0.13 | -0.31 | 10−95)×0.18 (9.25",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "AMF residual return",
+        "value": -0.05,
+        "unit": "ratio",
+        "context": "Low portfolio AMF residual return",
+        "evidence_quote": "AMF residual return | -0.05 | -0.18 | 0.12 (1.00)",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "AMF residual return",
+        "value": -0.18,
+        "unit": "ratio",
+        "context": "High portfolio AMF residual return",
+        "evidence_quote": "AMF residual return | -0.05 | -0.18 | 0.12 (1.00)",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "FF5 Adj.R2",
+        "value": 0.905,
+        "unit": "ratio",
+        "context": "Low volatility portfolio in-sample FF5 adjusted R-squared",
+        "evidence_quote": "Low | 0.905 | 0.961 (+6.18%) | 100% | 100%",
+        "source_location": "Table 6"
+      },
+      {
+        "metric_name": "AMF Adj.R2",
+        "value": 0.961,
+        "unit": "ratio",
+        "context": "Low volatility portfolio in-sample AMF adjusted R-squared",
+        "evidence_quote": "Low | 0.905 | 0.961 (+6.18%) | 100% | 100%",
+        "source_location": "Table 6"
+      },
+      {
+        "metric_name": "FF5 Adj.R2",
+        "value": 0.931,
+        "unit": "ratio",
+        "context": "High volatility portfolio in-sample FF5 adjusted R-squared",
+        "evidence_quote": "High | 0.931 | 0.973 (+4.56%) | 100% | 100%",
+        "source_location": "Table 6"
+      },
+      {
+        "metric_name": "AMF Adj.R2",
+        "value": 0.973,
+        "unit": "ratio",
+        "context": "High volatility portfolio in-sample AMF adjusted R-squared",
+        "evidence_quote": "High | 0.931 | 0.973 (+4.56%) | 100% | 100%",
+        "source_location": "Table 6"
+      },
+      {
+        "metric_name": "Out-of-Sample R2",
+        "value": 0.951,
+        "unit": "ratio",
+        "context": "Low volatility portfolio out-of-sample FF5 R-squared",
+        "evidence_quote": "Low | 0.951 | 0.973 (+2.25%)",
+        "source_location": "Table 7"
+      },
+      {
+        "metric_name": "Out-of-Sample R2",
+        "value": 0.973,
+        "unit": "ratio",
+        "context": "Low volatility portfolio out-of-sample AMF R-squared",
+        "evidence_quote": "Low | 0.951 | 0.973 (+2.25%)",
+        "source_location": "Table 7"
+      },
+      {
+        "metric_name": "Out-of-Sample R2",
+        "value": 0.973,
+        "unit": "ratio",
+        "context": "High volatility portfolio out-of-sample FF5 R-squared",
+        "evidence_quote": "High | 0.973 | 0.982 (+1.01%)",
+        "source_location": "Table 7"
+      },
+      {
+        "metric_name": "Out-of-Sample R2",
+        "value": 0.982,
+        "unit": "ratio",
+        "context": "High volatility portfolio out-of-sample AMF R-squared",
+        "evidence_quote": "High | 0.973 | 0.982 (+1.01%)",
+        "source_location": "Table 7"
+      },
+      {
+        "metric_name": "Annual Excess Return",
+        "value": 13.2,
+        "unit": "percent",
+        "context": "Market Return Fama-French 5 factor",
+        "evidence_quote": "Fama-French 5 Factors | Market Return | SMB | HML | RMW | CMAP \n Annual Excess Return (%) | 13.2 | -0.7 | -1.7 | 0.9 | -1.7",
+        "source_location": "Table 8"
+      },
+      {
+        "metric_name": "Annual Excess Return",
+        "value": -0.7,
+        "unit": "percent",
+        "context": "SMB Fama-French 5 factor",
+        "evidence_quote": "Fama-French 5 Factors | Market Return | SMB | HML | RMW | CMAP \n Annual Excess Return (%) | 13.2 | -0.7 | -1.7 | 0.9 | -1.7",
+        "source_location": "Table 8"
+      },
+      {
+        "metric_name": "Annual Excess Return",
+        "value": -1.7,
+        "unit": "percent",
+        "context": "HML Fama-French 5 factor",
+        "evidence_quote": "Fama-French 5 Factors | Market Return | SMB | HML | RMW | CMAP \n Annual Excess Return (%) | 13.2 | -0.7 | -1.7 | 0.9 | -1.7",
+        "source_location": "Table 8"
+      },
+      {
+        "metric_name": "Annual Excess Return",
+        "value": 0.9,
+        "unit": "percent",
+        "context": "RMW Fama-French 5 factor",
+        "evidence_quote": "Fama-French 5 Factors | Market Return | SMB | HML | RMW | CMAP \n Annual Excess Return (%) | 13.2 | -0.7 | -1.7 | 0.9 | -1.7",
+        "source_location": "Table 8"
+      },
+      {
+        "metric_name": "Annual Excess Return",
+        "value": -1.7,
+        "unit": "percent",
+        "context": "CMA Fama-French 5 factor",
+        "evidence_quote": "Fama-French 5 Factors | Market Return | SMB | HML | RMW | CMAP \n Annual Excess Return (%) | 13.2 | -0.7 | -1.7 | 0.9 | -1.7",
+        "source_location": "Table 8"
+      }
+    ],
+    "key_findings": [
+      "High-volatility and low-volatility portfolios load on significantly different basis assets, indicating volatility is not an independent risk factor but related to underlying asset risk factors.",
+      "The traditional Fama-French 5-factor model fails to explain the low-volatility anomaly, whereas the Adaptive Multi-Factor (AMF) model successfully accounts for it.",
+      "The AMF model outperforms the Fama-French 5-factor model both in-sample and out-of-sample, achieving higher adjusted R-squared and out-of-sample prediction R-squared.",
+      "Control for False Discovery Rate confirms that neither portfolio exhibits abnormal performance (non-zero intercepts) under the AMF model."
+    ],
+    "limitations": [
+      "Rolling regression windows and high-dimensional parameter spaces require careful handling of multicollinearity and tuning parameters like lambda."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:09:04.093924+00:00",
+    "input_tokens": 13786,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "low_volatility"
+    ],
+    "curation_asset_class": [
+      "equities"
+    ]
+  }
+}

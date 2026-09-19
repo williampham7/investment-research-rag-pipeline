@@ -1,0 +1,244 @@
+{
+  "paper_id": "arxiv:2008.09471v1",
+  "title": "GA-MSSR: Genetic Algorithm Maximizing Sharpe and Sterling Ratio Method for RoboTrading",
+  "extraction": {
+    "signal_type": [
+      "momentum",
+      "reversal",
+      "low_volatility",
+      "ml_composite"
+    ],
+    "asset_class": [
+      "fx"
+    ],
+    "methodology_summary": "The paper proposes a Genetic Algorithm Maximizing Sharpe and Sterling Ratio (GA-MSSR) robotic trading strategy. It constructs 16 rule-based features derived from technical indicators using a grid search optimization over a training period. A genetic algorithm then optimizes the weights of these features to maximize a novel cost function combining Sharpe and Sterling ratios, generating positions between -1 and 1 without future price prediction.",
+    "data_period": "2018-2019, 5-minute intraday data",
+    "universe": "6 major currency pairs (EURUSD, GBPUSD, AUDUSD, USDJPY, USDCAD, USDCHF)",
+    "performance_metrics": [
+      {
+        "metric_name": "annualized return",
+        "value": 320.0,
+        "unit": "percent",
+        "context": "5-minute AUDUSD currency pair with 1:20 leverage",
+        "evidence_quote": "The best performing currency pair on the testing dataset is AUDUSD which obtained an annual return of 320% with a 1:20 leverage.",
+        "source_location": "Section V"
+      },
+      {
+        "metric_name": "ROI",
+        "value": 9.68,
+        "unit": "percent",
+        "context": "EURUSD for GA-MSSR on 2019 5-minute data with no leverage",
+        "evidence_quote": "9.68%",
+        "source_location": "Table I"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 6.68,
+        "unit": "ratio",
+        "context": "EURUSD for GA-MSSR on 2019 5-minute data with no leverage",
+        "evidence_quote": "6.68",
+        "source_location": "Table I"
+      },
+      {
+        "metric_name": "Maximum drawdown",
+        "value": -0.03,
+        "unit": "percent",
+        "context": "EURUSD for GA-MSSR on 2019 5-minute data with no leverage",
+        "evidence_quote": "-0.03%",
+        "source_location": "Table I"
+      },
+      {
+        "metric_name": "Average position",
+        "value": 0.35,
+        "unit": "ratio",
+        "context": "EURUSD for GA-MSSR on 2019 5-minute data with no leverage",
+        "evidence_quote": "0.35",
+        "source_location": "Table I"
+      },
+      {
+        "metric_name": "ROI",
+        "value": 12.98,
+        "unit": "percent",
+        "context": "GBPUSD for GA-MSSR on 2019 5-minute data with no leverage",
+        "evidence_quote": "12.98%",
+        "source_location": "Table I"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 4.85,
+        "unit": "ratio",
+        "context": "GBPUSD for GA-MSSR on 2019 5-minute data with no leverage",
+        "evidence_quote": "4.85",
+        "source_location": "Table I"
+      },
+      {
+        "metric_name": "Maximum drawdown",
+        "value": -0.08,
+        "unit": "percent",
+        "context": "GBPUSD for GA-MSSR on 2019 5-minute data with no leverage",
+        "evidence_quote": "-0.08%",
+        "source_location": "Table I"
+      },
+      {
+        "metric_name": "Average position",
+        "value": 0.37,
+        "unit": "ratio",
+        "context": "GBPUSD for GA-MSSR on 2019 5-minute data with no leverage",
+        "evidence_quote": "0.37",
+        "source_location": "Table I"
+      },
+      {
+        "metric_name": "ROI",
+        "value": 15.95,
+        "unit": "percent",
+        "context": "AUDUSD for GA-MSSR on 2019 5-minute data with no leverage",
+        "evidence_quote": "15.95%",
+        "source_location": "Table I"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 5.97,
+        "unit": "ratio",
+        "context": "AUDUSD for GA-MSSR on 2019 5-minute data with no leverage",
+        "evidence_quote": "5.97",
+        "source_location": "Table I"
+      },
+      {
+        "metric_name": "Maximum drawdown",
+        "value": -0.13,
+        "unit": "percent",
+        "context": "AUDUSD for GA-MSSR on 2019 5-minute data with no leverage",
+        "evidence_quote": "-0.13%",
+        "source_location": "Table I"
+      },
+      {
+        "metric_name": "Average position",
+        "value": 0.45,
+        "unit": "ratio",
+        "context": "AUDUSD for GA-MSSR on 2019 5-minute data with no leverage",
+        "evidence_quote": "0.45",
+        "source_location": "Table I"
+      },
+      {
+        "metric_name": "ROI",
+        "value": 14.98,
+        "unit": "percent",
+        "context": "USDCAD for GA-MSSR on 2019 5-minute data with no leverage",
+        "evidence_quote": "14.98%",
+        "source_location": "Table I"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 8.85,
+        "unit": "ratio",
+        "context": "USDCAD for GA-MSSR on 2019 5-minute data with no leverage",
+        "evidence_quote": "8.85",
+        "source_location": "Table I"
+      },
+      {
+        "metric_name": "Maximum drawdown",
+        "value": -0.01,
+        "unit": "percent",
+        "context": "USDCAD for GA-MSSR on 2019 5-minute data with no leverage",
+        "evidence_quote": "-0.01%",
+        "source_location": "Table I"
+      },
+      {
+        "metric_name": "Average position",
+        "value": 0.42,
+        "unit": "ratio",
+        "context": "USDCAD for GA-MSSR on 2019 5-minute data with no leverage",
+        "evidence_quote": "0.42",
+        "source_location": "Table I"
+      },
+      {
+        "metric_name": "ROI",
+        "value": 11.74,
+        "unit": "percent",
+        "context": "USDCHF for GA-MSSR on 2019 5-minute data with no leverage",
+        "evidence_quote": "11.74%",
+        "source_location": "Table I"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 7.53,
+        "unit": "ratio",
+        "context": "USDCHF for GA-MSSR on 2019 5-minute data with no leverage",
+        "evidence_quote": "7.53",
+        "source_location": "Table I"
+      },
+      {
+        "metric_name": "Maximum drawdown",
+        "value": -0.09,
+        "unit": "percent",
+        "context": "USDCHF for GA-MSSR on 2019 5-minute data with no leverage",
+        "evidence_quote": "-0.09%",
+        "source_location": "Table I"
+      },
+      {
+        "metric_name": "Average position",
+        "value": 0.31,
+        "unit": "ratio",
+        "context": "USDCHF for GA-MSSR on 2019 5-minute data with no leverage",
+        "evidence_quote": "0.31",
+        "source_location": "Table I"
+      },
+      {
+        "metric_name": "ROI",
+        "value": 5.04,
+        "unit": "percent",
+        "context": "USDJPY for GA-MSSR on 2019 5-minute data with no leverage",
+        "evidence_quote": "5.04%",
+        "source_location": "Table I"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 2.91,
+        "unit": "ratio",
+        "context": "USDJPY for GA-MSSR on 2019 5-minute data with no leverage",
+        "evidence_quote": "2.91",
+        "source_location": "Table I"
+      },
+      {
+        "metric_name": "Maximum drawdown",
+        "value": -0.12,
+        "unit": "percent",
+        "context": "USDJPY for GA-MSSR on 2019 5-minute data with no leverage",
+        "evidence_quote": "-0.12%",
+        "source_location": "Table I"
+      },
+      {
+        "metric_name": "Average position",
+        "value": 0.32,
+        "unit": "ratio",
+        "context": "USDJPY for GA-MSSR on 2019 5-minute data with no leverage",
+        "evidence_quote": "0.32",
+        "source_location": "Table I"
+      }
+    ],
+    "key_findings": [
+      "The proposed GA-MSSR model consistently showed significant positive returns and outperformed benchmark models on risk factors like maximum drawdowns and return variance.",
+      "The GA-MSSR model achieved superior Sharpe ratios, maximum drawdowns, and average position metrics across all 6 major currency pairs compared to benchmarks.",
+      "The trading strategy does not perform directional price forecasting; instead, it utilizes optimized technical rule-based features to bypass short-term market noise.",
+      "Applying a 1:20 leverage to the GA-MSSR model yielded stable and consistent upward trends with minor drawdowns, achieving up to 320% annualized return for AUDUSD."
+    ],
+    "limitations": [
+      "The trading system has not taken transaction fees into account due to different pricing policies by each broker and the time-variant nature of the spread cost."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:09:38.143988+00:00",
+    "input_tokens": 7559,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "ml_composite",
+      "other"
+    ],
+    "curation_asset_class": [
+      "fx"
+    ]
+  }
+}

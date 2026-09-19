@@ -1,0 +1,77 @@
+{
+  "paper_id": "arxiv:2603.29763v1",
+  "title": "Option Pricing on Automated Market Maker Tokens",
+  "extraction": {
+    "signal_type": [
+      "other"
+    ],
+    "asset_class": [
+      "crypto"
+    ],
+    "methodology_summary": "The paper derives the stochastic price process for automated market maker (AMM) tokens from first principles, demonstrating that token prices follow a constant elasticity of variance (CEV) model when net staking flows follow a Brownian diffusion. Closed-form European option prices and liquidity-adjusted Greeks are obtained via the non-central chi-squared distribution. The empirical methodology includes a Monte Carlo validation, a cross-sectional delta-hedged backtest across Bittensor subnets to evaluate ATM hedging errors, and a variance elasticity regression test controlling for pool depth and flow volatility.",
+    "data_period": "August 8, 2025 to February 23, 2026, daily",
+    "universe": "98 Bittensor subnets with sufficient on-chain history (and subsets of 90 and 82 subnets for specific empirical tests)",
+    "performance_metrics": [
+      {
+        "metric_name": "R-squared",
+        "value": 0.003,
+        "unit": "ratio",
+        "context": "OLS regression of the CEV/BS hedging error ratio on log10(k)",
+        "evidence_quote": "\\frac{\\text{MAE}_{\\text{CEV}}}{\\text{MAE}_{\\text{BS}}} = 1.029 - 0.002 \\cdot \\log_{10}(k), \\quad R^2 = 0.003, \\quad p = 0.60.",
+        "source_location": "Section 6.5"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": -11.3,
+        "unit": "ratio",
+        "context": "One-sample t-test of within-subnet CEV variance elasticity slopes against the GBM null (slope = 0)",
+        "evidence_quote": "decisively rejecting geometric Brownian motion and consistent with the CEV prediction. A complementary delta-hedged backtest across 82 subnets confirms near-identical hedging errors at the money, consistent with the prediction that pricing differences are concentrated in the wings. Keywords: automated market makers, option pricing, constant elasticity of variance, Black–Scholes, Bittensor, decentralized finance, liquidity JEL Classification: G12, G13, G14 ∗ Fairfield University Dolan School of Business. Email: pmaymin@fairfield.edu.",
+        "source_location": "Abstract"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 3.7,
+        "unit": "ratio",
+        "context": "One-sample t-test of within-subnet CEV variance elasticity slopes against the exact CEV prediction (slope = -1)",
+        "evidence_quote": "and against the exact CEV prediction (slope = -1; t = 3.7, p < 0.001).",
+        "source_location": "Section 6.6"
+      },
+      {
+        "metric_name": "R-squared",
+        "value": 0.016,
+        "unit": "ratio",
+        "context": "Robustness OLS regression of the CEV/BS hedging error ratio on log10(k) using all 98 subnets without MAE filter",
+        "evidence_quote": "\\frac{\\text{MAE}_{\\text{CEV}}}{\\text{MAE}_{\\text{BS}}} = 1.048 - 0.003 \\cdot \\log_{10}(k), \\quad R^2 = 0.016, \\quad p = 0.21.",
+        "source_location": "Section B"
+      }
+    ],
+    "key_findings": [
+      "When net flows into a constant-weighted-product AMM follow a diffusion process, the token price follows a constant elasticity of variance (CEV) process with exponent equal to the numeraire weight (beta = w).",
+      "The CEV structure generates a leverage effect where volatility rises as price falls, creating a negative implied volatility skew controlled entirely by pool weights rather than pool depth.",
+      "Empirically, realized return variance across Bittensor subnets exhibits a strongly negative price elasticity (median slope -0.86), decisively rejecting geometric Brownian motion and supporting the CEV prediction.",
+      "A delta-hedged backtest across Bittensor subnets confirms near-identical hedging errors at the money between CEV and Black-Scholes, consistent with pricing differences being concentrated in the wings."
+    ],
+    "limitations": [
+      "The diffusion assumption for staking flows is an approximation, as Shapiro-Wilk tests reject normality and heavy tails indicate occasional large staking events.",
+      "Delta-hedging is imperfect due to AMM price impact slippage, though the replication premium is shown to be negligible for deep pools.",
+      "Flow volatility is treated as constant while in practice staking activity exhibits time-of-day effects, momentum, and regime changes.",
+      "Token prices can be vulnerable to manipulation near option expiry in shallow pools."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:18:20.962228+00:00",
+    "input_tokens": 16211,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "volatility_risk_premium",
+      "other"
+    ],
+    "curation_asset_class": [
+      "crypto",
+      "options_volatility"
+    ]
+  }
+}

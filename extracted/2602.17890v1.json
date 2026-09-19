@@ -1,0 +1,125 @@
+{
+  "paper_id": "arxiv:2602.17890v1",
+  "title": "The Information Dynamics of Insider Intent: How Reporting Inversions (Form 144) Mask Informational Rents in Insider Sales (Form 4)",
+  "extraction": {
+    "signal_type": [
+      "momentum",
+      "reversal",
+      "event_driven",
+      "ml_composite"
+    ],
+    "asset_class": [
+      "equities"
+    ],
+    "methodology_summary": "The paper investigates insider trading information dynamics using an event-study framework that links SEC Form 144 intent-to-sell notices to Form 4 trade executions. It uses a three-stage methodology combining univariate OLS baselines, a multi-paradigm predictive audit spanning linear models to deep neural transformers (such as FT-Transformers and XGBoost), and a causal machine learning ensemble including Double Machine Learning and Generalized Random Forests to estimate heterogeneous treatment effects on liquidity.",
+    "data_period": "January 2003 to November 2025, daily",
+    "universe": "111,800 unique insiders across approximately 2.6 million matched transactions from LSEG Insider, BoardEx, CRSP, and Compustat",
+    "performance_metrics": [
+      {
+        "metric_name": "t-statistic",
+        "value": 553.93,
+        "unit": "ratio",
+        "context": "Cumulative Market Excess Return (CMER) during the filing gap",
+        "evidence_quote": "Mean Return | 0.016484 | (0.000030) | 553.930 | 0.000000",
+        "source_location": "Table 5"
+      },
+      {
+        "metric_name": "annualized return",
+        "value": 1.6484,
+        "unit": "percent",
+        "context": "Mean Cumulative Market Excess Return (CMER) during the filing gap",
+        "evidence_quote": "Mean Return (%) | 1.6484",
+        "source_location": "Table 5"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": -3.094,
+        "unit": "ratio",
+        "context": "Paired t-test on the difference between CAR 144 and CAR 4",
+        "evidence_quote": "Mean Difference (𝐶𝐴𝑅144- 𝐶𝐴𝑅4) | -0.012943 (-1.29%) | -3.094 | 0.00216",
+        "source_location": "Table 6"
+      },
+      {
+        "metric_name": "alpha",
+        "value": 32.21,
+        "unit": "bps",
+        "context": "Calendar-Time Portfolio Equal-Weighted Alpha",
+        "evidence_quote": "Equal-Weighted | 32.21 | 0.003 | 1.03 | 0.304",
+        "source_location": "Table 10"
+      },
+      {
+        "metric_name": "alpha",
+        "value": 0.46,
+        "unit": "bps",
+        "context": "Calendar-Time Portfolio Value-Weighted Alpha",
+        "evidence_quote": "Value-Weighted | 0.46 | 0.002 | 0.03 | 0.979",
+        "source_location": "Table 10"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 1.03,
+        "unit": "ratio",
+        "context": "Equal-Weighted Calendar-Time Portfolio Alpha t-stat",
+        "evidence_quote": "Equal-Weighted | 32.21 | 0.003 | 1.03 | 0.304",
+        "source_location": "Table 10"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 0.03,
+        "unit": "ratio",
+        "context": "Value-Weighted Calendar-Time Portfolio Alpha t-stat",
+        "evidence_quote": "Value-Weighted | 0.46 | 0.002 | 0.03 | 0.979",
+        "source_location": "Table 10"
+      },
+      {
+        "metric_name": "alpha",
+        "value": 30.96,
+        "unit": "bps",
+        "context": "Small-Cap (Below Median) Sub-Sample Alpha",
+        "evidence_quote": "Small-Cap (Below Median) | 30.96 | 0.56 | 0.574",
+        "source_location": "Table 11"
+      },
+      {
+        "metric_name": "alpha",
+        "value": 14.49,
+        "unit": "bps",
+        "context": "Large-Cap (Above Median) Sub-Sample Alpha",
+        "evidence_quote": "Large-Cap (Above Median) | 14.49** | 2.30 | 0.021",
+        "source_location": "Table 11"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 2.3,
+        "unit": "ratio",
+        "context": "Large-Cap Sub-Sample Alpha t-stat",
+        "evidence_quote": "Large-Cap (Above Median) | 14.49** | 2.30 | 0.021",
+        "source_location": "Table 11"
+      }
+    ],
+    "key_findings": [
+      "A structural reporting inversion post-SOX means trade execution (Form 4) frequently precedes the notice of intent (Form 144), creating a persistent 52.4% opacity rate.",
+      "Unexecuted intent signals (aborted sales) remain statistically indistinguishable from routine executions within public datasets, establishing an information ceiling.",
+      "While small-cap portfolios yield higher absolute abnormal returns, statistically significant alpha is concentrated in large-cap firms due to higher institutional salience.",
+      "Causal machine learning confirms that aborted intent signals cause an illiquidity jump of up to 2.63 times at high-magnitude thresholds."
+    ],
+    "limitations": [
+      "Data attrition occurs due to smaller companies lacking BoardEx coverage or sufficient CRSP history for factor calibration.",
+      "High-capacity machine learning models reach an asymptotic limit (PR-AUC ceiling near 0.40) due to unobservable idiosyncratic catalysts in the public feature space."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:18:04.146324+00:00",
+    "input_tokens": 16619,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "event_driven",
+      "size"
+    ],
+    "curation_asset_class": [
+      "equities"
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "paper_id": "arxiv:1702.07374v1",
+  "title": "Time series momentum and contrarian effects in the Chinese stock market",
+  "extraction": {
+    "signal_type": [
+      "momentum",
+      "reversal"
+    ],
+    "asset_class": [
+      "equities"
+    ],
+    "methodology_summary": "The paper investigates time series momentum (TSMOM) and contrarian (TSCON) strategies using look-back (J) and holding (K) periods ranging from 1 to 60 months, applying two trading signaling methods (HL and MOP) to major Chinese stock indices, firm-specific factor quintile stock groups, and industrial sector indices or individual stocks. Individual stocks are sorted into quintiles or deciles by characteristics such as closing price, adjusted price, market value, turnover rate, and trading volume, and equally-weighted monthly excess returns are evaluated. Strategies are tested to determine the presence of short-term TSMOM and long-term TSCON effects, accompanied by linear regressions relating strategy returns to look-back/holding horizons and factor quintile dummies.",
+    "data_period": "1991-2015, monthly",
+    "universe": "All A-share individual stocks in Shanghai Stock Exchange (SHSE) and Shenzhen Stock Exchange (SZSE), plus major stock indices (SHCI, SZCI, CSI 300)",
+    "performance_metrics": [],
+    "key_findings": [
+      "There is a time series momentum (TSMOM) effect in the short run and a contrarian (TSCON) effect in the long run in the Chinese stock market.",
+      "The performances of TSMOM and contrarian strategies are highly dependent on the look-back and holding periods, with short-term horizons yielding positive TSMOM returns and long-term horizons yielding significant TSCON effects.",
+      "Higher closing and adjusted prices, smaller market capitalization, and lower trading volumes generally lead to more profitable TSMOM strategies.",
+      "Industrial sector index approaches reveal more significant TSMOM effects, whereas individual stock groupings within sectors tend to show more pronounced TSCON effects."
+    ],
+    "limitations": [],
+    "extraction_confidence": "high",
+    "extraction_notes": "No specific net portfolio Sharpe ratios, drawdowns, or standard performance metrics were reported as scalar results for the strategies (only annualized monthly excess returns and t-statistics across various J-K grids, plus regression coefficients), so performance_metrics is left empty as instructed."
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:38:17.244886+00:00",
+    "input_tokens": 17166,
+    "validation_flags": [
+      "no_performance_metrics_found"
+    ],
+    "curation_signal_type": [
+      "momentum",
+      "reversal"
+    ],
+    "curation_asset_class": [
+      "equities"
+    ]
+  }
+}

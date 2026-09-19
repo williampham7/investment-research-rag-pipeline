@@ -1,0 +1,99 @@
+{
+  "paper_id": "arxiv:0911.4030v1",
+  "title": "The StressVaR: A New Risk Concept for Superior Fund Allocation",
+  "extraction": {
+    "signal_type": [
+      "low_volatility",
+      "other"
+    ],
+    "asset_class": [
+      "other"
+    ],
+    "methodology_summary": "The paper introduces StressVaR (SVaR), a risk estimation approach that models hedge fund returns using a collection of single-factor nonlinear models against a large universe of 172 risk factors. Factors are ranked and selected using an adaptive p-value threshold from an F-test to avoid spurious relationships while capturing nonlinearities and lag effects. The fund's risk profile is then projected over the long historical data of the selected factors to assess potential losses during past crises, which is ultimately used to construct a portfolio by selecting the least risky quartile of funds and weighting them inversely to their SVaR.",
+    "data_period": "Feb. 2003 to June 2009, monthly",
+    "universe": "1060 hedge funds from the Hedge Fund Research (HFR) database, excluding index funds and Funds of Funds (FoFs), continuously reporting from Feb. 2000 to Feb. 2008.",
+    "performance_metrics": [
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 2.9,
+        "unit": "ratio",
+        "context": "SVaR portfolio simulated Fund-of-Funds investment strategy (Feb. 2003 to June 2009)",
+        "evidence_quote": "resulting in a Sharpe ratio of 2.9.",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Annual performance",
+        "value": 13.0,
+        "unit": "percent",
+        "context": "SVaR portfolio simulated Fund-of-Funds investment strategy (Feb. 2003 to June 2009)",
+        "evidence_quote": "Annual performance | 6.2% | 13.0% | 10.0% | 10.2%",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Annual volatility",
+        "value": 4.5,
+        "unit": "stddev",
+        "context": "SVaR portfolio simulated Fund-of-Funds investment strategy (Feb. 2003 to June 2009)",
+        "evidence_quote": "Annual volatility | 7.8% | 4.5% | 4.8% | 4.5%",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Max drawdown",
+        "value": -7.8,
+        "unit": "percent",
+        "context": "SVaR portfolio simulated Fund-of-Funds investment strategy (Feb. 2003 to June 2009)",
+        "evidence_quote": "Max drawdown | -27.6% | -7.8% | -12.9% | -10.1%",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Annualized outperformance over market",
+        "value": 6.0,
+        "unit": "percent",
+        "context": "SVaR portfolio outperformance over the market benchmark from Feb. 2003 to June 2009",
+        "evidence_quote": "the StressVaR constructed portfolio outperforms the market by about 6% annually",
+        "source_location": "Summary"
+      },
+      {
+        "metric_name": "1*VaR exception rate",
+        "value": 1.15,
+        "unit": "percent",
+        "context": "StressVaR 98% exception rate on 1060 hedge funds",
+        "evidence_quote": "StressVaR | 1.15% | 0.10% | 0.03% | 1.41 | 1.21",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "Average exception magnitude",
+        "value": 1.41,
+        "unit": "ratio",
+        "context": "Average magnitude of StressVaR exceptions in units of the VaR",
+        "evidence_quote": "StressVaR | 1.15% | 0.10% | 0.03% | 1.41 | 1.21",
+        "source_location": "Table 1"
+      }
+    ],
+    "key_findings": [
+      "StressVaR (SVaR) exhibits fewer extreme exceptions (at 2x and 3x the VaR threshold) and significantly smaller exception magnitudes when they do occur compared to Gaussian and Cornish-Fisher VaR measures.",
+      "A simulated Fund-of-Funds portfolio constructed using SVaR for allocation decisions achieved an annualized return of 13.0% and a Sharpe ratio of 2.9, outperforming the market benchmark and competing VaR-based portfolios.",
+      "The SVaR portfolio provides superior downside protection, limiting maximum drawdown to -7.8% during the Feb. 2003 to June 2009 period, which included the 2007-2008 financial crisis.",
+      "By utilizing nonlinear single-factor models, SVaR successfully captures complex risks such as liquidity traps and credit spread explosions that traditional linear models fail to detect."
+    ],
+    "limitations": [
+      "In theory, the StressVaR underestimates the real VaR because the effects of possible fat tails of the fund-specific residual risk (the residuals of the nonlinear model) are ignored.",
+      "The methodology relies heavily on a large, high-quality factor set and a robust factor selection/ranking mechanism to avoid spurious relationships.",
+      "To handle funds that stopped reporting during the 2008-2009 period, the authors assumed an arbitrary 30% loss in the month of disappearance, which may not perfectly reflect actual liquidation outcomes."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash",
+    "extracted_at": "2026-09-18T23:45:56.497299+00:00",
+    "input_tokens": 8153,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "other"
+    ],
+    "curation_asset_class": [
+      "other"
+    ]
+  }
+}

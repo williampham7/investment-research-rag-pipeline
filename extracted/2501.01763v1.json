@@ -1,0 +1,125 @@
+{
+  "paper_id": "arxiv:2501.01763v1",
+  "title": "Quantifying A Firm's AI Engagement: Constructing Objective, Data-Driven, AI Stock Indices Using 10-K Filings",
+  "extraction": {
+    "signal_type": [
+      "alternative_data",
+      "sentiment_text"
+    ],
+    "asset_class": [
+      "equities"
+    ],
+    "methodology_summary": "The study extracts textual data from annual 10-K filings of NASDAQ-listed firms using SEC EDGAR to quantify corporate AI engagement through keyword frequencies and normalized TF-IDF scores. Based on these metrics, four AI stock indices (AII, SAII, TAII05, and TAII5X) are constructed with daily updating and annual rebalancing. These indices are then evaluated using event studies around the ChatGPT launch and traditional risk-return performance metrics compared against existing AI thematic ETFs.",
+    "data_period": "2011 to 2023, daily",
+    "universe": "3,395 NASDAQ-listed firms",
+    "performance_metrics": [
+      {
+        "metric_name": "cumulative average abnormal return",
+        "value": 17.25,
+        "unit": "percent",
+        "context": "AI stocks one month following ChatGPT launch",
+        "evidence_quote": "The CAARs are positive and statistically significant for both groups one month following the ChatGPT launch: 17.25% for AI stocks (t = 8.24; z = 9.79)",
+        "source_location": "Section 4.1"
+      },
+      {
+        "metric_name": "cumulative average abnormal return",
+        "value": 11.59,
+        "unit": "percent",
+        "context": "non-AI stocks one month following ChatGPT launch",
+        "evidence_quote": "and 11.59% for non-AI stocks (t = 10.55; z = 10.83).",
+        "source_location": "Section 4.1"
+      },
+      {
+        "metric_name": "cumulative abnormal return",
+        "value": 16.35,
+        "unit": "percent",
+        "context": "AII index over 61-trading-day event window following ChatGPT launch",
+        "evidence_quote": "AII | 16.35 | 0.27 | 2.50** | 2.27**",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "cumulative abnormal return",
+        "value": 20.97,
+        "unit": "percent",
+        "context": "SAII index over 61-trading-day event window following ChatGPT launch",
+        "evidence_quote": "SAII | 20.97 | 0.34 | 2.61** | 2.32**",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "cumulative abnormal return",
+        "value": 16.19,
+        "unit": "percent",
+        "context": "TAII05 index over 61-trading-day event window following ChatGPT launch",
+        "evidence_quote": "TAII05 | 16.19 | 0.27 | 2.50** | 2.19**",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "cumulative abnormal return",
+        "value": 16.4,
+        "unit": "percent",
+        "context": "TAII5X index over 61-trading-day event window following ChatGPT launch",
+        "evidence_quote": "TAII5X | 16.40 | 0.27 | 2.43** | 2.21**",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 0.038,
+        "unit": "ratio",
+        "context": "AII index performance evaluation from June 27, 2019, to September 1, 2023",
+        "evidence_quote": "AII | 0.075 | 0.018 | -0.49 | 7.60 | 0.00011 | 0.945 | 0.038 | 0.036 | 4.70 | 1.34",
+        "source_location": "Table 5"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 0.043,
+        "unit": "ratio",
+        "context": "SAII index performance evaluation from June 27, 2019, to September 1, 2023",
+        "evidence_quote": "SAII | 0.089 | 0.019 | -0.36 | 6.91 | 0.00021 | 0.994 | 0.043 | 0.042 | 4.52 | 1.23",
+        "source_location": "Table 5"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 0.038,
+        "unit": "ratio",
+        "context": "TAII05 index performance evaluation from June 27, 2019, to September 1, 2023",
+        "evidence_quote": "TAII05 | 0.074 | 0.018 | -0.48 | 7.47 | 0.00009 | 0.945 | 0.038 | 0.036 | 4.74 | 1.33",
+        "source_location": "Table 5"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 0.036,
+        "unit": "ratio",
+        "context": "TAII5X index performance evaluation from June 27, 2019, to September 1, 2023",
+        "evidence_quote": "TAII5X | 0.072 | 0.018 | -0.44 | 7.20 | 0.00006 | 0.960 | 0.036 | 0.035 | 4.63 | 1.24",
+        "source_location": "Table 5"
+      }
+    ],
+    "key_findings": [
+      "Companies with higher AI engagement in 10-K filings exhibited significantly greater positive cumulative average abnormal returns following the launch of OpenAI's ChatGPT.",
+      "The data-driven AI indices constructed via NLP methods perform on par with or surpass existing AI-themed exchange-traded funds in market responsiveness and risk-adjusted returns.",
+      "Regression analyses confirm the predictive power of the proposed AI indices on cumulative average abnormal returns post-ChatGPT launch.",
+      "Objective text-based indexing offers a transparent, cost-effective alternative to opaque, subjective asset selection criteria used by traditional thematic ETFs."
+    ],
+    "limitations": [
+      "Reliance on 10-K filings may not capture all dimensions of a company's engagement with AI and is susceptible to potential strategic phrasing or \"AI washing\".",
+      "Focus on NASDAQ-listed firms limits geographical representation and overlooks global AI investment opportunities.",
+      "Event study approach based on the ChatGPT launch measures immediate market perceptions but may not capture long-term external market dynamics entirely."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:15:50.166483+00:00",
+    "input_tokens": 23440,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "event_driven",
+      "alternative_data",
+      "other"
+    ],
+    "curation_asset_class": [
+      "equities"
+    ]
+  }
+}

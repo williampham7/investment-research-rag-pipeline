@@ -1,0 +1,125 @@
+{
+  "paper_id": "arxiv:2607.08346v1",
+  "title": "Grounded Event Extraction from SEC 8-K Filings with a Fine-Grained Taxonomy",
+  "extraction": {
+    "signal_type": [
+      "event_driven"
+    ],
+    "asset_class": [
+      "equities"
+    ],
+    "methodology_summary": "A two-stage LLM system tags Form 8-K filings against a three-tier taxonomy of 119 corporate event types. The first stage extracts event tags constrained by output schema validation and fuzzy n-gram quote grounding to verify verbatim text support from the filing. The second stage assigns a quality score from 1 to 5 by re-evaluating each cited quote against the category definition. The resulting tagged corpus is evaluated via an LLM judge for precision and an event study assessing size of unsigned market reactions (SAR).",
+    "data_period": "January 2022 through June 2026, daily",
+    "universe": "U.S. public companies filing Form 8-K with common stock listings, covering 292,984 filings.",
+    "performance_metrics": [
+      {
+        "metric_name": "Precision",
+        "value": 0.123,
+        "unit": "ratio",
+        "context": "Judge-assessed precision for quality score 1",
+        "evidence_quote": "1 | 1,013 | 0.123 | 0.080",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "Unsupported rate",
+        "value": 0.08,
+        "unit": "ratio",
+        "context": "Unsupported rate for quality score 1",
+        "evidence_quote": "1 | 1,013 | 0.123 | 0.080",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "Precision",
+        "value": 0.472,
+        "unit": "ratio",
+        "context": "Judge-assessed precision for quality score 2",
+        "evidence_quote": "2 | 1,051 | 0.472 | 0.033",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "Unsupported rate",
+        "value": 0.033,
+        "unit": "ratio",
+        "context": "Unsupported rate for quality score 2",
+        "evidence_quote": "2 | 1,051 | 0.472 | 0.033",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "Precision",
+        "value": 0.782,
+        "unit": "ratio",
+        "context": "Judge-assessed precision for quality score 3",
+        "evidence_quote": "3 | 981 | 0.782 | 0.015",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "Unsupported rate",
+        "value": 0.015,
+        "unit": "ratio",
+        "context": "Unsupported rate for quality score 3",
+        "evidence_quote": "3 | 981 | 0.782 | 0.015",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "Precision",
+        "value": 0.868,
+        "unit": "ratio",
+        "context": "Judge-assessed precision for quality score 4",
+        "evidence_quote": "4 | 1,041 | 0.868 | 0.002",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "Unsupported rate",
+        "value": 0.002,
+        "unit": "ratio",
+        "context": "Unsupported rate for quality score 4",
+        "evidence_quote": "4 | 1,041 | 0.868 | 0.002",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "Precision",
+        "value": 0.964,
+        "unit": "ratio",
+        "context": "Judge-assessed precision for quality score 5",
+        "evidence_quote": "5 | 1,039 | 0.964 | 0.000",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "Unsupported rate",
+        "value": 0.0,
+        "unit": "ratio",
+        "context": "Unsupported rate for quality score 5",
+        "evidence_quote": "5 | 1,039 | 0.964 | 0.000",
+        "source_location": "Table 1"
+      }
+    ],
+    "key_findings": [
+      "Judge-assessed precision rises monotonically with the quality score from 12% at score 1 to 96% at score 5.",
+      "Assigning the quality score in a dedicated second pass successfully calibrates the reliability dial, whereas inline scoring during extraction saturates and behaves like a binary flag.",
+      "Fine-grained taxonomy tags explain 1.3 percentage points of additional variance in abnormal return reaction size beyond item codes, whereas item codes add only 0.4 percentage points beyond tags.",
+      "Many price-relevant corporate events, including clinical trial results and merger completions, reside predominantly under the voluntary catch-all Item 8.01."
+    ],
+    "limitations": [
+      "Quote grounding prevents fabricated evidence but not fabricated inference.",
+      "The second-stage grader sees only the cited quote and cannot catch a quote that reads correctly in isolation while the surrounding filing contradicts it.",
+      "The event study uses daily prices and filing dates without time of day, causing reaction windows to span two trading days and excluding halted or delisted stocks.",
+      "The corpus begins in 2022, so macroeconomic series cover only a single rate cycle."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:19:05.155044+00:00",
+    "input_tokens": 8632,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "event_driven",
+      "alternative_data",
+      "ml_composite"
+    ],
+    "curation_asset_class": [
+      "equities"
+    ]
+  }
+}

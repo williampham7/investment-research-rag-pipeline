@@ -1,0 +1,99 @@
+{
+  "paper_id": "arxiv:2501.07135v1",
+  "title": "Follow the Leader: Enhancing Systematic Trend-Following Using Network Momentum",
+  "extraction": {
+    "signal_type": [
+      "momentum",
+      "other"
+    ],
+    "asset_class": [
+      "commodities",
+      "futures_multi_asset"
+    ],
+    "methodology_summary": "The paper constructs a systematic trend-following strategy that combines univariate time-series momentum with network momentum derived from cross-sectional momentum spillover. Lead-lag relationships between asset pairs are detected using signature-based Lévy area and various dynamic time warping (DTW, DDTW, shapeDTW) algorithms. A convex graph learning optimization problem is then solved to convert the pairwise lead-lag matrices into a sparse, normalized network momentum adjacency matrix. Portfolios are formed using moving-average crossover signals weighted by this adjacency matrix, scaled to target volatility, and tested using stationary block-bootstrapped data and real historical commodity and index futures prices.",
+    "data_period": "June 2002 to June 2024, daily",
+    "universe": "28 futures markets spanning agriculture, energy, metals, and equity indices",
+    "performance_metrics": [
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.277,
+        "unit": "ratio",
+        "context": "MACD baseline model, average on 100 bootstrapped price data",
+        "evidence_quote": "MACD | 0.057 | 0.027 | 0.030 | 0.107 | 0.277",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.353,
+        "unit": "ratio",
+        "context": "NMM-DTW-E model, average on 100 bootstrapped price data",
+        "evidence_quote": "NMM-DTW-E | 0.063 | 0.023 | 0.039 | 0.109 | 0.353",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.357,
+        "unit": "ratio",
+        "context": "NMM-DDTW-E model, average on 100 bootstrapped price data",
+        "evidence_quote": "NMM-DDTW-E | 0.063 | 0.023 | 0.039 | 0.110 | 0.357",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.233,
+        "unit": "ratio",
+        "context": "MACD baseline model, real price data",
+        "evidence_quote": "MACD | 0.051 | 0.026 | 0.024 | 0.104 | 0.233",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.364,
+        "unit": "ratio",
+        "context": "NMM-DTW-E model, real price data",
+        "evidence_quote": "NMM-DTW-E | 0.062 | 0.023 | 0.039 | 0.106 | 0.364",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Sortino ratio",
+        "value": 0.515,
+        "unit": "ratio",
+        "context": "MACD baseline model, average on 100 bootstrapped price data",
+        "evidence_quote": "MACD | 0.057 | 0.027 | 0.030 | 0.107 | 0.277 | 0.058 | 0.239 | 0.515",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Sortino ratio",
+        "value": 0.684,
+        "unit": "ratio",
+        "context": "NMM-DDTW-E model, average on 100 bootstrapped price data",
+        "evidence_quote": "NMM-DDTW-E | 0.063 | 0.023 | 0.039 | 0.110 | 0.357 | 0.058 | 0.250 | 0.684",
+        "source_location": "Table 2"
+      }
+    ],
+    "key_findings": [
+      "Combining univariate time-series momentum with network momentum derived from lead-lag relationships significantly improves net Sharpe ratios and Sortino ratios over the baseline MACD model.",
+      "Network momentum models consistently produce more positively skewed returns, indicating superior management of downside risk while capturing large gains.",
+      "Ensemble methods utilizing multiple lookback windows reduce transaction costs and lower strategy turnover compared to single-window network momentum models.",
+      "Network momentum models significantly outperform the benchmark in short trading positions, where univariate trend-following models typically incur losses."
+    ],
+    "limitations": [
+      "The tested portfolio market selection is somewhat random and performance may not be fully reproducible for other specific sets of assets.",
+      "P&L is calculated using estimated historical transaction costs based on half the average bid-ask spread."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:16:09.226650+00:00",
+    "input_tokens": 18493,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "momentum"
+    ],
+    "curation_asset_class": [
+      "commodities"
+    ]
+  }
+}

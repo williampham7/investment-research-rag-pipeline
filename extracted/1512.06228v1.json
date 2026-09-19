@@ -1,0 +1,98 @@
+{
+  "paper_id": "arxiv:1512.06228v1",
+  "title": "Using machine learning for medium frequency derivative portfolio trading",
+  "extraction": {
+    "signal_type": [
+      "ml_composite"
+    ],
+    "asset_class": [
+      "fixed_income"
+    ],
+    "methodology_summary": "The authors construct a minimal risk portfolio of 5-year and 10-year US Treasury note futures using PCA weights. They extract daily trend features relative to weekly and biweekly moving averages, normalize them, and pass them through a Stacked Restricted Boltzmann Machine (Deep Belief Network) to learn latent representations. These features are then used by classifiers (SVM, Logistic Regression, and Neural Network) to predict the weekly direction of the portfolio, which is traded daily with a 5-day holding period.",
+    "data_period": "daily data from 1985 (test set covers 2.5 years)",
+    "universe": "5 year and 10 year US treasury note futures (shortcodes ZF and ZN respectively)",
+    "performance_metrics": [
+      {
+        "metric_name": "Test Recall rate (Actual Up)",
+        "value": 60.0,
+        "unit": "percent",
+        "context": "SVM classifier predicting weekly upward direction of movement of the portfolio on the test set",
+        "evidence_quote": "SVM 60%",
+        "source_location": "Table I"
+      },
+      {
+        "metric_name": "Test Precision rate (Actual Up)",
+        "value": 62.58,
+        "unit": "percent",
+        "context": "SVM classifier predicting weekly upward direction of movement of the portfolio on the test set",
+        "evidence_quote": "SVM 62.58%",
+        "source_location": "Table II"
+      },
+      {
+        "metric_name": "Test Recall rate (Actual Up)",
+        "value": 58.73,
+        "unit": "percent",
+        "context": "Logistic Regression classifier predicting weekly upward direction of movement of the portfolio on the test set",
+        "evidence_quote": "Logistic Regression 58.73%",
+        "source_location": "Table I"
+      },
+      {
+        "metric_name": "Test Precision rate (Actual Up)",
+        "value": 62.5,
+        "unit": "percent",
+        "context": "Logistic Regression classifier predicting weekly upward direction of movement of the portfolio on the test set",
+        "evidence_quote": "Logistic Regression 62.5%",
+        "source_location": "Table II"
+      },
+      {
+        "metric_name": "Test Recall rate (Actual Up)",
+        "value": 57.77,
+        "unit": "percent",
+        "context": "Neural Network classifier predicting weekly upward direction of movement of the portfolio on the test set",
+        "evidence_quote": "Neural Network 57.77%",
+        "source_location": "Table I"
+      },
+      {
+        "metric_name": "Test Precision rate (Actual Up)",
+        "value": 60.46,
+        "unit": "percent",
+        "context": "Neural Network classifier predicting weekly upward direction of movement of the portfolio on the test set",
+        "evidence_quote": "Neural Network 60.46%",
+        "source_location": "Table II"
+      },
+      {
+        "metric_name": "profitability",
+        "value": 90000.0,
+        "unit": "other",
+        "context": "trading strategy with a trade size of 10 units for the portfolio over a span of two and a half years, excluding exchange transaction costs and taxes",
+        "evidence_quote": "the proﬁtability for a trade size of 10 units for the portfolio is around 90000 dollars over a span of two and a half years.",
+        "source_location": "Section IV.D"
+      }
+    ],
+    "key_findings": [
+      "A machine learning pipeline using a Deep Belief Network (DBN) to extract features from technical indicators can successfully predict the weekly direction of a US Treasury note futures portfolio.",
+      "The SVM classifier achieved the highest test recall (60.00%) and test precision (62.58%) for predicting upward movements of the portfolio.",
+      "A day trading strategy based on these predictions generated approximately $90,000 in profit over a 2.5-year test period, excluding transaction costs and taxes.",
+      "The minimal risk portfolio constructed using PCA loadings (long ZF and short ZN) exhibits low drawdown and stable relative spread."
+    ],
+    "limitations": [
+      "The bid-ask spread is ignored by using mid-prices.",
+      "The trading frequency is limited to a single trade per day.",
+      "The reported profitability of $90,000 excludes exchange transaction costs and taxes."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash",
+    "extracted_at": "2026-09-18T23:52:17.557341+00:00",
+    "input_tokens": 3586,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "ml_composite"
+    ],
+    "curation_asset_class": [
+      "fixed_income"
+    ]
+  }
+}

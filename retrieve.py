@@ -15,12 +15,20 @@ from pathlib import Path
 
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
-import faiss
 import numpy as np
 from rank_bm25 import BM25Okapi
 from sentence_transformers import CrossEncoder, SentenceTransformer
 
 from embed import MODEL_REGISTRY, build_embed_text
+
+# faiss is imported lazily inside HybridRetriever.__init__, AFTER the CUDA
+# embedding model is constructed -- not here, and not reordered above. On
+# Windows, faiss bundles an OpenMP runtime that conflicts with torch's CUDA
+# runtime and segfaults the process the moment a CUDA context initializes
+# *after* faiss has loaded. Importing faiss merely before the `sentence_transformers`
+# package (as opposed to before the model is actually constructed on CUDA) does
+# NOT avoid this -- the crash is tied to CUDA context init order, not import
+# statement order, so faiss must not be imported until CUDA is already live.
 
 PROJECT_ROOT = Path(__file__).parent
 CHUNKS_PATH = PROJECT_ROOT / "chunks" / "chunks.jsonl"
@@ -70,13 +78,17 @@ class HybridRetriever:
         index_dir = index_dir / model_slug
         with (index_dir / "model_info.json").open("r", encoding="utf-8") as f:
             self.model_info = json.load(f)
-        self.faiss_index = faiss.read_index(str(index_dir / "faiss.index"))
-        with (index_dir / "chunk_ids.json").open("r", encoding="utf-8") as f:
-            self.faiss_chunk_ids = json.load(f)
 
+        # Load the CUDA embedding model BEFORE faiss is ever imported -- see
+        # the module-level note above on why the order matters here.
         self._log(f"Loading embedding model {self.model_info['hf_name']}...")
         self.embed_model = SentenceTransformer(self.model_info["hf_name"])
         self.reranker = None  # lazy-loaded, only needed if reranking is requested
+
+        import faiss
+        self.faiss_index = faiss.read_index(str(index_dir / "faiss.index"))
+        with (index_dir / "chunk_ids.json").open("r", encoding="utf-8") as f:
+            self.faiss_chunk_ids = json.load(f)
 
     def _dense_search(self, query: str, top_n: int) -> list[tuple[str, float]]:
         text = self.model_info["query_prefix"] + query
@@ -94,16 +106,22 @@ class HybridRetriever:
         return [(self.chunks[i]["chunk_id"], float(scores[i])) for i in top_indices if scores[i] > 0]
 
     def _apply_metadata_filter(
-        self, results: list[tuple[str, float]], signal_type: str | None, asset_class: str | None
+        self,
+        results: list[tuple[str, float]],
+        signal_type: str | None,
+        asset_class: str | None,
+        paper_ids: set[str] | None = None,
     ) -> list[tuple[str, float]]:
-        if not signal_type and not asset_class:
+        if not signal_type and not asset_class and paper_ids is None:
             return results
 
         def matches(chunk_id: str) -> bool:
             paper_id = self.chunks_by_id[chunk_id]["paper_id"]
+            if paper_ids is not None and paper_id not in paper_ids:
+                return False
             tags = self.paper_tags.get(paper_id)
             if not tags:
-                return False
+                return paper_ids is not None  # allow an explicit paper_id match even with no tags
             if signal_type and signal_type not in tags.get("signal_type", []):
                 return False
             if asset_class and asset_class not in tags.get("asset_class", []):
@@ -136,10 +154,14 @@ class HybridRetriever:
         use_bm25: bool = True,
         signal_type: str | None = None,
         asset_class: str | None = None,
+        paper_ids: set[str] | None = None,
     ) -> list[dict]:
-        dense = self._apply_metadata_filter(self._dense_search(query, DENSE_TOP_N), signal_type, asset_class)
+        """paper_ids, if given, restricts results to that set of papers -- used
+        by qa.py's hybrid mode to explain mechanism for a structured-query
+        match set rather than searching the whole corpus."""
+        dense = self._apply_metadata_filter(self._dense_search(query, DENSE_TOP_N), signal_type, asset_class, paper_ids)
         if use_bm25:
-            bm25 = self._apply_metadata_filter(self._bm25_search(query, BM25_TOP_N), signal_type, asset_class)
+            bm25 = self._apply_metadata_filter(self._bm25_search(query, BM25_TOP_N), signal_type, asset_class, paper_ids)
             fused = self._reciprocal_rank_fusion(dense, bm25)
         else:
             fused = dense

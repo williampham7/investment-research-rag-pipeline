@@ -1,0 +1,47 @@
+{
+  "paper_id": "arxiv:1910.08531v2",
+  "title": "Healthy... Distress... Default",
+  "extraction": {
+    "signal_type": [
+      "stat_arb_pairs",
+      "sentiment_text",
+      "alternative_data"
+    ],
+    "asset_class": [
+      "equities"
+    ],
+    "methodology_summary": "The paper develops an exactly solvable stochastic stock dynamics model with regime switching between healthy and distressed regimes. Using this theoretical framework, the author proposes extracting expected stock returns (as an alpha signal) from realized Credit Default Swap (CDS) spreads via cross-sectional regression of log CDS spreads on log stock prices. The resulting cross-sectional sentiment signal (nu) can then be used to construct a dollar-neutral statistical arbitrage equity portfolio by ranking and longing top-decile stocks and shorting bottom-decile stocks.",
+    "data_period": "not reported",
+    "universe": "a broad cross-section of stocks with available CDS data",
+    "performance_metrics": [],
+    "key_findings": [
+      "The proposed stock dynamics model smoothly interpolates between healthy and distressed regimes and is exactly solvable with a constant potential in the associated Schrödinger equation.",
+      "The model relates default probability to stock price levels asymptotically, enabling the extraction of the CDS market's sentiment regarding expected stock returns.",
+      "Applying this extraction method across a large cross-section of stocks allows the construction of a statistical arbitrage or dollar-neutral trading strategy."
+    ],
+    "limitations": [
+      "The model is a simple illustrative toy model and the author makes no claim regarding its empirical prowess.",
+      "Predicting the parameter nu out-of-sample based on historical data is difficult because it is equivalent to predicting the drift or expected return of the stock.",
+      "CDS data may not be available for the entire universe of stocks.",
+      "The intercept in the regression (related to the threshold price S*) can be unstable out-of-sample."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": "The paper is purely theoretical and proposes a mathematical model and signal extraction methodology. It reports zero empirical backtest results, performance figures, or quantitative metrics; thus performance_metrics is an empty list."
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:38:49.947933+00:00",
+    "input_tokens": 3208,
+    "validation_flags": [
+      "no_performance_metrics_found"
+    ],
+    "curation_signal_type": [
+      "sentiment_text",
+      "stat_arb_pairs"
+    ],
+    "curation_asset_class": [
+      "equities",
+      "fixed_income"
+    ]
+  }
+}

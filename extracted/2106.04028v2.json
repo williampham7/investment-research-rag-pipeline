@@ -1,0 +1,118 @@
+{
+  "paper_id": "arxiv:2106.04028v2",
+  "title": "Deep Learning Statistical Arbitrage",
+  "extraction": {
+    "signal_type": [
+      "stat_arb_pairs",
+      "ml_composite",
+      "other"
+    ],
+    "asset_class": [
+      "equities"
+    ],
+    "methodology_summary": "The paper develops a deep learning statistical arbitrage framework by first constructing arbitrage portfolios as residuals from conditional latent asset pricing factors (Fama-French, PCA, or IPCA). Second, time series signals are extracted from these residual portfolios using a convolutional transformer architecture combining local convolutional filters and attention-based global dependency modeling. Finally, these signals are mapped into an optimal trading allocation via a nonparametric feedforward neural network that maximizes risk-adjusted returns under trading constraints.",
+    "data_period": "January 1978 to December 2016, daily",
+    "universe": "Roughly the 550 largest and most liquid U.S. common stocks from CRSP with market capitalization larger than 0.01% of the total market capitalization",
+    "performance_metrics": [
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 4.16,
+        "unit": "ratio",
+        "context": "CNN+Trans model with IPCA 5-factor residuals based on Sharpe ratio objective",
+        "evidence_quote": "5 4.16 8.7% 2.1%",
+        "source_location": "Table I"
+      },
+      {
+        "metric_name": "annualized return",
+        "value": 8.7,
+        "unit": "percent",
+        "context": "CNN+Trans model with IPCA 5-factor residuals based on Sharpe ratio objective",
+        "evidence_quote": "5 4.16 8.7% 2.1%",
+        "source_location": "Table I"
+      },
+      {
+        "metric_name": "annualized volatility",
+        "value": 2.1,
+        "unit": "percent",
+        "context": "CNN+Trans model with IPCA 5-factor residuals based on Sharpe ratio objective",
+        "evidence_quote": "5 4.16 8.7% 2.1%",
+        "source_location": "Table I"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 3.56,
+        "unit": "ratio",
+        "context": "CNN+Trans model with PCA 3-factor residuals based on Sharpe ratio objective",
+        "evidence_quote": "3 3.56 16.0% 4.5%",
+        "source_location": "Table I"
+      },
+      {
+        "metric_name": "annualized return",
+        "value": 16.0,
+        "unit": "percent",
+        "context": "CNN+Trans model with PCA 3-factor residuals based on Sharpe ratio objective",
+        "evidence_quote": "3 3.56 16.0% 4.5%",
+        "source_location": "Table I"
+      },
+      {
+        "metric_name": "annualized volatility",
+        "value": 4.5,
+        "unit": "percent",
+        "context": "CNN+Trans model with PCA 3-factor residuals based on Sharpe ratio objective",
+        "evidence_quote": "3 3.56 16.0% 4.5%",
+        "source_location": "Table I"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 3.68,
+        "unit": "ratio",
+        "context": "CNN+Trans model with Fama-French 1-factor model based on Sharpe ratio objective",
+        "evidence_quote": "1 3.68 7.2% 2.0%",
+        "source_location": "Table I"
+      },
+      {
+        "metric_name": "annualized return",
+        "value": 7.2,
+        "unit": "percent",
+        "context": "CNN+Trans model with Fama-French 1-factor model based on Sharpe ratio objective",
+        "evidence_quote": "1 3.68 7.2% 2.0%",
+        "source_location": "Table I"
+      },
+      {
+        "metric_name": "annualized volatility",
+        "value": 2.0,
+        "unit": "percent",
+        "context": "CNN+Trans model with Fama-French 1-factor model based on Sharpe ratio objective",
+        "evidence_quote": "1 3.68 7.2% 2.0%",
+        "source_location": "Table I"
+      }
+    ],
+    "key_findings": [
+      "The deep learning statistical arbitrage model (CNN+Transformer) substantially outperforms all benchmark approaches out-of-sample, achieving annual Sharpe ratios greater than four.",
+      "Signal extraction is the most challenging and critical component of statistical arbitrage, whereas the specific choice of asset pricing factor models has a secondary effect.",
+      "Arbitrage trading signals are persistent over short horizons, with about half of the Sharpe ratio surviving for a holding period of one week, and remaining profitable over a one-month holding period.",
+      "The convolutional transformer network learns asymmetric policies, reacting quickly to downturn movements while acting more cautiously during uptrends.",
+      "Arbitrage strategies remain highly profitable and economically significant even after accounting for realistic transaction and holding costs."
+    ],
+    "limitations": [
+      "The empirical evaluation is restricted to the largest and most liquid U.S. equities, avoiding broader market frictions and liquidity issues associated with small-cap stocks.",
+      "The study assumes linear proportional transaction and holding costs in the friction extension rather than modeling full endogenous market impact.",
+      "Network rolling window training and periodic re-estimation introduce computational complexity and approximations."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:11:50.044630+00:00",
+    "input_tokens": 50407,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "stat_arb_pairs",
+      "ml_composite"
+    ],
+    "curation_asset_class": [
+      "equities"
+    ]
+  }
+}

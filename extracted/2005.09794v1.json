@@ -1,0 +1,88 @@
+{
+  "paper_id": "arxiv:2005.09794v1",
+  "title": "Pairs Trading with Nonlinear and Non-Gaussian State Space Models",
+  "extraction": {
+    "signal_type": [
+      "stat_arb_pairs",
+      "reversal"
+    ],
+    "asset_class": [
+      "equities",
+      "futures_multi_asset"
+    ],
+    "methodology_summary": "This paper models the price spread between two assets as an unobservable, mean-reverting state variable using a nonlinear and non-Gaussian state space framework that incorporates ARCH-style heteroskedasticity and a flexible drift function. The unobserved spread and parameters are estimated via a Quasi Monte Carlo Kalman filter algorithm. A simulation-based approach determines optimal trading boundaries (thresholds) for executing a novel trading strategy (Strategy C) that opens and closes positions based on volatility levels and threshold crossings.",
+    "data_period": "01/03/2012-06/28/2019",
+    "universe": "US banks listed on the NYSE and specific equity pairs / ETFs (PEP vs KO, EWT vs EWH)",
+    "performance_metrics": [
+      {
+        "metric_name": "annualized return",
+        "value": 0.2186,
+        "unit": "percent",
+        "context": "PEP vs KO using Strategy C, Model II",
+        "evidence_quote": "The results show that the new approach can achieve 21.86% annualized return for the PEP/KO pair",
+        "source_location": "Abstract"
+      },
+      {
+        "metric_name": "annualized return",
+        "value": 0.3184,
+        "unit": "percent",
+        "context": "EWT vs EWH using Strategy C, Model II",
+        "evidence_quote": "and 31.84% annualized return for the EWT/EWH pair.",
+        "source_location": "Abstract"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 2.9518,
+        "unit": "ratio",
+        "context": "PEP/KO pair, Strategy C, Model II",
+        "evidence_quote": "we find that our approach achieves an annualized return of 0.2186 and Sharpe ratio of 2.9518 on the PEP/KO pair",
+        "source_location": "Section 1"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 3.8892,
+        "unit": "ratio",
+        "context": "EWT/EWH pair, Strategy C, Model II",
+        "evidence_quote": "and an annualized return of 0.3184 and Sharpe ratio of 3.8892 on the EWT/EWH pair.",
+        "source_location": "Section 1"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 1.1003,
+        "unit": "ratio",
+        "context": "PEP/KO pair, conventional approach",
+        "evidence_quote": "In comparison, a conventional approach applied to the same pairs can only achieve an annualized return of 0.1311 and Sharpe ratio of 1.1003 for the PEP/KO pair",
+        "source_location": "Section 1"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 1.1277,
+        "unit": "ratio",
+        "context": "EWT/EWH pair, conventional approach",
+        "evidence_quote": "and an annualized return of 0.1480 and Sharpe ratio of 1.1277 for the EWT/EWH pair.",
+        "source_location": "Section 1"
+      }
+    ],
+    "key_findings": [
+      "Nonlinear and non-Gaussian state space models capture stylized features of asset prices such as heavy-tailedness, heteroskedasticity, and volatility clustering.",
+      "The newly proposed trading strategy (Strategy C) combined with Model II significantly outperforms conventional benchmark models and strategies in both return and Sharpe ratio.",
+      "Pairs formed among small banks yield higher returns than pairs among large banks due to higher volatility of the spread.",
+      "Out-of-sample tests confirm the robustness and superior performance of the proposed nonlinear/non-Gaussian modeling and Strategy C approach."
+    ],
+    "limitations": [],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:09:27.109516+00:00",
+    "input_tokens": 19340,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "stat_arb_pairs"
+    ],
+    "curation_asset_class": [
+      "equities"
+    ]
+  }
+}

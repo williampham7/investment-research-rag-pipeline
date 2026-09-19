@@ -1,0 +1,162 @@
+{
+  "paper_id": "arxiv:1808.02505v2",
+  "title": "Combining Independent Smart Beta Strategies for Portfolio Optimization",
+  "extraction": {
+    "signal_type": [
+      "momentum",
+      "low_volatility"
+    ],
+    "asset_class": [
+      "equities"
+    ],
+    "methodology_summary": "The paper combines two smart beta strategies: a long-short beta-neutral momentum strategy using an adaptive boosting classifier on technical indicators (RSI, stochastic oscillator, moving average crossover, and volume), and a minimum variance portfolio based on the lowest-beta stocks. Portfolios are rebalanced monthly on the S&P 500 universe. The strategies are tested both individually and combined, and also evaluated with leverage and in live trading.",
+    "data_period": "2007-2016, monthly",
+    "universe": "S&P 500 constituents",
+    "performance_metrics": [
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.42,
+        "unit": "ratio",
+        "context": "S&P 500 benchmark",
+        "evidence_quote": "Working off a market benchmark Sharpe Ratio of 0.42",
+        "source_location": "Abstract"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.61,
+        "unit": "ratio",
+        "context": "Market neutral component (leveraged)",
+        "evidence_quote": "we find that the market neutral component achieves a ratio of 0.61",
+        "source_location": "Abstract"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.9,
+        "unit": "ratio",
+        "context": "Low volatility approach",
+        "evidence_quote": "the low volatility approach achieves a ratio of 0.90",
+        "source_location": "Abstract"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.96,
+        "unit": "ratio",
+        "context": "Combined leveraged strategy",
+        "evidence_quote": "while the combined leveraged strategy achieves a ratio of 0.96",
+        "source_location": "Abstract"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 1.35,
+        "unit": "ratio",
+        "context": "Combined strategy in six months of live trading",
+        "evidence_quote": "In six months of live trading, the combined strategy achieved a Sharpe Ratio of 1.35.",
+        "source_location": "Abstract"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.58,
+        "unit": "ratio",
+        "context": "Beta-Neutral unleveraged strategy",
+        "evidence_quote": "β-Neutral | 25.4 | 0.58 | -0.01 | 8.7 | 4",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.7,
+        "unit": "ratio",
+        "context": "Beta-Neutral (55%) unleveraged strategy",
+        "evidence_quote": "β-Neutral (55%) | 36.5 | 0.70 | 0.1 | 8.5 | 4",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.89,
+        "unit": "ratio",
+        "context": "MinVar unleveraged strategy",
+        "evidence_quote": "MinVar | 54.1 | 0.89 | 0.06 | 8.9 | 5",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.9,
+        "unit": "ratio",
+        "context": "Combo unleveraged strategy",
+        "evidence_quote": "Combo | 33 | 0.9 | 0.03 | 6.4 | 3",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.92,
+        "unit": "ratio",
+        "context": "Combo (55%) unleveraged strategy",
+        "evidence_quote": "Combo (55%) | 38.8 | 0.92 | 0.08 | 7.9 | 4",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.61,
+        "unit": "ratio",
+        "context": "Beta-Neutral leveraged strategy",
+        "evidence_quote": "β-Neutral | 58.7 | 0.61 | -0.03 | 16.8 | 8",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.73,
+        "unit": "ratio",
+        "context": "Beta-Neutral (55%) leveraged strategy",
+        "evidence_quote": "β-Neutral (55%) | 86.27 | 0.73 | 0.19 | 16.5 | 9",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.9,
+        "unit": "ratio",
+        "context": "MinVar leveraged strategy",
+        "evidence_quote": "MinVar | 131.4 | 0.9 | 0.13 | 17.2 | 10",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.94,
+        "unit": "ratio",
+        "context": "Combo leveraged strategy",
+        "evidence_quote": "Combo | 80.1 | 0.94 | 0.05 | 12.6 | 6",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.96,
+        "unit": "ratio",
+        "context": "Combo (55%) leveraged strategy",
+        "evidence_quote": "Combo (55%) | 95.5 | 0.96 | 0.16 | 15.5 | 7",
+        "source_location": "Table 2"
+      }
+    ],
+    "key_findings": [
+      "Combining independent smart beta strategies (momentum and low-volatility) yields superior risk-adjusted performance compared to any single component in isolation.",
+      "The market neutral momentum component achieves a pure alpha profile with near-zero market beta and low maximum drawdown.",
+      "Applying moderate leverage to the combined low-risk smart beta strategy successfully magnifies absolute returns while keeping drawdowns controlled.",
+      "Out-of-sample live trading over a 6-month period demonstrated an impressive Sharpe ratio of 1.35."
+    ],
+    "limitations": [
+      "Algorithm performance drops immediately after extremely unstable trading periods due to poor learning from highly volatile datasets."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:06:54.786057+00:00",
+    "input_tokens": 7707,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "momentum",
+      "low_volatility"
+    ],
+    "curation_asset_class": [
+      "equities"
+    ]
+  }
+}

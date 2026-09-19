@@ -1,0 +1,76 @@
+{
+  "paper_id": "arxiv:2012.06573v2",
+  "title": "Risk & returns around FOMC press conferences: a novel perspective from computer vision",
+  "extraction": {
+    "signal_type": [
+      "alternative_data",
+      "sentiment_text",
+      "other"
+    ],
+    "asset_class": [
+      "equities"
+    ],
+    "methodology_summary": "The paper constructs a novel attention measure using computer vision algorithms on video recordings of FOMC press conference Q&A sessions. By tracking facial landmarks to calculate the Eye Aspect Ratio (EAR) and measuring the time the Fed Chair spends looking down at internal documents, the author quantifies discussion complexity. This attention measure is then tested in univariate linear regressions to explain contemporaneous stock returns and the change in realized volatility around press conferences.",
+    "data_period": "April 2011 to September 2020, 1-min frequency for S&P 500",
+    "universe": "S&P 500 index around FOMC press conferences",
+    "performance_metrics": [
+      {
+        "metric_name": "t-statistic",
+        "value": 5.0,
+        "unit": "ratio",
+        "context": "t-statistic for the regression coefficient of Delta lambda explaining contemporaneous S&P 500 returns during Q&A",
+        "evidence_quote": "While Lambda is also proportional to the length of the speech but contains the additional information that the Chair was paying close attention to important documents while answering questions. Hence Lambda gauges the intricacy of a Q&A session, which is arguably difficult to capture using NLP techniques without making subjective choices (like choosing a dictionary). An interesting consequence of these results is that the Chair reveals additional information during the Q&A sessions that is not present in the pre-written opening statements. I also run a similar regression to (3.4) but replacing the dependent variable with the return after the conference ra and find no significant coefficients. This means that the information is incorporated immediately in the stock price over the time of the Q&A. ... Table 3.1: Explaining contemporaneous stock returns ... Delta lambda 0.005*** (0.001) ... F Statistic 16.860***",
+        "source_location": "Section 3.1 and Table 3.1"
+      },
+      {
+        "metric_name": "R-squared",
+        "value": 0.286,
+        "unit": "ratio",
+        "context": "R-squared of the regression explaining contemporaneous S&P 500 returns using Delta lambda",
+        "evidence_quote": "While is also proportional to the length of the speech but contains the additional information that the Chair was paying close attention to important documents while answering questions. Hence gauges the intricacy of a Q&A session, which is arguably difficult to capture using NLP techniques without making subjective choices (like choosing a dictionary). ... R2 0.286",
+        "source_location": "Section 3.1 and Table 3.1"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 2.3,
+        "unit": "ratio",
+        "context": "t-statistic in absolute value for the regression coefficient of Delta lambda explaining the change in volatility before and after the Q&A",
+        "evidence_quote": "And consistently with the previous results, Delta lambda is the most precise signal in the sense that its associated t-stat is the highest (in absolute) with a value of 2.3.",
+        "source_location": "Section 3.2"
+      },
+      {
+        "metric_name": "R-squared",
+        "value": 0.109,
+        "unit": "ratio",
+        "context": "R-squared of the regression explaining the change in volatility before and after the Q&A using Delta lambda",
+        "evidence_quote": "R2 0.109",
+        "source_location": "Table 3.2"
+      }
+    ],
+    "key_findings": [
+      "Complex discussions during FOMC press conference Q&A sessions (measured by the Fed Chair reading internal documents more frequently) are associated with higher contemporaneous equity returns.",
+      "Complex discussions lead to a drop in realized volatility, indicating uncertainty resolution.",
+      "The video-based attention measure (Delta lambda) outperforms benchmark variables like speech duration and question counts in explaining stock returns and volatility changes around press conferences.",
+      "The information revealed during Q&A sessions is incorporated immediately into stock prices and is not redundant with pre-written opening statements."
+    ],
+    "limitations": [
+      "The methodology relies on the spontaneity of questions and answers; if speakers received questions in advance, the method would not work.",
+      "Excludes the FOMC conference of March 15, 2020, because only audio was available."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:10:14.532885+00:00",
+    "input_tokens": 8097,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "alternative_data",
+      "event_driven"
+    ],
+    "curation_asset_class": [
+      "equities"
+    ]
+  }
+}

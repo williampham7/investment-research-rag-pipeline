@@ -1,0 +1,150 @@
+{
+  "paper_id": "arxiv:1910.13115v2",
+  "title": "Horse race of weekly idiosyncratic momentum strategies with respect to various risk metrics: Evidence from the Chinese stock market",
+  "extraction": {
+    "signal_type": [
+      "momentum",
+      "reversal"
+    ],
+    "asset_class": [
+      "equities"
+    ],
+    "methodology_summary": "The paper evaluates weekly momentum (MOM) and idiosyncratic momentum (IMOM) strategies in the Chinese A-share market. Idiosyncratic returns are estimated using Fama-French 5-factor regressions on daily excess returns over past J weeks. Portfolios are formed by sorting stocks into deciles based on cumulative raw or idiosyncratic returns (with a 1-week skip to avoid microstructure effects) and held for K weeks. Additionally, risk-adjusted IMOM strategies are constructed by directly dividing idiosyncratic returns by various idiosyncratic risk metrics (such as idiosyncratic volatility, skewness, kurtosis, maximum drawdown, expected shortfall, and VaR) or indirectly via bivariate double sorting.",
+    "data_period": "January 1997 to December 2017",
+    "universe": "Chinese A-share common stocks listed on Shanghai Stock Exchange (SHSE) and Shenzhen Stock Exchange (SZSE)",
+    "performance_metrics": [
+      {
+        "metric_name": "annualized return",
+        "value": 5.2,
+        "unit": "percent",
+        "context": "MOM contrarian portfolios in Panel A of Table 2",
+        "evidence_quote": "This is confirmed by the significant returns ranging from 5.2% to 13% annually in Panel A of Table 2 for each J − K portfolio",
+        "source_location": "Section 3.1, page 7"
+      },
+      {
+        "metric_name": "annualized return",
+        "value": 13.0,
+        "unit": "percent",
+        "context": "MOM contrarian portfolios in Panel A of Table 2",
+        "evidence_quote": "This is confirmed by the significant returns ranging from 5.2% to 13% annually in Panel A of Table 2 for each J − K portfolio",
+        "source_location": "Section 3.1, page 7"
+      },
+      {
+        "metric_name": "annualized return",
+        "value": 3.64,
+        "unit": "percent",
+        "context": "IMOM portfolio when J = 2 weeks and K = 52 weeks",
+        "evidence_quote": "Specifically, the annual returns range from 3.64% (0.0007 × 52 ≈ 3.64% when J = 2 weeks and K = 52 weeks) to 19.76% (0.0038 × 52 ≈ 19.76% when J = 4 weeks and K = 1 week).",
+        "source_location": "Section 3.2, page 8"
+      },
+      {
+        "metric_name": "annualized return",
+        "value": 19.76,
+        "unit": "percent",
+        "context": "IMOM portfolio when J = 4 weeks and K = 1 week",
+        "evidence_quote": "Specifically, the annual returns range from 3.64% (0.0007 × 52 ≈ 3.64% when J = 2 weeks and K = 52 weeks) to 19.76% (0.0038 × 52 ≈ 19.76% when J = 4 weeks and K = 1 week).",
+        "source_location": "Section 3.2, page 8"
+      },
+      {
+        "metric_name": "monthly excess return",
+        "value": 0.882,
+        "unit": "percent",
+        "context": "IMOM portfolio in Lin (2019)",
+        "evidence_quote": "Specifically, the excess return and FF5F-α are 0.882% and 0.931% per month, respectively.",
+        "source_location": "Section 3.2, page 9"
+      },
+      {
+        "metric_name": "monthly FF5F-alpha",
+        "value": 0.931,
+        "unit": "percent",
+        "context": "IMOM portfolio in Lin (2019)",
+        "evidence_quote": "Specifically, the excess return and FF5F-α are 0.882% and 0.931% per month, respectively.",
+        "source_location": "Section 3.2, page 9"
+      },
+      {
+        "metric_name": "average weekly return",
+        "value": 0.27,
+        "unit": "percent",
+        "context": "ISkew-IMOM portfolio when K = 1 week",
+        "evidence_quote": "For instance, when the holding period K = 1 week, the ISkew-IMOM generates average return of 0.27%, which is higher than that of ISkew-based portfolio by 18 basis points (Panel B in Table A.3) .",
+        "source_location": "Section 3.5, page 14"
+      },
+      {
+        "metric_name": "difference in average weekly return",
+        "value": 18.0,
+        "unit": "bps",
+        "context": "ISkew-IMOM portfolio compared to ISkew-based portfolio when K = 1 week",
+        "evidence_quote": "For instance, when the holding period K = 1 week, the ISkew-IMOM generates average return of 0.27%, which is higher than that of ISkew-based portfolio by 18 basis points (Panel B in Table A.3) .",
+        "source_location": "Section 3.5, page 14"
+      },
+      {
+        "metric_name": "FF5F-alpha contribution of short side",
+        "value": 30.0,
+        "unit": "bps",
+        "context": "Short side of ISkew-IMOMs when K is less than four weeks",
+        "evidence_quote": "Especially, when K is less than four weeks, the short sides of the ISkew-IMOMs contribute to the total magnitudes of FF5F-α by at least 30 basis points, while the long sides provide with less than 5 basis points only.",
+        "source_location": "Section 3.5, page 14"
+      },
+      {
+        "metric_name": "FF5F-alpha contribution of long side",
+        "value": 5.0,
+        "unit": "bps",
+        "context": "Long side of ISkew-IMOMs when K is less than four weeks",
+        "evidence_quote": "Especially, when K is less than four weeks, the short sides of the ISkew-IMOMs contribute to the total magnitudes of FF5F-α by at least 30 basis points, while the long sides provide with less than 5 basis points only.",
+        "source_location": "Section 3.5, page 14"
+      },
+      {
+        "metric_name": "weekly short-term raw return",
+        "value": 0.24,
+        "unit": "percent",
+        "context": "IMOMs adjusted by idiosyncratic tail risk metrics (IMD, IES, IVaR) with indirect adjustment",
+        "evidence_quote": "For instance, weekly short-term raw returns reach up to around 0.24% for IMD, IES and IVaR, compared to the results of around 0.17% in Table 4.",
+        "source_location": "Section 3.5, page 14"
+      },
+      {
+        "metric_name": "weekly short-term raw return",
+        "value": 0.17,
+        "unit": "percent",
+        "context": "IMOMs adjusted by idiosyncratic tail risk metrics with direct adjustment",
+        "evidence_quote": "For instance, weekly short-term raw returns reach up to around 0.24% for IMD, IES and IVaR, compared to the results of around 0.17% in Table 4.",
+        "source_location": "Section 3.5, page 14"
+      },
+      {
+        "metric_name": "FF5F-alpha",
+        "value": 0.3,
+        "unit": "percent",
+        "context": "IMOMs adjusted by idiosyncratic tail risk metrics with indirect adjustment",
+        "evidence_quote": "The FF5F-α values have accordingly increased significantly to greater than 0.30%.",
+        "source_location": "Section 3.5, page 14"
+      }
+    ],
+    "key_findings": [
+      "A prevailing contrarian effect (short-term reversal) exists for raw returns, while a pronounced idiosyncratic momentum (IMOM) effect is observed when sorting on idiosyncratic returns.",
+      "Most idiosyncratic risk metrics (especially idiosyncratic volatility and idiosyncratic maximum drawdown) exhibit a negative relation with cross-sectional stock returns.",
+      "Bivariate double-sorted portfolios (indirect adjustment) of IMOM with idiosyncratic risk metrics (like ISkew, IMD, IES, and IVaR) significantly enhance profitability compared to univariate risk-sorted portfolios.",
+      "IVol-based and IMD-based IMOM portfolios show superior performance and have strong explanatory power over other risk-adjusted IMOM portfolios in spanning tests.",
+      "The profitability of IMOM and risk-adjusted IMOM strategies is highly dependent on market conditions, performing significantly better during upside market states, high market liquidity, and high investor sentiment."
+    ],
+    "limitations": [
+      "Costly short-selling in the Chinese stock market, which limits arbitrage efficiency.",
+      "Price limit trading rules (±10% daily fluctuation limit) that slow down or speed up price adjustments to news.",
+      "Retail investors in China are highly under-diversified, holding an average of only 1.4 stocks as of June 2018.",
+      "Potential microstructure biases (bid-ask spread, non-synchronous trading, lack of liquidity) require skipping a week between the estimation and holding periods."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash",
+    "extracted_at": "2026-09-18T23:47:06.063226+00:00",
+    "input_tokens": 60873,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "momentum",
+      "low_volatility"
+    ],
+    "curation_asset_class": [
+      "equities"
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "paper_id": "arxiv:2201.09319v1",
+  "title": "Option Volume Imbalance as a predictor for equity market returns",
+  "extraction": {
+    "signal_type": [
+      "alternative_data"
+    ],
+    "asset_class": [
+      "equities",
+      "options_volatility"
+    ],
+    "methodology_summary": "The strategy constructs an Option Volume Imbalance (OVI) metric based on the normalized difference between aggregated option volumes representing positive (call buys and put sells) versus negative (call sells and put buys) market views, decomposed by five distinct market participant classes. Portfolios of underlying stocks and ETFs are formed and rebalanced daily using the OVI signal sign and magnitude (via quantile ranking buckets) as a directional predictor for overnight spot returns. Performance is evaluated using cumulative Profit and Loss (P&L) and annualized Sharpe ratios, alongside a novel P&L-maximizing regression framework.",
+    "data_period": "02 Jan 2015-31 Dec 2019, daily",
+    "universe": "Underlying equities and 11 ETFs from NYSE/CRSP, as well as option contracts from NASDAQ (NOTO) and PHLX (PHOTO) exchanges",
+    "performance_metrics": [
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 4.4,
+        "unit": "ratio",
+        "context": "Market Maker OVI strategy using quantile rank portfolios for overnight returns",
+        "evidence_quote": "yielding annualized Sharpe Ratios of up to 4.5, for a simple betting scheme",
+        "source_location": "Section 8"
+      }
+    ],
+    "key_findings": [
+      "Option Volume Imbalance (OVI) exhibits significant predictive power for directional overnight price movements of underlying equities.",
+      "Market Makers and Customers provide the strongest predictive signals, whereas Firms and Professional Customers show no clear predictive power.",
+      "Most of the predictability stems from high implied volatility option contracts, put options, and at-the-money options.",
+      "Cross-impact network analysis reveals significant non-random predictive relationships across different underlying assets that do not follow a power-law distribution."
+    ],
+    "limitations": [
+      "Transaction costs are not taken into account.",
+      "Hypothetical strategy trades may not be executable in practice due to liquidity or timing constraints."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:12:29.024925+00:00",
+    "input_tokens": 32486,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "volatility_risk_premium",
+      "other"
+    ],
+    "curation_asset_class": [
+      "options_volatility",
+      "equities"
+    ]
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "paper_id": "arxiv:2105.13727v3",
+  "title": "Slow Momentum with Fast Reversion: A Trading Strategy Using Deep Learning and Changepoint Detection",
+  "extraction": {
+    "signal_type": [
+      "momentum",
+      "reversal",
+      "ml_composite"
+    ],
+    "asset_class": [
+      "futures_multi_asset"
+    ],
+    "methodology_summary": "An online changepoint detection (CPD) module based on Gaussian Process regression with a Matern 3/2 and Changepoint kernel is integrated into a Deep Momentum Network (DMN) pipeline using an LSTM architecture. The CPD module outputs a changepoint location and severity score, which are passed as inputs alongside returns and MACD indicators to train the LSTM network. The network directly optimizes a Sharpe ratio loss function via mini-batch SGD to learn trend estimation, regime changes, and position sizing.",
+    "data_period": "1995-2020, daily",
+    "universe": "50 liquid, continuous futures contracts across commodities, equities, fixed income, and FX",
+    "performance_metrics": [
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 1.62,
+        "unit": "ratio",
+        "context": "LSTM baseline strategy (raw signal output)",
+        "evidence_quote": "LSTM 3.53% 2.52% 1.62 1.71% 2.46 1.72% 2.79 55.23% 1.075",
+        "source_location": "Exhibit 3"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 1.77,
+        "unit": "ratio",
+        "context": "LSTM w/ CPD 10-day LBW strategy (raw signal output)",
+        "evidence_quote": "LSTM w/ CPD 10-day LBW 3.04% 1.57% 1.77 1.07% 2.74 1.09% 2.78 55.50% 1.096",
+        "source_location": "Exhibit 3"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 2.04,
+        "unit": "ratio",
+        "context": "LSTM w/ CPD 21-day LBW strategy (raw signal output)",
+        "evidence_quote": "21-day LBW 3.68% 1.81% 2.04 1.21% 3.07 1.08% 3.75 56.43% 1.095",
+        "source_location": "Exhibit 3"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 2.08,
+        "unit": "ratio",
+        "context": "LSTM w/ CPD 63-day LBW strategy (raw signal output)",
+        "evidence_quote": "63-day LBW 3.51% 1.72% 2.08 1.10% 3.27 1.06% 3.58 55.61% 1.140",
+        "source_location": "Exhibit 3"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 1.75,
+        "unit": "ratio",
+        "context": "LSTM w/ CPD 126-day LBW strategy (raw signal output)",
+        "evidence_quote": "126-day LBW 3.37% 2.28% 1.75 1.59% 2.66 1.52% 2.88 54.95% 1.117",
+        "source_location": "Exhibit 3"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 1.45,
+        "unit": "ratio",
+        "context": "LSTM w/ CPD 252-day LBW strategy (raw signal output)",
+        "evidence_quote": "252-day LBW 2.81% 2.24% 1.45 1.57% 2.19 1.54% 2.32 54.00% 1.101",
+        "source_location": "Exhibit 3"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 2.16,
+        "unit": "ratio",
+        "context": "LSTM w/ CPD LBW Optimised strategy (raw signal output)",
+        "evidence_quote": "LBW Optimised 3.64% 1.73% 2.16 1.17% 3.33 1.14% 3.50 56.22% 1.133",
+        "source_location": "Exhibit 3"
+      }
+    ],
+    "key_findings": [
+      "Integrating an online changepoint detection (CPD) module into Deep Momentum Networks (DMNs) improves the Sharpe ratio by approximately one-third across the 1995-2020 back-test period.",
+      "The CPD module is especially beneficial during periods of significant nonstationarity, achieving a performance boost of approximately two-thirds over the 2015-2020 period where traditional momentum strategies underperformed.",
+      "Using Gaussian Processes for CPD enables the model to perform well even with short lookback window (LBW) lengths such as two weeks, with performance peaking around a one-month LBW.",
+      "The CPD module helps reduce risk metrics like volatility, downside deviation, and maximum drawdown while slightly increasing raw returns, leading to a more robust model during market crashes."
+    ],
+    "limitations": [
+      "The primary back-tests focus on raw predictive power and do not account for transaction costs, though transaction cost analysis indicates the strategy outperforms classical strategies for average transaction costs up to 2 basis points.",
+      "Larger CPD lookback windows become more favorable when higher transaction costs are introduced."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:11:40.912622+00:00",
+    "input_tokens": 13595,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "momentum",
+      "ml_composite"
+    ],
+    "curation_asset_class": [
+      "futures_multi_asset"
+    ]
+  }
+}

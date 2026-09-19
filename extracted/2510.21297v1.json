@@ -1,0 +1,69 @@
+{
+  "paper_id": "arxiv:2510.21297v1",
+  "title": "Jump risk premia in the presence of clustered jumps",
+  "extraction": {
+    "signal_type": [
+      "reversal",
+      "volatility_risk_premium",
+      "other"
+    ],
+    "asset_class": [
+      "crypto",
+      "futures_multi_asset",
+      "options_volatility"
+    ],
+    "methodology_summary": "The paper constructs a bivariate Hawkes process option pricing model to capture self- and cross-exciting positive and negative jumps in cryptocurrency markets. A two-stage calibration is employed: first, model parameters under the physical P-measure are estimated using historical Bitcoin price data via a Peak-Over-Threshold (POT) jump filter and maximum likelihood estimation; second, risk-premia parameters under the risk-neutral Q-measure are calibrated to market implied volatilities. The resulting jump risk premia are then tested for their predictive power on the cost-of-carry in Bitcoin futures and the returns of delta-hedged option strategies.",
+    "data_period": "2015-12-31 to 2023-10-04, daily",
+    "universe": "Bitcoin (BTC) spot prices, one-month BTC futures, and BTC options traded on Deribit",
+    "performance_metrics": [
+      {
+        "metric_name": "adjusted R2",
+        "value": 0.1467,
+        "unit": "ratio",
+        "context": "Regression of BTC futures basis c_t on jump risk premia (Regression I)",
+        "evidence_quote": "Adj. R2 | 0.1467",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "adjusted R2",
+        "value": 0.3107,
+        "unit": "ratio",
+        "context": "Comprehensive regression of BTC futures basis c_t including jump risk premia, jump counts, and funding rates (Regression VI)",
+        "evidence_quote": "Adj. R2 | 0.3107",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "adjusted R2",
+        "value": 0.049,
+        "unit": "ratio",
+        "context": "Regression of one-week-ahead portfolio returns for the straddle option strategy",
+        "evidence_quote": "Adj. R2 | 0.049",
+        "source_location": "Table 2"
+      }
+    ],
+    "key_findings": [
+      "The bivariate Hawkes process effectively captures clustered positive and negative jumps, generating asymmetric, time-varying implied volatility skews in Bitcoin options.",
+      "Jump risk premia exhibit significant explanatory power for the cost-of-carry in Bitcoin futures, achieving an adjusted R2 of up to 31% when combined with jump counts and funding rates.",
+      "Inferred jump risk premia forecast one-week-ahead returns of delta-hedged option portfolios, confirming that systematic option selling strategies can capture these risk premia."
+    ],
+    "limitations": [
+      "The model assumes that the risk-premium parameters are constant for the specification of model dynamics."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:17:27.057373+00:00",
+    "input_tokens": 35877,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "volatility_risk_premium",
+      "other"
+    ],
+    "curation_asset_class": [
+      "crypto",
+      "options_volatility"
+    ]
+  }
+}

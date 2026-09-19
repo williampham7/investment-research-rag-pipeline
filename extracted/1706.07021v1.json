@@ -1,0 +1,89 @@
+{
+  "paper_id": "arxiv:1706.07021v1",
+  "title": "Stop-loss and Leverage in optimal Statistical Arbitrage with an application to Energy market",
+  "extraction": {
+    "signal_type": [
+      "stat_arb_pairs",
+      "reversal"
+    ],
+    "asset_class": [
+      "commodities"
+    ],
+    "methodology_summary": "The paper develops a statistical arbitrage trading strategy for mean-reverting asset prices modeled as an Ornstein-Uhlenbeck process, incorporating proportional transaction costs, a stop-loss level, and leverage. The investor establishes entry and exit bands around the mean, along with an ex-ante stop-loss level, and rebalances portfolio wealth across a risk-free asset and the risky security in a self-financing repeated strategy. The strategy is evaluated analytically for long-run return via first-exit times and tested empirically on a half-hour energy futures spread dataset (Heating-Oil and Gas-Oil).",
+    "data_period": "23.04.2015 to 22.04.2016, half-an-hour",
+    "universe": "Energy futures pair (Heating Oil second future contract and Gas Oil sixth future contract, HOc2-LGOc6)",
+    "performance_metrics": [
+      {
+        "metric_name": "In-Sample return",
+        "value": 0.145,
+        "unit": "percent",
+        "context": "IS return with stop-loss l = -1.96, leverage f = 1",
+        "evidence_quote": "1 | −0.870 | (−0.915,−0.688) | 0.581 | (0.564,0.603) | 0.145 | (0.124,0.151) | 0.410",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Out-of-Sample return",
+        "value": 0.41,
+        "unit": "percent",
+        "context": "OS return with stop-loss l = -1.96, leverage f = 1",
+        "evidence_quote": "1 | −0.870 | (−0.915,−0.688) | 0.581 | (0.564,0.603) | 0.145 | (0.124,0.151) | 0.410",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "In-Sample return",
+        "value": 1.175,
+        "unit": "percent",
+        "context": "IS return with stop-loss l = -1.96, leverage f = 10",
+        "evidence_quote": "10 | −0.863 | (−0.924,−0.642) | 0.447 | (0.386,0.521) | 1.175 | (1.049,1.367) | 4.340",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Out-of-Sample return",
+        "value": 4.34,
+        "unit": "percent",
+        "context": "OS return with stop-loss l = -1.96, leverage f = 10",
+        "evidence_quote": "10 | −0.863 | (−0.924,−0.642) | 0.447 | (0.386,0.521) | 1.175 | (1.049,1.367) | 4.340",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "In-Sample return",
+        "value": 1.945,
+        "unit": "percent",
+        "context": "IS return with stop-loss l = -1.96, optimal leverage",
+        "evidence_quote": "opt | −1.108 | (−1.112,−0.943) | 0.302 | (0.296,0.326) | 1.945 | (0.894,3.707) | 5.684",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Out-of-Sample return",
+        "value": 5.684,
+        "unit": "percent",
+        "context": "OS return with stop-loss l = -1.96, optimal leverage",
+        "evidence_quote": "opt | −1.108 | (−1.112,−0.943) | 0.302 | (0.296,0.326) | 1.945 | (0.894,3.707) | 5.684",
+        "source_location": "Table 2"
+      }
+    ],
+    "key_findings": [
+      "The introduction of stop-loss and leverage into optimal statistical arbitrage allows analytical derivation of the long-run return based on first-exit times and trading band probabilities for continuous mean-reverting processes.",
+      "For an Ornstein-Uhlenbeck process, expected first-exit times can be expressed explicitly via elementary functions.",
+      "Optimal leverage derived analytically is often too large for practical purposes, but empirical application to energy futures shows that the strategy provides significant Out-of-Sample long-run returns even under suboptimal leverage."
+    ],
+    "limitations": [
+      "The theoretically derived optimal leverage can be excessively high for practical implementation.",
+      "Assumes a constant Ornstein-Uhlenbeck parameter description that may not fully persist in the future, necessitating a stop-loss constraint."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:31:38.717318+00:00",
+    "input_tokens": 15755,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "stat_arb_pairs"
+    ],
+    "curation_asset_class": [
+      "commodities"
+    ]
+  }
+}

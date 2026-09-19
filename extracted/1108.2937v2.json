@@ -1,0 +1,66 @@
+{
+  "paper_id": "arxiv:1108.2937v2",
+  "title": "Statistical Methods for Estimating the non-random Content of Financial Markets",
+  "extraction": {
+    "signal_type": [
+      "momentum"
+    ],
+    "asset_class": [
+      "fx",
+      "futures_multi_asset"
+    ],
+    "methodology_summary": "The paper proposes a high-frequency trend-following trading strategy on the Euro future contract (EC) using 5-minute sampling. The strategy incorporates volatility-based sub-triggers and optimizes 8 parameters on an in-sample period (2000-2007) to maximize the Sharpe ratio. It is validated using out-of-sample (2008-2009) and live-sample (2010-2011) periods, alongside extensive stress testing including data randomization and execution delays.",
+    "data_period": "January 2000 till August 2011, five minutes sampling",
+    "universe": "Euro future contract (EC) time series",
+    "performance_metrics": [
+      {
+        "metric_name": "Average Sharpe ratio (stress tests)",
+        "value": 2.2,
+        "unit": "ratio",
+        "context": "Average Sharpe ratio across all considered stress tests on the in-sample data and its randomized version",
+        "evidence_quote": "This is what we observe in Fig. 3, with an average value of 2.2 and a RMS of 0.8.",
+        "source_location": "Section 3"
+      },
+      {
+        "metric_name": "RMS of Sharpe ratio (stress tests)",
+        "value": 0.8,
+        "unit": "ratio",
+        "context": "Root mean square (standard deviation) of the Sharpe ratio across all considered stress tests",
+        "evidence_quote": "This is what we observe in Fig. 3, with an average value of 2.2 and a RMS of 0.8.",
+        "source_location": "Section 3"
+      },
+      {
+        "metric_name": "Average duration of trades",
+        "value": 25.0,
+        "unit": "other",
+        "context": "Average duration of trades in minutes for the high-frequency trading system",
+        "evidence_quote": "We observe also in Fig. 6 (right) that the system is effectively working at high frequency with an average duration of trades of 25 minutes.",
+        "source_location": "Section 3"
+      }
+    ],
+    "key_findings": [
+      "The non-random content of high-frequency financial time series can be detected using multivariate statistical analysis and hypothesis testing.",
+      "A trend-following strategy combined with volatility-based sub-triggers yields profitable results net of transaction costs on the Euro future contract.",
+      "The trading system is robust against data randomization and various stress tests (such as execution delays and increased fees), maintaining an average Sharpe ratio of 2.2.",
+      "The strategy operates at high frequency with an average trade duration of 25 minutes."
+    ],
+    "limitations": [
+      "Specific details of the model parameters and the exact mathematical formulation of the volatility sub-triggers are not provided in this paper.",
+      "A global rationale explanation of the trading system's parameters and herding behaviors is complex, not unique, and noted as beyond the scope of the article."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": "The paper does not explicitly report the final out-of-sample or live-sample Sharpe ratios or annualized returns as exact numbers in the text, showing them only in figures. Thus, only the stress-test average Sharpe ratio (2.2), its RMS (0.8), and the average trade duration (25 minutes) are extracted as quantitative metrics."
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash",
+    "extracted_at": "2026-09-18T23:48:16.358120+00:00",
+    "input_tokens": 3134,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "momentum"
+    ],
+    "curation_asset_class": [
+      "fx"
+    ]
+  }
+}

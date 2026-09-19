@@ -1,0 +1,123 @@
+{
+  "paper_id": "arxiv:2508.16598v1",
+  "title": "Sizing the Risk: Kelly, VIX, and Hybrid Approaches in Put-Writing on Index Options",
+  "extraction": {
+    "signal_type": [
+      "reversal",
+      "volatility_risk_premium"
+    ],
+    "asset_class": [
+      "options_volatility",
+      "equities"
+    ],
+    "methodology_summary": "The paper evaluates systematic short put-writing strategies on S&P 500 Index weekly options (SPXW) using three position sizing methods: the Kelly criterion (estimated via Monte Carlo simulations with historical volatility estimators like close-to-close, Garman-Klass, and Yang-Zhang), VIX-rank volatility regime scaling, and a hybrid approach combining both. Strategies are tested across a grid of days-to-expiration (0 to 5 DTE), moneyness levels (0% to 10% OTM), and estimator lookback windows. Performance is evaluated on out-of-sample data from 2024 and in-sample data from 2018-2023 against buy-and-hold and CBOE PutWrite index benchmarks.",
+    "data_period": "2018-2024, daily and 1-minute intraday",
+    "universe": "S&P 500 Index weekly options (SPXW) and underlying S&P 500 Index",
+    "performance_metrics": [
+      {
+        "metric_name": "Information Ratio",
+        "value": 1.9,
+        "unit": "ratio",
+        "context": "Benchmark Buy-and-Hold strategy out-of-sample",
+        "evidence_quote": "The B&H benchmark achieved an annualized return of 24% with a volatility of 12.63%, resulting in an information ratio of 1.9, an exceptionally strong outcome.",
+        "source_location": "Section 6"
+      },
+      {
+        "metric_name": "annualized return",
+        "value": 24.01,
+        "unit": "percent",
+        "context": "Benchmark Buy-and-Hold strategy out-of-sample",
+        "evidence_quote": "B&H | - | - | - | - | - | - | 24.01 | 12.63 | 8.49 | 0.18 | 1.9 | 1.34 | 1.89 | 1",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "annualized standard deviation",
+        "value": 12.63,
+        "unit": "percent",
+        "context": "Benchmark Buy-and-Hold strategy out-of-sample",
+        "evidence_quote": "B&H | - | - | - | - | - | - | 24.01 | 12.63 | 8.49 | 0.18 | 1.9 | 1.34 | 1.89 | 1",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Information Ratio",
+        "value": 2.75,
+        "unit": "ratio",
+        "context": "Benchmark CBOE PUT index out-of-sample",
+        "evidence_quote": "The PUT index delivered 17.93% annualized returns with significantly lower volatility of 6.52%, producing an outstanding information ratio of 2.75.",
+        "source_location": "Section 6"
+      },
+      {
+        "metric_name": "annualized return",
+        "value": 17.93,
+        "unit": "percent",
+        "context": "Benchmark CBOE PUT index out-of-sample",
+        "evidence_quote": "PUT | - | - | - | - | - | - | 17.93 | 6.52 | 4.96 | 0.07 | 2.75 | 0.5 | 0.99 | 1",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "annualized return",
+        "value": 52.77,
+        "unit": "percent",
+        "context": "VIX-Rank strategy (5 DTE, 0% OTM, VIX9D, 21-day memory) out-of-sample",
+        "evidence_quote": "The most aggressive configurations—5 DTE, at-the-money options, using VIX9D with a 21-day memory—achieved the highest return (52.77%) with 21.59% volatility and a maximum drawdown of 9.91%.",
+        "source_location": "Section 6"
+      },
+      {
+        "metric_name": "annualized standard deviation",
+        "value": 21.59,
+        "unit": "percent",
+        "context": "VIX-Rank strategy (5 DTE, 0% OTM, VIX9D, 21-day memory) out-of-sample",
+        "evidence_quote": "VIX-Rank | 5 | 0 | VIX9D | 21 | - | - | 52,77 | 21,59 | 9,91 | 0.09 | 2.44 | -2,11 | -3,96 | 178",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Information Ratio",
+        "value": 2.44,
+        "unit": "ratio",
+        "context": "VIX-Rank strategy (5 DTE, 0% OTM, VIX9D, 21-day memory) out-of-sample",
+        "evidence_quote": "VIX-Rank | 5 | 0 | VIX9D | 21 | - | - | 52,77 | 21,59 | 9,91 | 0.09 | 2.44 | -2,11 | -3,96 | 178",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "annualized return",
+        "value": 23.13,
+        "unit": "percent",
+        "context": "Kelly-VIX strategy (5 DTE, 0% OTM, VIX30D 63-day, GK estimator 3-day memory) out-of-sample",
+        "evidence_quote": "Kelly-VIX | 5 | 0 | VIX30D | 63 | GK | 3 | 23,13 | 18,46 | 9,46 | 0.11 | 1.25 | -1,2 | -3,11 | 137",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Information Ratio",
+        "value": 1.25,
+        "unit": "ratio",
+        "context": "Kelly-VIX strategy (5 DTE, 0% OTM, VIX30D 63-day, GK estimator 3-day memory) out-of-sample",
+        "evidence_quote": "Kelly-VIX | 5 | 0 | VIX30D | 63 | GK | 3 | 23,13 | 18,46 | 9,46 | 0.11 | 1.25 | -1,2 | -3,11 | 137",
+        "source_location": "Table 2"
+      }
+    ],
+    "key_findings": [
+      "Ultra-short-dated (0-1 DTE) and far out-of-the-money (5%-10% OTM) put options deliver superior risk-adjusted returns and information ratios.",
+      "The hybrid position sizing method, combining the Kelly criterion with VIX-based volatility regime scaling, effectively balances return generation with robust drawdown control.",
+      "Advanced volatility estimators such as Garman-Klass and Yang-Zhang outperform simple close-to-close historical volatility by incorporating intraday price action and opening jumps.",
+      "The 9-day VIX (VIX9D) generally outperforms the standard 30-day VIX as a conditioning signal for short-dated option strategies."
+    ],
+    "limitations": [
+      "The study focuses exclusively on S&P 500 index options.",
+      "The out-of-sample period (2024) covers a strong bull market and does not encompass extreme market dislocations or alternative volatility regimes."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:16:54.019634+00:00",
+    "input_tokens": 56106,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "volatility_risk_premium"
+    ],
+    "curation_asset_class": [
+      "options_volatility"
+    ]
+  }
+}

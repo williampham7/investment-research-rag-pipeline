@@ -1,0 +1,91 @@
+{
+  "paper_id": "arxiv:2109.10662v1",
+  "title": "Evaluation of Dynamic Cointegration-Based Pairs Trading Strategy in the Cryptocurrency Market",
+  "extraction": {
+    "signal_type": [
+      "reversal",
+      "stat_arb_pairs"
+    ],
+    "asset_class": [
+      "crypto",
+      "futures_multi_asset"
+    ],
+    "methodology_summary": "The paper implements a dynamic cointegration-based pairs trading strategy in the cryptocurrency market using three different scenarios. In the formation period, the Engle-Granger methodology, Kapetanios-Snell-Shin (KSS) test, and Johansen test are used to test for linear and nonlinear cointegration. The mean-reversion speed of the Ornstein-Uhlenbeck process is calibrated to obtain the half-life, which determines the look-back window for computing Z-scores, and trading signals are generated when spreads diverge by two standard deviations and closed when they converge within one standard deviation.",
+    "data_period": "September 27, 2018, to October 2, 2019, minute-binned",
+    "universe": "Cryptocurrency contracts on the BitMEX exchange including perpetual swaps and futures",
+    "performance_metrics": [
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 7.94,
+        "unit": "ratio",
+        "context": "Second scenario (basket pairs trading strategy with dynamic Johansen cointegration test)",
+        "evidence_quote": "Therefore, the Shape ratio is equal to 7.94, which is considerable.",
+        "source_location": "Section 7"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 6.96,
+        "unit": "ratio",
+        "context": "First scenario under ADF test",
+        "evidence_quote": "We should also mention that the standard deviations of the first scenario under ADF and KSS tests are equal to 30.0% and 25.8%, and consequently, the Sharpe ratios of the first scenario under ADF and KSS tests are equal to 6.96 and 6.57 respectively.",
+        "source_location": "Section 7"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 6.57,
+        "unit": "ratio",
+        "context": "First scenario under KSS test",
+        "evidence_quote": "We should also mention that the standard deviations of the first scenario under ADF and KSS tests are equal to 30.0% and 25.8%, and consequently, the Sharpe ratios of the first scenario under ADF and KSS tests are equal to 6.96 and 6.57 respectively.",
+        "source_location": "Section 7"
+      },
+      {
+        "metric_name": "average monthly return",
+        "value": 17.3,
+        "unit": "percent",
+        "context": "First scenario under ADF test",
+        "evidence_quote": "The average monthly returns of the strategy under ADF and KSS tests are equal to 17.3% and 13.9% respectively.",
+        "source_location": "Section 7"
+      },
+      {
+        "metric_name": "average monthly return",
+        "value": 13.9,
+        "unit": "percent",
+        "context": "First scenario under KSS test",
+        "evidence_quote": "The average monthly returns of the strategy under ADF and KSS tests are equal to 17.3% and 13.9% respectively.",
+        "source_location": "Section 7"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.29,
+        "unit": "ratio",
+        "context": "Third scenario trading ETH futures with ETH perpetual swaps",
+        "evidence_quote": "For instance, the Sharpe ratio of trading ETH futures with ETH perpetual swaps is 0.29, which is low.",
+        "source_location": "Section 8"
+      }
+    ],
+    "key_findings": [
+      "A basket pairs trading strategy using a dynamic Johansen cointegration test improves risk-adjusted profitability, achieving a Sharpe ratio of 7.94.",
+      "The dynamic pairs trading strategy consistently outperforms the naive buy-and-hold strategy across the BitMEX exchange.",
+      "Certain coins such as Tron (TRX), Cardano (ADA), and Ripple (XRP) exhibit better statistical arbitrage opportunities and higher performance across various scenarios.",
+      "Incorporating market microstructure constraints such as order execution based on available volume makes the backtesting much more realistic."
+    ],
+    "limitations": [
+      "Increasing the number of coins and diversification lowers trading risk but also decreases the strategy's return.",
+      "Market jumps can cause non-proper signals in the strategy."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:21:37.816684+00:00",
+    "input_tokens": 17205,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "stat_arb_pairs"
+    ],
+    "curation_asset_class": [
+      "crypto"
+    ]
+  }
+}

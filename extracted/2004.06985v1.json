@@ -1,0 +1,59 @@
+{
+  "paper_id": "arxiv:2004.06985v1",
+  "title": "Extending Deep Reinforcement Learning Frameworks in Cryptocurrency Market Making",
+  "extraction": {
+    "signal_type": [
+      "other",
+      "ml_composite",
+      "reversal"
+    ],
+    "asset_class": [
+      "crypto"
+    ],
+    "methodology_summary": "Two policy-based deep reinforcement learning algorithms, A2C and PPO, are trained as market-making agents using a multi-layer perceptron neural network. The observation space integrates limit order book data, order flow, imbalances, and hand-crafted indicators across various window sizes. Agents interact with the environment via time-based snapshots or a newly proposed price-based event environment (triggered by midpoint price changes exceeding a threshold), and are evaluated across seven different reward functions.",
+    "data_period": "December 27, 2019 to February 3, 2020, daily",
+    "universe": "Bitcoin perpetual contract (XBTUSD) on Bitmex exchange",
+    "performance_metrics": [
+      {
+        "metric_name": "cumulative return",
+        "value": 16.25,
+        "unit": "percent",
+        "context": "Buy-and-hold benchmark strategy over the 30-day out-of-sample period",
+        "evidence_quote": "enables the benchmark to generate a 16.25% return during this period.",
+        "source_location": "Section 7"
+      },
+      {
+        "metric_name": "cumulative return",
+        "value": 17.61,
+        "unit": "percent",
+        "context": "Best performing A2C agent using Trade Completion TC reward function and feature set 3 in the time-based environment",
+        "evidence_quote": "The best result obtained from our agents is a 17.61% return over this same period, using reward function Trade Completion T C, A2C algorithm, and feature combination Set 3 for the observation space.",
+        "source_location": "Section 7"
+      }
+    ],
+    "key_findings": [
+      "The A2C algorithm outperformed the PPO agent in terms of highest cumulative return and number of profitable experiments.",
+      "Defining events based on price changes rather than time intervals made environments easier for agents to learn, yielding more stable trading patterns and less erratic behavior during large price jumps.",
+      "Goal-oriented reward functions such as Trade Completion (TC) achieved the highest overall returns in both time- and price-based environments.",
+      "Agents utilizing PnL-based rewards without realized gains incorporated tended to exhibit nearsighted trading behavior and incurred frequent transaction cost losses."
+    ],
+    "limitations": [
+      "All experiments incurred significant losses ranging between 5% and 10% during a sharp Bitcoin sell-off on January 19, 2020.",
+      "The train-test split was selected based on data availability rather than an empirical methodology."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:09:11.237145+00:00",
+    "input_tokens": 11302,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "other"
+    ],
+    "curation_asset_class": [
+      "crypto"
+    ]
+  }
+}

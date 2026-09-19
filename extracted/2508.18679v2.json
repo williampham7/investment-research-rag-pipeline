@@ -1,0 +1,114 @@
+{
+  "paper_id": "arxiv:2508.18679v2",
+  "title": "Identifying Risk Variables From Raw ESG Data Using Its Hierarchical Structure",
+  "extraction": {
+    "signal_type": [
+      "other"
+    ],
+    "asset_class": [
+      "equities"
+    ],
+    "methodology_summary": "The paper proposes a Hierarchical Variable Selection (HVS) framework to identify raw Environmental, Social, and Governance (ESG) variables relevant to financial risk, measured by the logarithmic volatility of returns. The methodology involves a multi-stage feature selection process: first performing stepwise regressions within each ESG category of the LSEG hierarchical structure, then running a consolidated stepwise regression across all significant variables, and finally applying Ridge regression with 5-fold cross-validation to enhance out-of-sample robustness and assess relative variable importance.",
+    "data_period": "not reported",
+    "universe": "Company data from various sectors of the US economy, including S&P 500 and Russell 2000 constituents",
+    "performance_metrics": [
+      {
+        "metric_name": "R-squared",
+        "value": 0.39,
+        "unit": "ratio",
+        "context": "Regular volatility model",
+        "evidence_quote": "Volatility | 0.0000 | 0.39",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "R-squared",
+        "value": 0.51,
+        "unit": "ratio",
+        "context": "Logarithmic volatility model",
+        "evidence_quote": "Logarithmic Volatility | 0.1389 | 0.51",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "Percent Deviance Explained",
+        "value": 0.52,
+        "unit": "percent",
+        "context": "Energy sector Stage 2 Stepwise model",
+        "evidence_quote": "Stage 2 | 35 | 0.52 | 344.65 | 491.94",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Percent Deviance Explained",
+        "value": 0.51,
+        "unit": "percent",
+        "context": "Energy sector Stage 3 Ridge model",
+        "evidence_quote": "Stage 3 | 35 | 0.51 | 351.19 | 496.39",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Percent Deviance Explained",
+        "value": 0.4,
+        "unit": "percent",
+        "context": "Energy sector PCA1 benchmark",
+        "evidence_quote": "PCA1 | 81 | 0.40 | 450.66 | 790.24",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "Percent Deviance Explained",
+        "value": 0.3,
+        "unit": "percent",
+        "context": "Energy sector PCA2 benchmark",
+        "evidence_quote": "PCA2 | 31 | 0.30 | 471.84 | 610.95",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "Percent Deviance Explained",
+        "value": 0.56,
+        "unit": "percent",
+        "context": "Energy sector Stepwise benchmark",
+        "evidence_quote": "Stepwise | 60 | 0.56 | 288.11 | 537.68",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "Percent Deviance Explained",
+        "value": 0.46,
+        "unit": "percent",
+        "context": "Energy sector Lasso benchmark",
+        "evidence_quote": "Lasso | 72 | 0.46 | 388.95 | 687.61",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "Percent Deviance Explained",
+        "value": 0.51,
+        "unit": "percent",
+        "context": "Energy sector HVS model",
+        "evidence_quote": "HVS | 35 | 0.51 | 347.76 | 480.68",
+        "source_location": "Table 4"
+      }
+    ],
+    "key_findings": [
+      "Using raw ESG variables directly in feature selection provides significantly stronger explanatory power for financial risk than relying on aggregated ESG scores.",
+      "Logarithmic transformation of return volatility effectively addresses heteroskedasticity and right-skewness in residuals.",
+      "HVS-selected ESG variables provide incremental explanatory power even in the presence of traditional financial risk factors.",
+      "Relevant ESG risk variables differ substantially between large-cap and small-cap companies within the same sector (e.g., environmental factors dominate large energy firms, while social and governance factors dominate small ones)."
+    ],
+    "limitations": [
+      "ESG datasets frequently contain missing values and high sparsity, necessitating careful data processing and imputation assumptions.",
+      "Feature selection models applied to high-dimensional datasets are prone to overfitting without regularization steps like Ridge regression."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:17:02.343057+00:00",
+    "input_tokens": 12013,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "quality_profitability",
+      "volatility_risk_premium"
+    ],
+    "curation_asset_class": [
+      "equities"
+    ]
+  }
+}

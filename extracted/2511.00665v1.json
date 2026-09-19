@@ -1,0 +1,140 @@
+{
+  "paper_id": "arxiv:2511.00665v1",
+  "title": "Technical Analysis Meets Machine Learning: Bitcoin Evidence",
+  "extraction": {
+    "signal_type": [
+      "momentum",
+      "ml_composite",
+      "other"
+    ],
+    "asset_class": [
+      "crypto"
+    ],
+    "methodology_summary": "The paper compares machine learning models (LightGBM and LSTM) and technical analysis strategies (EMA crossover and MACD+ADX) for Bitcoin trading. Models are trained on daily price data from January 19, 2021, to January 9, 2024, and tested out-of-sample from January 10, 2024, to December 31, 2024 (with returns calculated from April 14, 2024, onwards to account for an initial 95-day window for machine learning forecasts). The strategies generate binary signals for price direction or trend following to execute trades.",
+    "data_period": "2021-01-19 to 2024-12-31, daily",
+    "universe": "Bitcoin (BTC) price data downloaded from Binance",
+    "performance_metrics": [
+      {
+        "metric_name": "cumulative return",
+        "value": 65.23,
+        "unit": "percent",
+        "context": "LSTM strategy",
+        "evidence_quote": "LSTM | 65.23%",
+        "source_location": "Table 6 (page 12)"
+      },
+      {
+        "metric_name": "cumulative return",
+        "value": 53.38,
+        "unit": "percent",
+        "context": "LightGBM strategy",
+        "evidence_quote": "LightGBM | 53.38%",
+        "source_location": "Table 6 (page 12)"
+      },
+      {
+        "metric_name": "cumulative return",
+        "value": 42.51,
+        "unit": "percent",
+        "context": "Buy & Hold baseline strategy",
+        "evidence_quote": "Buy & Hold | 42.51%",
+        "source_location": "Table 6 (page 12)"
+      },
+      {
+        "metric_name": "cumulative return",
+        "value": 35.45,
+        "unit": "percent",
+        "context": "MACD + ADX strategy",
+        "evidence_quote": "MACD + ADX | 35.45%",
+        "source_location": "Table 6 (page 12)"
+      },
+      {
+        "metric_name": "cumulative return",
+        "value": 26.07,
+        "unit": "percent",
+        "context": "EMA strategy",
+        "evidence_quote": "EMA | 26.07%",
+        "source_location": "Table 6 (page 12)"
+      },
+      {
+        "metric_name": "accuracy",
+        "value": 0.5611,
+        "unit": "ratio",
+        "context": "LSTM classification metrics",
+        "evidence_quote": "Accuracy | 0.5611 | 0.5840",
+        "source_location": "Table 1 (page 13)"
+      },
+      {
+        "metric_name": "accuracy",
+        "value": 0.584,
+        "unit": "ratio",
+        "context": "LightGBM classification metrics",
+        "evidence_quote": "Accuracy | 0.5611 | 0.5840",
+        "source_location": "Table 1 (page 13)"
+      },
+      {
+        "metric_name": "cumulative return with 0.1% fee",
+        "value": 53.23,
+        "unit": "percent",
+        "context": "LSTM strategy with 0.1% fee",
+        "evidence_quote": "LSTM | 120 | 53.23%",
+        "source_location": "Table 5 (page 15)"
+      },
+      {
+        "metric_name": "cumulative return with 0.1% fee",
+        "value": 39.78,
+        "unit": "percent",
+        "context": "LightGBM strategy with 0.1% fee",
+        "evidence_quote": "LightGBM | 136 | 39.78%",
+        "source_location": "Table 5 (page 15)"
+      },
+      {
+        "metric_name": "cumulative return with 0.1% fee",
+        "value": 42.31,
+        "unit": "percent",
+        "context": "Buy & Hold strategy with 0.1% fee",
+        "evidence_quote": "Buy & Hold | 2 | 42.31%",
+        "source_location": "Table 5 (page 15)"
+      },
+      {
+        "metric_name": "cumulative return with 0.1% fee",
+        "value": 34.45,
+        "unit": "percent",
+        "context": "MACD + ADX strategy with 0.1% fee",
+        "evidence_quote": "MACD + ADX | 14 | 34.45%",
+        "source_location": "Table 5 (page 15)"
+      },
+      {
+        "metric_name": "cumulative return with 0.1% fee",
+        "value": 25.27,
+        "unit": "percent",
+        "context": "EMA strategy with 0.1% fee",
+        "evidence_quote": "EMA | 8 | 25.27%",
+        "source_location": "Table 5 (page 15)"
+      }
+    ],
+    "key_findings": [
+      "The LSTM model achieved the highest cumulative return of 65.23% in under a year, outperforming LightGBM, technical analysis strategies, and the baseline buy-and-hold.",
+      "When factoring in a 0.1% transaction fee per trade, only the LSTM strategy continued to outperform the buy-and-hold benchmark.",
+      "Technical analysis strategies such as MACD+ADX and EMA yielded lower cumulative returns compared to machine learning approaches and buy-and-hold over the specific out-of-sample period."
+    ],
+    "limitations": [
+      "The trading strategies initially do not include transaction costs or brokerage fees.",
+      "The strategies do not use risk management features like stop-loss orders.",
+      "Machine learning models require an initial 95-day window period to produce forecasts on the testing data."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:17:36.549075+00:00",
+    "input_tokens": 5804,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "ml_composite",
+      "momentum"
+    ],
+    "curation_asset_class": [
+      "crypto"
+    ]
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "paper_id": "arxiv:2504.06208v3",
+  "title": "Deep Hedging with Options Using the Implied Volatility Surface",
+  "extraction": {
+    "signal_type": [
+      "volatility_risk_premium",
+      "ml_composite"
+    ],
+    "asset_class": [
+      "equities",
+      "options_volatility"
+    ],
+    "methodology_summary": "The authors propose a deep reinforcement learning framework for managing index option portfolios by jointly modeling S&P 500 returns and the full implied volatility surface using the JIVR model. The agent's policy function, parameterized by a recurrent neural network (RNN-FNN), takes an enriched state vector containing implied volatility surface factors and portfolio/option Greeks to determine optimal daily rebalancing in the underlying asset and a longer-maturity hedging option. A soft constraint is incorporated into the objective function to penalize excessive risk-taking and prevent speculative behavior.",
+    "data_period": "1996-2020 (simulator training), 2021-2023 (out-of-sample backtest), daily",
+    "universe": "S&P 500 index options and underlying asset, tested on historical European straddles",
+    "performance_metrics": [
+      {
+        "metric_name": "MSE",
+        "value": 0.094,
+        "unit": "ratio",
+        "context": "Optimal risk measure value during training with full state space (S) under zero transaction costs",
+        "evidence_quote": "S | 0.094 | 0.022 | 0.502",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "SMSE",
+        "value": 0.022,
+        "unit": "ratio",
+        "context": "Optimal risk measure value during training with full state space (S) under zero transaction costs",
+        "evidence_quote": "S | 0.094 | 0.022 | 0.502",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "CVaR95%",
+        "value": 0.502,
+        "unit": "ratio",
+        "context": "Optimal risk measure value during training with full state space (S) under zero transaction costs",
+        "evidence_quote": "S | 0.094 | 0.022 | 0.502",
+        "source_location": "Table 2"
+      }
+    ],
+    "key_findings": [
+      "Deep hedging agents utilizing information from the full implied volatility surface consistently outperform traditional delta and delta-gamma hedging strategies across various market conditions.",
+      "Incorporating a longer-maturity option as an additional hedging instrument significantly reduces terminal hedging error and variance when combined with deep reinforcement learning.",
+      "RL agents naturally adopt smaller initial hedging option positions and scale up gradually, which avoids large transaction costs and minimizes short exposure to the variance risk premium.",
+      "Out-of-sample backtesting on actual historical option data from 2020 to 2023 demonstrates that RL strategies maintain robust performance and superior downside risk control compared to benchmark models."
+    ],
+    "limitations": [
+      "The market simulator relies on estimated joint dynamics which may be subject to specification errors.",
+      "Training requires extensive simulated paths and hyperparameter tuning (such as the soft constraint penalty weight)."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:16:26.302828+00:00",
+    "input_tokens": 20207,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "volatility_risk_premium",
+      "other"
+    ],
+    "curation_asset_class": [
+      "options_volatility"
+    ]
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "paper_id": "arxiv:2209.00121v1",
+  "title": "150 Years of Return Predictability Around the World: A Holistic View",
+  "extraction": {
+    "signal_type": [
+      "value",
+      "other"
+    ],
+    "asset_class": [
+      "equities",
+      "fixed_income",
+      "other"
+    ],
+    "methodology_summary": "The paper tests return predictability using payout-price ratios (coupon-price, dividend-price, and rent-price) across long-term government bonds, equities, and housing markets in 16 developed countries from the 1870s to 2020. Predictive OLS regressions and expanding out-of-sample moving windows are performed to evaluate statistical significance, out-of-sample R-squared, and economic utility gains (certainty equivalent return) for mean-variance investors, alongside vector autoregression (VAR) simulations for payout growth.",
+    "data_period": "1870s-2020, annual",
+    "universe": "16 developed countries covering long-term government bonds, equities, and housing markets, as well as representative agents' risky and wealth portfolios.",
+    "performance_metrics": [
+      {
+        "metric_name": "t-statistic",
+        "value": -4.645,
+        "unit": "ratio",
+        "context": "Japan bond excess return on coupon price",
+        "evidence_quote": "Japan | 1882 | 2020 | -0.017 | -4.645 | 0.079",
+        "source_location": "Table 2, Panel A"
+      },
+      {
+        "metric_name": "R-squared",
+        "value": 0.079,
+        "unit": "ratio",
+        "context": "Japan bond excess return on coupon price",
+        "evidence_quote": "Japan | 1882 | 2020 | -0.017 | -4.645 | 0.079",
+        "source_location": "Table 2, Panel A"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 7.066,
+        "unit": "ratio",
+        "context": "Portugal equity excess return on dividend price",
+        "evidence_quote": "Portugal | 1872 | 2020 | 0.029 | 7.066 | 0.147",
+        "source_location": "Table 2, Panel B"
+      },
+      {
+        "metric_name": "R-squared",
+        "value": 0.147,
+        "unit": "ratio",
+        "context": "Portugal equity excess return on dividend price",
+        "evidence_quote": "Portugal | 1872 | 2020 | 0.029 | 7.066 | 0.147",
+        "source_location": "Table 2, Panel B"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 3.481,
+        "unit": "ratio",
+        "context": "Netherlands housing excess return on rent price",
+        "evidence_quote": "Netherlands | 1872 | 2020 | 0.097 | 3.481 | 0.115",
+        "source_location": "Table 2, Panel C"
+      },
+      {
+        "metric_name": "R-squared",
+        "value": 0.115,
+        "unit": "ratio",
+        "context": "Netherlands housing excess return on rent price",
+        "evidence_quote": "Netherlands | 1872 | 2020 | 0.097 | 3.481 | 0.115",
+        "source_location": "Table 2, Panel C"
+      },
+      {
+        "metric_name": "CER gain",
+        "value": 0.61,
+        "unit": "percent",
+        "context": "Finnish housing market economic performance",
+        "evidence_quote": "Given the transaction costs, ex., commission alone can be as high as 6% in the US, whether timing the housing market with rent growth can be economically meaningful — even for the most promising market, i.e., the Finnish housing market with 0.61% CER gain — remains a question.",
+        "source_location": "Section 1"
+      }
+    ],
+    "key_findings": [
+      "None of the 48 country-asset combinations show consistent in-sample and out-of-sample performance with a positive utility gain for mean-variance investors.",
+      "Out-of-sample predictability is virtually absent for bond markets, while only isolated equity and housing markets show predictive power.",
+      "Predictive regressions based on Cochrane's VAR analysis show that 14 countries have predictable dividend growth and 5 countries have predictable rent growth in their respective markets.",
+      "VAR simulations do not reject the null hypothesis that returns are not predictable, nor do they reject that dividend growth is predictable across international data."
+    ],
+    "limitations": [
+      "High transaction costs (such as real estate commissions and turnover expenses) can easily eliminate small certainty equivalent return gains.",
+      "Data availability and sample period lengths vary across countries."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:13:20.478036+00:00",
+    "input_tokens": 21259,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "value",
+      "other"
+    ],
+    "curation_asset_class": [
+      "equities",
+      "fixed_income",
+      "other"
+    ]
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "paper_id": "arxiv:2605.04479v1",
+  "title": "ESG as Priced Crash Insurance: State-Dependent Tail Risk and Deconfounding Evidence",
+  "extraction": {
+    "signal_type": [
+      "quality_profitability",
+      "alternative_data"
+    ],
+    "asset_class": [
+      "equities"
+    ],
+    "methodology_summary": "The paper constructs a monthly firm-level panel of S&P 500 constituents from 2015 to 2025 using MSCI industry-adjusted ESG scores as the primary treatment variable. Market stress regimes are defined via a drawdown-based truncation rule classifying the bottom 15% of monthly market returns as stress periods. The authors evaluate the relationship between ESG and equity crashes using state-specific logit models, conditional quantile regressions across left-tail return quantiles, and Double Machine Learning (DML) with cross-fitting and Lasso or Random Forest estimators to control for high-dimensional firm-level confounders.",
+    "data_period": "2015 to 2025, monthly",
+    "universe": "U.S. equities constituents of the S&P 500 index",
+    "performance_metrics": [
+      {
+        "metric_name": "t-statistic",
+        "value": -3.44,
+        "unit": "ratio",
+        "context": "Stress months parsimonious logit for Crash(0.20)",
+        "evidence_quote": "−0.0844∗∗∗(−3.44)",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": -3.01,
+        "unit": "ratio",
+        "context": "Stress months logit with controls for Crash(0.20)",
+        "evidence_quote": "−0.0765∗∗∗(−3.01)",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 1.38,
+        "unit": "ratio",
+        "context": "Non-stress months parsimonious logit for Crash(0.20)",
+        "evidence_quote": "0.0498(1.38)",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 2.07,
+        "unit": "ratio",
+        "context": "Non-stress months logit with controls for Crash(0.20)",
+        "evidence_quote": "0.0772∗∗(2.07)",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": -5.53,
+        "unit": "ratio",
+        "context": "Double Machine Learning Downside Risk Lasso in Stress Regime",
+        "evidence_quote": "−0.0039∗∗∗ (−5.53)",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": -4.44,
+        "unit": "ratio",
+        "context": "Double Machine Learning Downside Risk Random Forest in Stress Regime",
+        "evidence_quote": "−0.0032∗∗∗ (−4.44)",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 0.12,
+        "unit": "ratio",
+        "context": "Double Machine Learning Downside Risk Lasso in Non-stress Regime",
+        "evidence_quote": "0.0000 (0.12)",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 0.42,
+        "unit": "ratio",
+        "context": "Double Machine Learning Downside Risk Random Forest in Non-stress Regime",
+        "evidence_quote": "0.0000 (0.42)",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 1.96,
+        "unit": "ratio",
+        "context": "Double Machine Learning Excess Return Lasso in Stress Regime",
+        "evidence_quote": "0.0006∗∗ (1.96)",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": 1.42,
+        "unit": "ratio",
+        "context": "Double Machine Learning Excess Return Random Forest in Stress Regime",
+        "evidence_quote": "0.0004 (1.42)",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": -1.52,
+        "unit": "ratio",
+        "context": "Double Machine Learning Excess Return Lasso in Non-stress Regime",
+        "evidence_quote": "−0.0002 (−1.52)",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "t-statistic",
+        "value": -1.34,
+        "unit": "ratio",
+        "context": "Double Machine Learning Excess Return Random Forest in Non-stress Regime",
+        "evidence_quote": "−0.0002 (−1.34)",
+        "source_location": "Table 4"
+      }
+    ],
+    "key_findings": [
+      "High ESG ratings materially reduce the incidence of discrete equity crash events during systemic market drawdowns, but show no protective effect or even positive associations in non-stress regimes.",
+      "Conditional quantile regressions reveal that ESG protective effects are concentrated in the ultra-left tail of the return distribution rather than shifting the entire return distribution.",
+      "Double Machine Learning confirms an asymmetric treatment effect of ESG, acting as priced crash insurance rather than an unconditional alpha driver.",
+      "When decomposing pillar scores, the Social pillar acts as the primary resilience driver while the Environmental pillar represents insurance costs during stable periods."
+    ],
+    "limitations": [],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:18:38.497274+00:00",
+    "input_tokens": 7676,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "quality_profitability",
+      "volatility_risk_premium"
+    ],
+    "curation_asset_class": [
+      "equities"
+    ]
+  }
+}

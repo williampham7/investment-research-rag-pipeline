@@ -1,0 +1,98 @@
+{
+  "paper_id": "arxiv:2012.11594v1",
+  "title": "Insider trading in the run-up to merger announcements. Before and after the UK's Financial Services Act 2012",
+  "extraction": {
+    "signal_type": [
+      "event_driven"
+    ],
+    "asset_class": [
+      "equities"
+    ],
+    "methodology_summary": "The paper investigates abnormal stock returns around merger and acquisition (M&A) announcements using an event study methodology. Stock price data and market index data over a 120-day window around the announcement date are gathered for UK companies from Bloomberg terminals and Yahoo Finance. The market model regression is fitted over an estimation window to calculate expected returns, average abnormal returns (AAR), and cumulative average abnormal returns (CAAR) to test for insider trading activity under different regulatory regimes (FSA vs. FCA).",
+    "data_period": "2008-2012 and 2015-2019, daily",
+    "universe": "58 M&A announcements of UK companies listed on the London Stock Exchange",
+    "performance_metrics": [
+      {
+        "metric_name": "Cumulative Average Abnormal Return",
+        "value": 0.041,
+        "unit": "ratio",
+        "context": "CAAR on day -6 relative to the announcement date for the 2008-2012 period",
+        "evidence_quote": "After day -12, CAAR begins to build up and by day -6, CAAR is recorded at 0.041 height, before the event date.",
+        "source_location": "Section 5.1"
+      },
+      {
+        "metric_name": "Cumulative Average Abnormal Return",
+        "value": 0.037,
+        "unit": "ratio",
+        "context": "CAAR on the day prior to the announcement date for the 2008-2012 period",
+        "evidence_quote": "The day just prior to the announcement, CAAR is observed at 0.037 as compared to 0.061 on the announcement date.",
+        "source_location": "Section 5.1"
+      },
+      {
+        "metric_name": "Cumulative Average Abnormal Return",
+        "value": 0.061,
+        "unit": "ratio",
+        "context": "CAAR on the announcement date for the 2008-2012 period",
+        "evidence_quote": "The day just prior to the announcement, CAAR is observed at 0.037 as compared to 0.061 on the announcement date.",
+        "source_location": "Section 5.1"
+      },
+      {
+        "metric_name": "Cumulative Average Abnormal Return",
+        "value": 0.077,
+        "unit": "ratio",
+        "context": "CAAR on the announcement date for the 2015-2019 period",
+        "evidence_quote": "It can be observed that after first becoming positive on day -24, CAAR remains positive after -19 days relative to the announcement date. Further to this, on day -16, it can be noticed that a build-up in CAAR starts to emerge: it increases from 0.011 to 0.077 from day -16 to day 0.",
+        "source_location": "Section 5.2"
+      },
+      {
+        "metric_name": "Cumulative Average Abnormal Return",
+        "value": 0.025,
+        "unit": "ratio",
+        "context": "CAAR on the day before the announcement date for the 2015-2019 period",
+        "evidence_quote": "On the day before the announcement date, the CAAR value is 0.025 compared to 0.077 on the event date.",
+        "source_location": "Section 5.2"
+      },
+      {
+        "metric_name": "Average Abnormal Return",
+        "value": 0.012,
+        "unit": "ratio",
+        "context": "AAR on day -6 relative to the announcement date in the 2008-2012 period",
+        "evidence_quote": "In comparison to the 2008-2012 period, the 2015-2019 period illustrates lower AAR values in the immediate run-up to merger announcements; this is measured at a height on day -8 relative to the announcement date at about 0.005 as compared to 0.012 on day -6 relative to the announcement date in the first period.",
+        "source_location": "Section 5.3"
+      },
+      {
+        "metric_name": "Average Abnormal Return",
+        "value": 0.005,
+        "unit": "ratio",
+        "context": "AAR on day -8 relative to the announcement date in the 2015-2019 period",
+        "evidence_quote": "In comparison to the 2008-2012 period, the 2015-2019 period illustrates lower AAR values in the immediate run-up to merger announcements; this is measured at a height on day -8 relative to the announcement date at about 0.005 as compared to 0.012 on day -6 relative to the announcement date in the first period.",
+        "source_location": "Section 5.3"
+      }
+    ],
+    "key_findings": [
+      "Abnormal returns in the run-up to merger announcements are reduced following the implementation of the Financial Services Act 2012.",
+      "Stock prices are noisier in the pre-2012 period (under FSA regulation) than in the post-2012 period (under FCA regulation).",
+      "Abnormal returns in the run-up to mergers are not statistically significant in either the 2008-2012 or 2015-2019 periods, leading to the acceptance of the null hypothesis in both cases.",
+      "The findings support the semi-strong form of the Efficient Market Hypothesis as prices adjust by the announcement date."
+    ],
+    "limitations": [
+      "The sample size of merger announcements is unbalanced across the two periods (18 announcements in 2008-2012 versus 40 in 2015-2019).",
+      "Cumulative average abnormal returns (CAAR) are positive throughout the entire event window in the 2008-2012 period, implying information leakage may occur prior to 30 days before the announcement.",
+      "The study assumes an equivalence between tighter regulations and reduced insider trading or abnormal returns, which may not strictly hold."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:39:27.197812+00:00",
+    "input_tokens": 12808,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "event_driven"
+    ],
+    "curation_asset_class": [
+      "equities"
+    ]
+  }
+}

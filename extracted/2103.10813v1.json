@@ -1,0 +1,83 @@
+{
+  "paper_id": "arxiv:2103.10813v1",
+  "title": "Multi-Period Portfolio Optimization using Model Predictive Control with Mean-Variance and Risk Parity Frameworks",
+  "extraction": {
+    "signal_type": [
+      "value",
+      "low_volatility",
+      "ml_composite"
+    ],
+    "asset_class": [
+      "futures_multi_asset"
+    ],
+    "methodology_summary": "The authors employ a model predictive control (MPC) framework for multi-period portfolio optimization, comparing mean-variance and risk-parity objective functions over a planning horizon. Asset returns and covariance matrices are dynamically forecasted using a hidden Markov model (HMM) fitted via an expectation-maximization algorithm over a rolling 2000-day window. To solve the non-convex risk-parity MPC formulation efficiently and robustly, a successive convex programming algorithm is introduced.",
+    "data_period": "1991-2020, daily",
+    "universe": "Ten major asset classes including global/domestic equities, US treasuries and corporate bonds, high yield, commodities, and real estate",
+    "performance_metrics": [
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.57,
+        "unit": "ratio",
+        "context": "Fix-mix (1/n) benchmark, out-of-sample period 2006-2020",
+        "evidence_quote": "Fix-mix (1/n) | 6.11 | 8.69 | 0.35 | 0.57 | 0.17 | 1.43 | 241.81",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.57,
+        "unit": "ratio",
+        "context": "SPO strategy, out-of-sample period 2006-2020",
+        "evidence_quote": "SPO | 5.71 | 8.04 | 0.34 | 0.57 | 0.17 | 0.00a | 228.54",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.64,
+        "unit": "ratio",
+        "context": "MPO strategy, out-of-sample period 2006-2020",
+        "evidence_quote": "MPO | 5.28 | 6.42 | 0.31 | 0.64 | 0.17 | 0.07 | 215.26",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.62,
+        "unit": "ratio",
+        "context": "SPO RP strategy, out-of-sample period 2006-2020",
+        "evidence_quote": "SPO RP | 6.18 | 8.06 | 0.33 | 0.62 | 0.19 | 0.05 | 244.15",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.97,
+        "unit": "ratio",
+        "context": "MPO RP strategy, out-of-sample period 2006-2020",
+        "evidence_quote": "MPO RP | 6.02 | 5.00 | 0.22 | 0.97 | 0.27 | 0.83 | 238.78",
+        "source_location": "Table 4"
+      }
+    ],
+    "key_findings": [
+      "Multi-period portfolio models using model predictive control (MPC) perform better than their single-period counterparts in the out-of-sample period (2006-2020).",
+      "Both mean-variance and risk-parity MPC formulations successfully beat the fixed-mix benchmark.",
+      "The multi-period risk parity (MPO RP) strategy achieves an out-of-sample Sharpe ratio of 0.97, while the multi-period mean-variance (MPO) strategy achieves 0.64.",
+      "The proposed successive convex program algorithm for risk-parity MPC yields solutions up to 30 times faster and with greater numerical stability than the original non-convex formulation."
+    ],
+    "limitations": [
+      "Single-period and multi-period strategies' performance depends heavily on the accuracy of underlying parameter estimation frameworks like the hidden Markov model."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": "[Manually corrected: model repeatedly (3x/2x independent calls) decomposed this diversified futures/index basket into ['equities', 'fixed_income', 'commodities', 'other'] instead of using the futures_multi_asset category, despite the universe description matching that convention. Overridden to match project taxonomy.]"
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:32:50.787993+00:00",
+    "input_tokens": 14252,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "other"
+    ],
+    "curation_asset_class": [
+      "futures_multi_asset"
+    ],
+    "manually_corrected": true
+  }
+}

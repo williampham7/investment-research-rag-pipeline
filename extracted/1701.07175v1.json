@@ -1,0 +1,46 @@
+{
+  "paper_id": "arxiv:1701.07175v1",
+  "title": "Day of the Week Effect in biotechnology stocks: An Application of the GARCH processes",
+  "extraction": {
+    "signal_type": [
+      "seasonality",
+      "momentum",
+      "size"
+    ],
+    "asset_class": [
+      "equities"
+    ],
+    "methodology_summary": "The paper investigates the day-of-the-week effect in the NASDAQ Biotechnology Index (NBI) using daily returns from January 2002 to December 2015. It incorporates Fama-French risk factors, the Carhart momentum factor, and utilizes GARCH, EGARCH, and GJR-GARCH processes to model volatility and test the significance of return differences across weekdays, comparing pre-ACA and post-ACA subperiods.",
+    "data_period": "January 2002 to December 2015, daily",
+    "universe": "NASDAQ Biotechnology Index (NBI) consisting of 117 listed companies.",
+    "performance_metrics": [],
+    "key_findings": [
+      "Biotechnology stock returns were lowest on Mondays and significantly higher on Wednesdays, Thursdays, and Fridays over the 2002-2015 period.",
+      "The day-of-the-week effect in biotechnology stocks persisted even after controlling for Fama-French risk factors and Carhart momentum.",
+      "The day-of-the-week effect disappeared in the period following the passage of the Affordable Care Act (ACA) on March 30, 2010.",
+      "Momentum (UMD) and the small-firm effect (SMB) were positively associated with market risk-adjusted biotechnology returns across the GARCH models."
+    ],
+    "limitations": [
+      "The post-ACA period may not be long enough to fully estimate the day-of-the-week effect.",
+      "Possible confounding from macroeconomic changes as the economy recovered from the 2008 great recession."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": "No standard strategy backtest performance metrics (such as Sharpe ratio or annualized strategy return) are reported in the paper; the quantitative results focus entirely on regression coefficients and descriptive statistics, so performance_metrics is empty."
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:38:06.735914+00:00",
+    "input_tokens": 8683,
+    "validation_flags": [
+      "no_performance_metrics_found"
+    ],
+    "curation_signal_type": [
+      "seasonality",
+      "momentum",
+      "size"
+    ],
+    "curation_asset_class": [
+      "equities"
+    ]
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "paper_id": "arxiv:1801.03018v1",
+  "title": "Predict Forex Trend via Convolutional Neural Networks",
+  "extraction": {
+    "signal_type": [
+      "ml_composite",
+      "momentum",
+      "other"
+    ],
+    "asset_class": [
+      "fx"
+    ],
+    "methodology_summary": "The authors propose transforming quantitative price data (such as raw prices and moving averages) into chart images and feeding them into convolutional neural networks (CNNs) to classify currency movements into buy, sell, or no-action categories. Because real-world forex data produced insufficient samples causing overfitting, the authors tested their approach using simulated forex data generated via Geometric Brownian Motion (GBM). Models including custom CNN architectures and AlexNet were trained and evaluated using validation and test sets.",
+    "data_period": "2010 to 2011 (real-world data); simulated data (Workflow 2)",
+    "universe": "Japanese Yen exchange rates (real-world) and Geometric Brownian Motion simulated foreign exchange rate data",
+    "performance_metrics": [
+      {
+        "metric_name": "accuracy rate",
+        "value": 82.0,
+        "unit": "percent",
+        "context": "Workflow 2, experiment 3 using moving average strategy rules with AlexNet",
+        "evidence_quote": "After the trials of experiment 3, we achieved an accuracy rate of 82%, which is a signiﬁcant improvement over experiments 1 and 2.",
+        "source_location": "Section 4.7"
+      },
+      {
+        "metric_name": "accuracy rate",
+        "value": 80.0,
+        "unit": "percent",
+        "context": "Workflow 2, scaled images to the maximum and minimum of prices and moving average",
+        "evidence_quote": "We also scaled the images to the maximum and minimum of the prices and the moving average; this yielded an 80% accuracy rate.",
+        "source_location": "Section 4.7"
+      }
+    ],
+    "key_findings": [
+      "Real-world daily financial time-series data yielded insufficient training samples for CNNs when using short time windows, leading to severe overfitting.",
+      "Using Geometric Brownian Motion (GBM) to simulate large amounts of forex data successfully resolved the data scarcity problem for training CNN image models.",
+      "Training the AlexNet architecture on simulated chart images with moving average strategies achieved classification accuracy rates of up to 82%."
+    ],
+    "limitations": [
+      "Real-world training data samples were too small to train complex convolutional neural networks without overfitting.",
+      "Extending historical time regions for real data introduced excessive noise and failed to improve predictions."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:05:55.931556+00:00",
+    "input_tokens": 6438,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "ml_composite"
+    ],
+    "curation_asset_class": [
+      "fx"
+    ]
+  }
+}

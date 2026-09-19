@@ -1,0 +1,156 @@
+{
+  "paper_id": "arxiv:1812.06000v1",
+  "title": "The Rank Effect",
+  "extraction": {
+    "signal_type": [
+      "value",
+      "other"
+    ],
+    "asset_class": [
+      "commodities",
+      "futures_multi_asset"
+    ],
+    "methodology_summary": "The paper decomposes asset and portfolio returns into rank crossovers and changes in relative prices of ranked asset subsets using continuous semimartingales and local time processes. Portfolios are constructed by ranking 30 normalized commodity futures contracts and forming price-weighted subsets of bottom- and top-ranked assets, rebalanced monthly. These strategies are tested empirically on monthly commodity futures data from 1974 through 2018.",
+    "data_period": "1974-2018, monthly",
+    "universe": "30 commodity futures contracts across energy, metals, agriculture, and livestock",
+    "performance_metrics": [
+      {
+        "metric_name": "annualized average return",
+        "value": 3.44,
+        "unit": "percent",
+        "context": "Price-weighted (market) portfolio, 1974-2018",
+        "evidence_quote": "1974-2018 | 3.44%(17.88)",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "annualized standard deviation",
+        "value": 17.88,
+        "unit": "stddev",
+        "context": "Price-weighted (market) portfolio, 1974-2018",
+        "evidence_quote": "1974-2018 | 3.44%(17.88)",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "annualized average return",
+        "value": 10.37,
+        "unit": "percent",
+        "context": "Small portfolio, 1974-2018",
+        "evidence_quote": "10.37% | (18.72)",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "annualized standard deviation",
+        "value": 18.72,
+        "unit": "stddev",
+        "context": "Small portfolio, 1974-2018",
+        "evidence_quote": "10.37% | (18.72)",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "annualized average return",
+        "value": 0.4,
+        "unit": "percent",
+        "context": "Big portfolio, 1974-2018",
+        "evidence_quote": "0.40% | (20.15)",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "annualized standard deviation",
+        "value": 20.15,
+        "unit": "stddev",
+        "context": "Big portfolio, 1974-2018",
+        "evidence_quote": "0.40% | (20.15)",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "annualized average return",
+        "value": 6.93,
+        "unit": "percent",
+        "context": "Small portfolio relative to Price-Weighted (Market) Portfolio, 1974-2018",
+        "evidence_quote": "1974-2018 | 6.93%(12.74) | 0.54",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "annualized standard deviation",
+        "value": 12.74,
+        "unit": "stddev",
+        "context": "Small portfolio relative to Price-Weighted (Market) Portfolio, 1974-2018",
+        "evidence_quote": "1974-2018 | 6.93%(12.74) | 0.54",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.54,
+        "unit": "ratio",
+        "context": "Small portfolio relative to Price-Weighted (Market) Portfolio, 1974-2018",
+        "evidence_quote": "1974-2018 | 6.93%(12.74) | 0.54",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "annualized average return",
+        "value": 9.97,
+        "unit": "percent",
+        "context": "Small portfolio relative to Big Portfolio, 1974-2018",
+        "evidence_quote": "1974-2018 | 9.97%(18.53) | 0.54",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "annualized standard deviation",
+        "value": 18.53,
+        "unit": "stddev",
+        "context": "Small portfolio relative to Big Portfolio, 1974-2018",
+        "evidence_quote": "1974-2018 | 9.97%(18.53) | 0.54",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.54,
+        "unit": "ratio",
+        "context": "Small portfolio relative to Big Portfolio, 1974-2018",
+        "evidence_quote": "1974-2018 | 9.97%(18.53) | 0.54",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "Adjusted R2",
+        "value": 0.15,
+        "unit": "ratio",
+        "context": "Regression with Value Anomaly excess returns on Small Portfolio relative to Price-Weighted Market Portfolio",
+        "evidence_quote": "R2Adjusted | 0.15 | 0.14",
+        "source_location": "Table 5"
+      },
+      {
+        "metric_name": "Adjusted R2",
+        "value": 0.14,
+        "unit": "ratio",
+        "context": "Regression with Value Anomaly excess returns on Small Portfolio relative to Big Portfolio",
+        "evidence_quote": "R2Adjusted | 0.15 | 0.14",
+        "source_location": "Table 5"
+      }
+    ],
+    "key_findings": [
+      "Portfolio and asset returns can be decomposed exactly in continuous time into rank crossovers (local time processes) and relative price changes of ranked asset subsets.",
+      "Because rank crossovers are non-negative for bottom-ranked assets and relative prices of bottom-ranked commodities are approximately stable, portfolios of bottom-ranked commodity futures systematically outperform the market over long horizons.",
+      "The outperformance of bottom-ranked commodity futures generates Sharpe ratios of 0.6-0.8 in decades after 1980.",
+      "The rank effect provides a theoretical foundation for the commodity value anomaly documented in prior literature."
+    ],
+    "limitations": [
+      "The theoretical framework assumes zero dividends, which is addressed by focusing on commodity futures where dividends are absent.",
+      "The basic framework assumes a closed market with no asset entry or exit, though the authors show entry and exit can be incorporated into the mathematical framework."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:07:11.522549+00:00",
+    "input_tokens": 23537,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "other",
+      "size"
+    ],
+    "curation_asset_class": [
+      "commodities"
+    ]
+  }
+}

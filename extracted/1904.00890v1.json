@@ -1,0 +1,330 @@
+{
+  "paper_id": "arxiv:1904.00890v1",
+  "title": "Momentum and liquidity in cryptocurrencies",
+  "extraction": {
+    "signal_type": [
+      "momentum",
+      "liquidity"
+    ],
+    "asset_class": [
+      "crypto"
+    ],
+    "methodology_summary": "Cryptocurrency portfolios are formed using bivariate sorts on past cumulative returns (momentum) and Amihud illiquidity measures over a 14-day lookback period. Selected cryptocurrencies are divided into 3 momentum groups and 3 illiquidity groups to form 9 equal-weighted portfolios, rebalanced bi-weekly (every 14 days). Long-only strategies (illiquid losers and liquid winners) and zero-investment factor portfolios (UMD and IML) are evaluated against a market capitalization-weighted benchmark.",
+    "data_period": "January 2015 to January 2019, daily",
+    "universe": "Cryptocurrencies from coinmarketcap.com excluding stablecoins, requiring a minimum history of 26 weeks and a historical market capitalization never below 1 million USD.",
+    "performance_metrics": [
+      {
+        "metric_name": "mean daily return",
+        "value": 0.52,
+        "unit": "percent",
+        "context": "IML zero-investment portfolio (losers bracket)",
+        "evidence_quote": "Losers | 0.31 | 0.56 | 1.07 | 0.52*",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "mean daily return",
+        "value": 0.16,
+        "unit": "percent",
+        "context": "IML zero-investment portfolio (neutral bracket)",
+        "evidence_quote": "Neutral | 0.37 | 0.68 | 0.66 | 0.16",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "mean daily return",
+        "value": -0.07,
+        "unit": "percent",
+        "context": "IML zero-investment portfolio (winners bracket)",
+        "evidence_quote": "Winners | 0.71 | 0.420.53 | -0.07",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "mean daily return",
+        "value": 0.26,
+        "unit": "percent",
+        "context": "UMD zero-investment portfolio (liquid bracket)",
+        "evidence_quote": "UMD | 0.26* | -0.06-0.33",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "mean daily return",
+        "value": -0.06,
+        "unit": "percent",
+        "context": "UMD zero-investment portfolio (neutral bracket)",
+        "evidence_quote": "UMD | 0.26* | -0.06-0.33",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "mean daily return",
+        "value": -0.33,
+        "unit": "percent",
+        "context": "UMD zero-investment portfolio (illiquid bracket)",
+        "evidence_quote": "UMD | 0.26* | -0.06-0.33",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "daily standard deviation",
+        "value": 5.66,
+        "unit": "percent",
+        "context": "Liquid losers portfolio",
+        "evidence_quote": "Losers | 5.66 | 5.92 | 7.79 | 5.05",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "daily standard deviation",
+        "value": 5.92,
+        "unit": "percent",
+        "context": "Neutral losers portfolio",
+        "evidence_quote": "Losers | 5.66 | 5.92 | 7.79 | 5.05",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "daily standard deviation",
+        "value": 7.79,
+        "unit": "percent",
+        "context": "Illiquid losers portfolio",
+        "evidence_quote": "Losers | 5.66 | 5.92 | 7.79 | 5.05",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "daily standard deviation",
+        "value": 5.05,
+        "unit": "percent",
+        "context": "IML zero-investment portfolio (losers bracket)",
+        "evidence_quote": "Losers | 5.66 | 5.92 | 7.79 | 5.05",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "daily standard deviation",
+        "value": 5.18,
+        "unit": "percent",
+        "context": "Liquid neutral portfolio",
+        "evidence_quote": "Neutral | 5.18 | 6.32 | 7.36 | 4.43",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "daily standard deviation",
+        "value": 6.32,
+        "unit": "percent",
+        "context": "Neutral neutral portfolio",
+        "evidence_quote": "Neutral | 5.18 | 6.32 | 7.36 | 4.43",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "daily standard deviation",
+        "value": 7.36,
+        "unit": "percent",
+        "context": "Illiquid neutral portfolio",
+        "evidence_quote": "Neutral | 5.18 | 6.32 | 7.36 | 4.43",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "daily standard deviation",
+        "value": 4.43,
+        "unit": "percent",
+        "context": "IML zero-investment portfolio (neutral bracket)",
+        "evidence_quote": "Neutral | 5.18 | 6.32 | 7.36 | 4.43",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "daily standard deviation",
+        "value": 7.43,
+        "unit": "percent",
+        "context": "Liquid winners portfolio",
+        "evidence_quote": "Winners | 7.43 | 6.73 | 9.45 | 7.89",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "daily standard deviation",
+        "value": 6.73,
+        "unit": "percent",
+        "context": "Neutral winners portfolio",
+        "evidence_quote": "Winners | 7.43 | 6.73 | 9.45 | 7.89",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "daily standard deviation",
+        "value": 9.45,
+        "unit": "percent",
+        "context": "Illiquid winners portfolio",
+        "evidence_quote": "Winners | 7.43 | 6.73 | 9.45 | 7.89",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "daily standard deviation",
+        "value": 7.89,
+        "unit": "percent",
+        "context": "IML zero-investment portfolio (winners bracket)",
+        "evidence_quote": "Winners | 7.43 | 6.73 | 9.45 | 7.89",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "daily standard deviation",
+        "value": 5.1,
+        "unit": "percent",
+        "context": "UMD zero-investment portfolio (liquid bracket)",
+        "evidence_quote": "UMD | 5.10 | 5.25 | 8.14",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "daily standard deviation",
+        "value": 5.25,
+        "unit": "percent",
+        "context": "UMD zero-investment portfolio (neutral bracket)",
+        "evidence_quote": "UMD | 5.10 | 5.25 | 8.14",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "daily standard deviation",
+        "value": 8.14,
+        "unit": "percent",
+        "context": "UMD zero-investment portfolio (illiquid bracket)",
+        "evidence_quote": "UMD | 5.10 | 5.25 | 8.14",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "information ratio",
+        "value": 0.55,
+        "unit": "ratio",
+        "context": "Liquid losers portfolio",
+        "evidence_quote": "Losers | 0.55 | 1.56 | 2.49 | 1.05",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "information ratio",
+        "value": 1.56,
+        "unit": "ratio",
+        "context": "Neutral losers portfolio",
+        "evidence_quote": "Losers | 0.55 | 1.56 | 2.49 | 1.05",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "information ratio",
+        "value": 2.49,
+        "unit": "ratio",
+        "context": "Illiquid losers portfolio",
+        "evidence_quote": "Losers | 0.55 | 1.56 | 2.49 | 1.05",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "information ratio",
+        "value": 1.05,
+        "unit": "ratio",
+        "context": "IML zero-investment portfolio (losers bracket)",
+        "evidence_quote": "Losers | 0.55 | 1.56 | 2.49 | 1.05",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "information ratio",
+        "value": 0.98,
+        "unit": "ratio",
+        "context": "Liquid neutral portfolio",
+        "evidence_quote": "Neutral | 0.98 | 1.92 | 1.42 | -0.09",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "information ratio",
+        "value": 1.92,
+        "unit": "ratio",
+        "context": "Neutral neutral portfolio",
+        "evidence_quote": "Neutral | 0.98 | 1.92 | 1.42 | -0.09",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "information ratio",
+        "value": 1.42,
+        "unit": "ratio",
+        "context": "Illiquid neutral portfolio",
+        "evidence_quote": "Neutral | 0.98 | 1.92 | 1.42 | -0.09",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "information ratio",
+        "value": -0.09,
+        "unit": "ratio",
+        "context": "IML zero-investment portfolio (neutral bracket)",
+        "evidence_quote": "Neutral | 0.98 | 1.92 | 1.42 | -0.09",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "information ratio",
+        "value": 1.59,
+        "unit": "ratio",
+        "context": "Liquid winners portfolio",
+        "evidence_quote": "Winners | 1.59 | 0.82 | 0.76 | -0.55",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "information ratio",
+        "value": 0.82,
+        "unit": "ratio",
+        "context": "Neutral winners portfolio",
+        "evidence_quote": "Winners | 1.59 | 0.82 | 0.76 | -0.55",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "information ratio",
+        "value": 0.76,
+        "unit": "ratio",
+        "context": "Illiquid winners portfolio",
+        "evidence_quote": "Winners | 1.59 | 0.82 | 0.76 | -0.55",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "information ratio",
+        "value": -0.55,
+        "unit": "ratio",
+        "context": "IML zero-investment portfolio (winners bracket)",
+        "evidence_quote": "Winners | 1.59 | 0.82 | 0.76 | -0.55",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "information ratio",
+        "value": 0.22,
+        "unit": "ratio",
+        "context": "UMD zero-investment portfolio (liquid bracket)",
+        "evidence_quote": "UMD | 0.22 | -0.71 | -1.08",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "information ratio",
+        "value": -0.71,
+        "unit": "ratio",
+        "context": "UMD zero-investment portfolio (neutral bracket)",
+        "evidence_quote": "UMD | 0.22 | -0.71 | -1.08",
+        "source_location": "Table 1"
+      },
+      {
+        "metric_name": "information ratio",
+        "value": -1.08,
+        "unit": "ratio",
+        "context": "UMD zero-investment portfolio (illiquid bracket)",
+        "evidence_quote": "UMD | 0.22 | -0.71 | -1.08",
+        "source_location": "Table 1"
+      }
+    ],
+    "key_findings": [
+      "A strong and statistically significant momentum effect is observed in the most liquid cryptocurrencies, supporting investor herding theories.",
+      "Illiquidity is most profitable among the previous period's loser cryptocurrencies, exhibiting a significant illiquidity premium.",
+      "Illiquid cryptocurrencies display a mean reversion effect, where illiquid losers outperform illiquid winners.",
+      "Two long-only strategies (liquid winners and illiquid losers) show improved risk-adjusted performance over the market capitalization-weighted benchmark even when factoring in trading costs."
+    ],
+    "limitations": [
+      "Illiquid losers portfolio performance may deteriorate in practice due to higher indirect trading costs and bid-ask spreads in illiquid cryptocurrencies."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:50:46.536141+00:00",
+    "input_tokens": 2724,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "momentum",
+      "liquidity"
+    ],
+    "curation_asset_class": [
+      "crypto"
+    ]
+  }
+}

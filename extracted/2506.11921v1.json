@@ -1,0 +1,65 @@
+{
+  "paper_id": "arxiv:2506.11921v1",
+  "title": "Dynamic Grid Trading Strategy: From Zero Expectation to Market Outperformance",
+  "extraction": {
+    "signal_type": [
+      "reversal",
+      "other"
+    ],
+    "asset_class": [
+      "crypto"
+    ],
+    "methodology_summary": "The paper introduces the Dynamic Grid-based Trading (DGT) strategy for cryptocurrencies, which continuously resets geometric grid levels and reinvests arbitrage profits when prices exceed predefined upper or lower boundaries, rather than terminating. Using 1-minute high-frequency spot candlestick data from Binance, the strategy is backtested across various parameter combinations of grid size and grid number counts.",
+    "data_period": "January 2021 to July 2024, 1-minute interval",
+    "universe": "Binance spot cryptocurrency markets (specifically Bitcoin and Ethereum)",
+    "performance_metrics": [
+      {
+        "metric_name": "annualized return",
+        "value": 60.0,
+        "unit": "percent",
+        "context": "DGT strategy IRR across various parameter combinations for BTC and ETH",
+        "evidence_quote": "First, the IRR of our strategy remains consistently positive throughout the backtesting period, reaching as high as 60-70%.",
+        "source_location": "Section 3.2"
+      },
+      {
+        "metric_name": "annualized return",
+        "value": 70.0,
+        "unit": "percent",
+        "context": "DGT strategy IRR upper bound across parameter combinations for BTC and ETH",
+        "evidence_quote": "First, the IRR of our strategy remains consistently positive throughout the backtesting period, reaching as high as 60-70%.",
+        "source_location": "Section 3.2"
+      },
+      {
+        "metric_name": "maximum drawdown",
+        "value": 50.0,
+        "unit": "percent",
+        "context": "DGT strategy maximum drawdown on ETH when the market experienced a maximum decline of around 80%",
+        "evidence_quote": "When the market experienced a maximum decline of around 80%, the DGT strategy limited the drawdown to approximately 50%.",
+        "source_location": "Section 4.1"
+      }
+    ],
+    "key_findings": [
+      "Traditional grid trading strategies without market trend insight have an expected value of zero before transaction fees, resulting in losses once fees are included.",
+      "The proposed Dynamic Grid-based Trading (DGT) strategy achieves consistently positive annualized returns (60-70%) by continuously resetting grids and avoiding premature termination.",
+      "The DGT strategy outperforms the traditional buy-and-hold strategy by achieving higher returns with significantly lower maximum drawdowns on BTC and better risk control on ETH.",
+      "Smaller grid sizes suffer heavily from transaction fee proportions, while large grid sizes and grid numbers result in infrequent activations and poor IRR performance."
+    ],
+    "limitations": [
+      "Backtests rely on historical data from a period with a significant cryptocurrency price rise, which is highly favorable for spot grid trading."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:16:33.423930+00:00",
+    "input_tokens": 3923,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "other"
+    ],
+    "curation_asset_class": [
+      "crypto"
+    ]
+  }
+}

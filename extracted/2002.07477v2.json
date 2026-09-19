@@ -1,0 +1,90 @@
+{
+  "paper_id": "arxiv:2002.07477v2",
+  "title": "ESG investments: Filtering versus machine learning approaches",
+  "extraction": {
+    "signal_type": [
+      "ml_composite",
+      "other"
+    ],
+    "asset_class": [
+      "equities"
+    ],
+    "methodology_summary": "The authors design a supervised machine learning algorithm that maps granular ESG indicators into regions (hyper-rectangles defined by If-Then rules) predicting 3-month forward excess returns. The rule predictions are aggregated through convex combination and transformed into discrete scores of {-1, 0, +1}. Simple long-only portfolios are formed by screening for stocks with positive scores (+1) and compared against traditional ESG best-in-class exclusion portfolios.",
+    "data_period": "January 2013 to March 2018 (algorithm trained starting from 2009)",
+    "universe": "MSCI World Index (large-cap equities across US, Canada, Western Europe, Japan, Australia, New Zealand, Hong Kong, and Singapore)",
+    "performance_metrics": [
+      {
+        "metric_name": "Annualized Performance",
+        "value": 13.07,
+        "unit": "percent",
+        "context": "Positive ML Screening portfolio",
+        "evidence_quote": "Ann. Performance | 10.32% | 13.07%",
+        "source_location": "Table 10"
+      },
+      {
+        "metric_name": "Annualized Volatility",
+        "value": 11.14,
+        "unit": "percent",
+        "context": "Positive ML Screening portfolio",
+        "evidence_quote": "Ann. Volatility | 10.50% | 11.14%",
+        "source_location": "Table 10"
+      },
+      {
+        "metric_name": "Sharpe Ratio",
+        "value": 1.14,
+        "unit": "ratio",
+        "context": "Positive ML Screening portfolio",
+        "evidence_quote": "Sharpe Ratio | 0.94 | 1.14",
+        "source_location": "Table 10"
+      },
+      {
+        "metric_name": "Max Drawdown",
+        "value": -14.99,
+        "unit": "percent",
+        "context": "Positive ML Screening portfolio",
+        "evidence_quote": "Max. Drawdown | -18.07% | -14.99%",
+        "source_location": "Table 10"
+      },
+      {
+        "metric_name": "Information Ratio",
+        "value": 1.01,
+        "unit": "ratio",
+        "context": "Positive ML Screening portfolio",
+        "evidence_quote": "Information Ratio | - | 1.01",
+        "source_location": "Table 10"
+      },
+      {
+        "metric_name": "Annualized Alpha",
+        "value": 2.47,
+        "unit": "percent",
+        "context": "Positive ML Screening portfolio",
+        "evidence_quote": "Ann. Alpha | - | 2.47%",
+        "source_location": "Table 10"
+      }
+    ],
+    "key_findings": [
+      "Simple ESG best-in-class filtering approaches do not generate significant outperformance or alpha over broad universes like the MSCI World Index.",
+      "Granular ESG indicators contain valuable predictive signals that can be successfully extracted using non-linear machine learning techniques.",
+      "The Positive ML Screening strategy significantly outperforms both the benchmark and standard ESG best-in-class portfolios.",
+      "Regularly updating and retraining the machine learning algorithm over time is crucial because the predictive power of the rules vanishes over time."
+    ],
+    "limitations": [
+      "The out-of-sample testing period is relatively short, covering five years and three months from January 2013 to March 2018."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:08:43.380329+00:00",
+    "input_tokens": 12971,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "quality_profitability",
+      "ml_composite"
+    ],
+    "curation_asset_class": [
+      "equities"
+    ]
+  }
+}

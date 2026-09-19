@@ -1,0 +1,90 @@
+{
+  "paper_id": "arxiv:1406.4322v1",
+  "title": "Upside and Downside Risk Exposures of Currency Carry Trades via Tail Dependence",
+  "extraction": {
+    "signal_type": [
+      "carry"
+    ],
+    "asset_class": [
+      "fx"
+    ],
+    "methodology_summary": "The paper constructs currency carry trade portfolios by sorting 34 currencies based on their interest rate differentials relative to the USD, estimated via the ratio of 1-month forward to spot prices. The top 20% highest interest rate currencies form the investment (long) basket, and the bottom 20% lowest interest rate currencies form the funding (short) basket. The authors fit mixture copula models (Clayton-Frank-Gumbel, Clayton-Gumbel, and Outer Power Clayton) with Log-Generalized-Gamma or GARCH(1,1) marginals to daily exchange rate log returns to analyze joint tail dependence (upside and downside risk exposures) over time.",
+    "data_period": "02/01/1989 to 29/01/2014, daily",
+    "universe": "34 currency exchange rates relative to the USD (including AUD, BRL, CAD, HRK, CYP, CZK, EGP, EUR, GRD, HUF, ISK, INR, IDR, ILS, JPY, MYR, MXN, NZD, NOK, PHP, PLN, RUB, SGD, SKK, SIT, ZAR, KRW, SEK, CHF, TWD, THB, TRY, UAH, and GBP)",
+    "performance_metrics": [
+      {
+        "metric_name": "R-squared (Low IR Basket Upper TD)",
+        "value": 0.57,
+        "unit": "ratio",
+        "context": "Pairwise non-parametric tail dependence regressed on respective basket tail dependence for Low IR Basket Upper TD",
+        "evidence_quote": "Upper TD | 0.22 (0.01) | 0.02 (0.03) | 0.18 (0.02) | 0.38 (0.05) | 0.57",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "R-squared (Low IR Basket Lower TD)",
+        "value": 0.28,
+        "unit": "ratio",
+        "context": "Pairwise non-parametric tail dependence regressed on respective basket tail dependence for Low IR Basket Lower TD",
+        "evidence_quote": "Lower TD | 0.71 (0.17) | -0.62 (0.25) | -0.38 (0.26) | 0.23 (0.32) | 0.28",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "R-squared (High IR Basket Upper TD)",
+        "value": 0.4,
+        "unit": "ratio",
+        "context": "Pairwise non-parametric tail dependence regressed on respective basket tail dependence for High IR Basket Upper TD",
+        "evidence_quote": "Upper TD | 0.07 (0.01) | -0.06 (0.33) | 0.59 (0.08) | 2.37 (0.42) | 0.4",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "R-squared (High IR Basket Lower TD)",
+        "value": 0.44,
+        "unit": "ratio",
+        "context": "Pairwise non-parametric tail dependence regressed on respective basket tail dependence for High IR Basket Lower TD",
+        "evidence_quote": "Lower TD | 0.1 (0.02) | 0.56 (0.05) | 0.44 (0.08) | -0.4 (0.07) | 0.44",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Mean AIC difference (CFG with GG vs GARCH(1,1) - High IR)",
+        "value": 12.3,
+        "unit": "other",
+        "context": "Mean difference between the AIC scores for the CFG model with Generalised Gamma vs GARCH(1,1) marginals for the high interest rate basket",
+        "evidence_quote": "Over the entire data period the mean difference between the AIC scores for the CFG model with Generalised Gamma vs GARCH(1,1) marginals for the high interest rate basket is 12.3",
+        "source_location": "Section 6, page 8"
+      },
+      {
+        "metric_name": "Mean AIC difference (CFG with GG vs GARCH(1,1) - Low IR)",
+        "value": 3.6,
+        "unit": "other",
+        "context": "Mean difference between the AIC scores for the CFG model with Generalised Gamma vs GARCH(1,1) marginals for the low interest rate basket",
+        "evidence_quote": "and for the low interest rate basket is 3.6 in favour of the Generalised Gamma.",
+        "source_location": "Section 6, page 8"
+      }
+    ],
+    "key_findings": [
+      "Currency carry trade portfolios are exposed to significant multivariate tail risk (both downside crash risk and upside profit risk) in both funding and investment baskets.",
+      "The Clayton-Frank-Gumbel (CFG) mixture copula model combined with Log-Generalized-Gamma marginals provides a superior fit for currency baskets compared to GARCH(1,1) marginals and Outer Power Clayton (OpC) copulas, especially during crisis periods.",
+      "There are periods of heightened tail dependence (e.g., during the 2007-2008 global financial crisis) where extreme returns tend to occur simultaneously, making carry portfolios highly sensitive to drawdown risk.",
+      "The low interest rate (funding) basket is a major source of tail risk exposure, showing high levels of upper tail dependence during periods of carry trade construction."
+    ],
+    "limitations": [
+      "The paper does not quantify a market price per unit of tail risk.",
+      "The Archimedean copula models assume exchangeability, which precludes decomposing total basket risks into individual currency-specific components without using linear projections or pairwise non-parametric estimators.",
+      "The analysis assumes approximate local stationarity over short 6-month time frames for the marginal models."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": "No standard portfolio performance metrics (such as Sharpe ratio or annualized returns) were reported as exact numbers in the text, only in cumulative log return plots (Figures 7 and 8). Therefore, statistical performance metrics (R-squared of tail dependence regressions and AIC differences) were extracted instead."
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash",
+    "extracted_at": "2026-09-18T23:51:09.300215+00:00",
+    "input_tokens": 10157,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "carry"
+    ],
+    "curation_asset_class": [
+      "fx"
+    ]
+  }
+}

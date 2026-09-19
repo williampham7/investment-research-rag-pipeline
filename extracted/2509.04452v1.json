@@ -1,0 +1,91 @@
+{
+  "paper_id": "arxiv:2509.04452v1",
+  "title": "Directional Price Forecasting in the Continuous Intraday Market under Consideration of Neighboring Products and Limit Order Books",
+  "extraction": {
+    "signal_type": [
+      "momentum",
+      "alternative_data"
+    ],
+    "asset_class": [
+      "commodities"
+    ],
+    "methodology_summary": "The paper proposes a directional electricity price forecasting method for hourly products in the European continuous intraday market using classification models such as logistic regression and gradient boosting. The forecasting framework uses a rolling window approach across the ID 3 period, extracting features from recent transactions, limit order books (LOB), and neighboring hourly and quarter-hourly products. Models are iteratively trained and cross-validated across a one-year test set from April 2024 to April 2025 using German EPEX market data.",
+    "data_period": "April 14, 2024, to April 13, 2025",
+    "universe": "German European Power Exchange (EPEX) continuous intraday market hourly power products",
+    "performance_metrics": [
+      {
+        "metric_name": "accuracy",
+        "value": 51.73,
+        "unit": "percent",
+        "context": "Gradient boosting model accuracy in 3h->2h period using Current feature set",
+        "evidence_quote": "Current | 51.73 | 51.26 | 53.00",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "accuracy",
+        "value": 51.26,
+        "unit": "percent",
+        "context": "Gradient boosting model accuracy in 2h->1h period using Current feature set",
+        "evidence_quote": "Current | 51.73 | 51.26 | 53.00",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "accuracy",
+        "value": 53.0,
+        "unit": "percent",
+        "context": "Gradient boosting model accuracy in 1h->h/2 period using Current feature set",
+        "evidence_quote": "Current | 51.73 | 51.26 | 53.00",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "accuracy",
+        "value": 58.22,
+        "unit": "percent",
+        "context": "Gradient boosting model accuracy in 3h->2h period using Current + LOB (top MW) feature set",
+        "evidence_quote": "Current + LOB (top MW) | 58.22 | 55.91 | 57.30",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "accuracy",
+        "value": 55.91,
+        "unit": "percent",
+        "context": "Gradient boosting model accuracy in 2h->1h period using Current + LOB (top MW) feature set",
+        "evidence_quote": "Current + LOB (top MW) | 58.22 | 55.91 | 57.30",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "accuracy",
+        "value": 57.3,
+        "unit": "percent",
+        "context": "Gradient boosting model accuracy in 1h->h/2 period using Current + LOB (top MW) feature set",
+        "evidence_quote": "Current + LOB (top MW) | 58.22 | 55.91 | 57.30",
+        "source_location": "Table 3"
+      }
+    ],
+    "key_findings": [
+      "Features derived from the limit order book (LOB) are the most influential exogenous variables for improving directional price forecast accuracy.",
+      "Features from neighboring hourly and quarter-hourly products whose delivery starts within the trading period of the target product enhance forecast accuracy.",
+      "Fundamental variables (load and VRE generation forecasts) and system imbalance data provide limited added value for short-term continuous intraday price forecasting.",
+      "Gradient boosting generally outperforms logistic regression in terms of directional accuracy, whereas logistic regression achieves higher PnL at high signal strengths due to regularization/better generalization."
+    ],
+    "limitations": [
+      "The analysis focuses exclusively on the ID 3 trading period and hourly products.",
+      "The test period spans only 2024–2025, which may limit broader generalizability.",
+      "Trading strategy profitability was not evaluated via realistic backtesting with LOB execution mechanics."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:17:10.396305+00:00",
+    "input_tokens": 15104,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "other"
+    ],
+    "curation_asset_class": [
+      "commodities"
+    ]
+  }
+}

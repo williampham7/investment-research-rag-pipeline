@@ -1,0 +1,155 @@
+{
+  "paper_id": "arxiv:2211.15912v1",
+  "title": "Optimizing Stock Option Forecasting with the Assembly of Machine Learning Models and Improved Trading Strategies",
+  "extraction": {
+    "signal_type": [
+      "ml_composite",
+      "other"
+    ],
+    "asset_class": [
+      "options_volatility",
+      "equities"
+    ],
+    "methodology_summary": "The paper applies machine learning models including Recurrent Neural Networks (RNN), Long Short-Term Memory (LSTM) networks, convolutional neural networks (CNN), and the Quasi-Reversibility Method (QRM) along with the Black-Scholes equation to forecast stock option trends and prices. Models are trained on historical stock and option time-series data. Simulated trading strategies, notably combining machine learning forecasts with a Binomial Asset Pricing Model and stochastic process analysis, are tested to evaluate investment performance.",
+    "data_period": "not reported",
+    "universe": "U.S. stock option market",
+    "performance_metrics": [
+      {
+        "metric_name": "Accuracy",
+        "value": 49.77,
+        "unit": "percent",
+        "context": "QRM method accuracy",
+        "evidence_quote": "QRM | 49.77% | 55.77% | 52.43%",
+        "source_location": "Table p3_t1"
+      },
+      {
+        "metric_name": "Precision",
+        "value": 55.77,
+        "unit": "percent",
+        "context": "QRM method precision",
+        "evidence_quote": "QRM | 49.77% | 55.77% | 52.43%",
+        "source_location": "Table p3_t1"
+      },
+      {
+        "metric_name": "Recall",
+        "value": 52.43,
+        "unit": "percent",
+        "context": "QRM method recall",
+        "evidence_quote": "QRM | 49.77% | 55.77% | 52.43%",
+        "source_location": "Table p3_t1"
+      },
+      {
+        "metric_name": "Accuracy",
+        "value": 56.36,
+        "unit": "percent",
+        "context": "Binary Classification accuracy",
+        "evidence_quote": "Binary Classification | 56.36% | 59.56% | 70.22%",
+        "source_location": "Table p3_t1"
+      },
+      {
+        "metric_name": "Precision",
+        "value": 59.56,
+        "unit": "percent",
+        "context": "Binary Classification precision",
+        "evidence_quote": "Binary Classification | 56.36% | 59.56% | 70.22%",
+        "source_location": "Table p3_t1"
+      },
+      {
+        "metric_name": "Recall",
+        "value": 70.22,
+        "unit": "percent",
+        "context": "Binary Classification recall",
+        "evidence_quote": "Binary Classification | 56.36% | 59.56% | 70.22%",
+        "source_location": "Table p3_t1"
+      },
+      {
+        "metric_name": "Accuracy",
+        "value": 55.42,
+        "unit": "percent",
+        "context": "Regression NN accuracy",
+        "evidence_quote": "Regression NN | 55.42% | 60.32% | 61.29%",
+        "source_location": "Table p3_t1"
+      },
+      {
+        "metric_name": "Precision",
+        "value": 60.32,
+        "unit": "percent",
+        "context": "Regression NN precision",
+        "evidence_quote": "Regression NN | 55.42% | 60.32% | 61.29%",
+        "source_location": "Table p3_t1"
+      },
+      {
+        "metric_name": "Recall",
+        "value": 61.29,
+        "unit": "percent",
+        "context": "Regression NN recall",
+        "evidence_quote": "Regression NN | 55.42% | 60.32% | 61.29%",
+        "source_location": "Table p3_t1"
+      },
+      {
+        "metric_name": "Precision",
+        "value": 55.77,
+        "unit": "percent",
+        "context": "QRM precision",
+        "evidence_quote": "QRM | 55.77%",
+        "source_location": "Table p4_t1"
+      },
+      {
+        "metric_name": "Precision",
+        "value": 59.56,
+        "unit": "percent",
+        "context": "Binary Classification precision",
+        "evidence_quote": "Binary Classification | 59.56%",
+        "source_location": "Table p4_t1"
+      },
+      {
+        "metric_name": "Precision",
+        "value": 60.32,
+        "unit": "percent",
+        "context": "Regression NN precision",
+        "evidence_quote": "Regression NN | 60.32%",
+        "source_location": "Table p4_t1"
+      },
+      {
+        "metric_name": "Precision",
+        "value": 57.14,
+        "unit": "percent",
+        "context": "Classification (CNN) precision",
+        "evidence_quote": "Classification (CNN) | 57.14%",
+        "source_location": "Table p4_t1"
+      },
+      {
+        "metric_name": "Precision",
+        "value": 53.9,
+        "unit": "percent",
+        "context": "Classification NN + Model10k CNN combined model precision",
+        "evidence_quote": "Classification NN + Model10k CNN | 53.9%",
+        "source_location": "Table p4_t1"
+      }
+    ],
+    "key_findings": [
+      "LSTM and other neural network models can predict stock option pricing and directional trends, though combining interdependent models can lead to lower performance due to shared features and correlation.",
+      "A Binomial Asset Pricing Model integrated with machine learning model precision estimates provides a structured framework for calculating expected returns and simulating option portfolios.",
+      "Empirical testing indicates that combining existing ML models (such as Classification NN and CNN) yields a lower precision than individual models due to a lack of complete independence."
+    ],
+    "limitations": [
+      "The LSTM was trained solely on sequences of fixed length (10 days), making its performance unpredictable on significantly longer sequences.",
+      "The independent models shared common features (such as relying on the QRM model's results), creating model dependence and lowering combined forecast precision.",
+      "Advanced hedging techniques like the Hamilton-Jacobi-Bellman (HJB) equation were not applied in the binomial trading tree nodes, utilizing a simpler method instead."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:13:39.200908+00:00",
+    "input_tokens": 4093,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "ml_composite"
+    ],
+    "curation_asset_class": [
+      "options_volatility"
+    ]
+  }
+}

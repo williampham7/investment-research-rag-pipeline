@@ -1,0 +1,156 @@
+{
+  "paper_id": "arxiv:2504.03311v1",
+  "title": "Information Leakages in the Green Bond Market",
+  "extraction": {
+    "signal_type": [
+      "event_driven",
+      "alternative_data",
+      "sentiment_text"
+    ],
+    "asset_class": [
+      "fixed_income",
+      "equities"
+    ],
+    "methodology_summary": "The paper investigates information leaks regarding upcoming green bond issues by scanning Bloomberg News and Bloomberg First Word headlines between 2016 and 2022. It employs standard event study methodologies—including the market-adjusted model, CAPM, Fama-French 3-factor model, and Carhart 4-factor model—to measure intraday and daily abnormal returns and trading volumes of underlying equities following news leaks.",
+    "data_period": "2016-2022, intraday and daily",
+    "universe": "Publicly traded parent companies globally that issued green bonds or loans and had associated news headlines on the Bloomberg Terminal",
+    "performance_metrics": [
+      {
+        "metric_name": "CAR",
+        "value": -0.21,
+        "unit": "percent",
+        "context": "Cumulative Abnormal Return over [0,1] window after news leak using Fama-French model",
+        "evidence_quote": "-0.21%* (-1.34)",
+        "source_location": "Table 6"
+      },
+      {
+        "metric_name": "CAR",
+        "value": -0.26,
+        "unit": "percent",
+        "context": "Cumulative Abnormal Return over [0,1] window after news leak using Carhart model",
+        "evidence_quote": "-0.26%** (-1.68)",
+        "source_location": "Table 6"
+      },
+      {
+        "metric_name": "CAR",
+        "value": -0.38,
+        "unit": "percent",
+        "context": "Cumulative Abnormal Return over [0,2] window after news leak using Fama-French model",
+        "evidence_quote": "-0.38%** (-2.16)",
+        "source_location": "Table 6"
+      },
+      {
+        "metric_name": "CAR",
+        "value": -0.47,
+        "unit": "percent",
+        "context": "Cumulative Abnormal Return over [0,2] window after news leak using Carhart model",
+        "evidence_quote": "-0.47%*** (-2.66)",
+        "source_location": "Table 6"
+      },
+      {
+        "metric_name": "CAR",
+        "value": -0.26,
+        "unit": "percent",
+        "context": "Cumulative Abnormal Return over [0,3] window after news leak using Fama-French model",
+        "evidence_quote": "-0.26%* (-1.34)",
+        "source_location": "Table 6"
+      },
+      {
+        "metric_name": "CAR",
+        "value": -0.33,
+        "unit": "percent",
+        "context": "Cumulative Abnormal Return over [0,3] window after news leak using Carhart model",
+        "evidence_quote": "-0.33%** (-1.68)",
+        "source_location": "Table 6"
+      },
+      {
+        "metric_name": "CAR",
+        "value": -0.36,
+        "unit": "percent",
+        "context": "Cumulative Abnormal Return over [0,5] window after news leak using Fama-French model",
+        "evidence_quote": "-0.36%* (-1.40)",
+        "source_location": "Table 6"
+      },
+      {
+        "metric_name": "CAR",
+        "value": -0.48,
+        "unit": "percent",
+        "context": "Cumulative Abnormal Return over [0,5] window after news leak using Carhart model",
+        "evidence_quote": "-0.48%** (-1.80)",
+        "source_location": "Table 6"
+      },
+      {
+        "metric_name": "CAR",
+        "value": -0.57,
+        "unit": "percent",
+        "context": "Cumulative Abnormal Return over [0,7] window after news leak using Fama-French model",
+        "evidence_quote": "-0.57%** (-1.92)",
+        "source_location": "Table 6"
+      },
+      {
+        "metric_name": "CAR",
+        "value": -0.73,
+        "unit": "percent",
+        "context": "Cumulative Abnormal Return over [0,7] window after news leak using Carhart model",
+        "evidence_quote": "-0.73%** (-2.33)",
+        "source_location": "Table 6"
+      },
+      {
+        "metric_name": "CAR",
+        "value": -0.58,
+        "unit": "percent",
+        "context": "Cumulative Abnormal Return over [0,10] window after news leak using Fama-French model",
+        "evidence_quote": "-0.58%* (-1.43)",
+        "source_location": "Table 6"
+      },
+      {
+        "metric_name": "CAR",
+        "value": -0.78,
+        "unit": "percent",
+        "context": "Cumulative Abnormal Return over [0,10] window after news leak using Carhart model",
+        "evidence_quote": "-0.78%** (-1.85)",
+        "source_location": "Table 6"
+      },
+      {
+        "metric_name": "CAR",
+        "value": 0.72,
+        "unit": "percent",
+        "context": "Cumulative Abnormal Return over [11,21] window after news leak using Fama-French model",
+        "evidence_quote": "+0.72%** (1.97)",
+        "source_location": "Table 6"
+      },
+      {
+        "metric_name": "CAR",
+        "value": 0.86,
+        "unit": "percent",
+        "context": "Cumulative Abnormal Return over [11,21] window after news leak using Carhart model",
+        "evidence_quote": "+0.86%** (2.31)",
+        "source_location": "Table 6"
+      }
+    ],
+    "key_findings": [
+      "A sizeable number of green bond announcements were pre-dated by anonymous information leakages on the Bloomberg Terminal (259 instances identified from 2,036 candidate headlines).",
+      "Pre-announcement news leaks significantly alter underlying equity trading dynamics, resulting in negative abnormal returns and increased trading volumes.",
+      "Negative investor reactions are heavily concentrated among leaks linked to financial firms and leaks occurring pre-market or early in the trading day.",
+      "Non-financial firms experience positive early reactions, with key positive drivers being Tobin's Q and free cash flow."
+    ],
+    "limitations": [
+      "Establishing the specific diffusive effect of leaked news is difficult due to fragmentation of access to news sources and potential pre-leakage anticipatory trading."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:16:18.636310+00:00",
+    "input_tokens": 27718,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "event_driven"
+    ],
+    "curation_asset_class": [
+      "equities",
+      "fixed_income"
+    ]
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "paper_id": "arxiv:2207.00949v4",
+  "title": "Stochastic arbitrage with market index options",
+  "extraction": {
+    "signal_type": [
+      "other"
+    ],
+    "asset_class": [
+      "options_volatility",
+      "equities"
+    ],
+    "methodology_summary": "The authors develop linear and mixed-integer linear programming formulations to compute maximum-premium second- and first-order stochastic arbitrage opportunities using put and call options on the S&P 500 index. The strategy takes long or short positions in options subject to market depth constraints and a requirement that the layover portfolio delivers zero payoff outside the range of traded strikes, using a skewed generalized t-distribution to model underlying returns. Performance and stochastic arbitrage frequencies are evaluated monthly from January 2004 to November 2021 across various investment scales and strike ranges.",
+    "data_period": "January 2004 to November 2021, monthly",
+    "universe": "Standard & Poor's 500 index (SPX) monthly put and call options with one month to expiry traded on the CBOE",
+    "performance_metrics": [
+      {
+        "metric_name": "annualized mean excess return",
+        "value": 9.81,
+        "unit": "percent",
+        "context": "SPX market portfolio over the 215 months",
+        "evidence_quote": "Realized mean | Mean | 9.81",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "annualized standard deviation",
+        "value": 17.77,
+        "unit": "stddev",
+        "context": "SPX market portfolio over the 215 months",
+        "evidence_quote": "Std. dev. | 17.77",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "Sortino ratio",
+        "value": 0.71,
+        "unit": "ratio",
+        "context": "SPX market portfolio over the 215 months",
+        "evidence_quote": "Sortino | 0.71",
+        "source_location": "Table 2"
+      }
+    ],
+    "key_findings": [
+      "Stochastic arbitrage opportunities are not systematically present in the market for S&P 500 index options at moderate strikes when state probabilities are specified using a skewed generalized t-distribution.",
+      "Using a standard normal distribution to specify state probabilities incorrectly identifies frequent stochastic arbitrage opportunities that yield poor realized performance, shedding light on the pricing kernel puzzle as an artifact of unmodelled return asymmetry.",
+      "Expanding the strike range to wider bounds identifies a substantial number of second-order stochastic arbitrage opportunities, but their realized performance is worse than holding the market due to large losses when the SPX performs very well.",
+      "Large positive returns previously reported in some literature for portfolios with small investment scales (S=1) are driven largely by pure arbitrage opportunities present in a small number of listed contracts."
+    ],
+    "limitations": [
+      "Transaction costs other than bid-ask spreads are omitted from the analysis.",
+      "The algorithms do not impose a sparsity condition on the number of nonzero option positions in the selected portfolio.",
+      "Tail probabilities for return distributions are inherently difficult to specify accurately, leading to potential mispricing assessments for far out-of-the-money options."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": "All performance metrics are directly extracted from Table 2 for the SPX baseline."
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:13:11.766243+00:00",
+    "input_tokens": 21434,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "volatility_risk_premium",
+      "other"
+    ],
+    "curation_asset_class": [
+      "options_volatility"
+    ]
+  }
+}

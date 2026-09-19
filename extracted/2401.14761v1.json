@@ -1,0 +1,131 @@
+{
+  "paper_id": "arxiv:2401.14761v1",
+  "title": "ESG driven pairs algorithm for sustainable trading: Analysis from the Indian market",
+  "extraction": {
+    "signal_type": [
+      "reversal",
+      "alternative_data",
+      "stat_arb_pairs"
+    ],
+    "asset_class": [
+      "equities"
+    ],
+    "methodology_summary": "The paper develops an algorithmic pairs trading framework that integrates Environmental, Social, and Governance (ESG) performance filters with statistical arbitrage. Stocks are first filtered using ESG scores from the CSRHub repository to select firms with superior ESG metrics relative to industry averages. Selected pairs are then analyzed and formed using Principal Component Analysis (PCA) for dimensionality reduction, followed by cointegration, unit root tests, Hurst exponent, and half-life evaluations, and traded using an Absolute Price Oscillator (APO) spread trading strategy based on exponential moving averages.",
+    "data_period": "not reported",
+    "universe": "Equities listed on the National Stock Exchange (NSE) of India",
+    "performance_metrics": [
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.5716,
+        "unit": "ratio",
+        "context": "Training result for GOKEX and PETRONET pair",
+        "evidence_quote": "GOKEX | PETRONET | 0.5716 | 0.0000 | 18.5213",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "max drawdown",
+        "value": 0.0,
+        "unit": "percent",
+        "context": "Training result for GOKEX and PETRONET pair",
+        "evidence_quote": "GOKEX | PETRONET | 0.5716 | 0.0000 | 18.5213",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "annualized return",
+        "value": 18.5213,
+        "unit": "percent",
+        "context": "Training result for GOKEX and PETRONET pair",
+        "evidence_quote": "GOKEX | PETRONET | 0.5716 | 0.0000 | 18.5213",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": -0.8136,
+        "unit": "ratio",
+        "context": "Testing result for GOKEX and PETRONET pair",
+        "evidence_quote": "GOKEX | PETRONET | -0.8136 | 194.0331 | –",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "max drawdown",
+        "value": 194.0331,
+        "unit": "percent",
+        "context": "Testing result for GOKEX and PETRONET pair",
+        "evidence_quote": "GOKEX | PETRONET | -0.8136 | 194.0331 | –",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 2.3859,
+        "unit": "ratio",
+        "context": "Testing result for RADICO and TATAELXSI pair",
+        "evidence_quote": "RADICO | TATAELXSI | 2.3859 | 0.0000 | 7.4691",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "max drawdown",
+        "value": 0.0,
+        "unit": "percent",
+        "context": "Testing result for RADICO and TATAELXSI pair",
+        "evidence_quote": "RADICO | TATAELXSI | 2.3859 | 0.0000 | 7.4691",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "annualized return",
+        "value": 7.4691,
+        "unit": "percent",
+        "context": "Testing result for RADICO and TATAELXSI pair",
+        "evidence_quote": "RADICO | TATAELXSI | 2.3859 | 0.0000 | 7.4691",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 5.7691,
+        "unit": "ratio",
+        "context": "Testing result for CCL and SSWL pair",
+        "evidence_quote": "CCL | SSWL | 5.7691 | 3.2371 | 11.1632",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "max drawdown",
+        "value": 3.2371,
+        "unit": "percent",
+        "context": "Testing result for CCL and SSWL pair",
+        "evidence_quote": "CCL | SSWL | 5.7691 | 3.2371 | 11.1632",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "annualized return",
+        "value": 11.1632,
+        "unit": "percent",
+        "context": "Testing result for CCL and SSWL pair",
+        "evidence_quote": "CCL | SSWL | 5.7691 | 3.2371 | 11.1632",
+        "source_location": "Table 4"
+      }
+    ],
+    "key_findings": [
+      "Integrating ESG filters with pairs trading successfully identifies sustainable stock pairs while preserving positive risk-adjusted returns.",
+      "Firms' average ESG scores generally exhibit an upward trend over time.",
+      "Backtesting indicates substantial performance variation across different pairs, with certain top pairs maintaining strong cointegration and positive risk-adjusted gains across both training and out-of-sample testing periods."
+    ],
+    "limitations": [
+      "Data sparsity and non-uniformity required extensive data cleaning prior to analysis.",
+      "Backtests show discrepancies between training and out-of-sample testing results for several pairs."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:14:40.548871+00:00",
+    "input_tokens": 5841,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "quality_profitability",
+      "stat_arb_pairs"
+    ],
+    "curation_asset_class": [
+      "equities"
+    ]
+  }
+}

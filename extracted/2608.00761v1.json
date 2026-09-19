@@ -1,0 +1,140 @@
+{
+  "paper_id": "arxiv:2608.00761v1",
+  "title": "AI and Exchange Rate Predictability",
+  "extraction": {
+    "signal_type": [
+      "sentiment_text",
+      "alternative_data",
+      "ml_composite"
+    ],
+    "asset_class": [
+      "fx"
+    ],
+    "methodology_summary": "The paper uses generative artificial intelligence models (such as GPT-4o and DeepSeek-V3) to analyze economic calendar data releases (realized values, previous figures, and consensus forecasts) to gauge currency fundamental strength. Based on the AI model's directional output (strengthen, weaken, or neutral), an AIFX index is constructed representing net fundamental strength. Cross-sectional and time-series trading strategies are formed by going long currencies with strong AIFX indices and shorting those with weak indices, and are evaluated against standard benchmark currency factors.",
+    "data_period": "January 1996 to October 2024, monthly",
+    "universe": "G-10 currencies including USD, EUR, JPY, GBP, CHF, CAD, AUD, NZD, SEK, and NOK",
+    "performance_metrics": [
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.7,
+        "unit": "ratio",
+        "context": "AIFX strategy annualized Sharpe ratio exceeding 0.7",
+        "evidence_quote": "A simple trading strategy that goes long currencies with strong fundamentals and short currencies with weak fundamentals generates a Sharpe ratio exceeding 0.7 per annum.",
+        "source_location": "Abstract"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.577,
+        "unit": "ratio",
+        "context": "AIFX strategy with 36-month lookback period",
+        "evidence_quote": "hs36tmon | hs42tmon | hs48tmon | hs54tmon | hs60tmon\nMean | 4.060 | 4.261 | 4.354 | 3.603 | 3.197\n...\nShaRiotearp | 0.577",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.604,
+        "unit": "ratio",
+        "context": "AIFX strategy with 42-month lookback period",
+        "evidence_quote": "ShaRiotearp | 0.577 | 0.604",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.594,
+        "unit": "ratio",
+        "context": "AIFX strategy with 48-month lookback period",
+        "evidence_quote": "ShaRiotearp | 0.577 | 0.604 | 0.594",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.491,
+        "unit": "ratio",
+        "context": "AIFX strategy with 54-month lookback period",
+        "evidence_quote": "ShaRiotearp | 0.577 | 0.604 | 0.594 | 0.491",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "Sharpe ratio",
+        "value": 0.467,
+        "unit": "ratio",
+        "context": "AIFX strategy with 60-month lookback period",
+        "evidence_quote": "ShaRiotearp | 0.577 | 0.604 | 0.594 | 0.491 | 0.467",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "annualized return",
+        "value": 4.06,
+        "unit": "percent",
+        "context": "AIFX strategy mean annualized return with 36-month lookback period",
+        "evidence_quote": "Mean | 4.060",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "annualized return",
+        "value": 4.261,
+        "unit": "percent",
+        "context": "AIFX strategy mean annualized return with 42-month lookback period",
+        "evidence_quote": "Mean | 4.060 | 4.261",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "annualized return",
+        "value": 4.354,
+        "unit": "percent",
+        "context": "AIFX strategy mean annualized return with 48-month lookback period",
+        "evidence_quote": "Mean | 4.060 | 4.261 | 4.354",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "Information Ratio",
+        "value": 0.78,
+        "unit": "ratio",
+        "context": "Information ratio for AIFX strategy with 36-month lookback",
+        "evidence_quote": "InfoRioiottrmana | 70.8 | 0.85 | 0.83 | 70.5 | 70.6",
+        "source_location": "Table 7"
+      },
+      {
+        "metric_name": "Information Ratio",
+        "value": 0.85,
+        "unit": "ratio",
+        "context": "Information ratio for AIFX strategy with 42-month lookback",
+        "evidence_quote": "InfoRioiottrmana | 70.8 | 0.85",
+        "source_location": "Table 7"
+      },
+      {
+        "metric_name": "Information Ratio",
+        "value": 0.83,
+        "unit": "ratio",
+        "context": "Information ratio for AIFX strategy with 48-month lookback",
+        "evidence_quote": "InfoRioiottrmana | 70.8 | 0.85 | 0.83",
+        "source_location": "Table 7"
+      }
+    ],
+    "key_findings": [
+      "AI-derived fundamentals extracted from economic calendar data releases exhibit significant cross-sectional predictive power for currency returns.",
+      "A long-short trading strategy based on the AIFX index produces an annualized Sharpe ratio larger than 0.7, with returns robust to controlling for traditional currency factors.",
+      "Extensive robustness tests (year-guessing test, cut-off comparison between GPT-4o and GPT-3.5, macro-correlation memory test, and pure hindsight portfolio control) indicate that predictive performance stems from genuine AI reasoning rather than look-ahead bias or memorization.",
+      "Inflation data, employment data, and broad economic activity indicators are identified as the most important categories driving the predictive power, aligning with a Taylor-rule monetary policy framework."
+    ],
+    "limitations": [
+      "The 2-year gap between GPT-4o and GPT-3.5 knowledge cut-off dates may limit statistical power to detect small performance differences.",
+      "Alternative explanations for predictability mechanisms cannot be definitively ruled out."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:19:14.959663+00:00",
+    "input_tokens": 22110,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "value",
+      "ml_composite"
+    ],
+    "curation_asset_class": [
+      "fx"
+    ]
+  }
+}

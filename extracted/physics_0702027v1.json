@@ -1,0 +1,201 @@
+{
+  "paper_id": "arxiv:physics/0702027v1",
+  "title": "A two-Factor Asset Pricing Model and the Fat Tail Distribution of Firm Sizes",
+  "extraction": {
+    "signal_type": [
+      "size",
+      "value",
+      "other"
+    ],
+    "asset_class": [
+      "equities"
+    ],
+    "methodology_summary": "The authors develop a theoretical two-factor asset pricing model incorporating market risk and an endogenous diversification/internal consistency risk factor resulting from the heavy-tailed distribution of firm sizes. They test the model using monthly excess returns on 25 size- and book-to-market-sorted portfolios as well as industry portfolios from January 1927 to December 2005. Regressions and bootstrap confidence intervals are used to compare the explanatory power of this two-factor model against the standard Fama-French three-factor model.",
+    "data_period": "Jan. 1927 to Dec. 2005, monthly",
+    "universe": "US stock market data available on Professor French's website (including Amex, Nasdaq, and NYSE listed stocks)",
+    "performance_metrics": [
+      {
+        "metric_name": "R-squared",
+        "value": 78.0,
+        "unit": "percent",
+        "context": "Consumer Non Durables industry portfolio (value-weighted)",
+        "evidence_quote": "Consumer Non Durables | 0.0019 | 0.78** | 0.08 | 0.07* | -0.15** | 78%",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "R-squared",
+        "value": 75.0,
+        "unit": "percent",
+        "context": "Consumer Durables industry portfolio (value-weighted)",
+        "evidence_quote": "Consumer Durables | -0.0006 | 1.11** | -0.12 | 0.11* | 0.24** | 75%",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "R-squared",
+        "value": 92.0,
+        "unit": "percent",
+        "context": "Manufacturing industry portfolio (value-weighted)",
+        "evidence_quote": "Manufacturing | -0.0006 | 1.10** | 0.11** | 0.19** | -0.11* | 92%",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "R-squared",
+        "value": 64.0,
+        "unit": "percent",
+        "context": "Energy industry portfolio (value-weighted)",
+        "evidence_quote": "Energy | 0.0018 | 0.86** | -0.10 | 0.30** | -0.16 | 64%",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "R-squared",
+        "value": 84.0,
+        "unit": "percent",
+        "context": "Business Equipment industry portfolio (value-weighted)",
+        "evidence_quote": "Business Equipment | 0.0012 | 1.27** | -0.21** | -0.45** | 0.37** | 84%",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "R-squared",
+        "value": 63.0,
+        "unit": "percent",
+        "context": "Telecom industry portfolio (value-weighted)",
+        "evidence_quote": "Telecom | 0.0015 | 0.69** | -0.27** | -0.15** | 0.18** | 63%",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "R-squared",
+        "value": 80.0,
+        "unit": "percent",
+        "context": "Shops industry portfolio (value-weighted)",
+        "evidence_quote": "Shops | 0.0010 | 0.96** | 0.03 | -0.14** | 0.06 | 80%",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "R-squared",
+        "value": 68.0,
+        "unit": "percent",
+        "context": "Health industry portfolio (value-weighted)",
+        "evidence_quote": "Health | 0.0030 | 0.91** | -0.01 | -0.15** | -0.11 | 68%",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "R-squared",
+        "value": 63.0,
+        "unit": "percent",
+        "context": "Utilities industry portfolio (value-weighted)",
+        "evidence_quote": "Utilities | -0.0001 | 0.79** | -0.05 | 0.35** | -0.11 | 63%",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "R-squared",
+        "value": 92.0,
+        "unit": "percent",
+        "context": "Others industry portfolio (value-weighted)",
+        "evidence_quote": "Others | -0.0016 | 1.06** | -0.07 | 0.30** | 0.12** | 92%",
+        "source_location": "Table 4"
+      },
+      {
+        "metric_name": "R-squared",
+        "value": 94.0,
+        "unit": "percent",
+        "context": "Consumer Non Durables industry portfolio (equally-weighted)",
+        "evidence_quote": "Consumer Non Durables | -0.0003 | 0.84** | 0.08* | 0.10** | 0.77** | 94%",
+        "source_location": "Table /page/33/Table/4 (page 34)"
+      },
+      {
+        "metric_name": "R-squared",
+        "value": 92.0,
+        "unit": "percent",
+        "context": "Consumer Durables industry portfolio (equally-weighted)",
+        "evidence_quote": "Consumer Durables | -0.0024 | 1.12** | 0.21** | 0.07* | 0.97** | 92%",
+        "source_location": "Table /page/33/Table/4 (page 34)"
+      },
+      {
+        "metric_name": "R-squared",
+        "value": 97.0,
+        "unit": "percent",
+        "context": "Manufacturing industry portfolio (equally-weighted)",
+        "evidence_quote": "Manufacturing | -0.0004 | 1.07** | 0.12** | 0.17** | 0.76** | 97%",
+        "source_location": "Table /page/33/Table/4 (page 34)"
+      },
+      {
+        "metric_name": "R-squared",
+        "value": 69.0,
+        "unit": "percent",
+        "context": "Energy industry portfolio (equally-weighted)",
+        "evidence_quote": "Energy | 0.0019 | 0.95** | 0.13 | 0.34** | 0.55** | 69%",
+        "source_location": "Table /page/33/Table/4 (page 34)"
+      },
+      {
+        "metric_name": "R-squared",
+        "value": 92.0,
+        "unit": "percent",
+        "context": "Business Equipment industry portfolio (equally-weighted)",
+        "evidence_quote": "Business Equipment | 0.0016 | 1.22** | -0.29** | -0.65** | 1.52** | 92%",
+        "source_location": "Table /page/33/Table/4 (page 34)"
+      },
+      {
+        "metric_name": "R-squared",
+        "value": 73.0,
+        "unit": "percent",
+        "context": "Telecom industry portfolio (equally-weighted)",
+        "evidence_quote": "Telecom | 0.0030 | 0.92** | -0.30** | -0.54** | 0.98** | 73%",
+        "source_location": "Table /page/33/Table/4 (page 34)"
+      },
+      {
+        "metric_name": "R-squared",
+        "value": 90.0,
+        "unit": "percent",
+        "context": "Shops industry portfolio (equally-weighted)",
+        "evidence_quote": "Shops | 0.0000 | 0.91** | 0.11* | -0.11** | 0.93** | 90%",
+        "source_location": "Table /page/33/Table/4 (page 34)"
+      },
+      {
+        "metric_name": "R-squared",
+        "value": 80.0,
+        "unit": "percent",
+        "context": "Health industry portfolio (equally-weighted)",
+        "evidence_quote": "Health | 0.0037 | 0.91** | -0.04 | -0.54** | 0.92** | 80%",
+        "source_location": "Table /page/33/Table/4 (page 34)"
+      },
+      {
+        "metric_name": "R-squared",
+        "value": 66.0,
+        "unit": "percent",
+        "context": "Utilities industry portfolio (equally-weighted)",
+        "evidence_quote": "Utilities | 0.0006 | 0.85** | 0.21* | 0.55** | -0.06 | 66%",
+        "source_location": "Table /page/33/Table/4 (page 34)"
+      },
+      {
+        "metric_name": "R-squared",
+        "value": 95.0,
+        "unit": "percent",
+        "context": "Others industry portfolio (equally-weighted)",
+        "evidence_quote": "Others | -0.0008 | 0.95** | 0.07 | 0.39** | 0.93** | 95%",
+        "source_location": "Table /page/33/Table/4 (page 34)"
+      }
+    ],
+    "key_findings": [
+      "When the distribution of firm sizes is heavy-tailed, the market portfolio exhibits an inherent lack of diversification, resulting in a persistent internal consistency factor (diversification risk) that must be priced even in infinite economies.",
+      "A theoretical two-factor model containing market risk and the diversification factor (proxied by the equally-weighted portfolio minus the market portfolio) rationalizes the Fama-French size factor as a proxy for the diversification factor.",
+      "The book-to-market effect naturally emerges from the model via the increasing sensitivity of value stocks to the diversification factor due to their lower market betas.",
+      "Empirically, a parsimonious two-factor model (market portfolio + internal consistency factor) performs as well as the Fama-French three-factor model in explaining cross-sectional monthly returns on US stocks from 1927 to 2005."
+    ],
+    "limitations": [],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:19:45.608635+00:00",
+    "input_tokens": 30534,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "value",
+      "size"
+    ],
+    "curation_asset_class": [
+      "equities"
+    ]
+  }
+}

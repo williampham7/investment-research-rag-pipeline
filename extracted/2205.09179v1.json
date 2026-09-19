@@ -1,0 +1,142 @@
+{
+  "paper_id": "arxiv:2205.09179v1",
+  "title": "Russia's Ruble during the onset of the Russian invasion of Ukraine in early 2022: The role of implied volatility and attention",
+  "extraction": {
+    "signal_type": [
+      "sentiment_text",
+      "volatility_risk_premium",
+      "other"
+    ],
+    "asset_class": [
+      "fx",
+      "options_volatility"
+    ],
+    "methodology_summary": "The authors model intraday price fluctuations of the USD/RUB and EUR/RUB exchange rates using high-frequency realized variance calculated from 5-minute trading prices divided into six 4-hour trading windows. To predict future price variations, they build autoregressive volatility models (similar to HAR models) estimated via OLS. The models incorporate intraday seasonality dummies, war-onset day effects, high-frequency Google search volume indices as attention proxies, and intraday implied volatilities extracted directly from Bloomberg OTC currency options.",
+    "data_period": "1st of December 2021 to 7th of March 2022, 5-minute intraday",
+    "universe": "USD/RUB and EUR/RUB foreign exchange markets and at-the-money monthly currency options",
+    "performance_metrics": [
+      {
+        "metric_name": "R-squared",
+        "value": 64.9,
+        "unit": "percent",
+        "context": "Model 1 for USD/RUB exchange pair",
+        "evidence_quote": "64.9%",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "adjusted R-squared",
+        "value": 63.7,
+        "unit": "percent",
+        "context": "Model 1 for USD/RUB exchange pair",
+        "evidence_quote": "63.7%",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "R-squared",
+        "value": 72.0,
+        "unit": "percent",
+        "context": "Model 2 for USD/RUB exchange pair",
+        "evidence_quote": "72.0%",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "adjusted R-squared",
+        "value": 70.9,
+        "unit": "percent",
+        "context": "Model 2 for USD/RUB exchange pair",
+        "evidence_quote": "70.9%",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "R-squared",
+        "value": 74.2,
+        "unit": "percent",
+        "context": "Model 7 for USD/RUB exchange pair",
+        "evidence_quote": "74.2%",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "adjusted R-squared",
+        "value": 73.0,
+        "unit": "percent",
+        "context": "Model 7 for USD/RUB exchange pair",
+        "evidence_quote": "73.0%",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "R-squared",
+        "value": 68.9,
+        "unit": "percent",
+        "context": "Model 1 for EUR/RUB exchange pair",
+        "evidence_quote": "68.9%",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "adjusted R-squared",
+        "value": 67.9,
+        "unit": "percent",
+        "context": "Model 1 for EUR/RUB exchange pair",
+        "evidence_quote": "67.9%",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "R-squared",
+        "value": 74.2,
+        "unit": "percent",
+        "context": "Model 2 for EUR/RUB exchange pair",
+        "evidence_quote": "74.2%",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "adjusted R-squared",
+        "value": 73.2,
+        "unit": "percent",
+        "context": "Model 2 for EUR/RUB exchange pair",
+        "evidence_quote": "73.2%",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "R-squared",
+        "value": 76.0,
+        "unit": "percent",
+        "context": "Model 7 for EUR/RUB exchange pair",
+        "evidence_quote": "76.0%",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "adjusted R-squared",
+        "value": 74.9,
+        "unit": "percent",
+        "context": "Model 7 for EUR/RUB exchange pair",
+        "evidence_quote": "74.9%",
+        "source_location": "Table 3"
+      }
+    ],
+    "key_findings": [
+      "Both high-frequency investor attention (Google searches) and implied volatility are useful for predicting intraday price fluctuations of the USD/RUB and EUR/RUB exchange rates.",
+      "Implied volatility encompasses intraday attention measures when both are included in the model, providing superior model fit and rendering attention variables statistically insignificant.",
+      "Intraday volatility exhibits clear non-linear seasonality across trading windows during 24-hour weekday trading.",
+      "Changes in investors' expectations are more relevant for the EUR/RUB exchange rate than USD/RUB, reflecting Europe's tighter economic ties and geographic proximity to the conflict."
+    ],
+    "limitations": [
+      "Google search volume indices can be noisy in the short term and their timely implementation is challenging as search terms are not known in advance.",
+      "Implied volatilities tend to be biased upwards, which may be amplified during sudden crisis periods when information unfolds continuously."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:12:45.576586+00:00",
+    "input_tokens": 11345,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "event_driven",
+      "alternative_data",
+      "volatility_risk_premium"
+    ],
+    "curation_asset_class": [
+      "fx"
+    ]
+  }
+}

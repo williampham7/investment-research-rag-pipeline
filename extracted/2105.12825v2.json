@@ -1,0 +1,116 @@
+{
+  "paper_id": "arxiv:2105.12825v2",
+  "title": "Trade the Event: Corporate Events Detection for News-Based Event-Driven Trading",
+  "extraction": {
+    "signal_type": [
+      "event_driven"
+    ],
+    "asset_class": [
+      "equities"
+    ],
+    "methodology_summary": "The paper introduces a bi-level event-driven trading strategy that detects corporate events from news articles to forecast short-term stock price movements. A low-level sequence labeling detector identifies event tokens while a high-level classifier integrates article-level context and low-level predictions. Recognized events are mapped to long or short positions immediately upon news publication and traded using policies such as holding for a fixed number of days or closing at the best price.",
+    "data_period": "Mar 1st, 2020 - Apr 30th, 2021 (Newswire) and Aug 16th, 2020 - May 6th, 2021 (Businesswire), minute-level timestamps",
+    "universe": "Securities listed on NYSE and NASDAQ",
+    "performance_metrics": [
+      {
+        "metric_name": "average return",
+        "value": 1.74,
+        "unit": "percent",
+        "context": "Bi-level Detection (ours), TAE (1) 1-day trading",
+        "evidence_quote": "Bi-level Detection (ours) | 54.5||34.2% | 1.74% | $84443 | 9.11% | 3118",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "excess returns",
+        "value": 84443.0,
+        "unit": "currency",
+        "context": "Bi-level Detection (ours), TAE (1) 1-day trading",
+        "evidence_quote": "Bi-level Detection (ours) | 54.5||34.2% | 1.74% | $84443 | 9.11% | 3118",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "average return",
+        "value": 9.11,
+        "unit": "percent",
+        "context": "Bi-level Detection (ours), TAB (1) 1-day trading",
+        "evidence_quote": "Bi-level Detection (ours) | 54.5||34.2% | 1.74% | $84443 | 9.11% | 3118",
+        "source_location": "Table 2"
+      },
+      {
+        "metric_name": "average return",
+        "value": 1.56,
+        "unit": "percent",
+        "context": "Bi-level Detection (ours), TAE (2) 2-day trading",
+        "evidence_quote": "Bi-level Detection (ours) | 52.3||40.8% | 1.56% | $59375 | 11.53% | 3118",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "excess returns",
+        "value": 59375.0,
+        "unit": "currency",
+        "context": "Bi-level Detection (ours), TAE (2) 2-day trading",
+        "evidence_quote": "Bi-level Detection (ours) | 52.3||40.8% | 1.56% | $59375 | 11.53% | 3118",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "average return",
+        "value": 11.53,
+        "unit": "percent",
+        "context": "Bi-level Detection (ours), TAB (2) 2-day trading",
+        "evidence_quote": "Bi-level Detection (ours) | 52.3||40.8% | 1.56% | $59375 | 11.53% | 3118",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "average return",
+        "value": 1.71,
+        "unit": "percent",
+        "context": "Bi-level Detection (ours), TAE (3) 3-day trading",
+        "evidence_quote": "Bi-level Detection (ours) | 52.0||42.0% | 1.71% | $55339 | 13.11% | 3118",
+        "source_location": "Table 6"
+      },
+      {
+        "metric_name": "excess returns",
+        "value": 55339.0,
+        "unit": "currency",
+        "context": "Bi-level Detection (ours), TAE (3) 3-day trading",
+        "evidence_quote": "Bi-level Detection (ours) | 52.0||42.0% | 1.71% | $55339 | 13.11% | 3118",
+        "source_location": "Table 6"
+      },
+      {
+        "metric_name": "average return",
+        "value": 13.11,
+        "unit": "percent",
+        "context": "Bi-level Detection (ours), TAB (3) 3-day trading",
+        "evidence_quote": "Bi-level Detection (ours) | 52.0||42.0% | 1.71% | $55339 | 13.11% | 3118",
+        "source_location": "Table 6"
+      }
+    ],
+    "key_findings": [
+      "Corporate events provide a higher signal-to-noise ratio and better average returns for stock prediction compared to traditional news sentiment analysis.",
+      "The proposed bi-level event detection model outperforms baseline architectures (such as Sentence-level and CRF models) across winning rates, excess returns, and average returns.",
+      "Timeliness is critical for event-driven strategies; delaying trade execution by even tens of seconds after publication heavily impairs performance and leads to negative average returns.",
+      "Different corporate events exhibit distinct price movement patterns and profitability ceilings (e.g., Special Dividends and Reverse Stock Splits are highly profitable, whereas Dividend Increases have minimal impact)."
+    ],
+    "limitations": [
+      "Assumes the cost of time in acquiring news and executing trades is almost zero.",
+      "Assumes unlimited stock liquidity, ignoring potential market impact and liquidity constraints as investment scales up.",
+      "Imperfect ticker recognition may occasionally introduce noise or point to incorrect securities."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:31:51.214409+00:00",
+    "input_tokens": 9080,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "event_driven",
+      "sentiment_text",
+      "ml_composite"
+    ],
+    "curation_asset_class": [
+      "equities"
+    ]
+  }
+}

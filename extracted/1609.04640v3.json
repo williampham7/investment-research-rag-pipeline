@@ -1,0 +1,85 @@
+{
+  "paper_id": "arxiv:1609.04640v3",
+  "title": "Statistically validated lead-lag networks and inventory prediction in the foreign exchange market",
+  "extraction": {
+    "signal_type": [
+      "alternative_data",
+      "ml_composite"
+    ],
+    "asset_class": [
+      "fx"
+    ],
+    "methodology_summary": "The paper proposes an unsupervised method to infer lead-lag networks of traders' actions in the foreign exchange market. First, traders are clustered into groups based on their synchronicity using Statistically Validated Networks (SVNs) and community detection. Then, lead-lag relationships between these groups are identified using lagged group states, and Random Forests are trained on these states to predict the sign of future hourly order flows and Volume Weighted Average Price (VWAP) changes.",
+    "data_period": "31 Jan. 2012 to 15 March 2016, hourly",
+    "universe": "Retail and institutional foreign exchange (FX) traders from Swissquote Bank SA (SQ) and a large dealing bank (LB), focusing on EURUSD, EURGBP, and USDJPY pairs.",
+    "performance_metrics": [
+      {
+        "metric_name": "Mean Adjusted Rand Index",
+        "value": 0.87,
+        "unit": "ratio",
+        "context": "Clustering stability of LB EURUSD traders between consecutive clustering times",
+        "evidence_quote": "mean | 0.87 | 0.83 | 0.91 | 0.84",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "Mean Adjusted Rand Index",
+        "value": 0.83,
+        "unit": "ratio",
+        "context": "Clustering stability of SQ EURUSD traders between consecutive clustering times",
+        "evidence_quote": "mean | 0.87 | 0.83 | 0.91 | 0.84",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "Mean Adjusted Rand Index",
+        "value": 0.91,
+        "unit": "ratio",
+        "context": "Clustering stability of SQ EURGBP traders between consecutive clustering times",
+        "evidence_quote": "mean | 0.87 | 0.83 | 0.91 | 0.84",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "Mean Adjusted Rand Index",
+        "value": 0.84,
+        "unit": "ratio",
+        "context": "Clustering stability of SQ USDJPY traders between consecutive clustering times",
+        "evidence_quote": "mean | 0.87 | 0.83 | 0.91 | 0.84",
+        "source_location": "Table 3"
+      },
+      {
+        "metric_name": "Fraction of perfect stability",
+        "value": 0.34,
+        "unit": "ratio",
+        "context": "Fraction of days with perfect clustering stability (ARI=1) for LB EURUSD traders",
+        "evidence_quote": "fraction of perfect stability | 0.34 | 0 | 0.01 | 0",
+        "source_location": "Table 3"
+      }
+    ],
+    "key_findings": [
+      "Trader synchronicity networks show high stability over time, as measured by the Adjusted Rand Index, indicating persistent trading styles.",
+      "Statistically validated lead-lag networks exist between groups of traders, showing that the actions of some groups systematically lead the actions of others.",
+      "Using Random Forests, both the sign of the order flow and the direction of the Volume Weighted Average Price (VWAP) are highly predictable at an hourly scale for retail investors (Swissquote).",
+      "Predictability is stronger during highly active hours for retail clients, whereas institutional/bank clients (LB) show less predictability at the hourly scale.",
+      "Random Forests outperform logistic regression in predicting future order flow signs."
+    ],
+    "limitations": [
+      "The hourly timescale may not be optimal for institutional/bank (LB) traders, resulting in minimal predictability for that dataset.",
+      "The method requires access to proprietary, trader-resolved data (with client IDs), which is not publicly available to most market participants.",
+      "The study does not account for transaction costs or execution details of implementing a live trading strategy based on these predictions."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash",
+    "extracted_at": "2026-09-18T23:54:43.981693+00:00",
+    "input_tokens": 14261,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "other",
+      "ml_composite"
+    ],
+    "curation_asset_class": [
+      "fx"
+    ]
+  }
+}

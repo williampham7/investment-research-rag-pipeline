@@ -1,0 +1,186 @@
+{
+  "paper_id": "arxiv:2608.04929v1",
+  "title": "Open Information: A Defining Perspective on Web Datasets for Carbon Pricing",
+  "extraction": {
+    "signal_type": [
+      "alternative_data",
+      "sentiment_text"
+    ],
+    "asset_class": [
+      "commodities"
+    ],
+    "methodology_summary": "The paper introduces 'open information' (OI) derived from the GDELT web database of news headlines and integrates it into carbon pricing models for EU Allowance (EUA) spot prices. The empirical approach uses data transformations to isolate the uncorrelated component of OI from public information, and evaluates its impact using Vector AutoRegressive (VAR) models, GARCH-X formulations, and return forecasting across expanding sample windows.",
+    "data_period": "01-04-2013 to 31-12-2023, daily",
+    "universe": "EU Allowance (EUA) spot prices and GDELT Events Database headlines",
+    "performance_metrics": [
+      {
+        "metric_name": "Pearson's Correlation",
+        "value": 0.68,
+        "unit": "ratio",
+        "context": "Correlation between O and P",
+        "evidence_quote": "0.68",
+        "source_location": "Table 5"
+      },
+      {
+        "metric_name": "Kendall's tau",
+        "value": 0.57,
+        "unit": "ratio",
+        "context": "Correlation between O and P",
+        "evidence_quote": "0.57",
+        "source_location": "Table 5"
+      },
+      {
+        "metric_name": "Spearman's rho",
+        "value": 0.76,
+        "unit": "ratio",
+        "context": "Correlation between O and P",
+        "evidence_quote": "0.76",
+        "source_location": "Table 5"
+      },
+      {
+        "metric_name": "Pearson's Correlation",
+        "value": 0.76,
+        "unit": "ratio",
+        "context": "Correlation between log(O) and log(P)",
+        "evidence_quote": "0.76",
+        "source_location": "Table 5"
+      },
+      {
+        "metric_name": "Kendall's tau",
+        "value": 0.57,
+        "unit": "ratio",
+        "context": "Correlation between log(O) and log(P)",
+        "evidence_quote": "0.57",
+        "source_location": "Table 5"
+      },
+      {
+        "metric_name": "Spearman's rho",
+        "value": 0.76,
+        "unit": "ratio",
+        "context": "Correlation between log(O) and log(P)",
+        "evidence_quote": "0.76",
+        "source_location": "Table 5"
+      },
+      {
+        "metric_name": "Adjusted R-squared",
+        "value": 0.992,
+        "unit": "ratio",
+        "context": "Regression from (2) to obtain residuals as log(Ou)",
+        "evidence_quote": "0.992",
+        "source_location": "Table 6"
+      },
+      {
+        "metric_name": "Pearson's Correlation",
+        "value": 0.04,
+        "unit": "ratio",
+        "context": "Correlation between log(Ou,t) and |rt|",
+        "evidence_quote": "0.040",
+        "source_location": "Table 7"
+      },
+      {
+        "metric_name": "Adjusted R-squared",
+        "value": 0.121,
+        "unit": "ratio",
+        "context": "VAR model dependent variable log(Ou,t)",
+        "evidence_quote": "0.121",
+        "source_location": "Table 8"
+      },
+      {
+        "metric_name": "Multiple R-squared",
+        "value": 0.121,
+        "unit": "ratio",
+        "context": "VAR model dependent variable log(Ou,t)",
+        "evidence_quote": "0.121",
+        "source_location": "Table 8"
+      },
+      {
+        "metric_name": "Adjusted R-squared",
+        "value": 0.037,
+        "unit": "ratio",
+        "context": "VAR model dependent variable |rt|",
+        "evidence_quote": "0.037",
+        "source_location": "Table 8"
+      },
+      {
+        "metric_name": "Multiple R-squared",
+        "value": 0.038,
+        "unit": "ratio",
+        "context": "VAR model dependent variable |rt|",
+        "evidence_quote": "0.038",
+        "source_location": "Table 8"
+      },
+      {
+        "metric_name": "Mean Error",
+        "value": -0.05112,
+        "unit": "other",
+        "context": "AR(1)-GARCH(1,1) prediction error",
+        "evidence_quote": "-0.05112",
+        "source_location": "Table 10"
+      },
+      {
+        "metric_name": "Mean Error",
+        "value": -0.04284,
+        "unit": "other",
+        "context": "AR(1)-X-GARCH(1,1) prediction error",
+        "evidence_quote": "-0.04284",
+        "source_location": "Table 10"
+      },
+      {
+        "metric_name": "RMSE",
+        "value": 1.94575,
+        "unit": "other",
+        "context": "AR(1)-GARCH(1,1) prediction error",
+        "evidence_quote": "1.94575",
+        "source_location": "Table 10"
+      },
+      {
+        "metric_name": "RMSE",
+        "value": 1.94543,
+        "unit": "other",
+        "context": "AR(1)-X-GARCH(1,1) prediction error",
+        "evidence_quote": "1.94543",
+        "source_location": "Table 10"
+      },
+      {
+        "metric_name": "MAE",
+        "value": 1.52465,
+        "unit": "other",
+        "context": "AR(1)-GARCH(1,1) prediction error",
+        "evidence_quote": "1.52465",
+        "source_location": "Table 10"
+      },
+      {
+        "metric_name": "MAE",
+        "value": 1.52311,
+        "unit": "other",
+        "context": "AR(1)-X-GARCH(1,1) prediction error",
+        "evidence_quote": "1.52311",
+        "source_location": "Table 10"
+      }
+    ],
+    "key_findings": [
+      "Open information (OI) from web datasets exists and is strongly correlated with public information (PI).",
+      "The uncorrelated component of open information provides information over and above public information, proving material significance for pricing models.",
+      "Integrating open information into GARCH and VAR models yields statistically significant coefficients and improvements in in-sample fit and out-of-sample forecast accuracy."
+    ],
+    "limitations": [
+      "The influence of open information is relatively feeble compared to volatility persistence.",
+      "The impact varies depending on model selection and can be overridden by specific transformations such as in integrated-GARCH models.",
+      "Diebold-Mariano tests for forecast accuracy improvements were statistically insignificant in most individual samples at the 10% level."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:19:24.820126+00:00",
+    "input_tokens": 10151,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "alternative_data"
+    ],
+    "curation_asset_class": [
+      "commodities"
+    ]
+  }
+}

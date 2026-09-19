@@ -1,0 +1,83 @@
+{
+  "paper_id": "arxiv:2512.00280v2",
+  "title": "Retail Investor Horizon and Earnings Announcements",
+  "extraction": {
+    "signal_type": [
+      "sentiment_text",
+      "alternative_data"
+    ],
+    "asset_class": [
+      "equities"
+    ],
+    "methodology_summary": "The paper uses self-reported holding periods from StockTwits users to classify stocks in the [−90, −1] window prior to quarterly earnings announcements into long-horizon and short-horizon retail cohorts. Based on whether the long-term share exceeds 50%, stocks are sorted into earnings-surprise bins and tested for cumulative abnormal returns and buy-and-hold abnormal returns (BHAR) using market-model adjustments, firm and time fixed effects, and propensity score matching. A monthly rebalanced zero-cost calendar strategy goes long on long-horizon stocks and short on short-horizon stocks to evaluate Fama-French five-factor alphas.",
+    "data_period": "2010–2021, quarterly",
+    "universe": "Quarterly earnings announcements from I/B/E/S matched with CRSP prices and StockTwits user posting activity, excluding penny stocks with pre-announcement prices under $5.",
+    "performance_metrics": [
+      {
+        "metric_name": "alpha",
+        "value": 0.3,
+        "unit": "ratio",
+        "context": "Fama-French five-factor alpha per month for the overall long-short horizon drift portfolio across all bins.",
+        "evidence_quote": "Despite these tilts, the portfolio delivers a statistically significant alpha of roughly 30 bps per month, implying economically meaningful abnormal returns beyond standard factor compensation.",
+        "source_location": "Section 5.5"
+      },
+      {
+        "metric_name": "alpha",
+        "value": 0.4,
+        "unit": "ratio",
+        "context": "Fama-French five-factor alpha per month for the Top-3-bin long-short portfolio.",
+        "evidence_quote": "The Top-3-bin portfolio (Column 2) shows nearly identical factor structure but produces an even larger and more precisely estimated alpha of nearly 40 bps per month, suggesting that concentrating weights on the bins associated with the strongest drift amplifies the signal.",
+        "source_location": "Section 5.5"
+      },
+      {
+        "metric_name": "annualized return",
+        "value": 0.21,
+        "unit": "percent",
+        "context": "Immediate buy-and-hold abnormal return over days 0 to 1 for long-horizon stocks in fully controlled specifications.",
+        "evidence_quote": "Long-horizon composition is associated with underreaction, characterized by larger initial reactions and pronounced Post-Earnings Announcement Drift (PEAD)... Relative to shorthorizon names, stocks predominantly followed by long-horizon investors exhibit stronger immediate reactions (about +0.21 pp over days 0–1 in fully controlled specifications)",
+        "source_location": "Abstract and Section 1"
+      },
+      {
+        "metric_name": "annualized return",
+        "value": 2.08,
+        "unit": "percent",
+        "context": "Delayed buy-and-hold abnormal return over days 2 to 75 for long-horizon stocks with controls and fixed effects.",
+        "evidence_quote": "Long-horizon stocks earn an additional +2.08 pp over days 2–75, resulting in a total outperformance of +2.31 pp over the full 0–75 day window.",
+        "source_location": "Section 1"
+      },
+      {
+        "metric_name": "annualized return",
+        "value": 2.31,
+        "unit": "percent",
+        "context": "Total outperformance (buy-and-hold abnormal return) over days 0 to 75 for long-horizon stocks.",
+        "evidence_quote": "Long-horizon stocks earn an additional +2.08 pp over days 2–75, resulting in a total outperformance of +2.31 pp over the full 0–75 day window.",
+        "source_location": "Section 1"
+      }
+    ],
+    "key_findings": [
+      "Retail investor horizons diverge in their earnings return patterns: long-horizon composition is associated with underreaction and PEAD, whereas short-horizon activity parallels sentiment-driven overreaction and price reversals.",
+      "Stocks predominantly followed by long-horizon investors exhibit stronger immediate reactions (0.21 pp over days 0-1) and larger post-announcement drift (2.08 pp over days 2-75) in fully controlled specifications.",
+      "A monthly zero-cost strategy going long long-horizon stocks and short short-horizon stocks generates Fama-French five-factor alphas of approximately 30 to 40 basis points per month.",
+      "Short-horizon investors exhibit high pre-announcement sentiment, higher sentiment volatility, and focus on technical cues, whereas long-horizon investors focus on fundamentals."
+    ],
+    "limitations": [
+      "Identifying investor horizons relies on observational data from a single social media platform, which may proxy for correlated firm characteristics such as attention or growth narratives."
+    ],
+    "extraction_confidence": "high",
+    "extraction_notes": ""
+  },
+  "extraction_meta": {
+    "model": "gemini-3.5-flash-lite",
+    "extracted_at": "2026-09-19T01:17:55.035263+00:00",
+    "input_tokens": 36145,
+    "validation_flags": [],
+    "curation_signal_type": [
+      "event_driven",
+      "sentiment_text",
+      "reversal"
+    ],
+    "curation_asset_class": [
+      "equities"
+    ]
+  }
+}
