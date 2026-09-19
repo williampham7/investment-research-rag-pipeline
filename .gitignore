@@ -3,6 +3,10 @@ __pycache__/
 .venv/
 venv/
 
+# API keys (GEMINI_API_KEY etc.) -- never commit secrets
+.env
+.env.*
+
 # Raw paper PDFs are large binaries — keep metadata.jsonl tracked, not the PDFs
 arxiv_papers/*.pdf
 

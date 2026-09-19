@@ -27,8 +27,11 @@ rank_bm25
 sentence-transformers==4.1.0
 
 # Structured extraction (structured_extract.py) and Q&A (qa.py). Free Gemini
-# API key from https://aistudio.google.com/apikey, set as GEMINI_API_KEY.
+# API key from https://aistudio.google.com/apikey. Put it in a .env file at
+# the project root as GEMINI_API_KEY=... (gitignored) -- llm_utils.py loads
+# it automatically, no need to export it in your shell.
 google-genai
+python-dotenv
 
 # Q&A UI (app.py)
 streamlit

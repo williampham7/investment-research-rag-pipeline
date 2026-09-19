@@ -11,10 +11,13 @@ import random
 import time
 from typing import TypeVar
 
+from dotenv import load_dotenv
 from google import genai
 from google.genai import errors as genai_errors
 from google.genai import types as genai_types
 from pydantic import BaseModel
+
+load_dotenv()  # picks up GEMINI_API_KEY from a .env file at the project root, if present
 
 logger = logging.getLogger(__name__)
 
