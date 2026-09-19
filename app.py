@@ -103,13 +103,18 @@ def main() -> None:
         "How do papers construct time-series momentum trading signals?",
         "What's the best performing statistical arbitrage strategy and how does it work?",
     ]
-    query = st.text_input("Your question", placeholder=examples[0])
+    # Bound to session_state via `key` so clicking an example can set it and
+    # `st.rerun()` to make the widget pick it up as its new value on the next
+    # render, WITHOUT permanently overriding whatever the user types afterward
+    # (a plain "last clicked example wins forever" flag would do that -- and
+    # silently re-answer a stale example query instead of what was just typed).
+    st.session_state.setdefault("query_input", "")
     cols = st.columns(len(examples))
     for col, ex in zip(cols, examples):
         if col.button(ex, use_container_width=True):
-            query = ex
-            st.session_state["_query_override"] = ex
-    query = st.session_state.get("_query_override", query)
+            st.session_state.query_input = ex
+            st.rerun()
+    query = st.text_input("Your question", key="query_input", placeholder=examples[0])
 
     if not query:
         return
